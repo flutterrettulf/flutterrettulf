@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://flutterrettulf.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://flutterrettulf.com/" rel="alternate" type="text/html" /><updated>2022-09-03T18:29:07+05:30</updated><id>https://flutterrettulf.com/feed.xml</id><title type="html">FlutterrettulF | Flutter Development Tutorails | Android | Dart | IOS | Web</title><subtitle>Flutter Development Tutorails | Android | Dart | IOS | Web</subtitle><entry><title type="html">Flutter: Loading Static Image &amp;amp; Font Assets in Flutter App.</title><link href="https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html" rel="alternate" type="text/html" title="Flutter: Loading Static Image &amp;amp; Font Assets in Flutter App." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app</id><content type="html" xml:base="https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html"><![CDATA[<h2 id="what-are-static-assets">What are Static Assets?</h2>
+
+<p>Static assets are the files that are bundled with the app and are not downloaded from the internet. Static assets are used to load images, fonts, and other files that are used in the app. Static assets are loaded using the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file. The <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file is used to define the assets that are used in the app. The <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file is located in the root directory of the app.</p>
+
+<h2 id="loading-static-image-assets-in-flutter-app">Loading Static Image Assets in Flutter App</h2>
+
+<p><strong>Step 1:</strong> Create a folder named <code class="language-plaintext highlighter-rouge">assets</code> in the root directory of the app.
+The <code class="language-plaintext highlighter-rouge">assets</code> folder is used to store all the static assets that are used in the app. The folder name can be anything, but we will use the <code class="language-plaintext highlighter-rouge">assets</code> folder name in this post.</p>
+
+<p><strong>Step 2:</strong> Create a folder named <code class="language-plaintext highlighter-rouge">images</code> in the <code class="language-plaintext highlighter-rouge">assets</code> folder and add the image files that are used in the app.</p>
+
+<p><strong>Step 3:</strong> Add the following code to the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">flutter</span><span class="pi">:</span>
+  <span class="na">assets</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">assets/images/</span>
+</code></pre></div></div>
+
+<p>The above code is used to load the static image assets in the app. The <code class="language-plaintext highlighter-rouge">assets/images/</code> is the path to the folder that contains the image files.</p>
+
+<p><strong>Step 4:</strong> Load the image assets in the app.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Image</span><span class="o">.</span><span class="na">asset</span><span class="p">(</span><span class="s">'assets/images/image.png'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="loading-static-font-assets-in-flutter-app">Loading Static Font Assets in Flutter App</h2>
+
+<p><strong>Step 1:</strong> Create a folder named <code class="language-plaintext highlighter-rouge">fonts</code> in the <code class="language-plaintext highlighter-rouge">assets</code> folder and add the font files that are used in the app.</p>
+
+<p><strong>Step 2:</strong> Add the following code to the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">flutter</span><span class="pi">:</span>
+  <span class="na">fonts</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">family</span><span class="pi">:</span>  <span class="s">Roboto</span>
+      <span class="na">fonts</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">asset</span><span class="pi">:</span> <span class="s">assets/fonts/Roboto-Regular.ttf</span>
+        <span class="pi">-</span> <span class="na">asset</span><span class="pi">:</span> <span class="s">assets/fonts/Roboto-Bold.ttf</span>
+          <span class="na">weight</span><span class="pi">:</span> <span class="m">700</span>
+</code></pre></div></div>
+
+<p>The above code is used to load the static font assets in the app. The <code class="language-plaintext highlighter-rouge">Roboto</code> is the font family name. The <code class="language-plaintext highlighter-rouge">Roboto-Regular.ttf</code> is the regular font file. The <code class="language-plaintext highlighter-rouge">Roboto-Bold.ttf</code> is the bold font file. We can add as many font files as we want.</p>
+
+<p><strong>Step 3:</strong> Load the font assets in the app.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Text</span><span class="p">(</span>
+  <span class="s">'Flutter'</span><span class="p">,</span>
+  <span class="nl">style:</span> <span class="n">TextStyle</span><span class="p">(</span>
+    <span class="nl">fontFamily:</span> <span class="s">'Roboto'</span><span class="p">,</span>
+    <span class="nl">fontWeight:</span> <span class="n">FontWeight</span><span class="o">.</span><span class="na">bold</span><span class="p">,</span>
+  <span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this post, we learned how to load static image and font assets in Flutter App. We created a folder named <code class="language-plaintext highlighter-rouge">assets</code> in the root directory of the app. We created a folder named <code class="language-plaintext highlighter-rouge">images</code> in the <code class="language-plaintext highlighter-rouge">assets</code> folder and added the image files that are used in the app. We provided the necessary configuration in the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file. We loaded the image assets in the app using the <code class="language-plaintext highlighter-rouge">Image.asset()</code> method. We created a folder named <code class="language-plaintext highlighter-rouge">fonts</code> in the <code class="language-plaintext highlighter-rouge">assets</code> folder and added the font files that are used in the app. We provided the necessary configuration in the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file. We loaded the font assets in the app using the <code class="language-plaintext highlighter-rouge">TextStyle</code> class.</p>]]></content><author><name></name></author><category term="Static Assets" /><category term="Assets" /><category term="Static Assets" /><category term="Image Assets" /><category term="Font Assets" /><summary type="html"><![CDATA[What are Static Assets?]]></summary></entry><entry><title type="html">How to disable the backbutton in Flutter using WillPopScope.</title><link href="https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" rel="alternate" type="text/html" title="How to disable the backbutton in Flutter using WillPopScope." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.</p>
+
+<p>If you want to know more about the WillPopScope widget, you can read the article <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html">How to use the WillPopScope widget in Flutter</a></p>
+
+<p>In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.</p>
+
+<h2 id="how-to-disable-the-backbutton-in-flutter-using-willpopscope">How to disable the backbutton in Flutter using WillPopScope</h2>
+
+<p>The WillPopScope widget allows us to intercept the back button press event. It provides a callback that is called when the user tries to dismiss the enclosing route. If the callback returns a Future that resolves to true, the enclosing route will be popped; otherwise the back button press is ignored.</p>
+
+<p>In order to disable the backbutton in Flutter, we need to return false from the onWillPop callback. Let’s see how to implement this functionality.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DisableBackButton</span> <span class="kd">extends</span> <span class="n">StatefulWidget</span> <span class="p">{</span>
+  <span class="nd">@override</span>
+  <span class="n">_DisableBackButtonState</span> <span class="n">createState</span><span class="p">()</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">_DisableBackButtonState</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">_DisableBackButtonState</span> <span class="kd">extends</span> <span class="n">State</span><span class="p">&lt;</span><span class="n">DisableBackButton</span><span class="p">&gt;</span> <span class="p">{</span>
+  <span class="nd">@override</span>
+  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">WillPopScope</span><span class="p">(</span>
+      <span class="nl">onWillPop:</span> <span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="nl">child:</span> <span class="n">Scaffold</span><span class="p">(</span>
+        <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
+          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"WillPopScope Demo"</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
+          <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
+            <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="o">.</span><span class="na">center</span><span class="p">,</span>
+            <span class="nl">children:</span> <span class="p">&lt;</span><span class="n">Widget</span><span class="p">&gt;[</span>
+              <span class="n">Text</span><span class="p">(</span>
+                <span class="s">'Back button is disabled'</span><span class="p">,</span>
+              <span class="p">),</span>
+            <span class="p">],</span>
+          <span class="p">),</span>
+        <span class="p">),</span>
+      <span class="p">),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the above code, we have used the WillPopScope widget to disable the backbutton in Flutter. We have returned false from the onWillPop callback. This will prevent the user from navigating back to the previous screen.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we have seen how to disable the backbutton in Flutter using the WillPopScope widget. We have also seen how to use the WillPopScope widget to intercept the back button press event. Thanks for reading this article. If you have any questions, please feel free to ask them using the email flutterrettulf@gmail.com</p>
+
+<h2 id="references">References</h2>
+<ol>
+  <li><a href="https://api.flutter.dev/flutter/widgets/WillPopScope-class.html">WillPopScope</a></li>
+</ol>]]></content><author><name></name></author><category term="Navigation" /><category term="WillPopScope" /><category term="Navigation" /><category term="Disable Back Button" /><summary type="html"><![CDATA[Introduction WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.]]></summary></entry><entry><title type="html">How to use WillPopScope widget in Flutter with examples.</title><link href="https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html" rel="alternate" type="text/html" title="How to use WillPopScope widget in Flutter with examples." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/how-to%20use-willpopscope-widget-in-flutter-with-examples</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html"><![CDATA[<p>In this article, we will discuss how to use the WillPopScope class in Flutter.</p>
+
+<h2 id="what-is-willpopscope">What is WillPopScope?</h2>
+
+<p>WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. In other words, it can be used to override what happens when a user presses the back button on the device or pops the current route.</p>
+
+<p><strong>The constructor of the class is as follows:</strong></p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">WillPopScope</span><span class="p">({</span>
+  <span class="n">Key</span><span class="o">?</span> <span class="n">key</span><span class="p">,</span>
+  <span class="kd">required</span> <span class="n">WillPopCallback</span><span class="o">?</span> <span class="n">onWillPop</span><span class="p">,</span>
+  <span class="kd">required</span> <span class="n">Widget</span> <span class="n">child</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="n">WillPopCallback</span> <span class="o">=</span> <span class="n">Future</span><span class="p">&lt;</span><span class="kt">bool</span><span class="p">&gt;</span> <span class="kt">Function</span><span class="p">()</span> <span class="c1">// Signature for a callback that verifies that it's OK to call Navigator.pop</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">child</code> argument is required. It is the child widget of the WillPopScope widget. <code class="language-plaintext highlighter-rouge">onWillPop</code> argument is optional. It is a callback function that returns a Future value. The callback function is called when the user tries to dismiss the enclosing route. The callback function returns a Future value. If the Future value is true, the enclosing route is popped. If the Future value is false, the enclosing route is not popped.</p>
+
+<h2 id="where-do-we-use-the-willpopscope-widget">Where do we use the WillPopScope widget?</h2>
+<p>The WillPopScope widget can be used to intercept the back button press event.</p>
+<ol>
+  <li>It can be used to prevent the user from navigating back to the previous screen based on some condition.</li>
+  <li>It can also be used to perform some action before navigating back to the previous screen.</li>
+</ol>
+
+<h2 id="how-to-use-the-willpopscope-widget">How to use the WillPopScope widget?</h2>
+<p>Let’s see how we can use the WillPopScope widget in Flutter.</p>
+
+<p><strong>Example 1: Using WillPopScope to prevent the user from navigating back to the previous screen.</strong></p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PreventNavigatingBAck</span> <span class="kd">extends</span> <span class="n">StatelessWidget</span> <span class="p">{</span>
+
+  <span class="nd">@override</span>
+  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">WillPopScope</span><span class="p">(</span>
+      <span class="nl">onWillPop:</span> <span class="p">()</span> <span class="kd">async</span> <span class="o">=</span><span class="p">&gt;</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nl">child:</span> <span class="n">Scaffold</span><span class="p">(</span>
+        <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
+          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"WillPopScope Demo"</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
+          <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
+            <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="o">.</span><span class="na">center</span><span class="p">,</span>
+            <span class="nl">children:</span> <span class="p">&lt;</span><span class="n">Widget</span><span class="p">&gt;[</span>
+              <span class="n">Text</span><span class="p">(</span>
+                <span class="s">'This route shall not be popped!'</span><span class="p">,</span>
+              <span class="p">),</span>
+      
+            <span class="p">],</span>
+          <span class="p">),</span>
+        <span class="p">),</span>
+      <span class="p">),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the above example, we have used the WillPopScope widget to prevent the user from navigating back to the previous screen. We have set the <code class="language-plaintext highlighter-rouge">onWillPop</code> argument to a callback function that returns a Future value. The callback function returns a Future value of false. So, the enclosing route is not popped.</p>
+
+<p><strong>Example 2: Using WillPopScope to check a condition before navigating back to the previous screen.</strong></p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">class</span> <span class="nc">CheckConditionBeforeNavigatingBack</span> <span class="kd">extends</span> <span class="n">StatefulWidget</span> <span class="p">{</span>
+  <span class="nd">@override</span>
+  <span class="n">_CheckConditionBeforeNavigatingBackState</span> <span class="n">createState</span><span class="p">()</span> <span class="o">=</span><span class="p">&gt;</span>
+      <span class="n">_CheckConditionBeforeNavigatingBackState</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">_CheckConditionBeforeNavigatingBackState</span>
+    <span class="kd">extends</span> <span class="n">State</span><span class="p">&lt;</span><span class="n">CheckConditionBeforeNavigatingBack</span><span class="p">&gt;</span> <span class="p">{</span>
+  <span class="kt">bool</span> <span class="n">_canPop</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="nd">@override</span>
+  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">WillPopScope</span><span class="p">(</span>
+      <span class="nl">onWillPop:</span> <span class="p">()</span> <span class="kd">async</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">_canPop</span><span class="p">,</span>
+      <span class="nl">child:</span> <span class="n">Scaffold</span><span class="p">(</span>
+        <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
+          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"WillPopScope Demo"</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
+          <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
+            <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="o">.</span><span class="na">center</span><span class="p">,</span>
+            <span class="nl">children:</span> <span class="p">&lt;</span><span class="n">Widget</span><span class="p">&gt;[</span>
+              <span class="n">Text</span><span class="p">(</span>
+                <span class="s">'This route can be popped only if the condition is met.'</span><span class="p">,</span>
+              <span class="p">),</span>
+              <span class="n">SizedBox</span><span class="p">(</span>
+                <span class="nl">height:</span> <span class="mi">20</span><span class="p">,</span>
+              <span class="p">),</span>
+              <span class="n">ElevatedButton</span><span class="p">(</span>
+                <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{</span>
+                  <span class="n">setState</span><span class="p">(()</span> <span class="p">{</span>
+                    <span class="n">_canPop</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                  <span class="p">});</span>
+                <span class="p">},</span>
+                <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"Set condition to true"</span><span class="p">),</span>
+              <span class="p">),</span>
+            <span class="p">],</span>
+          <span class="p">),</span>
+        <span class="p">),</span>
+      <span class="p">),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the above example, we have used the WillPopScope widget to check a condition before navigating back to the previous screen. We have set the <code class="language-plaintext highlighter-rouge">onWillPop</code> argument to a callback function that returns a Future value. The callback function returns a Future value of <code class="language-plaintext highlighter-rouge">_canPop</code>. So, the enclosing route is popped only if the <code class="language-plaintext highlighter-rouge">_canPop</code> variable is true. Otherwise, the enclosing route is not popped. We have set the <code class="language-plaintext highlighter-rouge">_canPop</code> variable to true when the user clicks on the ElevatedButton. So, the enclosing route is popped only after the user clicks on the ElevatedButton.</p>
+
+<h2 id="example-3-using-willpopscope-to-perform-an-action-before-navigating-back-to-the-previous-screen">Example 3: Using WillPopScope to perform an action before navigating back to the previous screen.</h2>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PerformActionBeforeNavigatingBack</span> <span class="kd">extends</span> <span class="n">StatefulWidget</span> <span class="p">{</span>
+  <span class="nd">@override</span>
+  <span class="n">_PerformActionBeforeNavigatingBackState</span> <span class="n">createState</span><span class="p">()</span> <span class="o">=</span><span class="p">&gt;</span>
+      <span class="n">_PerformActionBeforeNavigatingBackState</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">_PerformActionBeforeNavigatingBackState</span>
+    <span class="kd">extends</span> <span class="n">State</span><span class="p">&lt;</span><span class="n">PerformActionBeforeNavigatingBack</span><span class="p">&gt;</span> <span class="p">{</span>
+  <span class="kt">bool</span> <span class="n">_canPop</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="nd">@override</span>
+  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">WillPopScope</span><span class="p">(</span>
+      <span class="nl">onWillPop:</span> <span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">_canPop</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="n">showDialog</span><span class="p">(</span>
+            <span class="nl">context:</span> <span class="n">context</span><span class="p">,</span>
+            <span class="nl">builder:</span> <span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">AlertDialog</span><span class="p">(</span>
+              <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"Alert"</span><span class="p">),</span>
+              <span class="nl">content:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"Are you sure you want to exit?"</span><span class="p">),</span>
+              <span class="nl">actions:</span> <span class="p">[</span>
+                <span class="n">TextButton</span><span class="p">(</span>
+                  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{</span>
+                    <span class="n">Navigator</span><span class="o">.</span><span class="na">of</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="o">.</span><span class="na">pop</span><span class="p">();</span>
+                  <span class="p">},</span>
+                  <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"No"</span><span class="p">),</span>
+                <span class="p">),</span>
+                <span class="n">TextButton</span><span class="p">(</span>
+                  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{</span>
+                    <span class="n">setState</span><span class="p">(()</span> <span class="p">{</span>
+                      <span class="n">_canPop</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                    <span class="p">});</span>
+                    <span class="n">Navigator</span><span class="o">.</span><span class="na">of</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="o">.</span><span class="na">pop</span><span class="p">();</span>
+                  <span class="p">},</span>
+                  <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"Yes"</span><span class="p">),</span>
+                <span class="p">),</span>
+              <span class="p">],</span>
+            <span class="p">),</span>
+          <span class="p">);</span>
+          <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nl">child:</span> <span class="n">Scaffold</span><span class="p">(</span>
+        <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
+          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"WillPopScope Demo"</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
+          <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
+            <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="o">.</span><span class="na">center</span><span class="p">,</span>
+            <span class="nl">children:</span> <span class="p">&lt;</span><span class="n">Widget</span><span class="p">&gt;[</span>
+              <span class="n">Text</span><span class="p">(</span>
+                <span class="s">'This route can be popped only if the condition is met.'</span><span class="p">,</span>
+              <span class="p">),</span>
+              <span class="n">SizedBox</span><span class="p">(</span>
+                <span class="nl">height:</span> <span class="mi">20</span><span class="p">,</span>
+              <span class="p">),</span>
+              <span class="n">ElevatedButton</span><span class="p">(</span>
+                <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{</span>
+                  <span class="n">setState</span><span class="p">(()</span> <span class="p">{</span>
+                    <span class="n">_canPop</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+                  <span class="p">});</span>
+                <span class="p">},</span>
+                <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"Set condition to true"</span><span class="p">),</span>
+              <span class="p">),</span>
+            <span class="p">],</span>
+          <span class="p">),</span>
+        <span class="p">),</span>
+      <span class="p">),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the above example, we have used the WillPopScope widget to perform an action before navigating back to the previous screen. We have set the <code class="language-plaintext highlighter-rouge">onWillPop</code> argument to a callback function that returns a Future value. The callback function returns a Future value of <code class="language-plaintext highlighter-rouge">_canPop</code>. So, the enclosing route is popped only if the <code class="language-plaintext highlighter-rouge">_canPop</code> variable is true. Otherwise, a dialog box is shown to the user. The user can either click on the Yes button to set the <code class="language-plaintext highlighter-rouge">_canPop</code> variable to true or click on the No button to dismiss the dialog box. So, the enclosing route is popped only after the user clicks on the Yes button.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In this tutorial, we have learned about the WillPopScope widget in Flutter. We have seen how to use the WillPopScope widget to prevent the user from navigating back to the previous screen, check a condition before navigating back to the previous screen, and perform an action before navigating back to the previous screen.</p>
+
+<h2 id="references">References</h2>
+
+<ol>
+  <li><a href="https://api.flutter.dev/flutter/widgets/WillPopScope-class.html">WillPopScope</a></li>
+</ol>]]></content><author><name></name></author><category term="Navigation" /><category term="WillPopScope" /><category term="Navigation" /><summary type="html"><![CDATA[In this article, we will discuss how to use the WillPopScope class in Flutter.]]></summary></entry><entry><title type="html">How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?</title><link href="https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html" rel="alternate" type="text/html" title="How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?" /><published>2022-09-03T00:00:00+05:30</published><updated>2022-09-03T00:00:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>In this article, we will discuss how to use the WillPopScope widget in Flutter to show a snackbar saying press back button again to exit app.
+If you are not familiar with the WillPopScope widget, you can read the article <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html">How to use the WillPopScope widget in Flutter</a></p>
+
+<p>In order to exit the app, we need to press the back button twice. The first time we press the back button, we will show a snackbar saying press back button again to exit app. If the user presses the back button again within 2 seconds, the app will exit. If the user does not press the back button again within 2 seconds, the snackbar will be dismissed and the user will have to press the back button again to exit the app.</p>
+
+<p><strong>Let’s see how to implement this functionality.</strong></p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">PressBackButtonAgainToExitApp</span> <span class="kd">extends</span> <span class="n">StatefulWidget</span> <span class="p">{</span>
+  <span class="nd">@override</span>
+  <span class="n">_PressBackButtonAgainToExitAppState</span> <span class="n">createState</span><span class="p">()</span> <span class="o">=</span><span class="p">&gt;</span>
+      <span class="n">_PressBackButtonAgainToExitAppState</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">_PressBackButtonAgainToExitAppState</span>
+    <span class="kd">extends</span> <span class="n">State</span><span class="p">&lt;</span><span class="n">PressBackButtonAgainToExitApp</span><span class="p">&gt;</span> <span class="p">{</span>
+  <span class="n">DateTime</span><span class="o">?</span> <span class="n">_currentBackPressTime</span><span class="p">;</span>
+
+  <span class="nd">@override</span>
+  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">WillPopScope</span><span class="p">(</span>
+      <span class="nl">onWillPop:</span> <span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+        <span class="n">DateTime</span> <span class="n">now</span> <span class="o">=</span> <span class="n">DateTime</span><span class="o">.</span><span class="na">now</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">_currentBackPressTime</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span>
+            <span class="n">now</span><span class="o">.</span><span class="na">difference</span><span class="p">(</span><span class="n">_currentBackPressTime</span><span class="o">!</span><span class="p">)</span> <span class="p">&gt;</span> <span class="n">Duration</span><span class="p">(</span><span class="nl">seconds:</span> <span class="mi">2</span><span class="p">))</span> <span class="p">{</span>
+          <span class="n">_currentBackPressTime</span> <span class="o">=</span> <span class="n">now</span><span class="p">;</span>
+
+          <span class="n">ScaffoldMessenger</span><span class="o">.</span><span class="na">of</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="o">.</span><span class="na">showSnackBar</span><span class="p">(</span>
+            <span class="n">SnackBar</span><span class="p">(</span>
+              <span class="nl">content:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Press back button again to exit'</span><span class="p">),</span>
+            <span class="p">),</span>
+          <span class="p">);</span>
+
+          <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="nl">child:</span> <span class="n">Scaffold</span><span class="p">(</span>
+        <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
+          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"WillPopScope Demo"</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
+          <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
+            <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="o">.</span><span class="na">center</span><span class="p">,</span>
+            <span class="nl">children:</span> <span class="p">&lt;</span><span class="n">Widget</span><span class="p">&gt;[</span>
+              <span class="n">Text</span><span class="p">(</span>
+                <span class="s">'Press back button twice to exit app'</span><span class="p">,</span>
+              <span class="p">),</span>
+            <span class="p">],</span>
+          <span class="p">),</span>
+        <span class="p">),</span>
+      <span class="p">),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the above code, we have used the <code class="language-plaintext highlighter-rouge">WillPopScope</code> widget to intercept the back button press event. When the app is launched, the <code class="language-plaintext highlighter-rouge">_currentBackPressTime</code> variable will be null. When the user presses the back button, we will check if the <code class="language-plaintext highlighter-rouge">_currentBackPressTime</code> variable is null. If it is null, we will set the <code class="language-plaintext highlighter-rouge">_currentBackPressTime</code> variable to the current time and show a snackbar saying press back button again to exit app. If the user presses the back button again within 2 seconds, the app will exit. If the user does not press the back button again within 2 seconds, the snackbar will be dismissed and the user will have to press the back button again to exit the app.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this article, we have seen how to use the WillPopScope widget in Flutter to show a snackbar saying press back button again to exit app.</p>]]></content><author><name></name></author><category term="Navigation" /><category term="WillPopScope" /><category term="Navigation" /><category term="Double Back To Exit App" /><summary type="html"><![CDATA[Introduction]]></summary></entry></feed>
