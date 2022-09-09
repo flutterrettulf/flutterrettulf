@@ -6,14 +6,14 @@
   
   <title>How to use WillPopScope widget in Flutter with examples.</title>
   <meta name="title" content="How to use WillPopScope widget in Flutter with examples.">
-  <meta name="description" content="We will discuss about different methods to use WillPopScope widget in Flutter to customize the navigation and backbutton actions.">
+  <meta name="description" content="Learn how to use the WillPopScope widget in Flutter. We will see how to use the widget, through simple examples.">
   <meta name="author" content="Justin Thomas">
+  
   <!-- <meta name="twitter:card" content="summary-large-image"></meta>
   <meta name="twitter:site" content="flutterrettulf"></meta>
   <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
 <meta property="og:title" content="A Twitter for My Sister" />
 <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
-<meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
   <meta property="og:type" content="article" />
   
     article:published_time - datetime - When the article was first published.
@@ -84,6 +84,11 @@ body {
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/category/static-assets">Static Assets</a>
           </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
+          </li>
               
         
    
@@ -104,6 +109,8 @@ body {
       <span class="fs-5 fw-semibold">Navigation</span>
     </a>
     <div class=" list-group list-group-flush border-bottom scrollarea "> 
+      
+      
       
       
       
@@ -154,6 +161,29 @@ body {
         <small class="text-muted">Posted on September 3, 2022</small>
       </header>
       <div class="blog-post-body lh-lg">
+        
+        
+      
+        <div class="card card-body mb-4" >
+
+ 
+          <button class="btn btn-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_table_of_contents" aria-expanded="true" aria-controls="collapse_table_of_contents">
+            Table of Contents
+            <i class="bi bi-chevron-expand"></i>
+          </button>
+          <div class="collapse show" id="collapse_table_of_contents">
+            <ul id="toc" class="toc__list">
+<li class="toc-entry toc-h2"><a href="#what-is-willpopscope">What is WillPopScope?</a></li>
+<li class="toc-entry toc-h2"><a href="#where-do-we-use-the-willpopscope-widget">Where do we use the WillPopScope widget?</a></li>
+<li class="toc-entry toc-h2"><a href="#how-to-use-the-willpopscope-widget">How to use the WillPopScope widget?</a></li>
+<li class="toc-entry toc-h2"><a href="#example-3-using-willpopscope-to-perform-an-action-before-navigating-back-to-the-previous-screen">Example 3: Using WillPopScope to perform an action before navigating back to the previous screen.</a></li>
+<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul> 
+           </div>
+          </div>
+ 
+      
           <p>In this article, we will discuss how to use the WillPopScope class in Flutter.</p>
 
 <h2 id="what-is-willpopscope">What is WillPopScope?</h2>
@@ -462,6 +492,8 @@ body {
         
         <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
         
+        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+        
         <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
 
       </ul>
@@ -504,6 +536,8 @@ body {
     </div>
     <div class="offcanvas-body p-0">
       <div class=" list-group list-group-flush border-bottom scrollarea "> 
+        
+        
         
         
         

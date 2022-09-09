@@ -6,14 +6,14 @@
   
   <title>How to disable the backbutton in Flutter using WillPopScope.</title>
   <meta name="title" content="How to disable the backbutton in Flutter using WillPopScope.">
-  <meta name="description" content="In this article, we will discuss how to use the WillPopScope widget in Flutter to disable the backbutton.">
+  <meta name="description" content="In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.">
   <meta name="author" content="Justin Thomas">
+  
   <!-- <meta name="twitter:card" content="summary-large-image"></meta>
   <meta name="twitter:site" content="flutterrettulf"></meta>
   <meta property="og:url" content="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/" />
 <meta property="og:title" content="A Twitter for My Sister" />
 <meta property="og:description" content="In the early days, Twitter grew so quickly that it was almost impossible to add new features because engineers spent their time trying to keep the rocket ship from stalling." />
-<meta property="og:image" content="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg" />
   <meta property="og:type" content="article" />
   
     article:published_time - datetime - When the article was first published.
@@ -84,6 +84,11 @@ body {
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/category/static-assets">Static Assets</a>
           </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
+          </li>
               
         
    
@@ -104,6 +109,8 @@ body {
       <span class="fs-5 fw-semibold">Navigation</span>
     </a>
     <div class=" list-group list-group-flush border-bottom scrollarea "> 
+      
+      
       
       
       
@@ -154,6 +161,27 @@ body {
         <small class="text-muted">Posted on September 3, 2022</small>
       </header>
       <div class="blog-post-body lh-lg">
+        
+        
+      
+        <div class="card card-body mb-4" >
+
+ 
+          <button class="btn btn-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_table_of_contents" aria-expanded="true" aria-controls="collapse_table_of_contents">
+            Table of Contents
+            <i class="bi bi-chevron-expand"></i>
+          </button>
+          <div class="collapse show" id="collapse_table_of_contents">
+            <ul id="toc" class="toc__list">
+<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
+<li class="toc-entry toc-h2"><a href="#how-to-disable-the-backbutton-in-flutter-using-willpopscope">How to disable the backbutton in Flutter using WillPopScope</a></li>
+<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
+<li class="toc-entry toc-h2"><a href="#references">References</a></li>
+</ul> 
+           </div>
+          </div>
+ 
+      
           <h2 id="introduction">Introduction</h2>
 <p>WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.</p>
 
@@ -319,6 +347,8 @@ body {
         
         <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
         
+        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+        
         <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
 
       </ul>
@@ -361,6 +391,8 @@ body {
     </div>
     <div class="offcanvas-body p-0">
       <div class=" list-group list-group-flush border-bottom scrollarea "> 
+        
+        
         
         
         

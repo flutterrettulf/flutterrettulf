@@ -1,4 +1,223 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://flutterrettulf.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://flutterrettulf.com/" rel="alternate" type="text/html" /><updated>2022-09-06T19:23:08+05:30</updated><id>https://flutterrettulf.com/feed.xml</id><title type="html">FlutterrettulF | Flutter Development Tutorails | Android | Dart | IOS | Web</title><subtitle>Flutter Development Tutorails | Android | Dart | IOS | Web</subtitle><entry><title type="html">Flutter: Loading Static Image &amp;amp; Font Assets in Flutter App.</title><link href="https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html" rel="alternate" type="text/html" title="Flutter: Loading Static Image &amp;amp; Font Assets in Flutter App." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app</id><content type="html" xml:base="https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html"><![CDATA[<h2 id="what-are-static-assets">What are Static Assets?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://flutterrettulf.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://flutterrettulf.com/" rel="alternate" type="text/html" /><updated>2022-09-09T13:52:59+05:30</updated><id>https://flutterrettulf.com/feed.xml</id><title type="html">FlutterrettulF | Flutter Development Tutorails | Android | Dart | IOS | Web</title><subtitle>Flutter Development Tutorails | Android | Dart | IOS | Web</subtitle><entry><title type="html">Flutter: Elevated Button Examples.</title><link href="https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" rel="alternate" type="text/html" title="Flutter: Elevated Button Examples." /><published>2022-09-09T05:30:00+05:30</published><updated>2022-09-09T05:30:00+05:30</updated><id>https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples</id><content type="html" xml:base="https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html"><![CDATA[<h2 id="what-is-elevatedbutton-in-flutter">What is ElevatedButton in Flutter?</h2>
+
+<p>Elevated Button is a flutter component included inside the material package i.e. “package:flutter/material.dart“. It is a label child displayed on a Material widget whose elevation increases when the button is pressed. The label’s Text and Icon widgets are displayed in style’s ButtonStyle.foregroundColor and the button’s filled background is the ButtonStyle.backgroundColor. It is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. Since they use color fill and shadow, they are often used to indicate a primary action in an app. They are also used to indicate a primary action in a dialog. We will see some examples of ElevatedButton in Flutter.</p>
+
+<p>You can read more about ElevatedButton in Flutter from <a href="https://api.flutter.dev/flutter/material/ElevatedButton-class.html" target="_blank">Flutter ElevatedButton - class</a>.</p>
+
+<h2 id="what-are-the-states-of-elevated-button-in-flutter">What are the states of Elevated Button in Flutter?</h2>
+
+<p>There are 5 states of Elevated Button in Flutter. They are:</p>
+<ol>
+  <li>Normal</li>
+  <li>Hover</li>
+  <li>Focus</li>
+  <li>Pressed</li>
+  <li>Disabled</li>
+</ol>
+
+<h3 id="how-to-enable--disable-elevated-button-in-flutter">How to enable / disable Elevated Button in Flutter?</h3>
+<p>If onPressed and onLongPress callbacks are null, then the button will be disabled.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This button has an onPressed callback, so it is enabled and will react to hover and press.</span>
+<span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
+  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Button1'</span><span class="p">),</span>
+<span class="p">),</span>
+</code></pre></div></div>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This button is disabled because onPressed is null, so it will not react to hover or press.</span>
+<span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">onPressed:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Button2'</span><span class="p">),</span>
+<span class="p">),</span>
+</code></pre></div></div>
+
+<p>The onPressed and onLongPress callbacks can be based on the state of the app, or they can be hardcoded. For example, if the app has a form with one field, then the button can be disabled until the form is valid.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This button is will be enabled only when the `_formIsValid` variable is changed to true.</span>
+<span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">onPressed:</span> <span class="n">_formIsValid</span> <span class="o">?</span> <span class="p">()</span> <span class="p">{}</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Button3'</span><span class="p">),</span>
+<span class="p">),</span>
+</code></pre></div></div>
+
+<h2 id="how-do-you-give-an-elevated-button-style-in-flutter">How do you give an elevated button style in Flutter?</h2>
+
+<p>The elevated button’s default style is defined by defaultStyleOf. The button child’s Text and Icon widgets are rendered with the ButtonStyle’s foreground color. The button’s InkWell adds the style’s overlay color when the button is focused, hovered or pressed. The button’s background color becomes its Material color.</p>
+
+<p>The style of a single elevated button can be overridden with its style parameter. The style of all elevated buttons in a subtree can be overridden with the ElevatedButtonTheme, and the style of all of the elevated buttons in an app can be overridden with the Theme’s ThemeData.elevatedButtonTheme property.</p>
+
+<p>The static styleFrom method is a convenient way to create a elevated button ButtonStyle from simple values.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// This button's style is defined by the ElevatedButton.styleFrom method.</span>
+<span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
+  <span class="nl">style:</span> <span class="n">ElevatedButton</span><span class="o">.</span><span class="na">styleFrom</span><span class="p">(</span>
+    <span class="nl">primary:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">red</span><span class="p">,</span> <span class="c1">// background color</span>
+    <span class="nl">onPrimary:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">white</span><span class="p">,</span> <span class="c1">// foreground color</span>
+    <span class="nl">shadowColor:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">green</span><span class="p">,</span> <span class="c1">// elevation color</span>
+    <span class="nl">elevation:</span> <span class="mi">5</span><span class="p">,</span> <span class="c1">// elevation of button</span>
+  <span class="p">),</span>
+  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Button3'</span><span class="p">),</span>
+<span class="p">),</span>
+</code></pre></div></div>
+
+<p>You can read more about styleFrom in Flutter from <a href="https://api.flutter.dev/flutter/material/ElevatedButton/styleFrom.html" target="_blank">Flutter ElevatedButton.styleFrom - method</a>.</p>
+
+<h3 id="the-buttonstyle-class">The ButtonStyle Class</h3>
+<p>The ButtonStyle class is used to define all the visual properties that most buttons have in common.</p>
+
+<p>Buttons and their themes have a ButtonStyle property which defines the visual properties whose default values are to be overridden. The default values are defined by the individual button widgets and are typically based on overall theme’s ThemeData.colorScheme and ThemeData.textTheme.</p>
+
+<p>All of the ButtonStyle properties are null by default.</p>
+
+<h3 id="how-to-define-style-for-different-states-of-elevatedbutton-in-flutter">How to define style for different states of ElevatedButton in Flutter?</h3>
+<p>Many of the ButtonStyle properties are MaterialStateProperty objects which resolve to different values depending on the button’s state.</p>
+
+<p>For example the Color properties are defined with MaterialStateProperty<Color> and can resolve to different colors depending on if the button is pressed, hovered, focused, disabled, etc.These properties can override the default value for just one state or all of them.</Color></p>
+
+<p><strong>For example</strong> to create a ElevatedButton whose background color is the color scheme’s primary color with 50% opacity, but only when the button is pressed, one could write:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">style:</span> <span class="n">ButtonStyle</span><span class="p">(</span>
+    <span class="nl">backgroundColor:</span> <span class="n">MaterialStateProperty</span><span class="o">.</span><span class="na">resolveWith</span><span class="p">&lt;</span><span class="n">Color</span><span class="o">?</span><span class="p">&gt;(</span>
+      <span class="p">(</span><span class="kt">Set</span><span class="p">&lt;</span><span class="n">MaterialState</span><span class="p">&gt;</span> <span class="n">states</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">states</span><span class="o">.</span><span class="na">contains</span><span class="p">(</span><span class="n">MaterialState</span><span class="o">.</span><span class="na">pressed</span><span class="p">))</span>
+          <span class="k">return</span> <span class="n">Theme</span><span class="o">.</span><span class="na">of</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="o">.</span><span class="na">colorScheme</span><span class="o">.</span><span class="na">primary</span><span class="o">.</span><span class="na">withOpacity</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// Use the component's default.</span>
+      <span class="p">},</span>
+    <span class="p">),</span>
+  <span class="p">),</span>
+<span class="p">)</span>
+
+</code></pre></div></div>
+<p><strong>Another example</strong> to create an ElevatedButton with a different background color for the disabled state, one could write:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">style:</span> <span class="n">ButtonStyle</span><span class="p">(</span>
+    <span class="nl">backgroundColor:</span> <span class="n">MaterialStateProperty</span><span class="o">.</span><span class="na">resolveWith</span><span class="p">&lt;</span><span class="n">Color</span><span class="o">?</span><span class="p">&gt;(</span>
+      <span class="p">(</span><span class="kt">Set</span><span class="p">&lt;</span><span class="n">MaterialState</span><span class="p">&gt;</span> <span class="n">states</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">states</span><span class="o">.</span><span class="na">contains</span><span class="p">(</span><span class="n">MaterialState</span><span class="o">.</span><span class="na">disabled</span><span class="p">))</span>
+          <span class="k">return</span> <span class="n">Colors</span><span class="o">.</span><span class="na">grey</span><span class="p">;</span>
+        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// Use the component's default.</span>
+      <span class="p">},</span>
+    <span class="p">),</span>
+  <span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>In this case the background color for all other button states would fallback to the ElevatedButton’s default values.</p>
+
+<p>To <strong>unconditionally</strong> set the button’s backgroundColor for all states one could write:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">style:</span> <span class="n">ButtonStyle</span><span class="p">(</span>
+    <span class="nl">backgroundColor:</span> <span class="n">MaterialStatePropertyAll</span><span class="p">&lt;</span><span class="n">Color</span><span class="p">&gt;(</span><span class="n">Colors</span><span class="o">.</span><span class="na">green</span><span class="p">),</span>
+  <span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<p>Configuring a ButtonStyle directly makes it possible to very precisely control the button’s visual attributes for all states. This level of control is typically required when a custom “branded” look and feel is desirable. However, in many cases it’s useful to make relatively sweeping changes based on a few initial parameters with simple values. The button styleFrom() methods enable such sweeping changes.</p>
+
+<p>To configure all of the application’s ElevatedButtons in the same way, specify the overall theme’s elevatedButtonTheme property.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ThemeData</span><span class="p">(</span>
+  <span class="nl">elevatedButtonTheme:</span> <span class="n">ElevatedButtonThemeData</span><span class="p">(</span>
+    <span class="nl">style:</span> <span class="n">ElevatedButtonThemeData</span><span class="p">(</span>
+      <span class="nl">style:</span> <span class="n">ElevatedButton</span><span class="o">.</span><span class="na">styleFrom</span><span class="p">(</span>
+        <span class="nl">primary:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">blue</span><span class="p">,</span>
+        <span class="nl">onPrimary:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">white</span><span class="p">,</span>
+        <span class="nl">shape:</span> <span class="n">RoundedRectangleBorder</span><span class="p">(</span>
+          <span class="nl">borderRadius:</span> <span class="n">BorderRadius</span><span class="o">.</span><span class="na">circular</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="nl">minimumSize:</span> <span class="n">Size</span><span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">36</span><span class="p">),</span>
+      <span class="p">),</span>
+    <span class="p">)</span>
+  <span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div></div>
+<!-- 
+### Changing border style of ElevatedButton in Flutter.
+We use the Border.all() method to change the border style of ElevatedButton in Flutter. We can change the border color, border width, and border style. We can also change the border radius of ElevatedButton in Flutter. We can use the BorderRadius.circular() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadius.only() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadius.all() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadius.zero() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadiusDirectional.circular() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadiusDirectional.only() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadiusDirectional.all() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadiusDirectional.zero() method to change the border radius of ElevatedButton in Flutter.
+
+
+### Change padding of Elevated Button in Flutter
+We can override the padding in style property of an elevated button. 
+For example:
+  
+  ```dart
+  ElevatedButton(
+    style: ElevatedButton.styleFrom(
+      padding: EdgeInsets.all(20),
+    ),
+    onPressed: () {},
+    child: Text('Elevated Button'),
+  );
+  ```
+
+### Change width of Elevated Button in Flutter
+### Change height of Elevated Button in Flutter -->
+
+<h3 id="how-do-you-give-elevation-to-an-elevated-button">How do you give elevation to an elevated button?</h3>
+<p>We can override the elevation in style property of an elevated button or provide a common elevation to all the elevated buttons in the app using the theme.</p>
+
+<p>For example:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">style:</span> <span class="n">ElevatedButton</span><span class="o">.</span><span class="na">styleFrom</span><span class="p">(</span>
+    <span class="nl">elevation:</span> <span class="mi">20</span><span class="p">,</span>
+  <span class="p">),</span>
+  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
+  <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Elevated Button'</span><span class="p">),</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="how-do-you-give-shadow-to-an-elevated-button">How do you give shadow to an elevated button?</h3>
+
+<p>We can give shadow to an elevated button by using the shadowColor property of an elevated button. We can also give shadow to an elevated button by using the style property of an elevated button. We can override the shadowColor in style property of an elevated button.</p>
+
+<p>For example:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
+  <span class="nl">style:</span> <span class="n">ElevatedButton</span><span class="o">.</span><span class="na">styleFrom</span><span class="p">(</span>
+    <span class="nl">shadowColor:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">red</span><span class="p">,</span>
+  <span class="p">),</span>
+  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
+  <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Elevated Button'</span><span class="p">),</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="how-can-we-show-an-elevatedbutton-with-an-icon-in-flutter">How can we show an ElevatedButton with an icon in Flutter?</h2>
+<p>In order to show an elevated button with icon in flutter, we use the ElevatedButton.icon() constructor.</p>
+
+<p><strong>For example:</strong></p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="o">.</span><span class="na">icon</span><span class="p">(</span>
+  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
+  <span class="nl">icon:</span> <span class="n">Icon</span><span class="p">(</span><span class="n">Icons</span><span class="o">.</span><span class="na">add</span><span class="p">),</span>
+  <span class="nl">label:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Add'</span><span class="p">),</span>
+<span class="p">)</span>
+</code></pre></div></div>
+<p>If you want to learn more about the ElevatedButton.icon constructor, you can read the official documentation here. <a href="https://api.flutter.dev/flutter/material/ElevatedButton/ElevatedButton.icon.html" target="_blank">ElevatedButton.icon</a>.</p>
+
+<h2 id="elevatedbutton-vs-raisedbutton-in-flutter-is-raised-button-deprecated-in-flutter">ElevatedButton vs RaisedButton in Flutter. Is Raised button deprecated in Flutter?</h2>
+<p>As of June 2022, the RaisedButton widget is deprecated. It is recommended that you use the ElevatedButton widget instead. The RaisedButton widget will be removed in a future version of Flutter.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>ElevatedButton is a Material Design button that lifts and displays ink reactions on press. It is a filled button whose material elevates when pressed. An ElevatedButton consists of a text label, an icon, or both, displayed in a filled Material widget. The text label is displayed in the style defined by the button’s overall Theme, with the color taken from the button’s ButtonStyle. The ElevatedButton is usually used to indicate a primary action in an application.</p>
+
+<p>You can find the source code for this tutorial on GitHub. If you found this tutorial helpful, please share it with your friends. Thanks for reading!</p>
+
+<p><a href="https://github.com/flutterrettulf/elevatedbutton_demo" target="_blank">Source Code for Flutter ElevatedButton Tutorial</a>.</p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://api.flutter.dev/flutter/material/ElevatedButton-class.html" target="_blank">ElevatedButton</a></li>
+  <li><a href="https://api.flutter.dev/flutter/material/ElevatedButton/ElevatedButton.icon.html" target="_blank">ElevatedButton.icon</a></li>
+  <li><a href="https://api.flutter.dev/flutter/material/ElevatedButton/styleFrom.html" target="_blank">ElevatedButton.styleFrom</a></li>
+</ul>
+
+<!-- The icon is displayed in the color defined by the button’s ButtonStyle, and the size is defined by the overall IconTheme.  -->]]></content><author><name></name></author><category term="Flutter Buttons" /><category term="ElevatedButton" /><category term="ElevatedButtonExamples" /><category term="ElevatedButtonWidget" /><category term="ElevatedButtonFlutter" /><summary type="html"><![CDATA[What is ElevatedButton in Flutter?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://flutterrettulf.com/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo.png" /><media:content medium="image" url="https://flutterrettulf.com/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Flutter: Loading Static Image &amp;amp; Font Assets in Flutter App.</title><link href="https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html" rel="alternate" type="text/html" title="Flutter: Loading Static Image &amp;amp; Font Assets in Flutter App." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app</id><content type="html" xml:base="https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html"><![CDATA[<h2 id="what-are-static-assets">What are Static Assets?</h2>
 
 <p>Static assets are the files that are bundled with the app and are not downloaded from the internet. Static assets are used to load images, fonts, and other files that are used in the app. Static assets are loaded using the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file. The <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file is used to define the assets that are used in the app. The <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file is located in the root directory of the app.</p>
 
@@ -53,60 +272,7 @@ The <code class="language-plaintext highlighter-rouge">assets</code> folder is u
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>In this post, we learned how to load static image and font assets in Flutter App. We created a folder named <code class="language-plaintext highlighter-rouge">assets</code> in the root directory of the app. We created a folder named <code class="language-plaintext highlighter-rouge">images</code> in the <code class="language-plaintext highlighter-rouge">assets</code> folder and added the image files that are used in the app. We provided the necessary configuration in the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file. We loaded the image assets in the app using the <code class="language-plaintext highlighter-rouge">Image.asset()</code> method. We created a folder named <code class="language-plaintext highlighter-rouge">fonts</code> in the <code class="language-plaintext highlighter-rouge">assets</code> folder and added the font files that are used in the app. We provided the necessary configuration in the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file. We loaded the font assets in the app using the <code class="language-plaintext highlighter-rouge">TextStyle</code> class.</p>]]></content><author><name></name></author><category term="Static Assets" /><category term="Assets" /><category term="Static Assets" /><category term="Image Assets" /><category term="Font Assets" /><summary type="html"><![CDATA[In this article, we will discuss how to load static image and font assets in Flutter app.]]></summary></entry><entry><title type="html">How to disable the backbutton in Flutter using WillPopScope.</title><link href="https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" rel="alternate" type="text/html" title="How to disable the backbutton in Flutter using WillPopScope." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html"><![CDATA[<h2 id="introduction">Introduction</h2>
-<p>WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.</p>
-
-<p>If you want to know more about the WillPopScope widget, you can read the article <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html">How to use the WillPopScope widget in Flutter</a></p>
-
-<p>In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.</p>
-
-<h2 id="how-to-disable-the-backbutton-in-flutter-using-willpopscope">How to disable the backbutton in Flutter using WillPopScope</h2>
-
-<p>The WillPopScope widget allows us to intercept the back button press event. It provides a callback that is called when the user tries to dismiss the enclosing route. If the callback returns a Future that resolves to true, the enclosing route will be popped; otherwise the back button press is ignored.</p>
-
-<p>In order to disable the backbutton in Flutter, we need to return false from the onWillPop callback. Let’s see how to implement this functionality.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DisableBackButton</span> <span class="kd">extends</span> <span class="n">StatefulWidget</span> <span class="p">{</span>
-  <span class="nd">@override</span>
-  <span class="n">_DisableBackButtonState</span> <span class="n">createState</span><span class="p">()</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">_DisableBackButtonState</span><span class="p">();</span>
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">_DisableBackButtonState</span> <span class="kd">extends</span> <span class="n">State</span><span class="p">&lt;</span><span class="n">DisableBackButton</span><span class="p">&gt;</span> <span class="p">{</span>
-  <span class="nd">@override</span>
-  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">WillPopScope</span><span class="p">(</span>
-      <span class="nl">onWillPop:</span> <span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
-      <span class="p">},</span>
-      <span class="nl">child:</span> <span class="n">Scaffold</span><span class="p">(</span>
-        <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
-          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"WillPopScope Demo"</span><span class="p">),</span>
-        <span class="p">),</span>
-        <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
-          <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
-            <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="o">.</span><span class="na">center</span><span class="p">,</span>
-            <span class="nl">children:</span> <span class="p">&lt;</span><span class="n">Widget</span><span class="p">&gt;[</span>
-              <span class="n">Text</span><span class="p">(</span>
-                <span class="s">'Back button is disabled'</span><span class="p">,</span>
-              <span class="p">),</span>
-            <span class="p">],</span>
-          <span class="p">),</span>
-        <span class="p">),</span>
-      <span class="p">),</span>
-    <span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>In the above code, we have used the WillPopScope widget to disable the backbutton in Flutter. We have returned false from the onWillPop callback. This will prevent the user from navigating back to the previous screen.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-<p>In this article, we have seen how to disable the backbutton in Flutter using the WillPopScope widget. We have also seen how to use the WillPopScope widget to intercept the back button press event. Thanks for reading this article. If you have any questions, please feel free to ask them using the email flutterrettulf@gmail.com</p>
-
-<h2 id="references">References</h2>
-<ol>
-  <li><a href="https://api.flutter.dev/flutter/widgets/WillPopScope-class.html">WillPopScope</a></li>
-</ol>]]></content><author><name></name></author><category term="Navigation" /><category term="WillPopScope" /><category term="Navigation" /><category term="Disable Back Button" /><summary type="html"><![CDATA[In this article, we will discuss how to use the WillPopScope widget in Flutter to disable the backbutton.]]></summary></entry><entry><title type="html">How to use WillPopScope widget in Flutter with examples.</title><link href="https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html" rel="alternate" type="text/html" title="How to use WillPopScope widget in Flutter with examples." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/how-to%20use-willpopscope-widget-in-flutter-with-examples</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html"><![CDATA[<p>In this article, we will discuss how to use the WillPopScope class in Flutter.</p>
+<p>In this post, we learned how to load static image and font assets in Flutter App. We created a folder named <code class="language-plaintext highlighter-rouge">assets</code> in the root directory of the app. We created a folder named <code class="language-plaintext highlighter-rouge">images</code> in the <code class="language-plaintext highlighter-rouge">assets</code> folder and added the image files that are used in the app. We provided the necessary configuration in the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file. We loaded the image assets in the app using the <code class="language-plaintext highlighter-rouge">Image.asset()</code> method. We created a folder named <code class="language-plaintext highlighter-rouge">fonts</code> in the <code class="language-plaintext highlighter-rouge">assets</code> folder and added the font files that are used in the app. We provided the necessary configuration in the <code class="language-plaintext highlighter-rouge">pubspec.yaml</code> file. We loaded the font assets in the app using the <code class="language-plaintext highlighter-rouge">TextStyle</code> class.</p>]]></content><author><name></name></author><category term="Static Assets" /><category term="Assets" /><category term="Static Assets" /><category term="Image Assets" /><category term="Font Assets" /><summary type="html"><![CDATA[In this article, we will discuss how to load static image and font assets in Flutter app.]]></summary></entry><entry><title type="html">How to use WillPopScope widget in Flutter with examples.</title><link href="https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html" rel="alternate" type="text/html" title="How to use WillPopScope widget in Flutter with examples." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/how-to%20use-willpopscope-widget-in-flutter-with-examples</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html"><![CDATA[<p>In this article, we will discuss how to use the WillPopScope class in Flutter.</p>
 
 <h2 id="what-is-willpopscope">What is WillPopScope?</h2>
 
@@ -302,7 +468,60 @@ The <code class="language-plaintext highlighter-rouge">assets</code> folder is u
 
 <ol>
   <li><a href="https://api.flutter.dev/flutter/widgets/WillPopScope-class.html">WillPopScope</a></li>
-</ol>]]></content><author><name></name></author><category term="Navigation" /><category term="WillPopScope" /><category term="Navigation" /><summary type="html"><![CDATA[We will discuss about different methods to use WillPopScope widget in Flutter to customize the navigation and backbutton actions.]]></summary></entry><entry><title type="html">How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?</title><link href="https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html" rel="alternate" type="text/html" title="How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?" /><published>2022-09-03T00:00:00+05:30</published><updated>2022-09-03T00:00:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html"><![CDATA[<h2 id="introduction">Introduction</h2>
+</ol>]]></content><author><name></name></author><category term="Navigation" /><category term="WillPopScope" /><category term="Navigation" /><summary type="html"><![CDATA[We will discuss about different methods to use WillPopScope widget in Flutter to customize the navigation and backbutton actions.]]></summary></entry><entry><title type="html">How to disable the backbutton in Flutter using WillPopScope.</title><link href="https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" rel="alternate" type="text/html" title="How to disable the backbutton in Flutter using WillPopScope." /><published>2022-09-03T05:30:00+05:30</published><updated>2022-09-03T05:30:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.</p>
+
+<p>If you want to know more about the WillPopScope widget, you can read the article <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html">How to use the WillPopScope widget in Flutter</a></p>
+
+<p>In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.</p>
+
+<h2 id="how-to-disable-the-backbutton-in-flutter-using-willpopscope">How to disable the backbutton in Flutter using WillPopScope</h2>
+
+<p>The WillPopScope widget allows us to intercept the back button press event. It provides a callback that is called when the user tries to dismiss the enclosing route. If the callback returns a Future that resolves to true, the enclosing route will be popped; otherwise the back button press is ignored.</p>
+
+<p>In order to disable the backbutton in Flutter, we need to return false from the onWillPop callback. Let’s see how to implement this functionality.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">DisableBackButton</span> <span class="kd">extends</span> <span class="n">StatefulWidget</span> <span class="p">{</span>
+  <span class="nd">@override</span>
+  <span class="n">_DisableBackButtonState</span> <span class="n">createState</span><span class="p">()</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">_DisableBackButtonState</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">_DisableBackButtonState</span> <span class="kd">extends</span> <span class="n">State</span><span class="p">&lt;</span><span class="n">DisableBackButton</span><span class="p">&gt;</span> <span class="p">{</span>
+  <span class="nd">@override</span>
+  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">WillPopScope</span><span class="p">(</span>
+      <span class="nl">onWillPop:</span> <span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="p">},</span>
+      <span class="nl">child:</span> <span class="n">Scaffold</span><span class="p">(</span>
+        <span class="nl">appBar:</span> <span class="n">AppBar</span><span class="p">(</span>
+          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"WillPopScope Demo"</span><span class="p">),</span>
+        <span class="p">),</span>
+        <span class="nl">body:</span> <span class="n">Center</span><span class="p">(</span>
+          <span class="nl">child:</span> <span class="n">Column</span><span class="p">(</span>
+            <span class="nl">mainAxisAlignment:</span> <span class="n">MainAxisAlignment</span><span class="o">.</span><span class="na">center</span><span class="p">,</span>
+            <span class="nl">children:</span> <span class="p">&lt;</span><span class="n">Widget</span><span class="p">&gt;[</span>
+              <span class="n">Text</span><span class="p">(</span>
+                <span class="s">'Back button is disabled'</span><span class="p">,</span>
+              <span class="p">),</span>
+            <span class="p">],</span>
+          <span class="p">),</span>
+        <span class="p">),</span>
+      <span class="p">),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>In the above code, we have used the WillPopScope widget to disable the backbutton in Flutter. We have returned false from the onWillPop callback. This will prevent the user from navigating back to the previous screen.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we have seen how to disable the backbutton in Flutter using the WillPopScope widget. We have also seen how to use the WillPopScope widget to intercept the back button press event. Thanks for reading this article. If you have any questions, please feel free to ask them using the email flutterrettulf@gmail.com</p>
+
+<h2 id="references">References</h2>
+<ol>
+  <li><a href="https://api.flutter.dev/flutter/widgets/WillPopScope-class.html">WillPopScope</a></li>
+</ol>]]></content><author><name></name></author><category term="Navigation" /><category term="WillPopScope" /><category term="Navigation" /><category term="Disable Back Button" /><summary type="html"><![CDATA[In this article, we will discuss how to use the WillPopScope widget in Flutter to disable the backbutton.]]></summary></entry><entry><title type="html">How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?</title><link href="https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html" rel="alternate" type="text/html" title="How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?" /><published>2022-09-03T00:00:00+05:30</published><updated>2022-09-03T00:00:00+05:30</updated><id>https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget</id><content type="html" xml:base="https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>In this article, we will discuss how to use the WillPopScope widget in Flutter to show a snackbar saying press back button again to exit app.
 If you are not familiar with the WillPopScope widget, you can read the article <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html">How to use the WillPopScope widget in Flutter</a></p>
