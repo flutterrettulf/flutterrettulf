@@ -236,15 +236,8 @@ body {
       <div class="blog-post-body lh-lg">
         
         
-         
         
-        <div class="card card-body mb-4" >
-        
-          <button class="btn btn-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_table_of_contents" aria-expanded="true" aria-controls="collapse_table_of_contents">
-            Toggle Table of Contents
-            <i class="bi bi-chevron-expand"></i>
-          </button>
-           <div class="collapse show" id="collapse_table_of_contents">
+  
             <ul id="toc" class="toc__list">
 <li class="toc-entry toc-h1"><a href="#what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</a></li>
 <li class="toc-entry toc-h1"><a href="#types-of-operators-in-dart-programming">Types of Operators in Dart Programming</a>
@@ -257,12 +250,11 @@ body {
 <li class="toc-entry toc-h2"><a href="#assignment-operators-in-dart">Assignment Operators in Dart</a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#summary">Summary</a></li>
 <li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
 <li class="toc-entry toc-h1"><a href="#dart-tutorial">Dart Tutorial</a></li>
 </ul> 
-           </div>
-          </div>
-        
+    
           <h1 id="what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</h1>
 
 <p>In mathematics, an operator is a mathematical symbol or function that indicates the operation to be done on a <strong>value</strong> or <strong>a set of values</strong>. This is similar to how an operator in programming works. <strong>An operator defines how the operands will be processed</strong>.</p>
@@ -365,25 +357,19 @@ body {
     <tr>
       <th>Operator</th>
       <th>Meaning</th>
-      <th>Syntax</th>
       <th>example</th>
-      <th>output</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>is</td>
-      <td>checks whether an instance has a certain value or not an expression in Dart is always true unless the runtime type of the expression is <strong>Null</strong>.<code class="language-plaintext highlighter-rouge">if (obj is String){ print(‘yes’);} else{ print(‘no’);}</code></td>
-      <td>true</td>
-      <td> </td>
-      <td> </td>
+      <td>checks whether an instance has a certain value or not an expression in Dart is always true unless the runtime type of the expression is <strong>Null</strong>.</td>
+      <td><code class="language-plaintext highlighter-rouge">if (obj is String){ print(‘yes’);} else{ print(‘no’);}</code></td>
     </tr>
     <tr>
       <td>is!</td>
       <td>negate the is value</td>
-      <td>1.is! String (a is! String) = !(a is String)</td>
-      <td>false</td>
-      <td> </td>
+      <td>` a is! String`</td>
     </tr>
   </tbody>
 </table>
@@ -399,13 +385,11 @@ body {
       <th>Meaning</th>
       <th>Syntax</th>
       <th>Explanation</th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td> </td>
-      <td> </td>
+      <td>|</td>
       <td>OR</td>
       <td>A | B</td>
       <td>Set each bit to 1 if both bits are 1.</td>
@@ -415,35 +399,30 @@ body {
       <td>AND</td>
       <td>A &amp; B</td>
       <td>Set each bit to 1 if both bits are 1.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>^</td>
       <td>XOR</td>
       <td>A ^ B</td>
       <td>Set each bit to 1 if only one of two bits is 1.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>«</td>
       <td>left shift</td>
       <td>A«z</td>
       <td>Shift a bit pattern to the left, and fill the low-order bits with 0.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>&gt;&gt;</td>
       <td>right shift</td>
       <td>A»z</td>
       <td>Shift a bit pattern to the right, and fill the high-order bits with 0.</td>
-      <td> </td>
     </tr>
     <tr>
       <td>~</td>
       <td>one’s complement</td>
       <td>~A</td>
       <td>Invert all bits. This operation normally means “not A”.</td>
-      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -459,31 +438,19 @@ body {
       <th>Meaning</th>
       <th>Syntax</th>
       <th>Explanation</th>
-      <th> </th>
-      <th> </th>
-      <th> </th>
-      <th> </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>&amp;&amp;</td>
-      <td><code class="language-plaintext highlighter-rouge">AND(AND logical operator and AND bitwise operator also does not performs type casting, it simply checks the bit value.)</code></td>
+      <td><code class="language-plaintext highlighter-rouge">AND</code></td>
       <td>A &amp;&amp; B</td>
       <td>Only if A and B are true, results true, otherwise results false.</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
     <tr>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td><code class="language-plaintext highlighter-rouge">OR(OR logical operator and OR bitwise operator also does not perform type casting, it simply check the bit value.)</code></td>
-      <td>A</td>
-      <td> </td>
-      <td>B</td>
+      <td>||</td>
+      <td><code class="language-plaintext highlighter-rouge">OR</code></td>
+      <td>A || B</td>
       <td>If A or B, or A and B, results true.</td>
     </tr>
     <tr>
@@ -491,10 +458,6 @@ body {
       <td>NOT</td>
       <td>!A</td>
       <td>If A is false, results true, otherwise results false.</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -598,7 +561,7 @@ body {
   </tbody>
 </table>
 
-<p># Summary</p>
+<h1 id="summary">Summary</h1>
 
 <p>In this article, we covered different types of operators available in Dart programming. Now that you are familiar with the types of operators and their uses, you should focus on practice.</p>
 
