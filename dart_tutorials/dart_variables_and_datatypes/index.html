@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Variables and Datatypes in Dart</title>
+  <meta name="title" content="Variables and Datatypes in Dart">
+  <meta name="twitter:card" content="summary-large-image" >
+  <meta name="twitter:site" content="flutterrettulf" >
+  <meta name="description" content="Dart is a statically-typed language that supports runtime type checking. Learn the basics of variables and datatypes in Dart. We will learn about different Datatypes like string, double, datetime, list, etc. and how they are used.">
+  <meta name="author" content="Justin Thomas">
+  
+  <meta name="tags" content="Dart Variables">
+  
+  <meta property="og:title" content="Variables and Datatypes in Dart" >
+  <meta property="twitter:title" content="Variables and Datatypes in Dart" >
+  <meta property="og:description" content="Dart is a statically-typed language that supports runtime type checking. Learn the basics of variables and datatypes in Dart. We will learn about different Datatypes like string, double, datetime, list, etc. and how they are used." >
+  <meta property="twitter:description" content="Dart is a statically-typed language that supports runtime type checking. Learn the basics of variables and datatypes in Dart. We will learn about different Datatypes like string, double, datetime, list, etc. and how they are used." >
+  <meta property="og:url" content="https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/" >
+  <meta property="twitter:url" content="https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/" >
+  <meta name="robots" content="index, follow" >
+  <link rel="canonical" href="https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/" >
+  
+  <meta property="og:type" content="article" >
+  <meta property="og:article:author" content="Justin Thomas" >
+  <meta property="og:article:published_time" content="2022-10-20" >
+  <meta property="og:article:modified_time" content="2022-10-20" >
+  <meta property="og:article:section" content="Dart" >
+  <meta property="og:article:tag" content="Dart and Variables" >
+  
+  
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/prism.css" rel="stylesheet">
+  <script src="/assets/prism.js" ></script>
+  <!--fav icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+  <link rel="manifest" href="/sitemanifest.json">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+  <!-- Custom styles for this template -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GKQ47FWX29');
+  </script>
+
+</head>
+  <style>
+
+body {
+  min-height: 75rem;
+  padding-top: 3.5rem;
+}
+  </style>
+  <body>   
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="/"><img src="/assets/brand/logo_2.svg" width="30"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bi bi-three-dots-vertical"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/category/navigation">Navigation</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/category/static-assets">Static Assets</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
+          </li>
+              
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials">Dart tutorials</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins">Flutter plugins</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials">Flutter tutorials</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/posts">Posts</a>
+          </li>
+             
+        </ul>
+        <!-- <a class="btn btn-outline-light me-2" href="/courses">Courses</a>  -->
+        <!-- <a class="btn btn-primary"  href="/search">Search</a> -->
+      </div>
+    </div>
+  </nav>
+  <main class="container-fluid">  
+    <div class="row"> 
+      <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
+        <aside>
+
+        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
+
+    <div class=" list-group list-group-flush border-bottom scrollarea "> 
+      
+      
+      
+      
+      
+     
+      <a href="/dart_tutorials/dart_overview/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <div class="mb-1"> Dart Overview</div>
+        </div>
+        <!-- <div class="col-10 mb-1 small"> <h1 id="overview">Overview</h1>
+<p>Dart is a client-optimized programming language for apps on multiple platforms. It is developed by Google and is used to build mobile, desktop, server, and web applications. Dart is an object-oriented, class-based, garbage-collected language with C-style syntax. Dart can compile to either native code or JavaScript. It supports interfaces, mixins, abstract classes, reified generics, and type inference.</p>
+</div> -->
+      </a>
+      
+      
+     
+      <a href="/dart_tutorials/dart_hello_world/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <div class="mb-1"> Dart Hello World</div>
+        </div>
+        <!-- <div class="col-10 mb-1 small"> <h1 id="tldr">TL;DR</h1>
+<ul>
+  <li>Install Dart SDK from <a href="https://dart.dev/get-dart">here</a>.</li>
+  <li>Create a file named <code class="language-plaintext highlighter-rouge">hello_world.dart</code> and add the following code:
+    <div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span> 
+  <span class="n">print</span><span class="p">(</span><span class="s">'Hello World'</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Run the following command to compile the code:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dart hello_world.dart
+</code></pre></div>    </div>
+  </li>
+  <li>You should see the following output:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World
+</code></pre></div>    </div>
+  </li>
+</ul>
+</div> -->
+      </a>
+      
+      
+     
+      <a href="/dart_tutorials/dart_variables_and_datatypes/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <div class="mb-1"> Variables and Datatypes in Dart</div>
+        </div>
+        <!-- <div class="col-10 mb-1 small"> <h1 id="what-are-variables-in-dart">What are variables in Dart?</h1>
+<p>If you are familiar with programming, you would be aware of variables. A variable is basically a reserved memory location to store values. In other words, a variable in a program is a name given to a memory location that can store some data.</p>
+</div> -->
+      </a>
+      
+      
+     
+      <a href="/dart_tutorials/dart_operators/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <div class="mb-1"> Operators in Dart</div>
+        </div>
+        <!-- <div class="col-10 mb-1 small"> <h1 id="what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</h1>
+</div> -->
+      </a>
+      
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+         
+    </div>
+  </div>
+
+
+ 
+    </aside>
+
+    </div>
+    <div class="col-md-8 col-lg-8 p-4">
+      <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting"
+      
+      
+      >
+      
+      <meta itemprop="datePublished" content="2022-10-20T14:00:00+05:30">
+      
+      <meta itemprop="inLanguage" content="en-US">
+      
+      <meta itemprop="url" content="https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/">
+      <meta itemprop="dateModified" content="2022-10-20T14:00:00+05:30">
+      <meta itemprop="author" content="Justin Thomas">
+      <meta itemprop="publisher" content="Justin Thomas">
+      <meta itemprop="description" content="Dart is a statically-typed language that supports runtime type checking. Learn the basics of variables and datatypes in Dart. We will learn about different Datatypes like string, double, datetime, list, etc. and how they are used.">       
+
+        <header class="mb-4"><h1>Variables and Datatypes in Dart</h1>
+        <small class="text-muted">Updated on October 20, 2022</small>
+      </header>
+      <div class="blog-post-body lh-lg">
+        
+        
+         
+        
+        <div class="card card-body mb-4" >
+        
+          <button class="btn btn-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_table_of_contents" aria-expanded="true" aria-controls="collapse_table_of_contents">
+            Toggle Table of Contents
+            <i class="bi bi-chevron-expand"></i>
+          </button>
+           <div class="collapse show" id="collapse_table_of_contents">
+            <ul id="toc" class="toc__list">
+<li class="toc-entry toc-h1"><a href="#what-are-variables-in-dart">What are variables in Dart?</a>
+<ul class="toc__sublist">
+<li class="toc-entry toc-h2"><a href="#syntax-for-declaring-a-variable">Syntax for Declaring a Variable</a></li>
+<li class="toc-entry toc-h2"><a href="#naming-conventions-for-dart-variables">Naming Conventions for Dart Variables</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#data-types-in-dart">Data Types in Dart</a>
+<ul class="toc__sublist">
+<li class="toc-entry toc-h2"><a href="#type-safety">Type Safety</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#types-of-data-types-in-dart">Types of Data Types in Dart</a>
+<ul class="toc__sublist">
+<li class="toc-entry toc-h2"><a href="#numbers">Numbers</a></li>
+<li class="toc-entry toc-h2"><a href="#strings">Strings</a></li>
+<li class="toc-entry toc-h2"><a href="#booleans">Booleans</a></li>
+<li class="toc-entry toc-h2"><a href="#lists">Lists</a></li>
+<li class="toc-entry toc-h2"><a href="#maps">Maps</a></li>
+<li class="toc-entry toc-h2"><a href="#dynamic">Dynamic</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#summary">Summary</a></li>
+<li class="toc-entry toc-h1"><a href="#references">References</a></li>
+<li class="toc-entry toc-h1"><a href="#dart-tutorials">Dart Tutorials</a></li>
+</ul> 
+           </div>
+          </div>
+        
+          <h1 id="what-are-variables-in-dart">What are variables in Dart?</h1>
+<p>If you are familiar with programming, you would be aware of variables. A variable is basically a reserved memory location to store values. In other words, a variable in a program is a name given to a memory location that can store some data.</p>
+
+<p>For example, let’s say we want to store the temperature of a particular city in Celsius. In this case, we would create a <strong>variable</strong>, <code class="language-plaintext highlighter-rouge">temperature</code>, and store the value of <code class="language-plaintext highlighter-rouge">20</code> in it. Similary we can store other informations such as the name of the city (<code class="language-plaintext highlighter-rouge">hyderabad</code>) and the state (<code class="language-plaintext highlighter-rouge">telangana</code>) in variables. Let’s see a few examples below.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">// temperature of hyderabad is stored</span>
+    <span class="kt">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"hyderabad"</span><span class="p">;</span> <span class="c1">// store the city name</span>
+    <span class="kt">String</span> <span class="n">state</span> <span class="o">=</span> <span class="s">"telangana"</span><span class="p">;</span> <span class="c1">// store the city state</span>
+</code></pre></div></div>
+
+<h2 id="syntax-for-declaring-a-variable">Syntax for Declaring a Variable</h2>
+
+<p>In order to declare a variable in Dart, we simply write <code class="language-plaintext highlighter-rouge">&lt;data_type&gt; &lt;variable_name&gt;</code>. For example, the code for the declaration of the variable <code class="language-plaintext highlighter-rouge">temperature</code> would be as follows:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="n">temperature</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Let’s look at the syntax in detail:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Part of the statement</th>
+      <th style="text-align: center">Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Variable type</td>
+      <td style="text-align: center">The type of variable will be <code class="language-plaintext highlighter-rouge">int</code>, i.e, an <code class="language-plaintext highlighter-rouge">integer</code> value.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Variable name</td>
+      <td style="text-align: center">The name of the variable is <code class="language-plaintext highlighter-rouge">temperature</code>. The naming convention of variables in Dart is similar to the naming convention followed by other programming languages. We will go over these naming conventions in the next section.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="naming-conventions-for-dart-variables">Naming Conventions for Dart Variables</h2>
+
+<p>There are a few rules followed when naming variables in Dart. Following are some of the naming conventions we can follow;</p>
+<ul>
+  <li>It is recommended to follow CamelCase, i.e, <code class="language-plaintext highlighter-rouge">thisIsACamelCaseVariable</code>.</li>
+  <li>You should not start a variable name with special characters.</li>
+  <li>You can not use reserved keywords in Dart while naming a variable. For example, using the keyword <code class="language-plaintext highlighter-rouge">void</code> for the variable that stores a double value is not allowed.</li>
+  <li>The variable name should be descriptive, i.e, it should represent the task for which it is used. it is true that we can create a variable named <code class="language-plaintext highlighter-rouge">a</code> to store the number 2, but it i won’t help anyone in understanding the code. So it is better to write variable names that are descriptive.</li>
+  <li>Variable name or identifiers can’t begin with number.</li>
+</ul>
+
+<h1 id="data-types-in-dart">Data Types in Dart</h1>
+
+<p>The type of the data which a variable is used to store is known as the data type of that variable. Data types are used when mapping data types to a specific memory location. Different variables can contain values of different data types. In other words, the data type of a variable determines the size and the range of values that that variable can hold.</p>
+
+<h2 id="type-safety">Type Safety</h2>
+
+<p>Dart is type-safe programming language, meaning that not all types are compatible. If you declare a variable as an <code class="language-plaintext highlighter-rouge">int</code>, then the compiler ensures that the variable is type-safe meaning on runtime, other types of data cannot be inserted into the declaration. To see this in action, let’s take a look at the code below:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">18</span><span class="p">;</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="mf">19.2</span><span class="p">;</span> <span class="c1">// Will throw an error</span>
+</code></pre></div></div>
+<p>If you pass anything other than <code class="language-plaintext highlighter-rouge">int</code> (for example <code class="language-plaintext highlighter-rouge">double</code>), then the compiler would output an error.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    ...(int).dart:8:7: Error: A value of type 'double' can't be assigned to a variable of type 'int'.
+    Try changing the type of the left hand side, or casting the right hand side to 'int'.
+         age = 19.2;
+</code></pre></div></div>
+
+<h1 id="types-of-data-types-in-dart">Types of Data Types in Dart</h1>
+
+<p>Dart supports the following data types:</p>
+
+<ul>
+  <li>Numbers (<code class="language-plaintext highlighter-rouge">int</code> and <code class="language-plaintext highlighter-rouge">double</code>)</li>
+  <li>Strings (<code class="language-plaintext highlighter-rouge">String</code>)</li>
+  <li>Booleans (<code class="language-plaintext highlighter-rouge">bool</code>)</li>
+  <li>Lists (<code class="language-plaintext highlighter-rouge">list</code>)</li>
+  <li>Maps (<code class="language-plaintext highlighter-rouge">map</code>)</li>
+  <li>Dynamic (<code class="language-plaintext highlighter-rouge">dynamic</code>)</li>
+</ul>
+
+<p>Let us check out each of these datatypes one at a time.</p>
+
+<h2 id="numbers">Numbers</h2>
+
+<p>The number data types represent numbers ie. positive (+) and negative (-) in the arithmetic expression. Numbers are of two types <code class="language-plaintext highlighter-rouge">int</code> and <code class="language-plaintext highlighter-rouge">double</code>. Integers represent non-fractional numbers and floating-point numbers types are called <code class="language-plaintext highlighter-rouge">double</code>. The Double data-type represents 64 bit (double-precision) floating-point numbers.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="strings">Strings</h2>
+
+<p>The string type represents a sequence of unicode characters. Strings are usually used to store data such as name, address, etc…  A Dart string is a sequence of UTF-16 code units.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">String</code> keyword is used to declare a <code class="language-plaintext highlighter-rouge">string</code> variable.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"ali"</span><span class="p">;</span>
+</code></pre></div></div>
+<h2 id="booleans">Booleans</h2>
+
+<p>The boolean data type represents the logical values that are just two - true or false. Booleans are mostly used to store conditions, such as if any condition is true or false.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">bool</span> <span class="n">gameOver</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="lists">Lists</h2>
+
+<p>Lists are used to hold a collection of objects. Lists are similar to <code class="language-plaintext highlighter-rouge">arrays</code> that are typically used in other programming languages. Dart has support for <code class="language-plaintext highlighter-rouge">generic classes</code>. This means that we can specify the type of data that a list can store. Take a look at the code below</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">List</span><span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">'ali'</span><span class="p">,</span> <span class="s">'bharat'</span><span class="p">,</span> <span class="s">'sam'</span><span class="p">,</span> <span class="s">'tom'</span><span class="p">];</span>
+     <span class="kt">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">ages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">32</span><span class="p">];</span>
+    <span class="kt">List</span><span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;</span> <span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s">"hyderabad"</span><span class="p">,</span> <span class="s">"chennai"</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>The first list, <code class="language-plaintext highlighter-rouge">names</code>, consists of strings and can have other strings inserted into it. The second list, <code class="language-plaintext highlighter-rouge">ages</code>, consists of integers, and can have integers inserted into it. And, the third list, <code class="language-plaintext highlighter-rouge">cities</code>, consists of strings and can have other strings inserted into it. Note that we have used square brackets (<code class="language-plaintext highlighter-rouge">[]</code>), as it is used to define a list.</p>
+
+<h2 id="maps">Maps</h2>
+
+<p>Maps are also called associative arrays. A map is an object that associates keys and values. A key can be any valid string, integer or symbol while the value can be any valid dart object. We can add new entry to a map programmtically.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kt">Map</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">String</span><span class="p">&gt;</span> <span class="n">countryIdToName</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="o">:</span> <span class="s">"India"</span><span class="p">,</span> <span class="mi">2</span><span class="o">:</span> <span class="s">"America"</span><span class="p">};</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">dart:core</code> library enables creation and manipulation of these collections through the predefined <code class="language-plaintext highlighter-rouge">List</code> and <code class="language-plaintext highlighter-rouge">Map</code> classes respectively.</p>
+
+<h2 id="dynamic">Dynamic</h2>
+
+<p>Dart has a special data-type called <code class="language-plaintext highlighter-rouge">dynamic</code> which is useful when the type of the variable is unknown during the compile-time. We can use the dynamic data-type as illustrated below:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="kd">dynamic</span> <span class="n">n</span> <span class="o">=</span> <span class="mf">22.3</span><span class="p">;</span>
+   <span class="n">n</span><span class="o">=</span> <span class="s">"hi"</span><span class="p">;</span> <span class="c1">// value changed to String</span>
+   <span class="n">n</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// value changed to Bool</span>
+   <span class="n">print</span><span class="p">(</span><span class="n">n</span><span class="p">);</span> <span class="c1">// print Bool</span>
+</code></pre></div></div>
+
+<h1 id="summary">Summary</h1>
+
+<p>We have learnt how to declare the veriables and the types of data that can be stored in them. Dart is a type safe programming language meaning that one cannot insert another kind of data-type into a variable declaration. Instead, compiler throws the error. We learnt about different types of data such as numbers, strings, integers, double, dynamic, maps etc.</p>
+
+<h1 id="references">References</h1>
+<ul>
+  <li><a href="https://dart.dev/guides/language/type-system" target="_blank" rel="nofollow noopener">The Dart Type System</a></li>
+  <li><a href="https://dart.dev/guides/language/numbers" target="_blank" rel="nofollow noopener">How numbers work in dart</a></li>
+</ul>
+
+<h1 id="dart-tutorials">Dart Tutorials</h1>
+<p>This article is part of the Dart Tutorials series. You can find the list of all the tutorials in the series in the <a href="/dart_tutorials">dart tutorials page</a>. You can also find the list of all articles in the <a href="/dart_tutorials">Dart Tutorials</a> series in the sidebar.</p>
+
+
+
+                    
+
+      </div>
+        </article>
+        <div class="row">
+          <!--share buttons-->
+          <div class="col-12 mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/&text=Variables and Datatypes in Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/&title=Variables and Datatypes in Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/&title=Variables and Datatypes in Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+              </div>
+            </div>
+        </div>
+        </div>  
+        <div class="row">
+            <div class="col-sm-12 col-md-6 mb-2">
+                
+                <a href="/dart_tutorials/dart_hello_world/" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> Dart Hello World </a>
+              
+            </div>    
+            <div class="col-sm-12 col-md-6 text-end v-100">
+              
+                <a href="/dart_tutorials/dart_operators/" class="btn  btn-outline-primary btn-sm w-100">Operators in Dart <i class="bi bi-arrow-right"></i></a>
+              
+            </div>
+        </div>
+    </div>
+      <div class="col-md-12 col-lg-2">
+        <aside>
+
+      <!-- 
+    <div class="mb-3 mt-4" style="top: 4.5rem;">     
+      <a target="_blank" href='https://play.google.com/store/apps/details?id=com.tonocast.www&utm_source=flutterrettulf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="text-decoration:none" rel="Sponsored">
+      <div class="card mb-3 shadow-card">
+        <div class="card-body">
+
+          <div class="thumbnail">
+            <img class="rounded w-100 mb-2" src="https://i.ytimg.com/vi/s1e7Q-5W7t8/mqdefault.jpg" alt="..." class="img-fluid">
+          </div>
+          <h4 class="card-title">Tonocast</h4>
+          <p class="card-text text-muted mb-0" style="font-size:15px">The best app to listen to your favourite podcasts.</p>
+         <img alt='Get it on Google Play' class="w-100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+                <div class="w-100 text-muted d-flex justify-content-end" style="font-size:10px">Sponsored</div>
+
+        </div>
+    </div>
+  </a>   
+
+
+
+
+-->   
+
+
+
+    </aside>
+
+      </div>
+</div>
+</main>
+  <footer class="border-top">
+
+<div class="container">
+  <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+    <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+        <img src="/assets/brand/logo_2.svg" width="70">
+      </a>
+      <p class="text-muted">flutterrettulf@gmail.com </p>
+      <p class="text-muted">© 2022 </p>
+    </div>
+
+    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+      <h5>Top Tags</h5>
+      <ul class="nav flex-column">
+        
+        <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/flutter" class="nav-link p-0 text-muted">Flutter</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
+
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+
+      <h5>Top Categories</h5>
+      <ul class="nav flex-column">
+        
+        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
+
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+
+      <h5>Links</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted hover"><span class="bi bi-facebook me-2"></span>Facebook</a></li>-->
+       <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-twitter me-2"></span>Twitter</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-mastodon me-2"></span>Mastodon</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img src="/assets/img/dev.png " class="me-2" width="17">Dev.to</a></li>-->
+        <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+        <li class="nav-item mb-2"><a href="/feed.xml" class="nav-link p-0 text-muted"><span class="bi bi-rss me-2"></span>RSS Feed</a></li> 
+        <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+      
+      </ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+            document.querySelectorAll("table").forEach(table => {
+                table.classList.add("table")
+                table.classList.add("table-striped")
+                table.classList.add("table-bordered")
+                table.classList.add("table-sm")
+            })
+        </script>
+</footer> 
+
+
+<!-- <div class="p-4">
+  <h4 class="fst-italic">Elsewhere</h4>
+  <ol class="list-unstyled">
+    <li><a href="#">GitHub</a></li>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Facebook</a></li>
+  </ol>
+</div> -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+
+    <div class="offcanvas-body p-0">
+      <div class=" list-group list-group-flush border-bottom scrollarea "> 
+        
+      
+        
+        
+        <a href="/dart_tutorials/dart_overview/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <div class="mb-1"> Dart Overview</div>
+          </div>
+        </a>
+        
+        <a href="/dart_tutorials/dart_hello_world/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <div class="mb-1"> Dart Hello World</div>
+          </div>
+        </a>
+        
+        <a href="/dart_tutorials/dart_variables_and_datatypes/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <div class="mb-1"> Variables and Datatypes in Dart</div>
+          </div>
+        </a>
+        
+        <a href="/dart_tutorials/dart_operators/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <div class="mb-1"> Operators in Dart</div>
+          </div>
+        </a>
+           
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+           
+      </div>
+    </div>
+  </div>
+  <script>
+    function check(){
+      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+              checkboxes.forEach((checkbox) => {
+                if (checkbox.getAttribute('data-is-correct') === 'true') {
+                  checkbox.parentElement.classList.add('list-group-item-success');
+                } else {
+                  checkbox.parentElement.classList.add('list-group-item-danger');
+                }
+              });
+    }
+    document.getElementById('check-btn').addEventListener('click', check);
+  </script>
+  </body>
+</html>

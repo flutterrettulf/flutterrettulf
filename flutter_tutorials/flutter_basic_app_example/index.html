@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Flutter: Basic App Example | How to create a flutter app</title>
+  <meta name="title" content="Flutter: Basic App Example | How to create a flutter app">
+  <meta name="twitter:card" content="summary-large-image" >
+  <meta name="twitter:site" content="flutterrettulf" >
+  <meta name="description" content="In this tutorial, we will learn how to create a basic Flutter app. We will learn how to create, run, stop, and build a Flutter app.">
+  <meta name="author" content="Justin Thomas">
+  
+  <meta name="tags" content="Flutter BasicApp Flutter Tutorial How to start learning Flutter">
+  
+  <meta property="og:title" content="Flutter: Basic App Example | How to create a flutter app" >
+  <meta property="twitter:title" content="Flutter: Basic App Example | How to create a flutter app" >
+  <meta property="og:description" content="In this tutorial, we will learn how to create a basic Flutter app. We will learn how to create, run, stop, and build a Flutter app." >
+  <meta property="twitter:description" content="In this tutorial, we will learn how to create a basic Flutter app. We will learn how to create, run, stop, and build a Flutter app." >
+  <meta property="og:url" content="https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/" >
+  <meta property="twitter:url" content="https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/" >
+  <meta name="robots" content="index, follow" >
+  <link rel="canonical" href="https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/" >
+  
+  <meta property="og:type" content="article" >
+  <meta property="og:article:author" content="Justin Thomas" >
+  <meta property="og:article:published_time" content="2022-10-20" >
+  <meta property="og:article:modified_time" content="2022-10-20" >
+  <meta property="og:article:section" content="Flutter" >
+  <meta property="og:article:tag" content="Flutter, BasicApp, Flutter Tutorial, and How to start learning Flutter" >
+  
+  
+
+  <link href="/assets/blog.css" rel="stylesheet">
+  <link href="/assets/prism.css" rel="stylesheet">
+  <script src="/assets/prism.js" ></script>
+  <!--fav icons-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+  <link rel="manifest" href="/sitemanifest.json">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+  <!-- Custom styles for this template -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GKQ47FWX29');
+  </script>
+
+</head>
+  <style>
+
+body {
+  min-height: 75rem;
+  padding-top: 3.5rem;
+}
+  </style>
+  <body>   
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand" href="/"><img src="/assets/brand/logo_2.svg" width="30"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bi bi-three-dots-vertical"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/category/navigation">Navigation</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/category/static-assets">Static Assets</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
+          </li>
+              
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials">Dart tutorials</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins">Flutter plugins</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials">Flutter tutorials</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none" aria-current="page" href="/posts">Posts</a>
+          </li>
+             
+        </ul>
+        <!-- <a class="btn btn-outline-light me-2" href="/courses">Courses</a>  -->
+        <!-- <a class="btn btn-primary"  href="/search">Search</a> -->
+      </div>
+    </div>
+  </nav>
+  <main class="container-fluid">  
+    <div class="row"> 
+      <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
+        <aside>
+
+        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
+
+    <div class=" list-group list-group-flush border-bottom scrollarea "> 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     
+      <a href="/flutter_tutorials/flutter_basic_app_example/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
+        <div class="d-flex w-100 align-items-center justify-content-between">
+          <div class="mb-1"> Flutter: Basic App Example | How to create a flutter app</div>
+        </div>
+        <!-- <div class="col-10 mb-1 small"> <h1 id="creating-an-app">Creating an App</h1>
+</div> -->
+      </a>
+      
+  
+      
+      
+      
+      
+         
+    </div>
+  </div>
+
+
+ 
+    </aside>
+
+    </div>
+    <div class="col-md-8 col-lg-8 p-4">
+      <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting"
+      
+      
+      >
+      
+      <meta itemprop="datePublished" content="2022-10-20T15:00:00+05:30">
+      
+      <meta itemprop="inLanguage" content="en-US">
+      
+      <meta itemprop="url" content="https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/">
+      <meta itemprop="dateModified" content="2022-10-20T15:00:00+05:30">
+      <meta itemprop="author" content="Justin Thomas">
+      <meta itemprop="publisher" content="Justin Thomas">
+      <meta itemprop="description" content="In this tutorial, we will learn how to create a basic Flutter app. We will learn how to create, run, stop, and build a Flutter app.">       
+
+        <header class="mb-4"><h1>Flutter: Basic App Example | How to create a flutter app</h1>
+        <small class="text-muted">Updated on October 20, 2022</small>
+      </header>
+      <div class="blog-post-body lh-lg">
+        
+        
+         
+        
+        <div class="card card-body mb-4" >
+        
+          <button class="btn btn-default" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_table_of_contents" aria-expanded="true" aria-controls="collapse_table_of_contents">
+            Toggle Table of Contents
+            <i class="bi bi-chevron-expand"></i>
+          </button>
+           <div class="collapse show" id="collapse_table_of_contents">
+            <ul id="toc" class="toc__list">
+<li class="toc-entry toc-h1"><a href="#creating-an-app">Creating an App</a>
+<ul class="toc__sublist">
+<li class="toc-entry toc-h2"><a href="#from-the-terminal">From the Terminal</a></li>
+<li class="toc-entry toc-h2"><a href="#from-the-vs-code">From the VS Code​</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#coding-our-app">Coding our app</a></li>
+<li class="toc-entry toc-h1"><a href="#replacing-myhomepage-with-materialbutton">Replacing MyHomePage with MaterialButton</a></li>
+<li class="toc-entry toc-h1"><a href="#testing-the-app">Testing the App</a>
+<ul class="toc__sublist">
+<li class="toc-entry toc-h2"><a href="#using-terminal">Using Terminal</a></li>
+<li class="toc-entry toc-h2"><a href="#using-vs-code">Using VS Code</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#summary">Summary</a></li>
+<li class="toc-entry toc-h1"><a href="#references">References</a></li>
+<li class="toc-entry toc-h1"><a href="#flutter-tutorials">Flutter Tutorials</a></li>
+</ul> 
+           </div>
+          </div>
+        
+          <h1 id="creating-an-app">Creating an App</h1>
+
+<p>After installing flutter, you will be able to start making apps with Flutter. We will learn how to create a basic app with this tutorial. The app will have a simple button which will respond on click with the message “Hello Flutter”.</p>
+
+<h2 id="from-the-terminal">From the Terminal</h2>
+<p>Flutter provides a command-line tool that lets you start and manage your app. After installing Flutter you can start making apps with the following command.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter create hello_world
+<span class="nb">cd </span>hello_world
+</code></pre></div></div>
+
+<h2 id="from-the-vs-code">From the VS Code​</h2>
+
+<p>If you have setup VS code with Flutter then you can create a flutter app from it as well.</p>
+
+<ul>
+  <li>Invoke View &gt; Command Palette.</li>
+  <li>Type “flutter”, and select the Flutter: New Project.</li>
+  <li>Select Application.</li>
+  <li>Create or select the parent directory for the new project folder.</li>
+  <li>Enter a project name, such as my_app, and press Enter.</li>
+  <li>Wait for project creation to complete and the main.dart file to appear.</li>
+</ul>
+
+<p>You can double click on lib/main.dart file and you will see that it will open up in a separate tab.</p>
+
+<h1 id="coding-our-app">Coding our app</h1>
+
+<p>Now let’s explore the code present in <code class="language-plaintext highlighter-rouge">lib/main.dart</code> file. Inside <code class="language-plaintext highlighter-rouge">lib/main.dart</code> file if you search for the <code class="language-plaintext highlighter-rouge">main()</code>function you will find the following code:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">runApp</span><span class="p">(</span><span class="n">MyApp</span><span class="p">());</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>If you are familiar with dart, you might know that this is the main entry point of the program. This is the function that will be called first when starting the application. To learn more about dart, visit the <a href="/dart_tutorials">Dart Tutorials</a> page.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">runApp()</code> function takes the widget (<code class="language-plaintext highlighter-rouge">MyApp</code> in this case) and renders it on screen.</p>
+
+<p>In the following lines let’s explore the code inside <code class="language-plaintext highlighter-rouge">MyApp</code> class:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">MyApp</span> <span class="kd">extends</span> <span class="n">StatelessWidget</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="n">MyApp</span><span class="p">({</span><span class="n">Key</span><span class="o">?</span> <span class="n">key</span><span class="p">})</span> <span class="o">:</span> <span class="k">super</span><span class="p">(</span><span class="nl">key:</span> <span class="n">key</span><span class="p">);</span>
+  <span class="nd">@override</span>
+  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">MaterialApp</span><span class="p">(</span>
+      <span class="nl">title:</span> <span class="s">'Flutter Demo'</span><span class="p">,</span>
+      <span class="nl">theme:</span> <span class="n">ThemeData</span><span class="p">(</span>
+        <span class="nl">primarySwatch:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">blue</span><span class="p">,</span>
+      <span class="p">),</span>
+      <span class="nl">home:</span> <span class="kd">const</span> <span class="n">MyHomePage</span><span class="p">(</span><span class="nl">title:</span> <span class="s">'Flutter Demo Home Page'</span><span class="p">),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">MyApp</code> class extends StatelessWidget. We will not be explaining much about <code class="language-plaintext highlighter-rouge">StatelessWidget</code> in this tutorial. The next line is a simple constructor and the following lines contain some code that might interest us.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">build()</code> function is a mandatory function that should be implemented when creating a new widget. It takes the context and widget that it will be rendering on screen. Here it simply returns an <code class="language-plaintext highlighter-rouge">MaterialApp</code> with title and home. <code class="language-plaintext highlighter-rouge">MaterialApp</code> widget is a built-in widget that is provided by the Flutter framework. It renders an empty flutter page with label text provided in the parameter: <code class="language-plaintext highlighter-rouge">title</code>.</p>
+
+<p>Then it takes a <code class="language-plaintext highlighter-rouge">theme</code> and a <code class="language-plaintext highlighter-rouge">home</code> parameter. The <code class="language-plaintext highlighter-rouge">theme</code> parameter takes a <code class="language-plaintext highlighter-rouge">ThemeData</code> object (note theme is a parameter of the <code class="language-plaintext highlighter-rouge">ThemeData</code> object) with a color value given (In this case <code class="language-plaintext highlighter-rouge">primarySwatch</code> value is initialized to <code class="language-plaintext highlighter-rouge">Colors.blue</code>) that is then used to color the UI.</p>
+
+<p>The final value <code class="language-plaintext highlighter-rouge">home</code> is the page that will be rendered on screen when you load the Home screen. The code that <code class="language-plaintext highlighter-rouge">home</code> is initialized with (<code class="language-plaintext highlighter-rouge">MyHomePage(title: 'Flutter Demo Home Page')</code>) creates a new instance of that class in the <code class="language-plaintext highlighter-rouge">home</code>, with the parameter <code class="language-plaintext highlighter-rouge">title</code> passed to the constructor of the <code class="language-plaintext highlighter-rouge">MyHomePage</code> class.</p>
+
+<p><code class="language-plaintext highlighter-rouge">MyHomePage</code> class is a stateful widget. We will not be going into details about how the class <code class="language-plaintext highlighter-rouge">MyHomePage</code> works, the stateful widget is basically used when an element of the UI needs to be updated. Some readers might find it a bit confusing. So, we will be replacing the class <code class="language-plaintext highlighter-rouge">MyHomePage</code> with another stateless widget which will display a button which will respond on click with the message “Hello Flutter”.</p>
+
+<h1 id="replacing-myhomepage-with-materialbutton">Replacing <code class="language-plaintext highlighter-rouge">MyHomePage</code> with <code class="language-plaintext highlighter-rouge">MaterialButton</code></h1>
+
+<p>You can safely delete the class <code class="language-plaintext highlighter-rouge">MyHomePage</code>and <code class="language-plaintext highlighter-rouge">_MyHomePageState</code> classes from the <code class="language-plaintext highlighter-rouge">lib/main.dart</code>file. Then reassign the value of <code class="language-plaintext highlighter-rouge">home</code> inside <code class="language-plaintext highlighter-rouge">class MyApp</code> to our button. The final code will look like this:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">runApp</span><span class="p">(</span><span class="n">MyApp</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">MyApp</span> <span class="kd">extends</span> <span class="n">StatelessWidget</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="n">MyApp</span><span class="p">({</span><span class="n">Key</span><span class="o">?</span> <span class="n">key</span><span class="p">})</span> <span class="o">:</span> <span class="k">super</span><span class="p">(</span><span class="nl">key:</span> <span class="n">key</span><span class="p">);</span>
+  <span class="nd">@override</span>
+  <span class="n">Widget</span> <span class="n">build</span><span class="p">(</span><span class="n">BuildContext</span> <span class="n">context</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">MaterialApp</span><span class="p">(</span>
+      <span class="nl">title:</span> <span class="s">'Flutter Demo'</span><span class="p">,</span>
+      <span class="nl">theme:</span> <span class="n">ThemeData</span><span class="p">(</span>
+        <span class="nl">primarySwatch:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">blue</span><span class="p">,</span>
+      <span class="p">),</span>
+      <span class="nl">home:</span> <span class="n">Center</span><span class="p">(</span>
+        <span class="nl">child:</span> <span class="n">ElevatedButton</span><span class="p">(</span>
+          <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{</span>
+            <span class="n">showDialog</span><span class="p">(</span>
+                <span class="nl">context:</span> <span class="n">context</span><span class="p">,</span>
+                <span class="nl">builder:</span> <span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="kd">const</span> <span class="n">AlertDialog</span><span class="p">(</span>
+                      <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Hello Flutter'</span><span class="p">),</span>
+                    <span class="p">));</span>
+          <span class="p">},</span>
+          <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Hello World'</span><span class="p">),</span>
+        <span class="p">),</span>
+      <span class="p">),</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Let’s take a look at the code we just added.</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Center</span><span class="p">(</span>
+    <span class="nl">child:</span> <span class="n">ElevatedButton</span><span class="p">(</span>
+        <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="n">showDialog</span><span class="p">(</span>
+            <span class="nl">context:</span> <span class="n">context</span><span class="p">,</span>
+            <span class="nl">builder:</span> <span class="p">(</span><span class="n">context</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="kd">const</span> <span class="n">AlertDialog</span><span class="p">(</span>
+                    <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Hello Flutter'</span><span class="p">),</span>
+                <span class="p">));</span>
+        <span class="p">},</span>
+        <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Hello World'</span><span class="p">),</span>
+    <span class="p">),</span>
+<span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">Center</code> widget which is wrapping the <code class="language-plaintext highlighter-rouge">ElevatedButton</code> widget (which is a stateless widget) here helps us center the button in the middle of the screen. It is a simple but very useful widget provided by the Flutter framework.</p>
+
+<p>Then the <code class="language-plaintext highlighter-rouge">ElevatedButton</code> widget takes two parameters: <code class="language-plaintext highlighter-rouge">onPressed</code> that is a callback function that is called when the button is clicked by the user, <code class="language-plaintext highlighter-rouge">child</code>:  which is the text that will be displayed by the button.</p>
+
+<p>The callback function takes a value as a parameter, using which it determines the state of the app. After the <code class="language-plaintext highlighter-rouge">showDialog</code> function is called, the app interracts with the user by displaying a simple alert dialog with the message <strong>“Hello Flutter”</strong>. The last parameter inside the constructor <code class="language-plaintext highlighter-rouge">Text</code> is also a stateless widget which is used to display text on the screen.</p>
+
+<p>That’s it. Now that we’ve done with all the coding parts of this tutorial, we will now discuss how to run this app.</p>
+
+<h1 id="testing-the-app">Testing the App</h1>
+
+<p>In this part of the tutorial we will go over how to test or run the app once it is created. Make sure you have an emulator or a device connected.</p>
+
+<h2 id="using-terminal">Using Terminal</h2>
+
+<p>Using the terminal run:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter run
+
+</code></pre></div></div>
+
+<p>If everything is setup properly you should see that the app is building and starting on the emulator or the connected device.</p>
+
+<h2 id="using-vs-code">Using VS Code</h2>
+
+<ul>
+  <li>Invoke Run &gt; Start Debugging or press F5.</li>
+</ul>
+
+<p>Then you would see the button displayed on screen with the label <strong>“Hello World.”</strong> On clicking the button its callback function get’s invoked and so the user gets a simple alert dialog with the label <strong>“Hello Flutter”</strong>.</p>
+
+<p>Congratulations. You learned how to build a simple <strong>“Hello World”</strong> app with Flutter.</p>
+
+<h1 id="summary">Summary</h1>
+
+<p>In this tutorial we went over the basics of building an Android application with flutter. As a next step you can take this app to next level by doing more complicated user interface and implementing a custom stateful widget.</p>
+
+<h1 id="references">References</h1>
+<ul>
+  <li><a href="https://docs.flutter.dev/get-started/test-drive?tab=vscode#create-app">Create and Run Your first App</a></li>
+</ul>
+
+<h1 id="flutter-tutorials">Flutter Tutorials</h1>
+<p>This article is a part of the Flutter Tutorials series. To see the complete list of articles available in this series, visit the <a href="/flutter_tutorials">Flutter Tutorials page</a>.</p>
+
+
+
+                    
+
+      </div>
+        </article>
+        <div class="row">
+          <!--share buttons-->
+          <div class="col-12 mb-4">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/&text=Flutter: Basic App Example | How to create a flutter app" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/&title=Flutter: Basic App Example | How to create a flutter app" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/&title=Flutter: Basic App Example | How to create a flutter app" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+              </div>
+            </div>
+        </div>
+        </div>  
+        <div class="row">
+            <div class="col-sm-12 col-md-6 mb-2">
+              
+            </div>    
+            <div class="col-sm-12 col-md-6 text-end v-100">
+              
+            </div>
+        </div>
+    </div>
+      <div class="col-md-12 col-lg-2">
+        <aside>
+
+      <!-- 
+    <div class="mb-3 mt-4" style="top: 4.5rem;">     
+      <a target="_blank" href='https://play.google.com/store/apps/details?id=com.tonocast.www&utm_source=flutterrettulf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="text-decoration:none" rel="Sponsored">
+      <div class="card mb-3 shadow-card">
+        <div class="card-body">
+
+          <div class="thumbnail">
+            <img class="rounded w-100 mb-2" src="https://i.ytimg.com/vi/s1e7Q-5W7t8/mqdefault.jpg" alt="..." class="img-fluid">
+          </div>
+          <h4 class="card-title">Tonocast</h4>
+          <p class="card-text text-muted mb-0" style="font-size:15px">The best app to listen to your favourite podcasts.</p>
+         <img alt='Get it on Google Play' class="w-100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
+                <div class="w-100 text-muted d-flex justify-content-end" style="font-size:10px">Sponsored</div>
+
+        </div>
+    </div>
+  </a>   
+
+
+
+
+-->   
+
+
+
+    </aside>
+
+      </div>
+</div>
+</main>
+  <footer class="border-top">
+
+<div class="container">
+  <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+    <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+        <img src="/assets/brand/logo_2.svg" width="70">
+      </a>
+      <p class="text-muted">flutterrettulf@gmail.com </p>
+      <p class="text-muted">© 2022 </p>
+    </div>
+
+    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+      <h5>Top Tags</h5>
+      <ul class="nav flex-column">
+        
+        <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/flutter" class="nav-link p-0 text-muted">Flutter</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
+
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+
+      <h5>Top Categories</h5>
+      <ul class="nav flex-column">
+        
+        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
+
+      </ul>
+    </div>
+
+    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+
+      <h5>Links</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted hover"><span class="bi bi-facebook me-2"></span>Facebook</a></li>-->
+       <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-twitter me-2"></span>Twitter</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-mastodon me-2"></span>Mastodon</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img src="/assets/img/dev.png " class="me-2" width="17">Dev.to</a></li>-->
+        <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+        <li class="nav-item mb-2"><a href="/feed.xml" class="nav-link p-0 text-muted"><span class="bi bi-rss me-2"></span>RSS Feed</a></li> 
+        <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+      
+      </ul>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+            document.querySelectorAll("table").forEach(table => {
+                table.classList.add("table")
+                table.classList.add("table-striped")
+                table.classList.add("table-bordered")
+                table.classList.add("table-sm")
+            })
+        </script>
+</footer> 
+
+
+<!-- <div class="p-4">
+  <h4 class="fst-italic">Elsewhere</h4>
+  <ol class="list-unstyled">
+    <li><a href="#">GitHub</a></li>
+    <li><a href="#">Twitter</a></li>
+    <li><a href="#">Facebook</a></li>
+  </ol>
+</div> -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+
+    <div class="offcanvas-body p-0">
+      <div class=" list-group list-group-flush border-bottom scrollarea "> 
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+        <a href="/flutter_tutorials/flutter_basic_app_example/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <div class="mb-1"> Flutter: Basic App Example | How to create a flutter app</div>
+          </div>
+        </a>
+           
+        
+        
+      
+        
+           
+      </div>
+    </div>
+  </div>
+  <script>
+    function check(){
+      const checkboxes = document.querySelectorAll('input[type=checkbox]');
+              checkboxes.forEach((checkbox) => {
+                if (checkbox.getAttribute('data-is-correct') === 'true') {
+                  checkbox.parentElement.classList.add('list-group-item-success');
+                } else {
+                  checkbox.parentElement.classList.add('list-group-item-danger');
+                }
+              });
+    }
+    document.getElementById('check-btn').addEventListener('click', check);
+  </script>
+  </body>
+</html>

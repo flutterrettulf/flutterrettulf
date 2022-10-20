@@ -33,4 +33,6 @@
  #toc a:hover {
   color: #9D174D;
  }
- 
+ table {
+  @extend .table;
+}
