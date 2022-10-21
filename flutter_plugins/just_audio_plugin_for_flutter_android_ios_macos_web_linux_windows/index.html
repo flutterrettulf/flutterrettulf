@@ -237,6 +237,7 @@ body {
 <li class="toc-entry toc-h1"><a href="#supported-features">Supported features</a>
 <ul class="toc__sublist">
 <li class="toc-entry toc-h2"><a href="#audio-sources">Audio sources</a></li>
+<li class="toc-entry toc-h2"><a href="#playback-controls">Playback controls</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#summary">Summary</a></li>
@@ -350,42 +351,42 @@ body {
     <div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">await</span> <span class="n">player</span><span class="o">.</span><span class="na">setAsset</span><span class="p">(</span><span class="s">'assets/audio.mp3'</span><span class="p">);</span>
 </code></pre></div>    </div>
   </li>
-  <li>
-    <p>Byte buffers
-```dart
-// Feed your own stream of bytes into the player
-class MyCustomSource extends StreamAudioSource {
-final List<int> bytes;
-MyCustomSource(this.bytes);</int></p>
+  <li>Byte buffers
+    <div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Feed your own stream of bytes into the player</span>
+<span class="kd">class</span> <span class="nc">MyCustomSource</span> <span class="kd">extends</span> <span class="n">StreamAudioSource</span> <span class="p">{</span>
+  <span class="kd">final</span> <span class="kt">List</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;</span> <span class="n">bytes</span><span class="p">;</span>
+  <span class="n">MyCustomSource</span><span class="p">(</span><span class="k">this</span><span class="o">.</span><span class="na">bytes</span><span class="p">);</span>
+    
+  <span class="nd">@override</span>
+  <span class="n">Future</span><span class="p">&lt;</span><span class="n">StreamAudioResponse</span><span class="p">&gt;</span> <span class="n">request</span><span class="p">([</span><span class="kt">int</span><span class="o">?</span> <span class="n">start</span><span class="p">,</span> <span class="kt">int</span><span class="o">?</span> <span class="n">end</span><span class="p">])</span> <span class="kd">async</span> <span class="p">{</span>
+    <span class="n">start</span> <span class="o">??=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">end</span> <span class="o">??=</span> <span class="n">bytes</span><span class="o">.</span><span class="na">length</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">StreamAudioResponse</span><span class="p">(</span>
+      <span class="nl">sourceLength:</span> <span class="n">bytes</span><span class="o">.</span><span class="na">length</span><span class="p">,</span>
+      <span class="nl">contentLength:</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span><span class="p">,</span>
+      <span class="nl">offset:</span> <span class="n">start</span><span class="p">,</span>
+      <span class="nl">stream:</span> <span class="n">Stream</span><span class="o">.</span><span class="na">value</span><span class="p">(</span><span class="n">bytes</span><span class="o">.</span><span class="na">sublist</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">)),</span>
+      <span class="nl">contentType:</span> <span class="s">'audio/mpeg'</span><span class="p">,</span>
+    <span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 
-    <p>@override
-Future<StreamAudioResponse> request([int? start, int? end]) async {
-  start ??= 0;
-  end ??= bytes.length;
-  return StreamAudioResponse(
-    sourceLength: bytes.length,
-    contentLength: end - start,
-    offset: start,
-    stream: Stream.value(bytes.sublist(start, end)),
-    contentType: 'audio/mpeg',
-  );
-}
-}</StreamAudioResponse></p>
+<span class="k">await</span> <span class="n">player</span><span class="o">.</span><span class="na">setAudioSource</span><span class="p">(</span><span class="n">MyCustomSource</span><span class="p">());</span>
+<span class="n">player</span><span class="o">.</span><span class="na">play</span><span class="p">()</span>
+
+</code></pre></div>    </div>
   </li>
 </ul>
 
-<p>await player.setAudioSource(MyCustomSource());
-player.play()</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## Playback controls
+<h2 id="playback-controls">Playback controls</h2>
 
-The following playback controls are supported:
+<p>The following playback controls are supported:</p>
 
-* Play
-```dart
-player.play();
-</code></pre></div></div>
 <ul>
+  <li>Play
+    <div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">player</span><span class="o">.</span><span class="na">play</span><span class="p">();</span>
+</code></pre></div>    </div>
+  </li>
   <li>Pause
     <div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">player</span><span class="o">.</span><span class="na">pause</span><span class="p">();</span>
 </code></pre></div>    </div>
