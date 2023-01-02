@@ -5,30 +5,35 @@
 }
 .toc__list:before {
   content: "Table Of Contents";
-  font-weight: bold;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-left: -1.1rem;
  }
  
  .toc__list {
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   border-radius: 4px;
   line-height: 1.8rem;
-  padding: 1rem 1.5rem;
-  font-weight: 600;
+  padding: 1rem 2.5rem;
+  font-weight: 400;
+  font-size: 1rem;
  }
  
  .toc__sublist li {
-  padding-left: 1.25rem;
+  padding-left: 1rem;
  }
  
  #toc a {
-  color: #BE185D;
+  color: #485460;
   text-decoration: none;
  }
  
  #toc a:hover {
-  color: #9D174D;
+  color: #1e272e;
  }
- table {
-  @extend .table;
+
+.list-group-item-light.list-group-item-action.active {
+  color: #34495e;
+  background-color: #ecf0f1;
+  border-color: #ecf0f1;
 }

@@ -25,13 +25,12 @@
   <meta property="og:type" content="article" >
   <meta property="og:article:author" content="Justin Thomas" >
   <meta property="og:article:published_time" content="2022-09-03" >
-  <meta property="og:article:modified_time" content="2022-10-20" >
+  <meta property="og:article:modified_time" content="2023-01-01" >
   <meta property="og:article:section" content="Navigation" >
   <meta property="og:article:tag" content="WillPopScope, Navigation, Disable Back Button, and Flutter" >
   
   
 
-  <link href="/assets/blog.css" rel="stylesheet">
   <link href="/assets/prism.css" rel="stylesheet">
   <script src="/assets/prism.js" ></script>
   <!--fav icons-->
@@ -58,6 +57,7 @@
 
     gtag('config', 'G-GKQ47FWX29');
   </script>
+  <link href="/assets/blog.css" rel="stylesheet">
 
 </head>
   <style>
@@ -68,7 +68,7 @@ body {
 }
   </style>
   <body>   
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top border-bottom bg-white">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
         <span class="navbar-toggler-icon"></span>
@@ -83,17 +83,27 @@ body {
           
           <!--active class add on correct page-->
           <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/category/navigation">Navigation</a>
+            <a class="nav-link text-decoration-none " aria-current="page" href="/category/static-assets">Static Assets</a>
           </li>
           
           <!--active class add on correct page-->
           <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/category/static-assets">Static Assets</a>
+            <a class="nav-link text-decoration-none " aria-current="page" href="/category/navigation">Navigation</a>
           </li>
           
           <!--active class add on correct page-->
           <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
+            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-column">Flutter Column</a>
+          </li>
+          
+          <!--active class add on correct page-->
+          <li class="nav-item">
+            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-listview">Flutter ListView</a>
           </li>
               
           
@@ -127,13 +137,14 @@ body {
     <div class="row"> 
       <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
         <aside>
-
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
+            <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
     
     <a href="/category/navigation" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
       <span class="fs-5 fw-semibold">Navigation</span>
     </a>
     <div class=" list-group list-group-flush border-bottom scrollarea "> 
+      
+      
       
       
       
@@ -169,6 +180,8 @@ body {
 </div> -->
       </a>
       
+      
+      
          
     </div>
     
@@ -176,43 +189,34 @@ body {
 
 
  
-    </aside>
-
-    </div>
-    <div class="col-md-8 col-lg-8 p-4">
-      <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting"
-      
-      
-      >
-      
-      <meta itemprop="datePublished" content="2022-09-03T05:30:00+05:30">
-      
-      <meta itemprop="inLanguage" content="en-US">
-      
-      <meta itemprop="url" content="https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html">
-      <meta itemprop="dateModified" content="2022-10-20T05:30:00+05:30">
-      <meta itemprop="author" content="Justin Thomas">
-      <meta itemprop="publisher" content="Justin Thomas">
-      <meta itemprop="description" content="In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.">       
+        </aside>
+      </div>
+      <div class="col-md-8 col-lg-8 p-4">
+        <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
+        
+        <meta itemprop="datePublished" content="2022-09-03T05:30:00+05:30">
+        
+        <meta itemprop="inLanguage" content="en-US">
+        
+        <meta itemprop="url" content="https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html">
+        <meta itemprop="dateModified" content="2023-01-01T05:30:00+05:30">
+        <meta itemprop="author" content="Justin Thomas">
+        <meta itemprop="publisher" content="Justin Thomas">
+        <meta itemprop="description" content="In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.">       
 
         <header class="mb-4"><h1>How to disable the backbutton in Flutter using WillPopScope.</h1>
-        <small class="text-muted">Posted on September 3, 2022</small>
-      </header>
-      <div class="blog-post-body lh-lg">
-        
-        
-      
+          <small class="text-muted">Posted on September 3, 2022</small>
+        </header>
 
- 
-       
-            <ul id="toc" class="toc__list">
+        <div class="blog-post-body lh-lg">
+          
+                
+          <ul id="toc" class="toc__list">
 <li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
 <li class="toc-entry toc-h2"><a href="#how-to-disable-the-backbutton-in-flutter-using-willpopscope">How to disable the backbutton in Flutter using WillPopScope</a></li>
 <li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul> 
- 
-      
+</ul>        
           <h2 id="introduction">Introduction</h2>
 <p>WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.</p>
 
@@ -265,38 +269,39 @@ body {
 
 <h2 id="references">References</h2>
 <ol>
-  <li><a href="https://api.flutter.dev/flutter/widgets/WillPopScope-class.html">WillPopScope</a></li>
+  <li><a href="https://api.flutter.dev/flutter/widgets/WillPopScope-class.html" target="_blank">WillPopScope</a></li>
 </ol>
 
 
-      </div>
-        </article>
-        <div class="row">
-          <!--share buttons-->
-          <div class="col-12 mb-4">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html&text=How to disable the backbutton in Flutter using WillPopScope." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html&title=How to disable the backbutton in Flutter using WillPopScope." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html&title=How to disable the backbutton in Flutter using WillPopScope." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+
+        </div>
+          </article>
+          <div class="row">
+            <!--share buttons-->
+            <div class="col-12 mb-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+                  <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html&text=How to disable the backbutton in Flutter using WillPopScope." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html&title=How to disable the backbutton in Flutter using WillPopScope." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+                  <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html&title=How to disable the backbutton in Flutter using WillPopScope." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+                </div>
               </div>
-            </div>
-        </div>
-        </div>  
-        <div class="row">
-            <div class="col-sm-12 col-md-6 mb-2">
+          </div>
+          </div>  
+          <div class="row">
+              <div class="col-sm-12 col-md-6 mb-2">
+                  
+                  <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> How to use WillPopScope widget in Flutter with examples. </a>
                 
-                <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> How to use WillPopScope widget in Flutter with examples. </a>
-              
-            </div>    
-            <div class="col-sm-12 col-md-6 text-end v-100">
-              
-                <a href="/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html" class="btn  btn-outline-primary btn-sm w-100">Flutter: Loading Static Image & Font Assets in Flutter App. <i class="bi bi-arrow-right"></i></a>
-              
-            </div>
-        </div>
-    </div>
+              </div>    
+              <div class="col-sm-12 col-md-6 text-end v-100">
+                
+                  <a href="/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" class="btn  btn-outline-primary btn-sm w-100">Flutter: Elevated Button Examples. <i class="bi bi-arrow-right"></i></a>
+                
+              </div>
+          </div>
+      </div>
       <div class="col-md-12 col-lg-2">
         <aside>
 
@@ -346,6 +351,14 @@ body {
       <h5>Top Tags</h5>
       <ul class="nav flex-column">
         
+        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
+        
+        <li class="nav-item mb-2"><a href="/tag/font-assets" class="nav-link p-0 text-muted">Font Assets</a></li>
+        
         <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
         
         <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
@@ -353,14 +366,6 @@ body {
         <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
         
         <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/flutter" class="nav-link p-0 text-muted">Flutter</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
         
         <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
 
@@ -372,11 +377,15 @@ body {
       <h5>Top Categories</h5>
       <ul class="nav flex-column">
         
-        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
         <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
         
+        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
+        
         <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category/flutter-column" class="nav-link p-0 text-muted">Flutter Column</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category/flutter-listview" class="nav-link p-0 text-muted">Flutter ListView</a></li>
         
         <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
 
@@ -434,6 +443,8 @@ body {
         
         
         
+        
+        
         <a href="/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
           <div class="d-flex w-100 align-items-center justify-content-between">
             <div class="mb-1"> How to disable the backbutton in Flutter using WillPopScope.</div>
@@ -455,6 +466,8 @@ body {
             <div class="mb-1"> How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?</div>
           </div>
         </a>
+        
+        
         
            
       </div>
