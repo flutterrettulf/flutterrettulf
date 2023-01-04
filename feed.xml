@@ -1,4 +1,156 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://flutterrettulf.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://flutterrettulf.com/" rel="alternate" type="text/html" /><updated>2023-01-03T22:06:31+05:30</updated><id>https://flutterrettulf.com/feed.xml</id><title type="html">FlutterrettulF | Flutter Development Tutorails | Android | Dart | IOS | Web</title><subtitle>Flutter Development Tutorails | Android | Dart | IOS | Web</subtitle><entry><title type="html">Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter</title><link href="https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html" rel="alternate" type="text/html" title="Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter" /><published>2023-01-01T08:00:00+05:30</published><updated>2023-01-01T08:00:00+05:30</updated><id>https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter</id><content type="html" xml:base="https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html"><![CDATA[<h2 id="introduction">Introduction</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://flutterrettulf.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://flutterrettulf.com/" rel="alternate" type="text/html" /><updated>2023-01-04T22:40:37+05:30</updated><id>https://flutterrettulf.com/feed.xml</id><title type="html">FlutterrettulF | Flutter Development Tutorails | Android | Dart | IOS | Web</title><subtitle>Flutter Development Tutorails | Android | Dart | IOS | Web</subtitle><entry><title type="html">Using JSON for Data Storage and Exchange</title><link href="https://flutterrettulf.com/json/2023/01/04/what-is-json.html" rel="alternate" type="text/html" title="Using JSON for Data Storage and Exchange" /><published>2023-01-04T00:00:00+05:30</published><updated>2023-01-04T00:00:00+05:30</updated><id>https://flutterrettulf.com/json/2023/01/04/what-is-json</id><content type="html" xml:base="https://flutterrettulf.com/json/2023/01/04/what-is-json.html"><![CDATA[<h1 id="what-is-json-and-why-it-is-used">What is JSON and why it is used?</h1>
+
+<p>JSON (JavaScript Object Notation) is a simple data exchange format that is simple for both humans and machines to read, write, parse, and produce. It is simple to use with current JavaScript programmes because it is built on a subset of the JavaScript programming language.</p>
+
+<p>JSON is used to transmit data between a server and a client or between a server and a server. It is also often used for storing data in databases and as a format for transmitting data over the internet.</p>
+
+<p>One of the main reasons that JSON is so popular is that it is very lightweight and easy to work with. It is also language-agnostic, meaning that it can be used with many different programming languages. This makes it a good choice for transmitting data between different systems that may be written in different languages.</p>
+
+<p>In summary, JSON is used for transmitting data between a server and a client or between a server and a server, and is often used for storing data in databases and as a format for transmitting data over the internet because it is lightweight, easy to work with, and language-agnostic.</p>
+
+<h1 id="is-json-same-as-javascript">Is JSON same as JavaScript?</h1>
+
+<p>JSON and JavaScript are not the same thing, although they are closely related.</p>
+
+<p>JavaScript is a programming language that is primarily used to create interactive web pages. It is a versatile language that can be used for a wide range of purposes, including front-end web development, server-side development, and mobile app development.</p>
+
+<p>JSON, on the other hand, is a data interchange format that is used to transmit data between a server and a client or between a server and a server. It is based on a subset of the JavaScript programming language and uses a syntax that is similar to JavaScript object literal notation. However, JSON is a standalone data format that does not require the use of JavaScript to be interpreted or used.</p>
+
+<h1 id="what-is-json-used-for">What is JSON used for?</h1>
+
+<p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used for transmitting data between a server and a web application, as a simple alternative to XML.</p>
+
+<p>Here are some common use cases for JSON:</p>
+
+<ul>
+  <li>
+    <p>Transmitting data between a server and a web application: JSON is often used as a lightweight alternative to XML for transmitting data between a server and a web application. It is easy to parse and generate, making it a good choice for exchanging data between systems.</p>
+  </li>
+  <li>
+    <p>Storing data in a database: Many databases have native support for JSON data, which means you can store JSON documents directly in the database. This can be useful if you need to store complex data structures or if you want to be able to query the data directly. Databases such as PostgreSQL supports feilds which can be stored in JSON.</p>
+  </li>
+  <li>
+    <p>Serializing and deserializing data: JSON is often used as a way to serialize and deserialize data, especially when working with web APIs. When you send a request to a web API, the API may return a response in JSON format, which you can then deserialize into a native data structure in your programming language.</p>
+  </li>
+  <li>
+    <p>Configuring application settings: JSON is sometimes used to store application configuration settings. It is easy to read and write, making it a convenient choice for storing simple key-value pairs or more complex data structures.</p>
+  </li>
+</ul>
+
+<h1 id="how-to-use-json-in-dart">How to use JSON in Dart</h1>
+<p>In Dart, you can use the <code class="language-plaintext highlighter-rouge">dart:convert</code> library to work with <code class="language-plaintext highlighter-rouge">JSON</code> data. The <code class="language-plaintext highlighter-rouge">dart:convert</code> library provides functions for parsing JSON data and for <strong>converting <code class="language-plaintext highlighter-rouge">Dart</code> objects into JSON data.</strong></p>
+
+<p>Here is an example of how you can use the <code class="language-plaintext highlighter-rouge">dart:convert</code> library to parse a JSON string and convert it into a Dart object:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="s">'dart:convert'</span><span class="o">;</span>
+
+<span class="c1">// Parse a JSON string</span>
+<span class="kt">String</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="s">'{"name": "John", "age": 30, "city": "New York"}'</span><span class="p">;</span>
+<span class="kt">Map</span><span class="p">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kd">dynamic</span><span class="p">&gt;</span> <span class="n">dartObject</span> <span class="o">=</span> <span class="n">jsonDecode</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
+
+<span class="c1">// Access data in the Dart object</span>
+<span class="n">print</span><span class="p">(</span><span class="n">dartObject</span><span class="p">[</span><span class="s">'name'</span><span class="p">]);</span>  <span class="c1">// Output: John</span>
+<span class="n">print</span><span class="p">(</span><span class="n">dartObject</span><span class="p">[</span><span class="s">'age'</span><span class="p">]);</span>   <span class="c1">// Output: 30</span>
+<span class="n">print</span><span class="p">(</span><span class="n">dartObject</span><span class="p">[</span><span class="s">'city'</span><span class="p">]);</span>  <span class="c1">// Output: New York</span>
+</code></pre></div></div>
+<p>You can also use the <code class="language-plaintext highlighter-rouge">dart:convert</code> library to convert a Dart object into a JSON string:</p>
+
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="s">'dart:convert'</span><span class="o">;</span>
+
+<span class="c1">// Create a Dart object</span>
+<span class="kt">Map</span><span class="p">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kd">dynamic</span><span class="p">&gt;</span> <span class="n">dartObject</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'name'</span><span class="o">:</span> <span class="s">'John'</span><span class="p">,</span>
+    <span class="s">'age'</span><span class="o">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s">'city'</span><span class="o">:</span> <span class="s">'New York'</span>
+<span class="p">};</span>
+
+<span class="c1">// Convert the Dart object into a JSON string</span>
+<span class="kt">String</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="n">jsonEncode</span><span class="p">(</span><span class="n">dartObject</span><span class="p">);</span>
+
+<span class="n">print</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>  <span class="c1">// Output: '{"name":"John","age":30,"city":"New York"}'</span>
+</code></pre></div></div>
+
+<p>In summary, to use JSON in Dart, you can use the json package and the jsonDecode() function to parse a JSON string and convert it into a Dart object, or use the jsonEncode() function to convert a Dart object into a JSON string.</p>
+
+<h1 id="how-to--use-json-in-python">how to  use json in python?</h1>
+<p>To use JSON in Python, you will need to import the json module. This module provides functions for working with JSON in Python.</p>
+
+<p>Here is an example of how you can use the json module to parse a JSON string and convert it into a Python object:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Parse a JSON string
+</span><span class="n">json_string</span> <span class="o">=</span> <span class="s">'{"name": "John", "age": 30, "city": "New York"}'</span>
+<span class="n">python_obj</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+
+<span class="c1"># Access data in the Python object
+</span><span class="k">print</span><span class="p">(</span><span class="n">python_obj</span><span class="p">[</span><span class="s">'name'</span><span class="p">])</span>  <span class="c1"># Output: John
+</span><span class="k">print</span><span class="p">(</span><span class="n">python_obj</span><span class="p">[</span><span class="s">'age'</span><span class="p">])</span>   <span class="c1"># Output: 30
+</span><span class="k">print</span><span class="p">(</span><span class="n">python_obj</span><span class="p">[</span><span class="s">'city'</span><span class="p">])</span>  <span class="c1"># Output: New York
+</span></code></pre></div></div>
+<p>You can also use the json module to convert a Python object into a JSON string:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Create a Python object
+</span><span class="n">python_obj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"name"</span><span class="p">:</span> <span class="s">"John"</span><span class="p">,</span>
+    <span class="s">"age"</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="s">"city"</span><span class="p">:</span> <span class="s">"New York"</span>
+<span class="p">}</span>
+
+<span class="c1"># Convert the Python object into a JSON string
+</span><span class="n">json_string</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">python_obj</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>  <span class="c1"># Output: '{"name": "John", "age": 30, "city": "New York"}'
+</span></code></pre></div></div>
+
+<p>In summary, to use JSON in Python, you will need to import the <code class="language-plaintext highlighter-rouge">json</code> module and use the json.loads() function to parse a JSON string and convert it into a Python object, or use the json.dumps() function to convert a Python object into a JSON string.</p>
+
+<h1 id="using-json-in-javascript">Using JSON in Javascript</h1>
+<p>In JavaScript, you can use the JSON object to work with JSON data. The JSON object provides methods for parsing JSON data and for converting JavaScript objects into JSON data.</p>
+
+<p>Here is an example of how you can use the JSON object to parse a JSON string and convert it into a JavaScript object:</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Parse a JSON string</span>
+<span class="kd">var</span> <span class="nx">json_string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">{"name": "John", "age": 30, "city": "New York"}</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">js_obj</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">json_string</span><span class="p">);</span>
+
+<span class="c1">// Access data in the JavaScript object</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">js_obj</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>  <span class="c1">// Output: John</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">js_obj</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span>   <span class="c1">// Output: 30</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">js_obj</span><span class="p">.</span><span class="nx">city</span><span class="p">);</span>  <span class="c1">// Output: New York</span>
+
+<span class="nx">You</span> <span class="nx">can</span> <span class="nx">also</span> <span class="nx">use</span> <span class="nx">the</span> <span class="nx">JSON</span> <span class="nx">object</span> <span class="nx">to</span> <span class="nx">convert</span> <span class="nx">a</span> <span class="nx">JavaScript</span> <span class="nx">object</span> <span class="nx">into</span> <span class="nx">a</span> <span class="nx">JSON</span> <span class="nx">string</span><span class="p">:</span>
+
+<span class="c1">// Create a JavaScript object</span>
+<span class="kd">var</span> <span class="nx">js_obj</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John</span><span class="dl">"</span><span class="p">,</span>
+    <span class="na">age</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+    <span class="na">city</span><span class="p">:</span> <span class="dl">"</span><span class="s2">New York</span><span class="dl">"</span>
+<span class="p">};</span>
+
+<span class="c1">// Convert the JavaScript object into a JSON string</span>
+<span class="kd">var</span> <span class="nx">json_string</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">js_obj</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">json_string</span><span class="p">);</span>  <span class="c1">// Output: '{"name":"John","age":30,"city":"New York"}'</span>
+</code></pre></div></div>
+
+<p>In summary, to use JSON in JavaScript, you can use the JSON object and its JSON.parse() method to parse a JSON string and convert it into a JavaScript object, or use the JSON.stringify() method to convert a JavaScript object into a JSON string.</p>
+
+<h2 id="summary">Summary</h2>
+<p>JSON (JavaScript Object Notation) is a lightweight data transfer format for storing and transmitting data. It is easy for people to read and write as well as for computers to parse and generate.JSON is frequently used for data transmission between a server and a web application. It is frequently employed when working with web APIs to serialise and deserialize data as well as to store data in databases. JSON can also be used to store application setup parameters. JSON is language-neutral, allowing it to work with a wide range of programming languages. To work with JSON data in Dart, utilise the <code class="language-plaintext highlighter-rouge">dart:convert</code> library and python has its own <code class="language-plaintext highlighter-rouge">json</code> module, to work with JSON data.</p>
+
+<h2 id="references">References</h2>
+<ol>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">JSON on MDN</a></li>
+  <li><a href="https://api.dart.dev/stable/2.18.6/dart-convert/dart-convert-library.html" target="_blank">dart:convert Library</a></li>
+  <li><a href="https://docs.python.org/3/library/json.html" target="_blank">json module in Python</a></li>
+</ol>
+
+<h1 id="related-articles">Related Articles</h1>
+<ol>
+  <li><a href="/flutter_tutorials/flutter_list_view_explained_with_examples" target="_blank">Understanding and Using ListViews in Flutter: Examples and Best Practices</a></li>
+</ol>]]></content><author><name></name></author><category term="JSON" /><category term="JSON" /><category term="API Request" /><category term="Rest API" /><category term="Flutter JSON" /><summary type="html"><![CDATA[What is JSON and why it is used?]]></summary></entry><entry><title type="html">Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter</title><link href="https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html" rel="alternate" type="text/html" title="Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter" /><published>2023-01-01T08:00:00+05:30</published><updated>2023-01-01T08:00:00+05:30</updated><id>https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter</id><content type="html" xml:base="https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html"><![CDATA[<h2 id="introduction">Introduction</h2>
 
 <p>Welcome to our tutorial on how to render a ListView inside another ListView or Column in Flutter. If you are a Flutter developer, you may have come across situations where you want to render a ListView inside another ListView or Column in Flutter. This can be a challenging task. Sometimes, if the approach is not correct, the elements in the ListView might not be visible, or you might get while nesting ListViews. Don’t worry! In this article we’ll show you how to render a ListView inside another ListView or Column in Flutter and will also include tips and best practises to help you. We’ll go over several scenarios when it will be required and use examples to explain it. Then let’s get going.</p>
 

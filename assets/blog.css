@@ -9,7 +9,9 @@
   font-size: 1.25rem;
   margin-left: -1.1rem;
  }
- 
+ .h1,h2,h3 {
+  scroll-margin-top: 75px;
+ }
  .toc__list {
   border: 1px solid #eee;
   border-radius: 4px;

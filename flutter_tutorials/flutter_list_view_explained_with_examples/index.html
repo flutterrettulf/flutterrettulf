@@ -228,6 +228,7 @@ body {
 <li class="toc-entry toc-h2"><a href="#how-to-change-the-scroll-direction-of-a-listview">How to change the scroll direction of a ListView?</a></li>
 <li class="toc-entry toc-h2"><a href="#how-to-disable-scroll-in-a-listview">How to disable scroll in a ListView</a></li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
+<li class="toc-entry toc-h1"><a href="#related-articles">Related Articles</a></li>
 <li class="toc-entry toc-h1"><a href="#flutter-tutorials">Flutter Tutorials</a></li>
 </ul> 
     
@@ -301,7 +302,7 @@ body {
 
 <p>Here is an example:</p>
 
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="s">'dart:convert'</span><span class="o">;</span>
 <span class="c1">//convert the json string to a list</span>
 <span class="kd">var</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="s">'[{"name": "John Smith"}, {"name": "Jane Doe"}]'</span><span class="p">;</span>
 <span class="kt">List</span><span class="p">&lt;</span><span class="kd">dynamic</span><span class="p">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="na">decode</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
@@ -321,7 +322,8 @@ body {
 
 <p>Here is an example:</p>
 
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//convert the json string to a list</span>
+<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="s">'dart:convert'</span><span class="o">;</span>
+<span class="c1">//convert the json string to a list</span>
 <span class="kd">var</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="s">'[{"name": "John Smith"}, {"name": "Jane Doe"}]'</span><span class="p">;</span>
 <span class="kt">List</span><span class="p">&lt;</span><span class="kd">dynamic</span><span class="p">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="na">decode</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
 
@@ -335,7 +337,8 @@ body {
   <span class="nl">separatorBuilder:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">Divider</span><span class="p">(),</span><span class="c1">//This divider widget will be present between each item in the list.</span>
 <span class="p">)</span>
 </code></pre></div></div>
-<p>In this example, we use the <code class="language-plaintext highlighter-rouge">Divider</code> widget as a separator between each item in the list.</p>
+<p>In this example, we use the <code class="language-plaintext highlighter-rouge">Divider</code> widget as a separator between each item in the list.
+You can <a href="/">learn more about JSON in this article</a></p>
 
 <p>You can customize this example to display the JSON data in any way that you want. For example, you can use different widgets to display the data, such as <code class="language-plaintext highlighter-rouge">Card()</code>, <code class="language-plaintext highlighter-rouge">ListTile()</code>, or <code class="language-plaintext highlighter-rouge">Row()</code>, and you can use different keys from the JSON data to display different pieces of information for each item in the column.</p>
 
@@ -386,6 +389,11 @@ body {
   <li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.custom.html" target="_blank">ListView.custom constructor</a></li>
   <li><a href="https://api.flutter.dev/flutter/widgets/ListView-class.html" target="_blank">ListView Flutter Documentation</a></li>
   <li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.html" target="_blank">ListView constructor</a></li>
+</ol>
+
+<h1 id="related-articles">Related Articles</h1>
+<ol>
+  <li><a href="/json/2023/01/04/what-is-json.html">Using JSON for Data Storage and Exchange</a></li>
 </ol>
 
 <h1 id="flutter-tutorials">Flutter Tutorials</h1>
@@ -504,6 +512,8 @@ body {
         <li class="nav-item mb-2"><a href="/category/flutter-column" class="nav-link p-0 text-muted">Flutter Column</a></li>
         
         <li class="nav-item mb-2"><a href="/category/flutter-listview" class="nav-link p-0 text-muted">Flutter ListView</a></li>
+        
+        <li class="nav-item mb-2"><a href="/category/json" class="nav-link p-0 text-muted">JSON</a></li>
         
         <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
 
