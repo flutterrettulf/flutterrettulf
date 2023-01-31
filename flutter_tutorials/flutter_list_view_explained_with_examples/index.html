@@ -1,630 +1,566 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>Understanding and Using ListViews in Flutter: Examples and Best Practices</title>
-  <meta name="title" content="Understanding and Using ListViews in Flutter: Examples and Best Practices">
-  <meta name="twitter:card" content="summary-large-image" >
-  <meta name="twitter:site" content="flutterrettulf" >
-  <meta name="description" content="In this article we will learn how to implement and customize ListViews in Flutter, the popular mobile development framework. Get tips on best practices and see examples of how to display and manage lists of data in your Flutter app.">
-  <meta name="author" content="Justin Thomas">
-  
-  <meta name="tags" content="ListView ListView Examples ListView Widget ListView Flutter">
-  
-  <meta property="og:title" content="Understanding and Using ListViews in Flutter: Examples and Best Practices" >
-  <meta property="twitter:title" content="Understanding and Using ListViews in Flutter: Examples and Best Practices" >
-  <meta property="og:description" content="In this article we will learn how to implement and customize ListViews in Flutter, the popular mobile development framework. Get tips on best practices and see examples of how to display and manage lists of data in your Flutter app." >
-  <meta property="twitter:description" content="In this article we will learn how to implement and customize ListViews in Flutter, the popular mobile development framework. Get tips on best practices and see examples of how to display and manage lists of data in your Flutter app." >
-  <meta property="og:url" content="https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/" >
-  <meta property="twitter:url" content="https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/" >
-  <meta name="robots" content="index, follow" >
-  <link rel="canonical" href="https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/" >
-  
-  <meta property="og:type" content="article" >
-  <meta property="og:article:author" content="Justin Thomas" >
-  <meta property="og:article:published_time" content="2023-01-02" >
-  <meta property="og:article:modified_time" content="2023-01-02" >
-  <meta property="og:article:section" content="Flutter ListView" >
-  <meta property="og:article:tag" content="ListView, ListView Examples, ListView Widget, and ListView Flutter" >
-  
-  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow" >
+        <link rel="canonical" href="https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/">
+        <link href="/css/blog.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/sitemanifest.json">        
 
-  <link href="/assets/prism.css" rel="stylesheet">
-  <script src="/assets/prism.js" ></script>
-  <!--fav icons-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-  <link rel="manifest" href="/sitemanifest.json">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-      
-  <!-- Custom styles for this template -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+            gtag('config', 'G-GKQ47FWX29');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+        crossorigin="anonymous"></script>
+        <meta property="og:title" content="Understanding and Using ListViews in Flutter: Examples and Best Practices" />
+<meta property="og:description" content="In this article we will learn how to implement and customize ListViews in Flutter, the popular mobile development framework. Get tips on best practices and see examples of how to display and manage lists of data in your Flutter app." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/" /><meta property="article:section" content="flutter_tutorials" />
+<meta property="article:published_time" content="2023-01-02T00:00:00+05:30" />
+<meta property="article:modified_time" content="2023-01-02T00:00:00+05:30" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <meta itemprop="name" content="Understanding and Using ListViews in Flutter: Examples and Best Practices">
+<meta itemprop="description" content="In this article we will learn how to implement and customize ListViews in Flutter, the popular mobile development framework. Get tips on best practices and see examples of how to display and manage lists of data in your Flutter app."><meta itemprop="datePublished" content="2023-01-02T00:00:00+05:30" />
+<meta itemprop="dateModified" content="2023-01-02T00:00:00+05:30" />
+<meta itemprop="wordCount" content="1130">
+<meta itemprop="keywords" content="ListView,ListView Examples,ListView Widget,ListView Flutter," />
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Understanding and Using ListViews in Flutter: Examples and Best Practices"/>
+<meta name="twitter:description" content="In this article we will learn how to implement and customize ListViews in Flutter, the popular mobile development framework. Get tips on best practices and see examples of how to display and manage lists of data in your Flutter app."/>
 
-    gtag('config', 'G-GKQ47FWX29');
-  </script>
-  <link href="/assets/blog.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
-  crossorigin="anonymous"></script>
-</head>
-  <style>
-
-body {
-  min-height: 75rem;
-  padding-top: 3.5rem;
-}
-  </style>
+        <title>
+             Understanding and using list views in flutter examples and best practices | FlutterrettulF 
+        </title>
+        
+    </head>
+  
   <body>   
     <nav class="navbar navbar-expand-md navbar-light fixed-top border-bottom bg-white">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      
 
-      <a class="navbar-brand" href="/"><img src="/assets/brand/logo_2.svg" width="30"></a>
+      <a class="navbar-brand" href="/"><img src="/brand/logo_2.svg" width="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="bi bi-three-dots-vertical"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/static-assets">Static Assets</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/navigation">Navigation</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-column">Flutter Column</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-listview">Flutter ListView</a>
-          </li>
-              
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials">Dart tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins">Flutter plugins</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials">Flutter tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/posts">Posts</a>
-          </li>
-             
+            
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials/">Dart Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials/">Flutter Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins/">Popular Flutter Plugins</a>
+                    </li>
+                
+            
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none " aria-current="page" href="/categories/">Categories</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none" aria-current="page" href="/tags/">Tags</a>
+            </li>
         </ul>
-        <!-- <a class="btn btn-outline-light me-2" href="/courses">Courses</a>  -->
-        <!-- <a class="btn btn-primary"  href="/search">Search</a> -->
+        
+        
       </div>
     </div>
   </nav>
-  <main class="container-fluid">  
-    <div class="row"> 
-      <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
-        <aside>
+    
+<main class="container-fluid">
+ 
+  <div class="row ">
+    <div class="col-md-4 col-lg-3 d-none d-md-block"><div class="bg-light rounded p-3 sticky-top" style="top: 5rem;">
+        <p class="h5 fw-bold">The Index of Insight</p>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-the-listview-widget-in-flutter">What is the ListView Widget in Flutter?</a></li>
+    <li><a href="#how-to-use-listview-widget-to-create-a-simple-scrollable-list">How to use ListView Widget to create a simple scrollable list?</a></li>
+    <li><a href="#how-to-set-the-list-of-json-data-inside-list-in-the-listviewbuilder-in-flutter">How to set the list of json data inside list in the <code>Listview.builder</code> in flutter?</a></li>
+    <li><a href="#how-to-change-the-scroll-direction-of-a-listview">How to change the scroll direction of a <code>ListView</code>?</a></li>
+    <li><a href="#how-to-disable-scroll-in-a-listview">How to disable scroll in a ListView</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#flutter-tutorials">Flutter Tutorials</a></li>
+  </ul>
+</nav>
+          <hr >
+          <p class="h5 my-2">Share</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <div class="btn-group ">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fflutter_tutorials%2fflutter_list_view_explained_with_examples%2f" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fflutter_tutorials%2fflutter_list_view_explained_with_examples%2f&text=Understanding%20and%20using%20list%20views%20in%20flutter%20examples%20and%20best%20practices" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fflutter_tutorials%2fflutter_list_view_explained_with_examples%2f&title=Understanding%20and%20using%20list%20views%20in%20flutter%20examples%20and%20best%20practices" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fflutter_tutorials%2fflutter_list_view_explained_with_examples%2f&title=Understanding%20and%20using%20list%20views%20in%20flutter%20examples%20and%20best%20practices" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+            </div>
+          </div>
+      </div></div>
+    <div class="col-md-8 col-lg-6 ">
 
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
+    <article >
+      <header >
+        <h1 class="fw-bold mb-4">
+          Understanding and Using ListViews in Flutter: Examples and Best Practices
+        </h1>
+        
+                
+      </header>
+      <div class="col-12 d-block d-md-none"><div class="bg-light rounded p-3 mb-4" >
+            <p class="h5 fw-bold">The Index of Insight</p>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-the-listview-widget-in-flutter">What is the ListView Widget in Flutter?</a></li>
+    <li><a href="#how-to-use-listview-widget-to-create-a-simple-scrollable-list">How to use ListView Widget to create a simple scrollable list?</a></li>
+    <li><a href="#how-to-set-the-list-of-json-data-inside-list-in-the-listviewbuilder-in-flutter">How to set the list of json data inside list in the <code>Listview.builder</code> in flutter?</a></li>
+    <li><a href="#how-to-change-the-scroll-direction-of-a-listview">How to change the scroll direction of a <code>ListView</code>?</a></li>
+    <li><a href="#how-to-disable-scroll-in-a-listview">How to disable scroll in a ListView</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#flutter-tutorials">Flutter Tutorials</a></li>
+  </ul>
+</nav>      
+          </div></div>
+      <div class="nested-copy-line-height lh-copy f4 nested-links">
+        <h2 id="what-is-the-listview-widget-in-flutter">What is the ListView Widget in Flutter?</h2>
+<p><strong>Listview</strong> is a widget used to display items in a sequential order. <strong>ListView</strong> is the most commonly used scrolling widget. The <code>ListView</code> widget in Flutter is a scrollable list of widgets. Based on the scroll direction, it displays its children, horizontally or vertically.</p>
+<p>A <code>ListView</code> is an example of a scrolling widget, which means that it creates a scrollable list of widgets. By default, the list scrolls vertically, but you can change the <code>scrollDirection</code> property to <code>Axis.horizontal</code> to make the list scroll horizontally.</p>
+<p>Here is an example of how to use the <code>ListView</code> widget:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ListView(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">children:</span> [
+</span></span><span style="display:flex;"><span>    Text(<span style="color:#a5d6ff">&#39;Item 1&#39;</span>),
+</span></span><span style="display:flex;"><span>    Text(<span style="color:#a5d6ff">&#39;Item 2&#39;</span>),
+</span></span><span style="display:flex;"><span>    Text(<span style="color:#a5d6ff">&#39;Item 3&#39;</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  ],
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>In this example, we create a <code>ListView</code> with a fixed number of items. Each item is a Text widget that displays a string.</p>
+<h2 id="how-to-use-listview-widget-to-create-a-simple-scrollable-list">How to use ListView Widget to create a simple scrollable list?</h2>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ListView(
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff;font-weight:bold">children:</span> [
+</span></span><span style="display:flex;"><span>        Card(
+</span></span><span style="display:flex;"><span>            <span style="color:#79c0ff;font-weight:bold">child:</span> ListTile(
+</span></span><span style="display:flex;"><span>              <span style="color:#79c0ff;font-weight:bold">title:</span>Text(<span style="color:#a5d6ff">&#34;List Item 1&#34;</span>) ,
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>        Card(
+</span></span><span style="display:flex;"><span>            <span style="color:#79c0ff;font-weight:bold">child:</span> ListTile(
+</span></span><span style="display:flex;"><span>              <span style="color:#79c0ff;font-weight:bold">title:</span> Text(<span style="color:#a5d6ff">&#34;List Item 2&#34;</span>),
+</span></span><span style="display:flex;"><span>            ),
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>        Card(
+</span></span><span style="display:flex;"><span>            <span style="color:#79c0ff;font-weight:bold">child:</span> ListTile(
+</span></span><span style="display:flex;"><span>              <span style="color:#79c0ff;font-weight:bold">title:</span> Text(<span style="color:#a5d6ff">&#34;List Item 3&#34;</span>),
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Thats it. You just mention the items that you want to display inside the <code>ListView</code> as the children property of <code>Listview</code>. This is the default constructor for the <code>ListView</code> widget.The default constructor takes an explicit <code>List&lt;Widget&gt;</code> of <code>children</code>. This constructor is appropriate for list views with a small number of children because constructing the List requires doing work for every child that could possibly be displayed in the list view instead of just those children that are actually visible.</p>
+<p>You can use the <code>ListView.builder</code> constructor to create a list with a variable number of items. This constructor takes an <code>itemBuilder</code> function, which defines the widget to display for each item in the list.</p>
+<p>There are several other <code>ListView</code> Constructors.</p>
+<ul>
+<li>
+<p><code>ListView.builder()</code>
+The <code>ListView.builder</code> constructor takes an <code>IndexedWidgetBuilder</code>, which builds the children on demand. This constructor is appropriate for list views with a large (or infinite) number of children because the builder is called <strong>only for those children that are actually visible.</strong></p>
+</li>
+<li>
+<p><code>ListView.separated()</code>
+The <code>ListView.separated</code> constructor takes two <code>IndexedWidgetBuilders</code>: <code>itemBuilder</code> builds child items on demand, and <code>separatorBuilder</code> similarly builds separator children which appear in between the child items. This constructor is appropriate for list views with a fixed number of children.</p>
+</li>
+<li>
+<p><code>ListView.custom</code>
+The <code>ListView.custom</code> constructor takes a <code>SliverChildDelegate</code>, which provides the ability to customize additional aspects of the child model. For example, a <code>SliverChildDelegate</code> can control the algorithm used to estimate the size of children that are not actually visible.</p>
+</li>
+</ul>
+<h2 id="how-to-set-the-list-of-json-data-inside-list-in-the-listviewbuilder-in-flutter">How to set the list of json data inside list in the <code>Listview.builder</code> in flutter?</h2>
+<p>To display a list of <code>JSON</code> data in a <code>ListView</code> in Flutter, you can use the <code>ListView.builder</code> constructor. This constructor takes an <code>itemBuilder</code> function, which defines the widget to display for each item in the list.</p>
+<p>First, we have to convert the <code>json</code> string to a <code>List</code> using the <code>dart:convert</code> library. Then it can be passed to the <code>ListView.builder</code> constructor.</p>
+<p>Here is an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#a5d6ff">&#39;dart:convert&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//convert the json string to a list
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">var</span> jsonString <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#39;[{&#34;name&#34;: &#34;John Smith&#34;}, {&#34;name&#34;: &#34;Jane Doe&#34;}]&#39;</span>;
+</span></span><span style="display:flex;"><span>List<span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">dynamic</span><span style="color:#ff7b72;font-weight:bold">&gt;</span> data <span style="color:#ff7b72;font-weight:bold">=</span> json.decode(jsonString);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//Display the list of items
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>ListView.builder(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">itemCount:</span> data.length,
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">itemBuilder:</span> (context, index) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">final</span> item <span style="color:#ff7b72;font-weight:bold">=</span> data[index];
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> Text(item[<span style="color:#a5d6ff">&#39;name&#39;</span>]);
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>In this example, data is a <code>List</code> that contains the parsed JSON data. The <code>itemCount</code> property specifies the number of items in the list. The <code>itemBuilder</code> function is called once for each item in the list, and it returns a widget that represents the item. In this case, we return a <code>Text</code> widget that displays the <code>name</code> property of the JSON object.</p>
+<p>You can also use the <code>ListView.separated</code> constructor to display a separator between each item in the list. This constructor takes a <code>separatorBuilder</code> function, which defines the widget to use as a separator between items.</p>
+<p>Here is an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#a5d6ff">&#39;dart:convert&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//convert the json string to a list
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">var</span> jsonString <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">&#39;[{&#34;name&#34;: &#34;John Smith&#34;}, {&#34;name&#34;: &#34;Jane Doe&#34;}]&#39;</span>;
+</span></span><span style="display:flex;"><span>List<span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">dynamic</span><span style="color:#ff7b72;font-weight:bold">&gt;</span> data <span style="color:#ff7b72;font-weight:bold">=</span> json.decode(jsonString);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//Display the list of items
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>ListView.separated(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">itemCount:</span> data.length,
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">itemBuilder:</span> (context, index) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">final</span> item <span style="color:#ff7b72;font-weight:bold">=</span> data[index];
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">return</span> Text(item[<span style="color:#a5d6ff">&#39;name&#39;</span>]);
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">separatorBuilder:</span> (context, index) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> Divider(),<span style="color:#8b949e;font-style:italic">//This divider widget will be present between each item in the list.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>)
+</span></span></code></pre></div><p>In this example, we use the <code>Divider</code> widget as a separator between each item in the list.
+You can <a href="/json/2023/01/04/what-is-json.html">learn more about JSON in this article</a>
+</p>
+<p>You can customize this example to display the JSON data in any way that you want. For example, you can use different widgets to display the data, such as <code>Card()</code>, <code>ListTile()</code>, or <code>Row()</code>, and you can use different keys from the JSON data to display different pieces of information for each item in the column.</p>
+<h2 id="how-to-change-the-scroll-direction-of-a-listview">How to change the scroll direction of a <code>ListView</code>?</h2>
+<p>To change the scroll direction of a <code>ListView</code>, you can set the <code>scrollDirection</code> property. This property determines the axis along which the list view scrolls. The default value is <code>Axis.vertical</code>, which means the list scrolls vertically. To make the list scroll horizontally, you can set the <code>scrollDirection</code> property to <code>Axis.horizontal</code>.</p>
+<p>Here is an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ListView(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">scrollDirection:</span> Axis.horizontal,
+</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic">// other properties here
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>)
+</span></span></code></pre></div><p>You can also use the reverse property to reverse the direction of the scroll. This property is <strong><code>false</code> by default</strong>, which means the list items are in their natural order. To reverse the order of the items, set the reverse property to <code>true</code>.</p>
+<p>Here is an example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ListView(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">reverse:</span> <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic">// other properties here
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>)
+</span></span></code></pre></div><h2 id="how-to-disable-scroll-in-a-listview">How to disable scroll in a ListView</h2>
+<p>To disable scrolling in a <code>ListView</code> in Flutter, you can use the physics property of the <code>ListView</code> widget. Set the <code>physics</code> property to <code>NeverScrollableScrollPhysics</code> to disable scrolling in the <code>ListView</code>.</p>
+<p>Here is an example of how to disable scrolling in a <code>ListView</code> in Flutter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ListView(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">physics:</span> NeverScrollableScrollPhysics(),
+</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic">// Other ListView properties and children here...
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>)
+</span></span></code></pre></div><p>Alternatively, you can use the <code>shrinkWrap</code> property to disable scrolling in the <code>ListView</code>. Set the <code>shrinkWrap</code> property to <code>true </code>to disable scrolling in the <code>ListView</code>. This will cause the ListView to size itself based on its children, and will not allow scrolling. However if the size grows outside the available space, scrolling will be enabled.</p>
+<p>Here is an example of how to disable scrolling in a <code>ListView</code> using the shrinkWrap property:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ListView(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">shrinkWrap:</span> <span style="color:#79c0ff">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#8b949e;font-style:italic">// Other ListView properties and children here...
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>)
+</span></span></code></pre></div><p>It is important to note that disabling scrolling in a <code>ListView</code> may cause issues with the layout and functionality of the <code>ListView </code>and the widgets it contains. It is recommended to carefully consider the implications of disabling scrolling before doing so.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.separated.html" target="_blank" rel="nofollow noopener noreferrer" >ListView.separated constructor</a>
+</li>
+<li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.builder.html" target="_blank" rel="nofollow noopener noreferrer" >ListView.builder constructor</a>
+</li>
+<li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.custom.html" target="_blank" rel="nofollow noopener noreferrer" >ListView.custom constructor</a>
+</li>
+<li><a href="https://api.flutter.dev/flutter/widgets/ListView-class.html" target="_blank" rel="nofollow noopener noreferrer" >ListView Flutter Documentation</a>
+</li>
+<li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.html" target="_blank" rel="nofollow noopener noreferrer" >ListView constructor</a>
+</li>
+</ol>
+<h2 id="flutter-tutorials">Flutter Tutorials</h2>
+<p>This article is a part of the Flutter Tutorials series. To see the complete list of articles available in this series, visit the <a href="/flutter_tutorials/">Flutter Tutorials page</a>
+.</p>
 
-    <div class=" list-group list-group-flush border-bottom scrollarea "> 
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-     
-      <a href="/flutter_tutorials/flutter_basic_app_example/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Flutter: Basic App Example | How to create a flutter app</div>
+      </div>
+    </article>
+    <div class="col-12 mt-4  bg-light rounded p-3 text-dark">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="btn-group ">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fflutter_tutorials%2fflutter_list_view_explained_with_examples%2f" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fflutter_tutorials%2fflutter_list_view_explained_with_examples%2f&text=Understanding%20and%20using%20list%20views%20in%20flutter%20examples%20and%20best%20practices" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fflutter_tutorials%2fflutter_list_view_explained_with_examples%2f&title=Understanding%20and%20using%20list%20views%20in%20flutter%20examples%20and%20best%20practices" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fflutter_tutorials%2fflutter_list_view_explained_with_examples%2f&title=Understanding%20and%20using%20list%20views%20in%20flutter%20examples%20and%20best%20practices" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
         </div>
-        <!-- <div class="col-10 mb-1 small"> <h2 id="creating-an-app">Creating an App</h2>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/flutter_tutorials/flutter-column-widget-explained-with-examples/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Flutter Columns Explained: From Basics to Advanced Use Cases</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h2 id="introduction">Introduction</h2>
-<p>The <code class="language-plaintext highlighter-rouge">Column</code> widget in Flutter is used to display child widgets in a vertical arrangement. It is a versatile widget that can be used in many different ways.</p>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/flutter_tutorials/flutter_list_view_explained_with_examples/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Understanding and Using ListViews in Flutter: Examples and Best Practices</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h2 id="what-is-the-listview-widget-in-flutter">What is the ListView Widget in Flutter?</h2>
-<p><strong>Listview</strong> is a widget used to display items in a sequential order. <strong>ListView</strong> is the most commonly used scrolling widget. The <code class="language-plaintext highlighter-rouge">ListView</code> widget in Flutter is a scrollable list of widgets. Based on the scroll direction, it displays its children, horizontally or vertically.</p>
-</div> -->
-      </a>
-      
-  
-      
-      
-      
-      
-         
+      </div>
     </div>
+
   </div>
+  <div class="col-md-4 col-lg-3 d-none d-md-block">
+
 
 
  
-    </aside>
-
-    </div>
-    <div class="col-md-8 col-lg-8 p-4">
-      <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting"
-      
-      
-      >
-      
-      <meta itemprop="datePublished" content="2023-01-02T00:00:00+05:30">
-      
-      <meta itemprop="inLanguage" content="en-US">
-      
-      <meta itemprop="url" content="https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/">
-      <meta itemprop="datePublished" content="2023-01-02T00:00:00+05:30">
-      <meta itemprop="dateModified" content="2023-01-02T00:00:00+05:30">
-      <meta itemprop="author" content="Justin Thomas">
-      <meta itemprop="publisher" content="Justin Thomas">
-      <meta itemprop="description" content="In this article we will learn how to implement and customize ListViews in Flutter, the popular mobile development framework. Get tips on best practices and see examples of how to display and manage lists of data in your Flutter app.">       
-
-        <header class="mb-4"><h1>Understanding and Using ListViews in Flutter: Examples and Best Practices</h1>
-        <small class="text-muted">Added on January 2, 2023 |</small>
-        <small class="text-muted">Updated on January 2, 2023</small>
-      </header>
-      <div class="blog-post-body lh-lg">
-        
-        
-        
+  </div>
+  </div>
   
-            <ul id="toc" class="toc__list">
-<li class="toc-entry toc-h2"><a href="#what-is-the-listview-widget-in-flutter">What is the ListView Widget in Flutter?</a></li>
-<li class="toc-entry toc-h2"><a href="#how-to-use-listview-widget-to-create-a-simple-scrollable-list">How to use ListView Widget to create a simple scrollable list?</a></li>
-<li class="toc-entry toc-h2"><a href="#how-to-set-the-list-of-json-data-inside-list-in-the-listviewbuilder-in-flutter">How to set the list of json data inside list in the Listview.builder in flutter?</a></li>
-<li class="toc-entry toc-h2"><a href="#how-to-change-the-scroll-direction-of-a-listview">How to change the scroll direction of a ListView?</a></li>
-<li class="toc-entry toc-h2"><a href="#how-to-disable-scroll-in-a-listview">How to disable scroll in a ListView</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-<li class="toc-entry toc-h1"><a href="#related-articles">Related Articles</a></li>
-<li class="toc-entry toc-h1"><a href="#flutter-tutorials">Flutter Tutorials</a></li>
-</ul> 
-    
-          <h2 id="what-is-the-listview-widget-in-flutter">What is the ListView Widget in Flutter?</h2>
-<p><strong>Listview</strong> is a widget used to display items in a sequential order. <strong>ListView</strong> is the most commonly used scrolling widget. The <code class="language-plaintext highlighter-rouge">ListView</code> widget in Flutter is a scrollable list of widgets. Based on the scroll direction, it displays its children, horizontally or vertically.</p>
-
-<p>A <code class="language-plaintext highlighter-rouge">ListView</code> is an example of a scrolling widget, which means that it creates a scrollable list of widgets. By default, the list scrolls vertically, but you can change the <code class="language-plaintext highlighter-rouge">scrollDirection</code> property to <code class="language-plaintext highlighter-rouge">Axis.horizontal</code> to make the list scroll horizontally.</p>
-
-<p>Here is an example of how to use the <code class="language-plaintext highlighter-rouge">ListView</code> widget:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ListView</span><span class="p">(</span>
-  <span class="nl">children:</span> <span class="p">[</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s">'Item 1'</span><span class="p">),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s">'Item 2'</span><span class="p">),</span>
-    <span class="n">Text</span><span class="p">(</span><span class="s">'Item 3'</span><span class="p">),</span>
-    <span class="c1">// ...</span>
-  <span class="p">],</span>
-<span class="p">)</span>
-</code></pre></div></div>
-
-<p>In this example, we create a <code class="language-plaintext highlighter-rouge">ListView</code> with a fixed number of items. Each item is a Text widget that displays a string.</p>
-
-<h2 id="how-to-use-listview-widget-to-create-a-simple-scrollable-list">How to use ListView Widget to create a simple scrollable list?</h2>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ListView</span><span class="p">(</span>
-    <span class="nl">children:</span> <span class="p">[</span>
-        <span class="n">Card</span><span class="p">(</span>
-            <span class="nl">child:</span> <span class="n">ListTile</span><span class="p">(</span>
-              <span class="nl">title:</span><span class="n">Text</span><span class="p">(</span><span class="s">"List Item 1"</span><span class="p">)</span> <span class="p">,</span>
-            <span class="p">)</span>
-        <span class="p">),</span>
-        <span class="n">Card</span><span class="p">(</span>
-            <span class="nl">child:</span> <span class="n">ListTile</span><span class="p">(</span>
-              <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"List Item 2"</span><span class="p">),</span>
-            <span class="p">),</span>
-        <span class="p">),</span>
-        <span class="n">Card</span><span class="p">(</span>
-            <span class="nl">child:</span> <span class="n">ListTile</span><span class="p">(</span>
-              <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s">"List Item 3"</span><span class="p">),</span>
-            <span class="p">)</span>
-        <span class="p">),</span>
-    <span class="p">],</span>
-<span class="p">)</span>
-</code></pre></div></div>
-
-<p>Thats it. You just mention the items that you want to display inside the <code class="language-plaintext highlighter-rouge">ListView</code> as the children property of <code class="language-plaintext highlighter-rouge">Listview</code>. This is the default constructor for the <code class="language-plaintext highlighter-rouge">ListView</code> widget.The default constructor takes an explicit <code class="language-plaintext highlighter-rouge">List&lt;Widget&gt;</code> of <code class="language-plaintext highlighter-rouge">children</code>. This constructor is appropriate for list views with a small number of children because constructing the List requires doing work for every child that could possibly be displayed in the list view instead of just those children that are actually visible.</p>
-
-<p>You can use the <code class="language-plaintext highlighter-rouge">ListView.builder</code> constructor to create a list with a variable number of items. This constructor takes an <code class="language-plaintext highlighter-rouge">itemBuilder</code> function, which defines the widget to display for each item in the list.</p>
-
-<p>There are several other <code class="language-plaintext highlighter-rouge">ListView</code> Constructors.</p>
-
-<ul>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ListView.builder()</code>
-  The <code class="language-plaintext highlighter-rouge">ListView.builder</code> constructor takes an <code class="language-plaintext highlighter-rouge">IndexedWidgetBuilder</code>, which builds the children on demand. This constructor is appropriate for list views with a large (or infinite) number of children because the builder is called <strong>only for those children that are actually visible.</strong></p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ListView.separated()</code>
-  The <code class="language-plaintext highlighter-rouge">ListView.separated</code> constructor takes two <code class="language-plaintext highlighter-rouge">IndexedWidgetBuilders</code>: <code class="language-plaintext highlighter-rouge">itemBuilder</code> builds child items on demand, and <code class="language-plaintext highlighter-rouge">separatorBuilder</code> similarly builds separator children which appear in between the child items. This constructor is appropriate for list views with a fixed number of children.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">ListView.custom</code>
-  The <code class="language-plaintext highlighter-rouge">ListView.custom</code> constructor takes a <code class="language-plaintext highlighter-rouge">SliverChildDelegate</code>, which provides the ability to customize additional aspects of the child model. For example, a <code class="language-plaintext highlighter-rouge">SliverChildDelegate</code> can control the algorithm used to estimate the size of children that are not actually visible.</p>
-  </li>
-</ul>
-
-<h2 id="how-to-set-the-list-of-json-data-inside-list-in-the-listviewbuilder-in-flutter">How to set the list of json data inside list in the <code class="language-plaintext highlighter-rouge">Listview.builder</code> in flutter?</h2>
-<p>To display a list of <code class="language-plaintext highlighter-rouge">JSON</code> data in a <code class="language-plaintext highlighter-rouge">ListView</code> in Flutter, you can use the <code class="language-plaintext highlighter-rouge">ListView.builder</code> constructor. This constructor takes an <code class="language-plaintext highlighter-rouge">itemBuilder</code> function, which defines the widget to display for each item in the list.</p>
-
-<p>First, we have to convert the <code class="language-plaintext highlighter-rouge">json</code> string to a <code class="language-plaintext highlighter-rouge">List</code> using the <code class="language-plaintext highlighter-rouge">dart:convert</code> library. Then it can be passed to the <code class="language-plaintext highlighter-rouge">ListView.builder</code> constructor.</p>
-
-<p>Here is an example:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="s">'dart:convert'</span><span class="o">;</span>
-<span class="c1">//convert the json string to a list</span>
-<span class="kd">var</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="s">'[{"name": "John Smith"}, {"name": "Jane Doe"}]'</span><span class="p">;</span>
-<span class="kt">List</span><span class="p">&lt;</span><span class="kd">dynamic</span><span class="p">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="na">decode</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
-
-<span class="c1">//Display the list of items</span>
-<span class="n">ListView</span><span class="o">.</span><span class="na">builder</span><span class="p">(</span>
-  <span class="nl">itemCount:</span> <span class="n">data</span><span class="o">.</span><span class="na">length</span><span class="p">,</span>
-  <span class="nl">itemBuilder:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">final</span> <span class="n">item</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
-    <span class="k">return</span> <span class="n">Text</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s">'name'</span><span class="p">]);</span>
-  <span class="p">},</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<p>In this example, data is a <code class="language-plaintext highlighter-rouge">List</code> that contains the parsed JSON data. The <code class="language-plaintext highlighter-rouge">itemCount</code> property specifies the number of items in the list. The <code class="language-plaintext highlighter-rouge">itemBuilder</code> function is called once for each item in the list, and it returns a widget that represents the item. In this case, we return a <code class="language-plaintext highlighter-rouge">Text</code> widget that displays the <code class="language-plaintext highlighter-rouge">name</code> property of the JSON object.</p>
-
-<p>You can also use the <code class="language-plaintext highlighter-rouge">ListView.separated</code> constructor to display a separator between each item in the list. This constructor takes a <code class="language-plaintext highlighter-rouge">separatorBuilder</code> function, which defines the widget to use as a separator between items.</p>
-
-<p>Here is an example:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="s">'dart:convert'</span><span class="o">;</span>
-<span class="c1">//convert the json string to a list</span>
-<span class="kd">var</span> <span class="n">jsonString</span> <span class="o">=</span> <span class="s">'[{"name": "John Smith"}, {"name": "Jane Doe"}]'</span><span class="p">;</span>
-<span class="kt">List</span><span class="p">&lt;</span><span class="kd">dynamic</span><span class="p">&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="na">decode</span><span class="p">(</span><span class="n">jsonString</span><span class="p">);</span>
-
-<span class="c1">//Display the list of items</span>
-<span class="n">ListView</span><span class="o">.</span><span class="na">separated</span><span class="p">(</span>
-  <span class="nl">itemCount:</span> <span class="n">data</span><span class="o">.</span><span class="na">length</span><span class="p">,</span>
-  <span class="nl">itemBuilder:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">final</span> <span class="n">item</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">index</span><span class="p">];</span>
-    <span class="k">return</span> <span class="n">Text</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s">'name'</span><span class="p">]);</span>
-  <span class="p">},</span>
-  <span class="nl">separatorBuilder:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">Divider</span><span class="p">(),</span><span class="c1">//This divider widget will be present between each item in the list.</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<p>In this example, we use the <code class="language-plaintext highlighter-rouge">Divider</code> widget as a separator between each item in the list.
-You can <a href="/">learn more about JSON in this article</a></p>
-
-<p>You can customize this example to display the JSON data in any way that you want. For example, you can use different widgets to display the data, such as <code class="language-plaintext highlighter-rouge">Card()</code>, <code class="language-plaintext highlighter-rouge">ListTile()</code>, or <code class="language-plaintext highlighter-rouge">Row()</code>, and you can use different keys from the JSON data to display different pieces of information for each item in the column.</p>
-
-<h2 id="how-to-change-the-scroll-direction-of-a-listview">How to change the scroll direction of a <code class="language-plaintext highlighter-rouge">ListView</code>?</h2>
-<p>To change the scroll direction of a <code class="language-plaintext highlighter-rouge">ListView</code>, you can set the <code class="language-plaintext highlighter-rouge">scrollDirection</code> property. This property determines the axis along which the list view scrolls. The default value is <code class="language-plaintext highlighter-rouge">Axis.vertical</code>, which means the list scrolls vertically. To make the list scroll horizontally, you can set the <code class="language-plaintext highlighter-rouge">scrollDirection</code> property to <code class="language-plaintext highlighter-rouge">Axis.horizontal</code>.</p>
-
-<p>Here is an example:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ListView</span><span class="p">(</span>
-  <span class="nl">scrollDirection:</span> <span class="n">Axis</span><span class="o">.</span><span class="na">horizontal</span><span class="p">,</span>
-  <span class="c1">// other properties here</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<p>You can also use the reverse property to reverse the direction of the scroll. This property is <strong><code class="language-plaintext highlighter-rouge">false</code> by default</strong>, which means the list items are in their natural order. To reverse the order of the items, set the reverse property to <code class="language-plaintext highlighter-rouge">true</code>.</p>
-
-<p>Here is an example:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ListView</span><span class="p">(</span>
-  <span class="nl">reverse:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="c1">// other properties here</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<h2 id="how-to-disable-scroll-in-a-listview">How to disable scroll in a ListView</h2>
-<p>To disable scrolling in a <code class="language-plaintext highlighter-rouge">ListView</code> in Flutter, you can use the physics property of the <code class="language-plaintext highlighter-rouge">ListView</code> widget. Set the <code class="language-plaintext highlighter-rouge">physics</code> property to <code class="language-plaintext highlighter-rouge">NeverScrollableScrollPhysics</code> to disable scrolling in the <code class="language-plaintext highlighter-rouge">ListView</code>.</p>
-
-<p>Here is an example of how to disable scrolling in a <code class="language-plaintext highlighter-rouge">ListView</code> in Flutter:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ListView</span><span class="p">(</span>
-  <span class="nl">physics:</span> <span class="n">NeverScrollableScrollPhysics</span><span class="p">(),</span>
-  <span class="c1">// Other ListView properties and children here...</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<p>Alternatively, you can use the <code class="language-plaintext highlighter-rouge">shrinkWrap</code> property to disable scrolling in the <code class="language-plaintext highlighter-rouge">ListView</code>. Set the <code class="language-plaintext highlighter-rouge">shrinkWrap</code> property to <code class="language-plaintext highlighter-rouge">true </code>to disable scrolling in the <code class="language-plaintext highlighter-rouge">ListView</code>. This will cause the ListView to size itself based on its children, and will not allow scrolling. However if the size grows outside the available space, scrolling will be enabled.</p>
-
-<p>Here is an example of how to disable scrolling in a <code class="language-plaintext highlighter-rouge">ListView</code> using the shrinkWrap property:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ListView</span><span class="p">(</span>
-  <span class="nl">shrinkWrap:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="c1">// Other ListView properties and children here...</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<p>It is important to note that disabling scrolling in a <code class="language-plaintext highlighter-rouge">ListView</code> may cause issues with the layout and functionality of the <code class="language-plaintext highlighter-rouge">ListView </code>and the widgets it contains. It is recommended to carefully consider the implications of disabling scrolling before doing so.</p>
-
-<h2 id="references">References</h2>
-<ol>
-  <li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.separated.html" target="_blank">ListView.separated constructor</a></li>
-  <li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.builder.html" target="_blank">ListView.builder constructor</a></li>
-  <li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.custom.html" target="_blank">ListView.custom constructor</a></li>
-  <li><a href="https://api.flutter.dev/flutter/widgets/ListView-class.html" target="_blank">ListView Flutter Documentation</a></li>
-  <li><a href="https://api.flutter.dev/flutter/widgets/ListView/ListView.html" target="_blank">ListView constructor</a></li>
-</ol>
-
-<h1 id="related-articles">Related Articles</h1>
-<ol>
-  <li><a href="/json/2023/01/04/what-is-json.html">Using JSON for Data Storage and Exchange</a></li>
-</ol>
-
-<h1 id="flutter-tutorials">Flutter Tutorials</h1>
-<p>This article is a part of the Flutter Tutorials series. To see the complete list of articles available in this series, visit the <a href="/flutter_tutorials">Flutter Tutorials page</a>.</p>
-
-
-                    
-
-      </div>
-        </article>
-        <div class="row">
-          <!--share buttons-->
-          <div class="col-12 mb-4">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/&text=Understanding and Using ListViews in Flutter: Examples and Best Practices" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/&title=Understanding and Using ListViews in Flutter: Examples and Best Practices" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/&title=Understanding and Using ListViews in Flutter: Examples and Best Practices" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
-              </div>
-            </div>
-        </div>
-        </div>  
-        <div class="row">
-            <div class="col-sm-12 col-md-6 mb-2">
-                
-                <a href="/flutter_tutorials/flutter-column-widget-explained-with-examples/" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> Flutter Columns Explained: From Basics to Advanced Use Cases </a>
-              
-            </div>    
-            <div class="col-sm-12 col-md-6 text-end v-100">
-              
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="card" style="background-image: linear-gradient(315deg, #007cc6 0%, #200bdbe7 74%);color:white">
-              <div class="card-body">
-                <h5 class="card-title">We are on LinkedIn</h5>
-                we are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. 
-                Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="color: white;font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-      <div class="col-md-12 col-lg-2">
-        <aside>
-
-      <!-- 
-    <div class="mb-3 mt-4" style="top: 4.5rem;">     
-      <a target="_blank" href='https://play.google.com/store/apps/details?id=com.tonocast.www&utm_source=flutterrettulf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="text-decoration:none" rel="Sponsored">
-      <div class="card mb-3 shadow-card">
+  <div class="row mt-4 pt-4 bg-light">
+    <div class="col-md-0 col-lg-3 mb-3 ">
+      <div class="card border-0" >
         <div class="card-body">
-
-          <div class="thumbnail">
-            <img class="rounded w-100 mb-2" src="https://i.ytimg.com/vi/s1e7Q-5W7t8/mqdefault.jpg" alt="..." class="img-fluid">
-          </div>
-          <h4 class="card-title">Tonocast</h4>
-          <p class="card-text text-muted mb-0" style="font-size:15px">The best app to listen to your favourite podcasts.</p>
-         <img alt='Get it on Google Play' class="w-100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-                <div class="w-100 text-muted d-flex justify-content-end" style="font-size:10px">Sponsored</div>
-
+          <h5 class="card-title fw-bold h1 text-primary">We are on LinkedIn</h5>
+                  We are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
         </div>
-    </div>
-  </a>   
-
-
-
-
--->   
-
-
-
-    </aside>
-
       </div>
-</div>
+    </div>
+    <div class="col-md-8 col-lg-6 " >
+     
+        
+          
+      
+      
+        <p class="h3 ">Related Articles</p>
+        <ul class="list-unstyled">
+          
+          <li  class="mb-2">
+            <a href="/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html" class="text-decoration-none">Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter-column-widget-explained-with-examples/" class="text-decoration-none">Flutter Columns Explained: From Basics to Advanced Use Cases</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" class="text-decoration-none">Flutter Scrollable Columns: The Complete Guide</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/" class="text-decoration-none">just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/dio_http_client/" class="text-decoration-none">Dio | Powerfull Http Client for flutter</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter_basic_app_example/" class="text-decoration-none">Flutter: Basic App Example | How to create a flutter app</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_variables_and_datatypes/" class="text-decoration-none">Variables and Datatypes in Dart</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/about/" class="text-decoration-none">About FlutterrettulF</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart-hello-world/" class="text-decoration-none">Dart Hello World Program</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_overview/" class="text-decoration-none">Dart Overview</a>
+          </li>
+          
+        </ul>
+      
+    </div>
+    <div class="col-md-4 col-lg-3 mb-3">
+     
+    </div>
+
+  </div>
 </main>
-  <footer class="border-top">
+   
+   
+    <footer class="border-top">
 
-<div class="container">
-  <div class="row row-cols-5 pb-2 pt-5 my-2 ">
-    <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
-      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        <img src="/assets/brand/logo_2.webp" width="70">
-      </a>
-      <p class="text-muted">flutterrettulf@gmail.com </p>
-      <p class="text-muted">© 2022 </p>
-      <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
-    </div>
+    <div class="container">
+      <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+        <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="/brand/logo_2.webp" width="70">
+          </a>
+          <p class="text-muted">flutterrettulf@gmail.com </p>
+          <p class="text-muted">© 2022 </p>
+          <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
+        </div>
+        
+        
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/categories/" class="nav-link p-0 text-muted">Top Categories</a></h5>
+          <ul class="nav flex-column">
+         
 
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-      <h5>Top Tags</h5>
-      <ul class="nav flex-column">
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/dart-tutorials/" class="nav-link p-0 text-muted">Dart Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter/" class="nav-link p-0 text-muted">Flutter</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-buttons/" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-column/" class="nav-link p-0 text-muted">Flutter Column</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-listview/" class="nav-link p-0 text-muted">Flutter ListView</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-plugins/" class="nav-link p-0 text-muted">Flutter Plugins</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-tutorials/" class="nav-link p-0 text-muted">Flutter Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-widgets/" class="nav-link p-0 text-muted">Flutter Widgets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/json/" class="nav-link p-0 text-muted">JSON</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/navigation/" class="nav-link p-0 text-muted">Navigation</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/categories/" class="nav-link p-0 text-muted">All Categories</a></li>
+    
+          </ul>
+        </div>
         
-        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
         
-        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
         
-        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/font-assets" class="nav-link p-0 text-muted">Font Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/tags/" class="nav-link p-0 text-muted">Top Tags</a></h5>
+          <ul class="nav flex-column">
+         
 
-      </ul>
-    </div>
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/android/" class="nav-link p-0 text-muted">android</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/animatedindicator/" class="nav-link p-0 text-muted">AnimatedIndicator</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/api-request/" class="nav-link p-0 text-muted">API Request</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/assets/" class="nav-link p-0 text-muted">Assets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/audio/" class="nav-link p-0 text-muted">audio</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/basicapp/" class="nav-link p-0 text-muted">BasicApp</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/beginner/" class="nav-link p-0 text-muted">Beginner</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/column-widget/" class="nav-link p-0 text-muted">Column widget</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/columns/" class="nav-link p-0 text-muted">Columns</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/customize-scrolling/" class="nav-link p-0 text-muted">Customize scrolling</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 text-muted">All Tags</a></li>
+    
+          </ul>
+        </div>
+        
+        
 
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Top Categories</h5>
-      <ul class="nav flex-column">
-        
-        <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-column" class="nav-link p-0 text-muted">Flutter Column</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-listview" class="nav-link p-0 text-muted">Flutter ListView</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/json" class="nav-link p-0 text-muted">JSON</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
-
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Links</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
-        <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted hover"><span class="bi bi-facebook me-2"></span>Facebook</a></li>-->
-       <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-twitter me-2"></span>Twitter</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-mastodon me-2"></span>Mastodon</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img src="/assets/img/dev.png " class="me-2" width="17">Dev.to</a></li>-->
-        <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
-        <li class="nav-item mb-2"><a href="/feed.xml" class="nav-link p-0 text-muted"><span class="bi bi-rss me-2"></span>RSS Feed</a></li> 
-        <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
-      
-      </ul>
-    </div>
-  </div>
-</div>
-<script type="text/javascript">
-            document.querySelectorAll("table").forEach(table => {
-                table.classList.add("table")
-                table.classList.add("table-striped")
-                table.classList.add("table-bordered")
-                table.classList.add("table-sm")
-            })
-        </script>
-</footer> 
-
-
-<!-- <div class="p-4">
-  <h4 class="fst-italic">Elsewhere</h4>
-  <ol class="list-unstyled">
-    <li><a href="#">GitHub</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Facebook</a></li>
-  </ol>
-</div> -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-
-    <div class="offcanvas-body p-0">
-      <div class=" list-group list-group-flush border-bottom scrollarea "> 
-        
-      
-        
-        
-      
-        
-        
-      
-        
-        
-        <a href="/flutter_tutorials/flutter_basic_app_example/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Flutter: Basic App Example | How to create a flutter app</div>
-          </div>
-        </a>
-        
-        <a href="/flutter_tutorials/flutter-column-widget-explained-with-examples/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Flutter Columns Explained: From Basics to Advanced Use Cases</div>
-          </div>
-        </a>
-        
-        <a href="/flutter_tutorials/flutter_list_view_explained_with_examples/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Understanding and Using ListViews in Flutter: Examples and Best Practices</div>
-          </div>
-        </a>
-           
-        
-        
-      
-        
-           
+    
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+    
+          <h5>Discover FlutterrettulF</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
+            
+           <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+            
+            <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+            
+            <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-    function check(){
-      const checkboxes = document.querySelectorAll('input[type=checkbox]');
-              checkboxes.forEach((checkbox) => {
-                if (checkbox.getAttribute('data-is-correct') === 'true') {
-                  checkbox.parentElement.classList.add('list-group-item-success');
-                } else {
-                  checkbox.parentElement.classList.add('list-group-item-danger');
-                }
-              });
-    }
-    document.getElementById('check-btn').addEventListener('click', check);
-  </script>
-  </body>
+    <script type="text/javascript">
+                document.querySelectorAll("table").forEach(table => {
+                    table.classList.add("table")
+                    table.classList.add("table-striped")
+                    table.classList.add("table-bordered")
+                    table.classList.add("table-sm")
+                })
+            </script>
+    </footer> 
+    
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="1088001170"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="5124283255"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+
+    </head>
+    <body>       
+        <div id="content">
+         
+        </div>
+    </body>
 </html>

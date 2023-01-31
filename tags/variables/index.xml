@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Variables on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/variables/</link>
+    <description>Recent content in Variables on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Oct 2022 14:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/variables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Variables and Datatypes in Dart</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/</link>
+      <pubDate>Thu, 20 Oct 2022 14:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/</guid>
+      <description>What are variables in Dart? If you are familiar with programming, you would be aware of variables. A variable is basically a reserved memory location to store values. In other words, a variable in a program is a name given to a memory location that can store some data.
+For example, let&amp;rsquo;s say we want to store the temperature of a particular city in Celsius. In this case, we would create a variable, temperature, and store the value of 20 in it.</description>
+    </item>
+    
+  </channel>
+</rss>

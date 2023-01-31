@@ -1,782 +1,665 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>Exploring the Powerful List Methods of Dart</title>
-  <meta name="title" content="Exploring the Powerful List Methods of Dart">
-  <meta name="twitter:card" content="summary-large-image" >
-  <meta name="twitter:site" content="flutterrettulf" >
-  <meta name="description" content="Dart is a versatile programming language that offers a variety of useful list methods to manipulate and transform data. In this post, we'll take a deep dive into some of the most useful list methods.">
-  <meta name="author" content="Justin Thomas">
-  
-  <meta name="tags" content="Dart List List Methods">
-  
-  <meta property="og:title" content="Exploring the Powerful List Methods of Dart" >
-  <meta property="twitter:title" content="Exploring the Powerful List Methods of Dart" >
-  <meta property="og:description" content="Dart is a versatile programming language that offers a variety of useful list methods to manipulate and transform data. In this post, we'll take a deep dive into some of the most useful list methods." >
-  <meta property="twitter:description" content="Dart is a versatile programming language that offers a variety of useful list methods to manipulate and transform data. In this post, we'll take a deep dive into some of the most useful list methods." >
-  <meta property="og:url" content="https://flutterrettulf.com/dart_tutorials/dart_list_methods/" >
-  <meta property="twitter:url" content="https://flutterrettulf.com/dart_tutorials/dart_list_methods/" >
-  <meta name="robots" content="index, follow" >
-  <link rel="canonical" href="https://flutterrettulf.com/dart_tutorials/dart_list_methods/" >
-  
-  <meta property="og:type" content="article" >
-  <meta property="og:article:author" content="Justin Thomas" >
-  <meta property="og:article:published_time" content="2023-01-06" >
-  <meta property="og:article:modified_time" content="2023-01-06" >
-  <meta property="og:article:section" content="Dart" >
-  <meta property="og:article:tag" content="Dart, List, and List Methods" >
-  
-  
-  <meta property="og:image" content="https://flutterrettulf.com/assets/img/list_methods/dart_list_methods.png" >
-  <meta property="twitter:image" content="https://flutterrettulf.com/assets/img/list_methods/dart_list_methods.png" >
-  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow" >
+        <link rel="canonical" href="https://flutterrettulf.com/dart_tutorials/dart_list_methods/">
+        <link href="/css/blog.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/sitemanifest.json">        
 
-  <link href="/assets/prism.css" rel="stylesheet">
-  <script src="/assets/prism.js" ></script>
-  <!--fav icons-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-  <link rel="manifest" href="/sitemanifest.json">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-      
-  <!-- Custom styles for this template -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+            gtag('config', 'G-GKQ47FWX29');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+        crossorigin="anonymous"></script>
+        <meta property="og:title" content="Exploring the Powerful List Methods of Dart" />
+<meta property="og:description" content="Dart is a versatile programming language that offers a variety of useful list methods to manipulate and transform data. In this post, we&#39;ll take a deep dive into some of the most useful list methods." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://flutterrettulf.com/dart_tutorials/dart_list_methods/" /><meta property="og:image" content="https://flutterrettulf.com/post_images/dart_list_methods.png" /><meta property="article:section" content="dart_tutorials" />
+<meta property="article:published_time" content="2023-01-06T15:00:00+05:30" />
+<meta property="article:modified_time" content="2023-01-06T15:00:00+05:30" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <meta itemprop="name" content="Exploring the Powerful List Methods of Dart">
+<meta itemprop="description" content="Dart is a versatile programming language that offers a variety of useful list methods to manipulate and transform data. In this post, we&#39;ll take a deep dive into some of the most useful list methods."><meta itemprop="datePublished" content="2023-01-06T15:00:00+05:30" />
+<meta itemprop="dateModified" content="2023-01-06T15:00:00+05:30" />
+<meta itemprop="wordCount" content="1895"><meta itemprop="image" content="https://flutterrettulf.com/post_images/dart_list_methods.png">
+<meta itemprop="keywords" content="Dart,List,List Methods," />
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://flutterrettulf.com/post_images/dart_list_methods.png"/>
 
-    gtag('config', 'G-GKQ47FWX29');
-  </script>
-  <link href="/assets/blog.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
-  crossorigin="anonymous"></script>
-</head>
-  <style>
+<meta name="twitter:title" content="Exploring the Powerful List Methods of Dart"/>
+<meta name="twitter:description" content="Dart is a versatile programming language that offers a variety of useful list methods to manipulate and transform data. In this post, we&#39;ll take a deep dive into some of the most useful list methods."/>
 
-body {
-  min-height: 75rem;
-  padding-top: 3.5rem;
-}
-  </style>
+        <title>
+             Exploring the powerful list methods of dart | FlutterrettulF 
+        </title>
+        
+    </head>
+  
   <body>   
     <nav class="navbar navbar-expand-md navbar-light fixed-top border-bottom bg-white">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      
 
-      <a class="navbar-brand" href="/"><img src="/assets/brand/logo_2.svg" width="30"></a>
+      <a class="navbar-brand" href="/"><img src="/brand/logo_2.svg" width="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="bi bi-three-dots-vertical"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/static-assets">Static Assets</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/navigation">Navigation</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-column">Flutter Column</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-listview">Flutter ListView</a>
-          </li>
-              
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials">Dart tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins">Flutter plugins</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials">Flutter tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/posts">Posts</a>
-          </li>
-             
+            
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials/">Dart Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials/">Flutter Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins/">Popular Flutter Plugins</a>
+                    </li>
+                
+            
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none " aria-current="page" href="/categories/">Categories</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none" aria-current="page" href="/tags/">Tags</a>
+            </li>
         </ul>
-        <!-- <a class="btn btn-outline-light me-2" href="/courses">Courses</a>  -->
-        <!-- <a class="btn btn-primary"  href="/search">Search</a> -->
+        
+        
       </div>
     </div>
   </nav>
-  <main class="container-fluid">  
-    <div class="row"> 
-      <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
-        <aside>
+    
+<main class="container-fluid">
+ 
+  <div class="row ">
+    <div class="col-md-4 col-lg-3 d-none d-md-block"><div class="bg-light rounded p-3 sticky-top" style="top: 5rem;">
+        <p class="h5 fw-bold">The Index of Insight</p>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#how-to-insert-elements-to-a-list-in-dart">How to insert elements to a list in dart?</a>
+      <ul>
+        <li><a href="#1-add">1. <code>add()</code></a></li>
+        <li><a href="#2-addall">2. <code>addAll()</code></a></li>
+        <li><a href="#3-insert">3. <code>insert()</code></a></li>
+        <li><a href="#4-insertall">4. <code>insertAll()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-remove-elements-from-a-list-in-dart">How to remove elements from a list in dart?</a>
+      <ul>
+        <li><a href="#1-clear">1. <code>clear()</code></a></li>
+        <li><a href="#2-remove">2. <code>remove()</code></a></li>
+        <li><a href="#3-removeat">3. <code>removeAt()</code></a></li>
+        <li><a href="#4-removelast">4. <code>removeLast()</code></a></li>
+        <li><a href="#5-removerange">5. <code>removeRange()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-remove-elements-from-a-list-in-dart-based-on-a-condition">How to remove elements from a list in dart, based on a condition?</a>
+      <ul>
+        <li><a href="#1-removewhere">1. <code>removeWhere()</code></a></li>
+        <li><a href="#2-retainwhere">2. <code>retainWhere()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-find-if-an-item-is-present-in-the-list">How to find if an item is present in the list?</a>
+      <ul>
+        <li><a href="#1-indexof">1. <code>indexOf()</code></a></li>
+        <li><a href="#2-indexwhere">2. <code>indexWhere()</code></a></li>
+        <li><a href="#3-lastindexof">3. <code>lastIndexOf()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-sort-a-list-in-dart">How to sort a list in dart?</a></li>
+    <li><a href="#how-to-reduce-a-collection-in-dart-to-a-single-value--reduce-method">How to reduce a collection in dart to a single value:  <code>reduce()</code> method</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#dart-tutorials">Dart Tutorials</a></li>
+  </ul>
+</nav>
+          <hr >
+          <p class="h5 my-2">Share</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <div class="btn-group ">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_list_methods%2f" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_list_methods%2f&text=Exploring%20the%20powerful%20list%20methods%20of%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_list_methods%2f&title=Exploring%20the%20powerful%20list%20methods%20of%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_list_methods%2f&title=Exploring%20the%20powerful%20list%20methods%20of%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+            </div>
+          </div>
+      </div></div>
+    <div class="col-md-8 col-lg-6 ">
 
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
+    <article >
+      <header >
+        <h1 class="fw-bold mb-4">
+          Exploring the Powerful List Methods of Dart
+        </h1>
+        
+        
+        <picture class="w-100">
+          
+          <source srcset="/post_images/dart_list_methods_hu1ebce9e634ec8b3ff9bf6d19babe314f_69316_200x0_resize_box_3.png" media="(max-width: 200px)">
+          
+          
+          <source srcset="/post_images/dart_list_methods_hu1ebce9e634ec8b3ff9bf6d19babe314f_69316_400x0_resize_box_3.png" media="(max-width: 400px)">
+          
+          
+          <source srcset="/post_images/dart_list_methods_hu1ebce9e634ec8b3ff9bf6d19babe314f_69316_600x0_resize_box_3.png" media="(max-width: 600px)">
+          
+          
+          <source srcset="/post_images/dart_list_methods_hu1ebce9e634ec8b3ff9bf6d19babe314f_69316_800x0_resize_box_3.png" media="(max-width: 800px)">
+          
+          <img src="/post_images/dart_list_methods.png" alt="post_images/dart_list_methods.png" class="img-fluid rounded mb-4" >
+        </picture>
+                
+      </header>
+      <div class="col-12 d-block d-md-none"><div class="bg-light rounded p-3 mb-4" >
+            <p class="h5 fw-bold">The Index of Insight</p>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#how-to-insert-elements-to-a-list-in-dart">How to insert elements to a list in dart?</a>
+      <ul>
+        <li><a href="#1-add">1. <code>add()</code></a></li>
+        <li><a href="#2-addall">2. <code>addAll()</code></a></li>
+        <li><a href="#3-insert">3. <code>insert()</code></a></li>
+        <li><a href="#4-insertall">4. <code>insertAll()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-remove-elements-from-a-list-in-dart">How to remove elements from a list in dart?</a>
+      <ul>
+        <li><a href="#1-clear">1. <code>clear()</code></a></li>
+        <li><a href="#2-remove">2. <code>remove()</code></a></li>
+        <li><a href="#3-removeat">3. <code>removeAt()</code></a></li>
+        <li><a href="#4-removelast">4. <code>removeLast()</code></a></li>
+        <li><a href="#5-removerange">5. <code>removeRange()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-remove-elements-from-a-list-in-dart-based-on-a-condition">How to remove elements from a list in dart, based on a condition?</a>
+      <ul>
+        <li><a href="#1-removewhere">1. <code>removeWhere()</code></a></li>
+        <li><a href="#2-retainwhere">2. <code>retainWhere()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-find-if-an-item-is-present-in-the-list">How to find if an item is present in the list?</a>
+      <ul>
+        <li><a href="#1-indexof">1. <code>indexOf()</code></a></li>
+        <li><a href="#2-indexwhere">2. <code>indexWhere()</code></a></li>
+        <li><a href="#3-lastindexof">3. <code>lastIndexOf()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-sort-a-list-in-dart">How to sort a list in dart?</a></li>
+    <li><a href="#how-to-reduce-a-collection-in-dart-to-a-single-value--reduce-method">How to reduce a collection in dart to a single value:  <code>reduce()</code> method</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#dart-tutorials">Dart Tutorials</a></li>
+  </ul>
+</nav>      
+          </div></div>
+      <div class="nested-copy-line-height lh-copy f4 nested-links">
+        <h2 id="introduction">Introduction</h2>
+<p>Hello and welcome to our tutorial on using lists in Dart. In this article, we&rsquo;ll go through several ways to work with lists in Dart. Every programming language needs lists as a fundamental data structure, and Dart offers a variety of effective ways to interact with them. We will examine these techniques in-depth in this article. We hope this article will be helpful to you whether you&rsquo;re a new or seasoned coder. Let&rsquo;s get going!</p>
+<h2 id="how-to-insert-elements-to-a-list-in-dart">How to insert elements to a list in dart?</h2>
+<p>Dart provides several methods to insert elements into a list. They are:</p>
+<ol>
+<li><code>add()</code></li>
+<li><code>addAll()</code></li>
+<li><code>insert()</code></li>
+<li><code>insertAll()</code></li>
+</ol>
+<h3 id="1-add">1. <code>add()</code></h3>
+<p>The <code>add()</code> method appends the specified value to the end of the list. The <strong>list must be growable</strong>, when using the <code>add()</code> method.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">6</span>];
+</span></span><span style="display:flex;"><span>numbers.add(<span style="color:#a5d6ff">7</span>);
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [1, 2, 3, 6, 7]
+</span></span></span></code></pre></div><p>In the above example, the <code>numbers</code> list has the values <code>[1,2,3,6]</code>. Then we call the <code>add()</code> method with the value <code>7</code> as the parameter. The <code>numbers</code> list is updated by appending the value <code>7</code> to the list.</p>
+<h3 id="2-addall">2. <code>addAll()</code></h3>
+<p>The <code>addAll()</code> is used when we want to append multiple items to a list. The <code>addAll()</code> method accepts an iterator as the parameter and appends them to the end of the list.
+This method extends the length of the list by the number of objects in iterable, So the list must be growable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> ls <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">5</span>];
+</span></span><span style="display:flex;"><span>ls.addAll([<span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">7</span>, <span style="color:#a5d6ff">8</span>]);
+</span></span><span style="display:flex;"><span>print(ls); <span style="color:#8b949e;font-style:italic">// [1, 2, 3, 4, 5, 6, 7, 8]
+</span></span></span></code></pre></div><h3 id="3-insert">3. <code>insert()</code></h3>
+<p><code>insert()</code> method accepts two parameters: <code>index</code> and the <code>object</code> to be inserted.
+It increases the length of the list by one and shifts all objects at or after the <code>index</code> towards the end of the list.The <code>index</code> value must be greater than or equal to 0 and no greater than length.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">4</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> index <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">2</span>;
+</span></span><span style="display:flex;"><span>numbers.insert(index, <span style="color:#a5d6ff">10</span>);
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [1, 2, 10, 3, 4]
+</span></span></span></code></pre></div><h3 id="4-insertall">4. <code>insertAll()</code></h3>
+<p><code>insert()</code> method accepts two parameters: <code>index</code> and an iterable of <code>objects</code> to be inserted.It increases the length of the list by the length of iterable and shifts all later objects towards the end of the list, So, the list must be growable. The <code>index</code> value must be greater than or equal to 0 and no greater than length.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">4</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">final</span> insertItems <span style="color:#ff7b72;font-weight:bold">=</span> [<span style="color:#a5d6ff">10</span>, <span style="color:#a5d6ff">11</span>];
+</span></span><span style="display:flex;"><span>numbers.insertAll(<span style="color:#a5d6ff">2</span>, insertItems);
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [1, 2, 10, 11, 3, 4]
+</span></span></span></code></pre></div><h2 id="how-to-remove-elements-from-a-list-in-dart">How to remove elements from a list in dart?</h2>
+<p>There are several ways to remove elements from a list. You can remove one element from the list by calling <code>remove()</code> or clear the whole list by calling <code>clear()</code>. Let&rsquo;s take a detailed look at different ways to remove elements from a list in dart.</p>
+<ol>
+<li><code>clear()</code></li>
+<li><code>remove()</code></li>
+<li><code>removeAt()</code></li>
+<li><code>removeLast()</code></li>
+<li><code>removeRange()</code></li>
+</ol>
+<h3 id="1-clear">1. <code>clear()</code></h3>
+<p><code>clear()</code> method is used to remove all elements from a list. In other words, empty the list.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>];
+</span></span><span style="display:flex;"><span>numbers.clear();
+</span></span><span style="display:flex;"><span>print(numbers.length); <span style="color:#8b949e;font-style:italic">// 0
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>print(numbers); <span style="color:#8b949e;font-style:italic">// []
+</span></span></span></code></pre></div><h3 id="2-remove">2. <code>remove()</code></h3>
+<p>Removes the first occurrence of value from this list. If the value was in the result, this function returns <code>true</code> and removes the first occurrence of value from the list. If the value was not in the list, this function returns <code>false</code>. The list must be growable.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> parts <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;head&#39;</span>, <span style="color:#a5d6ff">&#39;shoulders&#39;</span>, <span style="color:#a5d6ff">&#39;knees&#39;</span>, <span style="color:#a5d6ff">&#39;toes&#39;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">final</span> retVal <span style="color:#ff7b72;font-weight:bold">=</span> parts.remove(<span style="color:#a5d6ff">&#39;head&#39;</span>); <span style="color:#8b949e;font-style:italic">// true
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>print(parts); <span style="color:#8b949e;font-style:italic">// [shoulders, knees, toes]
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">final</span> retVal <span style="color:#ff7b72;font-weight:bold">=</span> parts.remove(<span style="color:#a5d6ff">&#39;head&#39;</span>); <span style="color:#8b949e;font-style:italic">// false
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>print(parts); <span style="color:#8b949e;font-style:italic">// [shoulders, knees, toes]
+</span></span></span></code></pre></div><h3 id="3-removeat">3. <code>removeAt()</code></h3>
+<p>The <code>removeAt()</code> method is used to remove the object at the specified index. This method removes the object at the specified index, moves all later elements down by one and reduces the length of the list by one. <strong>Returns the removed value.</strong> The index must be in the range 0 ≤ index &lt; length.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> parts <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;head&#39;</span>, <span style="color:#a5d6ff">&#39;shoulder&#39;</span>, <span style="color:#a5d6ff">&#39;knees&#39;</span>, <span style="color:#a5d6ff">&#39;toes&#39;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">final</span> retVal <span style="color:#ff7b72;font-weight:bold">=</span> parts.removeAt(<span style="color:#a5d6ff">2</span>); <span style="color:#8b949e;font-style:italic">// knees
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>print(parts); <span style="color:#8b949e;font-style:italic">// [head, shoulder, toes]
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>print(retVal); <span style="color:#8b949e;font-style:italic">// knees
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>print(parts.length); <span style="color:#8b949e;font-style:italic">// 3
+</span></span></span></code></pre></div><h3 id="4-removelast">4. <code>removeLast()</code></h3>
+<p>Removes and returns the last object in this list. The list must be growable and non-empty.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> parts <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;head&#39;</span>, <span style="color:#a5d6ff">&#39;shoulder&#39;</span>, <span style="color:#a5d6ff">&#39;knees&#39;</span>, <span style="color:#a5d6ff">&#39;toes&#39;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">final</span> retVal <span style="color:#ff7b72;font-weight:bold">=</span> parts.removeLast(); <span style="color:#8b949e;font-style:italic">// toes
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>print(parts); <span style="color:#8b949e;font-style:italic">// [head, shoulder, knees]
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>print(parts.length); <span style="color:#8b949e;font-style:italic">// 3
+</span></span></span></code></pre></div><h3 id="5-removerange">5. <code>removeRange()</code></h3>
+<p>The <code>removeRange()</code> method is used to remove a range of objects from the list.The method accepts two arguments: <code>start</code> and <code>end</code>. The first argument is the index of the start of the range. The second argument is the index of the end of the range. Every object with positions <strong>greater than or equal</strong> to <code>start</code> and <strong>less than</strong> <code>end</code>, will be removed from the list. The object at the index <code>end</code> will not be removed.</p>
+<p>A range from <code>start</code> to <code>end</code> is valid if <code>0 ≤ start ≤ end ≤ length</code>. An empty range (with <code>end == start</code>) is valid.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">3</span>, <span style="color:#a5d6ff">4</span>, <span style="color:#a5d6ff">5</span>];
+</span></span><span style="display:flex;"><span>numbers.removeRange(<span style="color:#a5d6ff">1</span>, <span style="color:#a5d6ff">4</span>);
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [1, 5]
+</span></span></span></code></pre></div><h2 id="how-to-remove-elements-from-a-list-in-dart-based-on-a-condition">How to remove elements from a list in dart, based on a condition?</h2>
+<p>Earlier, we looked at removing elements a specific index or a range. Next, we are going to look at how to remove elements from a list based on some conditions. Dart provides some usefull methods for this purpose.</p>
+<ol>
+<li><code>removeWhere()</code></li>
+<li><code>retainWhere()</code></li>
+</ol>
+<h3 id="1-removewhere">1. <code>removeWhere()</code></h3>
+<p>Removes all objects from this list that satisfy the provided condition. The <code>removeWhere()</code> method accepts a function as an argument(test function). Each item in the list will be passed to the test function as an argument. The test should perform the required checks and return <code>true</code> or <code>false</code>. All the objects where the test function returns <code>true</code> will be removed from the list.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;one&#39;</span>, <span style="color:#a5d6ff">&#39;two&#39;</span>, <span style="color:#a5d6ff">&#39;three&#39;</span>, <span style="color:#a5d6ff">&#39;four&#39;</span>];
+</span></span><span style="display:flex;"><span>numbers.removeWhere((item) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> item.length <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">3</span>);
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [three, four]
+</span></span></span></code></pre></div><h3 id="2-retainwhere">2. <code>retainWhere()</code></h3>
+<p>Removes all objects from this list that does not satisfy the provided condition. The working of the <code>retainWhere()</code> method is similar to that of <code>removeWhere()</code> except that it retains all the objects where the test function returns <code>true</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;one&#39;</span>, <span style="color:#a5d6ff">&#39;two&#39;</span>, <span style="color:#a5d6ff">&#39;three&#39;</span>, <span style="color:#a5d6ff">&#39;four&#39;</span>];
+</span></span><span style="display:flex;"><span>numbers.retainWhere((item) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> item.length <span style="color:#ff7b72;font-weight:bold">==</span> <span style="color:#a5d6ff">3</span>);
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [one, two]
+</span></span></span></code></pre></div><h2 id="how-to-find-if-an-item-is-present-in-the-list">How to find if an item is present in the list?</h2>
+<p>We have several options in dart, to check if the <code>list</code> contains a specific item.</p>
+<ol>
+<li><code>indexOf()</code></li>
+<li><code>indexWhere()</code></li>
+<li><code>lastIndexOf()</code></li>
+<li></li>
+</ol>
+<h3 id="1-indexof">1. <code>indexOf()</code></h3>
+<p>Searches the list from index start to the end of the list. The first time an object <code>o</code> is encountered so that <code>o</code> == element, the index of <code>o</code> is returned. If the element is not present, this method returns <code>-1</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> notes <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;do&#39;</span>, <span style="color:#a5d6ff">&#39;re&#39;</span>, <span style="color:#a5d6ff">&#39;mi&#39;</span>, <span style="color:#a5d6ff">&#39;re&#39;</span>];
+</span></span><span style="display:flex;"><span>print(notes.indexOf(<span style="color:#a5d6ff">&#39;re&#39;</span>)); <span style="color:#8b949e;font-style:italic">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">final</span> indexWithStart <span style="color:#ff7b72;font-weight:bold">=</span> notes.indexOf(<span style="color:#a5d6ff">&#39;re&#39;</span>, <span style="color:#a5d6ff">2</span>); <span style="color:#8b949e;font-style:italic">// 3
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">final</span> index <span style="color:#ff7b72;font-weight:bold">=</span> notes.indexOf(<span style="color:#a5d6ff">&#39;fa&#39;</span>); <span style="color:#8b949e;font-style:italic">// -1
+</span></span></span></code></pre></div><h3 id="2-indexwhere">2. <code>indexWhere()</code></h3>
+<p>This method accepts a test function as a parameter. Searches the list from index start to the end of the list. The test function will be called each time with the element as the parameter. The test function should return <code>true</code> or <code>false</code> after performing required checks. The first time an object <code>o</code> is encountered so that <code>test(o)</code> is true, the index of <code>o</code> is returned. If the element is not present, this method returns <code>-1</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> notes <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;do&#39;</span>, <span style="color:#a5d6ff">&#39;re&#39;</span>, <span style="color:#a5d6ff">&#39;mi&#39;</span>, <span style="color:#a5d6ff">&#39;re&#39;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">final</span> first <span style="color:#ff7b72;font-weight:bold">=</span> notes.indexWhere((note) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> note.startsWith(<span style="color:#a5d6ff">&#39;r&#39;</span>)); <span style="color:#8b949e;font-style:italic">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">final</span> second <span style="color:#ff7b72;font-weight:bold">=</span> notes.indexWhere((note) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> note.startsWith(<span style="color:#a5d6ff">&#39;r&#39;</span>), <span style="color:#a5d6ff">2</span>); <span style="color:#8b949e;font-style:italic">// 3
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">final</span> index <span style="color:#ff7b72;font-weight:bold">=</span> notes.indexWhere((note) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> note.startsWith(<span style="color:#a5d6ff">&#39;k&#39;</span>)); <span style="color:#8b949e;font-style:italic">// -1
+</span></span></span></code></pre></div><h3 id="3-lastindexof">3. <code>lastIndexOf()</code></h3>
+<p>Searches the list backwards to index <code>0</code>. The method accetps an optional parameter <code>start</code>. If the <code>start</code> index is given, the method searhes the list backwards from <code>start</code> index to 0. if `start is not given, it begins the search from the last element.</p>
+<p>The first time an object <code>o</code> is encountered so that <code>o == element</code>, the index of <code>o</code> is returned.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> notes <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;do&#39;</span>, <span style="color:#a5d6ff">&#39;re&#39;</span>, <span style="color:#a5d6ff">&#39;mi&#39;</span>, <span style="color:#a5d6ff">&#39;re&#39;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">const</span> startIndex <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#a5d6ff">2</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">final</span> index <span style="color:#ff7b72;font-weight:bold">=</span> notes.lastIndexOf(<span style="color:#a5d6ff">&#39;re&#39;</span>, startIndex); <span style="color:#8b949e;font-style:italic">// 1, with startIndex as 2
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">final</span> index <span style="color:#ff7b72;font-weight:bold">=</span> notes.lastIndexOf(<span style="color:#a5d6ff">&#39;re&#39;</span>); <span style="color:#8b949e;font-style:italic">// 3, without startIndex. default=index of last element
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span><span style="color:#ff7b72">final</span> index <span style="color:#ff7b72;font-weight:bold">=</span> notes.lastIndexOf(<span style="color:#a5d6ff">&#39;fa&#39;</span>); <span style="color:#8b949e;font-style:italic">// -1
+</span></span></span></code></pre></div><h2 id="how-to-sort-a-list-in-dart">How to sort a list in dart?</h2>
+<p>Dart provides a <code>sort()</code> method to sort the values in a list. The <code>sort()</code> method accepts a compare function as its parameter. We can provide a custom logic on how to sort the list. For example, we could provide a compare function that checks the alphabetical order, or may be the length of the elements etc&hellip; The compare function must act as a Comparator.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;two&#39;</span>, <span style="color:#a5d6ff">&#39;three&#39;</span>, <span style="color:#a5d6ff">&#39;four&#39;</span>];
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Sort from shortest to longest.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>numbers.sort((a, b) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> a.length.compareTo(b.length));
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [two, four, three]
+</span></span></span></code></pre></div><p>The default List implementations use Comparable.compare if compare is omitted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">13</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#ff7b72;font-weight:bold">-</span><span style="color:#a5d6ff">11</span>, <span style="color:#a5d6ff">0</span>];
+</span></span><span style="display:flex;"><span>numbers.sort();
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [-11, 0, 2, 13]
+</span></span></span></code></pre></div><p>In that case, the elements of the list must be Comparable to each other.</p>
+<p>A Comparator may compare objects as equal (return zero), even if they are distinct objects. The sort function is not guaranteed to be stable, so distinct objects that compare as equal may occur in any order in the result:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">String</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">&#39;one&#39;</span>, <span style="color:#a5d6ff">&#39;two&#39;</span>, <span style="color:#a5d6ff">&#39;three&#39;</span>, <span style="color:#a5d6ff">&#39;four&#39;</span>];
+</span></span><span style="display:flex;"><span>numbers.sort((a, b) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> a.length.compareTo(b.length));
+</span></span><span style="display:flex;"><span>print(numbers); <span style="color:#8b949e;font-style:italic">// [one, two, four, three] OR [two, one, four, three]
+</span></span></span></code></pre></div><h2 id="how-to-reduce-a-collection-in-dart-to-a-single-value--reduce-method">How to reduce a collection in dart to a single value:  <code>reduce()</code> method</h2>
+<p>Reduces a collection to a single value by iteratively combining elements of the collection using the provided function.The iterable must have at least one element. If it has only one element, that element is returned.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">final</span> numbers <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">double</span><span style="color:#ff7b72;font-weight:bold">&gt;</span>[<span style="color:#a5d6ff">10</span>, <span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">5</span>, <span style="color:#a5d6ff">0.5</span>];
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">final</span> result <span style="color:#ff7b72;font-weight:bold">=</span> numbers.reduce((value, element) <span style="color:#ff7b72;font-weight:bold">=&gt;</span> value <span style="color:#ff7b72;font-weight:bold">+</span> element);
+</span></span><span style="display:flex;"><span>print(result); <span style="color:#8b949e;font-style:italic">// 17.5
+</span></span></span></code></pre></div><p>The reduce method takes a function as an argument, which is applied to each element in the list. In this case, the function takes two arguments <code>value</code> and <code>element</code> and returns the sum of those two numbers. The reduce method applies this function to the elements of the list, starting with the first two elements and then combining the result with the next element and so on, until the entire list has been reduced to a single value. In this example, the list is reduced to the sum of all its elements.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we explored several powerful methods for manipulating lists in Dart. We covered the add method, which allows you to append an element to the end of a list, and the insert method, which allows you to add an element at a specific index in the list. We also looked at the remove method, which allows you to remove an element from the list by value or by index, and the sublist method, which allows you to create a new list from a subset of an existing list. Finally, we looked at the sort method, which allows you to sort the elements of a list in ascending or descending order. These methods provide a wide range of options for working with lists in Dart, and are essential tools for any Dart developer.</p>
+<p>And with that, I think it&rsquo;s safe to say that we&rsquo;ve covered every single list method in the history of ever. Or at least, it feels that way. Time for a well-deserved break and maybe a cup of tea (or coffee, if that&rsquo;s your thing). <strong>Happy coding</strong>.</p>
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://api.dart.dev/be/180791/dart-core/List-class.html" target="_blank" rel="nofollow noopener noreferrer" >Dart List Class</a>
 
-    <div class=" list-group list-group-flush border-bottom scrollarea "> 
-      
-      
-      
-      
-      
-     
-      <a href="/dart_tutorials/dart_overview/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Dart Overview</div>
+The documentation on dart.dev is wonderfull resource to read more about the powerfull apis provided by dart.</li>
+</ol>
+<h2 id="dart-tutorials">Dart Tutorials</h2>
+<p>This article is part of the Dart Tutorials series. You can find the list of all the tutorials in the series in the <a href="/dart_tutorials/">dart tutorials page</a>
+.</p>
+
+      </div>
+    </article>
+    <div class="col-12 mt-4  bg-light rounded p-3 text-dark">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="btn-group ">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_list_methods%2f" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_list_methods%2f&text=Exploring%20the%20powerful%20list%20methods%20of%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_list_methods%2f&title=Exploring%20the%20powerful%20list%20methods%20of%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_list_methods%2f&title=Exploring%20the%20powerful%20list%20methods%20of%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
         </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="overview">Overview</h1>
-<p>Dart is a programming language for apps on several platforms that is client-optimized.
-It was created by Google and is employed to create desktop, server, online, and mobile applications.
-Dart is a garbage-collected, object-oriented, class-based language with C-style syntax.
-JavaScript or native code can both be produced using Dart.
-It supports type inference, reified generics, abstract classes, mixins, and interfaces.</p>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/dart_tutorials/dart_hello_world/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Dart Hello World Program</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="tldr">TL;DR</h1>
-<ul>
-  <li>Install Dart SDK from <a href="https://dart.dev/get-dart">here</a>.</li>
-  <li>Create a file named <code class="language-plaintext highlighter-rouge">hello_world.dart</code> and add the following code:
-    <div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span> 
-  <span class="n">print</span><span class="p">(</span><span class="s">'Hello World'</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>Run the following command to compile the code:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dart hello_world.dart
-</code></pre></div>    </div>
-  </li>
-  <li>You should see the following output:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World
-</code></pre></div>    </div>
-  </li>
-</ul>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/dart_tutorials/dart_variables_and_datatypes/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Variables and Datatypes in Dart</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="what-are-variables-in-dart">What are variables in Dart?</h1>
-<p>If you are familiar with programming, you would be aware of variables. A variable is basically a reserved memory location to store values. In other words, a variable in a program is a name given to a memory location that can store some data.</p>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/dart_tutorials/dart_operators/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Operators in Dart</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</h1>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/dart_tutorials/dart_list_methods/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Exploring the Powerful List Methods of Dart</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h2 id="introduction">Introduction</h2>
-<p>Hello and welcome to our tutorial on using lists in Dart. In this article, we’ll go through several ways to work with lists in Dart. Every programming language needs lists as a fundamental data structure, and Dart offers a variety of effective ways to interact with them. We will examine these techniques in-depth in this article. We hope this article will be helpful to you whether you’re a new or seasoned coder. Let’s get going!</p>
-</div> -->
-      </a>
-      
-  
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-         
+      </div>
     </div>
+
   </div>
+  <div class="col-md-4 col-lg-3 d-none d-md-block">
+
 
 
  
-    </aside>
-
-    </div>
-    <div class="col-md-8 col-lg-8 p-4">
-      <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting"
-      
-      
-      >
-      
-      <meta itemprop="datePublished" content="2023-01-06T15:00:00+05:30">
-      
-      <meta itemprop="inLanguage" content="en-US">
-      
-      <meta itemprop="image" content="/assets/img/list_methods/dart_list_methods.png">
-      
-      <meta itemprop="url" content="https://flutterrettulf.com/dart_tutorials/dart_list_methods/">
-      <meta itemprop="datePublished" content="2023-01-06T15:00:00+05:30">
-      <meta itemprop="dateModified" content="2023-01-06T15:00:00+05:30">
-      <meta itemprop="author" content="Justin Thomas">
-      <meta itemprop="publisher" content="Justin Thomas">
-      <meta itemprop="description" content="Dart is a versatile programming language that offers a variety of useful list methods to manipulate and transform data. In this post, we'll take a deep dive into some of the most useful list methods.">       
-
-        <header class="mb-4"><h1>Exploring the Powerful List Methods of Dart</h1>
-        <small class="text-muted">Added on January 6, 2023 |</small>
-        <small class="text-muted">Updated on January 6, 2023</small>
-      </header>
-      <div class="blog-post-body lh-lg">
-        
-        
-        <img class="img-fluid rounded mb-4" src="/generated/assets/img/list_methods/dart_list_methods-800-5c9cefa52.png" alt="Exploring the Powerful List Methods of Dart" srcset="/generated/assets/img/list_methods/dart_list_methods-400-5c9cefa52.png 400w, /generated/assets/img/list_methods/dart_list_methods-600-5c9cefa52.png 600w, /generated/assets/img/list_methods/dart_list_methods-800-5c9cefa52.png 800w, /generated/assets/img/list_methods/dart_list_methods-1000-5c9cefa52.png 1000w">
-
-        
-        
+  </div>
+  </div>
   
-            <ul id="toc" class="toc__list">
-<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
-<li class="toc-entry toc-h2"><a href="#how-to-insert-elements-to-a-list-in-dart">How to insert elements to a list in dart?</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h3"><a href="#1-add">1. add()</a></li>
-<li class="toc-entry toc-h3"><a href="#2-addall">2. addAll()</a></li>
-<li class="toc-entry toc-h3"><a href="#3-insert">3. insert()</a></li>
-<li class="toc-entry toc-h3"><a href="#4-insertall">4. insertAll()</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#how-to-remove-elements-from-a-list-in-dart">How to remove elements from a list in dart?</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h3"><a href="#1-clear">1. clear()</a></li>
-<li class="toc-entry toc-h3"><a href="#2-remove">2. remove()</a></li>
-<li class="toc-entry toc-h3"><a href="#3-removeat">3. removeAt()</a></li>
-<li class="toc-entry toc-h3"><a href="#4-removelast">4. removeLast()</a></li>
-<li class="toc-entry toc-h3"><a href="#5-removerange">5. removeRange()</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#how-to-remove-elements-from-a-list-in-dart-based-on-a-condition">How to remove elements from a list in dart, based on a condition?</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h3"><a href="#1-removewhere">1. removeWhere()</a></li>
-<li class="toc-entry toc-h3"><a href="#2-retainwhere">2. retainWhere()</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#how-to-find-if-an-item-is-present-in-the-list">How to find if an item is present in the list?</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h3"><a href="#1-indexof">1. indexOf()</a></li>
-<li class="toc-entry toc-h3"><a href="#2-indexwhere">2. indexWhere()</a></li>
-<li class="toc-entry toc-h3"><a href="#3-lastindexof">3. lastIndexOf()</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#how-to-sort-a-list-in-dart">How to sort a list in dart?</a></li>
-<li class="toc-entry toc-h2"><a href="#how-to-reduce-a-collection-in-dart-to-a-single-value--reduce-method">How to reduce a collection in dart to a single value:  reduce() method</a></li>
-<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-<li class="toc-entry toc-h1"><a href="#dart-tutorials">Dart Tutorials</a></li>
-</ul> 
-    
-          <h2 id="introduction">Introduction</h2>
-<p>Hello and welcome to our tutorial on using lists in Dart. In this article, we’ll go through several ways to work with lists in Dart. Every programming language needs lists as a fundamental data structure, and Dart offers a variety of effective ways to interact with them. We will examine these techniques in-depth in this article. We hope this article will be helpful to you whether you’re a new or seasoned coder. Let’s get going!</p>
-
-<h2 id="how-to-insert-elements-to-a-list-in-dart">How to insert elements to a list in dart?</h2>
-<p>Dart provides several methods to insert elements into a list. They are:</p>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">add()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">addAll()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">insert()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">insertAll()</code></li>
-</ol>
-
-<h3 id="1-add">1. <code class="language-plaintext highlighter-rouge">add()</code></h3>
-<p>The <code class="language-plaintext highlighter-rouge">add()</code> method appends the specified value to the end of the list. The <strong>list must be growable</strong>, when using the <code class="language-plaintext highlighter-rouge">add()</code> method.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">add</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [1, 2, 3, 6, 7]</span>
-</code></pre></div></div>
-<p>In the above example, the <code class="language-plaintext highlighter-rouge">numbers</code> list has the values <code class="language-plaintext highlighter-rouge">[1,2,3,6]</code>. Then we call the <code class="language-plaintext highlighter-rouge">add()</code> method with the value <code class="language-plaintext highlighter-rouge">7</code> as the parameter. The <code class="language-plaintext highlighter-rouge">numbers</code> list is updated by appending the value <code class="language-plaintext highlighter-rouge">7</code> to the list.</p>
-
-<h3 id="2-addall">2. <code class="language-plaintext highlighter-rouge">addAll()</code></h3>
-
-<p>The <code class="language-plaintext highlighter-rouge">addAll()</code> is used when we want to append multiple items to a list. The <code class="language-plaintext highlighter-rouge">addAll()</code> method accepts an iterator as the parameter and appends them to the end of the list.
-This method extends the length of the list by the number of objects in iterable, So the list must be growable.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">ls</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
-<span class="n">ls</span><span class="o">.</span><span class="na">addAll</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]);</span>
-<span class="n">print</span><span class="p">(</span><span class="n">ls</span><span class="p">);</span> <span class="c1">// [1, 2, 3, 4, 5, 6, 7, 8]</span>
-</code></pre></div></div>
-
-<h3 id="3-insert">3. <code class="language-plaintext highlighter-rouge">insert()</code></h3>
-<p><code class="language-plaintext highlighter-rouge">insert()</code> method accepts two parameters: <code class="language-plaintext highlighter-rouge">index</code> and the <code class="language-plaintext highlighter-rouge">object</code> to be inserted.
-It increases the length of the list by one and shifts all objects at or after the <code class="language-plaintext highlighter-rouge">index</code> towards the end of the list.The <code class="language-plaintext highlighter-rouge">index</code> value must be greater than or equal to 0 and no greater than length.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
-<span class="kd">const</span> <span class="n">index</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">insert</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [1, 2, 10, 3, 4]</span>
-</code></pre></div></div>
-
-<h3 id="4-insertall">4. <code class="language-plaintext highlighter-rouge">insertAll()</code></h3>
-<p><code class="language-plaintext highlighter-rouge">insert()</code> method accepts two parameters: <code class="language-plaintext highlighter-rouge">index</code> and an iterable of <code class="language-plaintext highlighter-rouge">objects</code> to be inserted.It increases the length of the list by the length of iterable and shifts all later objects towards the end of the list, So, the list must be growable. The <code class="language-plaintext highlighter-rouge">index</code> value must be greater than or equal to 0 and no greater than length.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">];</span>
-<span class="kd">final</span> <span class="n">insertItems</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">];</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">insertAll</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">insertItems</span><span class="p">);</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [1, 2, 10, 11, 3, 4]</span>
-</code></pre></div></div>
-
-<h2 id="how-to-remove-elements-from-a-list-in-dart">How to remove elements from a list in dart?</h2>
-
-<p>There are several ways to remove elements from a list. You can remove one element from the list by calling <code class="language-plaintext highlighter-rouge">remove()</code> or clear the whole list by calling <code class="language-plaintext highlighter-rouge">clear()</code>. Let’s take a detailed look at different ways to remove elements from a list in dart.</p>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">clear()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">remove()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">removeAt()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">removeLast()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">removeRange()</code></li>
-</ol>
-
-<h3 id="1-clear">1. <code class="language-plaintext highlighter-rouge">clear()</code></h3>
-<p><code class="language-plaintext highlighter-rouge">clear()</code> method is used to remove all elements from a list. In other words, empty the list.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">clear</span><span class="p">();</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="o">.</span><span class="na">length</span><span class="p">);</span> <span class="c1">// 0</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// []</span>
-</code></pre></div></div>
-
-<h3 id="2-remove">2. <code class="language-plaintext highlighter-rouge">remove()</code></h3>
-
-<p>Removes the first occurrence of value from this list. If the value was in the result, this function returns <code class="language-plaintext highlighter-rouge">true</code> and removes the first occurrence of value from the list. If the value was not in the list, this function returns <code class="language-plaintext highlighter-rouge">false</code>. The list must be growable.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">parts</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'head'</span><span class="p">,</span> <span class="s">'shoulders'</span><span class="p">,</span> <span class="s">'knees'</span><span class="p">,</span> <span class="s">'toes'</span><span class="p">];</span>
-<span class="kd">final</span> <span class="n">retVal</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="na">remove</span><span class="p">(</span><span class="s">'head'</span><span class="p">);</span> <span class="c1">// true</span>
-<span class="n">print</span><span class="p">(</span><span class="n">parts</span><span class="p">);</span> <span class="c1">// [shoulders, knees, toes]</span>
-
-<span class="kd">final</span> <span class="n">retVal</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="na">remove</span><span class="p">(</span><span class="s">'head'</span><span class="p">);</span> <span class="c1">// false</span>
-<span class="n">print</span><span class="p">(</span><span class="n">parts</span><span class="p">);</span> <span class="c1">// [shoulders, knees, toes]</span>
-</code></pre></div></div>
-
-<h3 id="3-removeat">3. <code class="language-plaintext highlighter-rouge">removeAt()</code></h3>
-<p>The <code class="language-plaintext highlighter-rouge">removeAt()</code> method is used to remove the object at the specified index. This method removes the object at the specified index, moves all later elements down by one and reduces the length of the list by one. <strong>Returns the removed value.</strong> The index must be in the range 0 ≤ index &lt; length.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">parts</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'head'</span><span class="p">,</span> <span class="s">'shoulder'</span><span class="p">,</span> <span class="s">'knees'</span><span class="p">,</span> <span class="s">'toes'</span><span class="p">];</span>
-<span class="kd">final</span> <span class="n">retVal</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="na">removeAt</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// knees</span>
-<span class="n">print</span><span class="p">(</span><span class="n">parts</span><span class="p">);</span> <span class="c1">// [head, shoulder, toes]</span>
-<span class="n">print</span><span class="p">(</span><span class="n">retVal</span><span class="p">);</span> <span class="c1">// knees</span>
-<span class="n">print</span><span class="p">(</span><span class="n">parts</span><span class="o">.</span><span class="na">length</span><span class="p">);</span> <span class="c1">// 3</span>
-</code></pre></div></div>
-
-<h3 id="4-removelast">4. <code class="language-plaintext highlighter-rouge">removeLast()</code></h3>
-<p>Removes and returns the last object in this list. The list must be growable and non-empty.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">parts</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'head'</span><span class="p">,</span> <span class="s">'shoulder'</span><span class="p">,</span> <span class="s">'knees'</span><span class="p">,</span> <span class="s">'toes'</span><span class="p">];</span>
-<span class="kd">final</span> <span class="n">retVal</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="na">removeLast</span><span class="p">();</span> <span class="c1">// toes</span>
-<span class="n">print</span><span class="p">(</span><span class="n">parts</span><span class="p">);</span> <span class="c1">// [head, shoulder, knees]</span>
-<span class="n">print</span><span class="p">(</span><span class="n">parts</span><span class="o">.</span><span class="na">length</span><span class="p">);</span> <span class="c1">// 3</span>
-</code></pre></div></div>
-
-<h3 id="5-removerange">5. <code class="language-plaintext highlighter-rouge">removeRange()</code></h3>
-<p>The <code class="language-plaintext highlighter-rouge">removeRange()</code> method is used to remove a range of objects from the list.The method accepts two arguments: <code class="language-plaintext highlighter-rouge">start</code> and <code class="language-plaintext highlighter-rouge">end</code>. The first argument is the index of the start of the range. The second argument is the index of the end of the range. Every object with positions <strong>greater than or equal</strong> to <code class="language-plaintext highlighter-rouge">start</code> and <strong>less than</strong> <code class="language-plaintext highlighter-rouge">end</code>, will be removed from the list. The object at the index <code class="language-plaintext highlighter-rouge">end</code> will not be removed.</p>
-
-<p>A range from <code class="language-plaintext highlighter-rouge">start</code> to <code class="language-plaintext highlighter-rouge">end</code> is valid if <code class="language-plaintext highlighter-rouge">0 ≤ start ≤ end ≤ length</code>. An empty range (with <code class="language-plaintext highlighter-rouge">end == start</code>) is valid.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">];</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">removeRange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [1, 5]</span>
-</code></pre></div></div>
-
-<h2 id="how-to-remove-elements-from-a-list-in-dart-based-on-a-condition">How to remove elements from a list in dart, based on a condition?</h2>
-<p>Earlier, we looked at removing elements a specific index or a range. Next, we are going to look at how to remove elements from a list based on some conditions. Dart provides some usefull methods for this purpose.</p>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">removeWhere()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">retainWhere()</code></li>
-</ol>
-
-<h3 id="1-removewhere">1. <code class="language-plaintext highlighter-rouge">removeWhere()</code></h3>
-<p>Removes all objects from this list that satisfy the provided condition. The <code class="language-plaintext highlighter-rouge">removeWhere()</code> method accepts a function as an argument(test function). Each item in the list will be passed to the test function as an argument. The test should perform the required checks and return <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code>. All the objects where the test function returns <code class="language-plaintext highlighter-rouge">true</code> will be removed from the list.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="s">'four'</span><span class="p">];</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">removeWhere</span><span class="p">((</span><span class="n">item</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">item</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">3</span><span class="p">);</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [three, four]</span>
-</code></pre></div></div>
-
-<h3 id="2-retainwhere">2. <code class="language-plaintext highlighter-rouge">retainWhere()</code></h3>
-<p>Removes all objects from this list that does not satisfy the provided condition. The working of the <code class="language-plaintext highlighter-rouge">retainWhere()</code> method is similar to that of <code class="language-plaintext highlighter-rouge">removeWhere()</code> except that it retains all the objects where the test function returns <code class="language-plaintext highlighter-rouge">true</code>.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="s">'four'</span><span class="p">];</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">retainWhere</span><span class="p">((</span><span class="n">item</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">item</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">3</span><span class="p">);</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [one, two]</span>
-</code></pre></div></div>
-
-<h2 id="how-to-find-if-an-item-is-present-in-the-list">How to find if an item is present in the list?</h2>
-<p>We have several options in dart, to check if the <code class="language-plaintext highlighter-rouge">list</code> contains a specific item.</p>
-
-<ol>
-  <li><code class="language-plaintext highlighter-rouge">indexOf()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">indexWhere()</code></li>
-  <li><code class="language-plaintext highlighter-rouge">lastIndexOf()</code></li>
-  <li></li>
-</ol>
-
-<h3 id="1-indexof">1. <code class="language-plaintext highlighter-rouge">indexOf()</code></h3>
-
-<p>Searches the list from index start to the end of the list. The first time an object <code class="language-plaintext highlighter-rouge">o</code> is encountered so that <code class="language-plaintext highlighter-rouge">o</code> == element, the index of <code class="language-plaintext highlighter-rouge">o</code> is returned. If the element is not present, this method returns <code class="language-plaintext highlighter-rouge">-1</code>.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">notes</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'do'</span><span class="p">,</span> <span class="s">'re'</span><span class="p">,</span> <span class="s">'mi'</span><span class="p">,</span> <span class="s">'re'</span><span class="p">];</span>
-<span class="n">print</span><span class="p">(</span><span class="n">notes</span><span class="o">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">'re'</span><span class="p">));</span> <span class="c1">// 1</span>
-<span class="kd">final</span> <span class="n">indexWithStart</span> <span class="o">=</span> <span class="n">notes</span><span class="o">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">'re'</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// 3</span>
-<span class="kd">final</span> <span class="n">index</span> <span class="o">=</span> <span class="n">notes</span><span class="o">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">'fa'</span><span class="p">);</span> <span class="c1">// -1</span>
-</code></pre></div></div>
-
-<h3 id="2-indexwhere">2. <code class="language-plaintext highlighter-rouge">indexWhere()</code></h3>
-<p>This method accepts a test function as a parameter. Searches the list from index start to the end of the list. The test function will be called each time with the element as the parameter. The test function should return <code class="language-plaintext highlighter-rouge">true</code> or <code class="language-plaintext highlighter-rouge">false</code> after performing required checks. The first time an object <code class="language-plaintext highlighter-rouge">o</code> is encountered so that <code class="language-plaintext highlighter-rouge">test(o)</code> is true, the index of <code class="language-plaintext highlighter-rouge">o</code> is returned. If the element is not present, this method returns <code class="language-plaintext highlighter-rouge">-1</code>.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">notes</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'do'</span><span class="p">,</span> <span class="s">'re'</span><span class="p">,</span> <span class="s">'mi'</span><span class="p">,</span> <span class="s">'re'</span><span class="p">];</span>
-<span class="kd">final</span> <span class="n">first</span> <span class="o">=</span> <span class="n">notes</span><span class="o">.</span><span class="na">indexWhere</span><span class="p">((</span><span class="n">note</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">note</span><span class="o">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">'r'</span><span class="p">));</span> <span class="c1">// 1</span>
-<span class="kd">final</span> <span class="n">second</span> <span class="o">=</span> <span class="n">notes</span><span class="o">.</span><span class="na">indexWhere</span><span class="p">((</span><span class="n">note</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">note</span><span class="o">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">'r'</span><span class="p">),</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">// 3</span>
-<span class="kd">final</span> <span class="n">index</span> <span class="o">=</span> <span class="n">notes</span><span class="o">.</span><span class="na">indexWhere</span><span class="p">((</span><span class="n">note</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">note</span><span class="o">.</span><span class="na">startsWith</span><span class="p">(</span><span class="s">'k'</span><span class="p">));</span> <span class="c1">// -1</span>
-</code></pre></div></div>
-
-<h3 id="3-lastindexof">3. <code class="language-plaintext highlighter-rouge">lastIndexOf()</code></h3>
-
-<p>Searches the list backwards to index <code class="language-plaintext highlighter-rouge">0</code>. The method accetps an optional parameter <code class="language-plaintext highlighter-rouge">start</code>. If the <code class="language-plaintext highlighter-rouge">start</code> index is given, the method searhes the list backwards from <code class="language-plaintext highlighter-rouge">start</code> index to 0. if `start is not given, it begins the search from the last element.</p>
-
-<p>The first time an object <code class="language-plaintext highlighter-rouge">o</code> is encountered so that <code class="language-plaintext highlighter-rouge">o == element</code>, the index of <code class="language-plaintext highlighter-rouge">o</code> is returned.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">notes</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'do'</span><span class="p">,</span> <span class="s">'re'</span><span class="p">,</span> <span class="s">'mi'</span><span class="p">,</span> <span class="s">'re'</span><span class="p">];</span>
-<span class="kd">const</span> <span class="n">startIndex</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
-<span class="kd">final</span> <span class="n">index</span> <span class="o">=</span> <span class="n">notes</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="s">'re'</span><span class="p">,</span> <span class="n">startIndex</span><span class="p">);</span> <span class="c1">// 1, with startIndex as 2</span>
-<span class="kd">final</span> <span class="n">index</span> <span class="o">=</span> <span class="n">notes</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="s">'re'</span><span class="p">);</span> <span class="c1">// 3, without startIndex. default=index of last element</span>
-<span class="kd">final</span> <span class="n">index</span> <span class="o">=</span> <span class="n">notes</span><span class="o">.</span><span class="na">lastIndexOf</span><span class="p">(</span><span class="s">'fa'</span><span class="p">);</span> <span class="c1">// -1</span>
-</code></pre></div></div>
-
-<h2 id="how-to-sort-a-list-in-dart">How to sort a list in dart?</h2>
-
-<p>Dart provides a <code class="language-plaintext highlighter-rouge">sort()</code> method to sort the values in a list. The <code class="language-plaintext highlighter-rouge">sort()</code> method accepts a compare function as its parameter. We can provide a custom logic on how to sort the list. For example, we could provide a compare function that checks the alphabetical order, or may be the length of the elements etc… The compare function must act as a Comparator.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="s">'four'</span><span class="p">];</span>
-<span class="c1">// Sort from shortest to longest.</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">sort</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="na">length</span><span class="p">));</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [two, four, three]</span>
-</code></pre></div></div>
-<p>The default List implementations use Comparable.compare if compare is omitted.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;[</span><span class="mi">13</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">11</span><span class="p">,</span> <span class="mi">0</span><span class="p">];</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">sort</span><span class="p">();</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [-11, 0, 2, 13]</span>
-</code></pre></div></div>
-<p>In that case, the elements of the list must be Comparable to each other.</p>
-
-<p>A Comparator may compare objects as equal (return zero), even if they are distinct objects. The sort function is not guaranteed to be stable, so distinct objects that compare as equal may occur in any order in the result:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">String</span><span class="p">&gt;[</span><span class="s">'one'</span><span class="p">,</span> <span class="s">'two'</span><span class="p">,</span> <span class="s">'three'</span><span class="p">,</span> <span class="s">'four'</span><span class="p">];</span>
-<span class="n">numbers</span><span class="o">.</span><span class="na">sort</span><span class="p">((</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">a</span><span class="o">.</span><span class="na">length</span><span class="o">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="na">length</span><span class="p">));</span>
-<span class="n">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">);</span> <span class="c1">// [one, two, four, three] OR [two, one, four, three]</span>
-</code></pre></div></div>
-
-<h2 id="how-to-reduce-a-collection-in-dart-to-a-single-value--reduce-method">How to reduce a collection in dart to a single value:  <code class="language-plaintext highlighter-rouge">reduce()</code> method</h2>
-
-<p>Reduces a collection to a single value by iteratively combining elements of the collection using the provided function.The iterable must have at least one element. If it has only one element, that element is returned.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">final</span> <span class="n">numbers</span> <span class="o">=</span> <span class="p">&lt;</span><span class="kt">double</span><span class="p">&gt;[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">];</span>
-<span class="kd">final</span> <span class="n">result</span> <span class="o">=</span> <span class="n">numbers</span><span class="o">.</span><span class="na">reduce</span><span class="p">((</span><span class="n">value</span><span class="p">,</span> <span class="n">element</span><span class="p">)</span> <span class="o">=</span><span class="p">&gt;</span> <span class="n">value</span> <span class="o">+</span> <span class="n">element</span><span class="p">);</span>
-<span class="n">print</span><span class="p">(</span><span class="n">result</span><span class="p">);</span> <span class="c1">// 17.5</span>
-</code></pre></div></div>
-
-<p>The reduce method takes a function as an argument, which is applied to each element in the list. In this case, the function takes two arguments <code class="language-plaintext highlighter-rouge">value</code> and <code class="language-plaintext highlighter-rouge">element</code> and returns the sum of those two numbers. The reduce method applies this function to the elements of the list, starting with the first two elements and then combining the result with the next element and so on, until the entire list has been reduced to a single value. In this example, the list is reduced to the sum of all its elements.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-<p>In this article, we explored several powerful methods for manipulating lists in Dart. We covered the add method, which allows you to append an element to the end of a list, and the insert method, which allows you to add an element at a specific index in the list. We also looked at the remove method, which allows you to remove an element from the list by value or by index, and the sublist method, which allows you to create a new list from a subset of an existing list. Finally, we looked at the sort method, which allows you to sort the elements of a list in ascending or descending order. These methods provide a wide range of options for working with lists in Dart, and are essential tools for any Dart developer.</p>
-
-<p>And with that, I think it’s safe to say that we’ve covered every single list method in the history of ever. Or at least, it feels that way. Time for a well-deserved break and maybe a cup of tea (or coffee, if that’s your thing). <strong>Happy coding</strong>.</p>
-
-<h2 id="references">References</h2>
-<ol>
-  <li><a href="https://api.dart.dev/be/180791/dart-core/List-class.html" target="_blank">Dart List Class</a>
- The documentation on dart.dev is wonderfull resource to read more about the powerfull apis provided by dart.</li>
-</ol>
-
-<h1 id="dart-tutorials">Dart Tutorials</h1>
-<p>This article is part of the Dart Tutorials series. You can find the list of all the tutorials in the series in the <a href="/dart_tutorials/">dart tutorials page</a>. You can also find the list of all articles in the <a href="/dart_tutorials/">Dart Tutorials</a> series in the sidebar.</p>
-
-
-
-                    
-
-      </div>
-        </article>
-        <div class="row">
-          <!--share buttons-->
-          <div class="col-12 mb-4">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/dart_tutorials/dart_list_methods/" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/dart_tutorials/dart_list_methods/&text=Exploring the Powerful List Methods of Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/dart_tutorials/dart_list_methods/&title=Exploring the Powerful List Methods of Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/dart_tutorials/dart_list_methods/&title=Exploring the Powerful List Methods of Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
-              </div>
-            </div>
-        </div>
-        </div>  
-        <div class="row">
-            <div class="col-sm-12 col-md-6 mb-2">
-                
-                <a href="/dart_tutorials/dart_operators/" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> Operators in Dart </a>
-              
-            </div>    
-            <div class="col-sm-12 col-md-6 text-end v-100">
-              
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="card" style="background-image: linear-gradient(315deg, #007cc6 0%, #200bdbe7 74%);color:white">
-              <div class="card-body">
-                <h5 class="card-title">We are on LinkedIn</h5>
-                we are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. 
-                Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="color: white;font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-      <div class="col-md-12 col-lg-2">
-        <aside>
-
-      <!-- 
-    <div class="mb-3 mt-4" style="top: 4.5rem;">     
-      <a target="_blank" href='https://play.google.com/store/apps/details?id=com.tonocast.www&utm_source=flutterrettulf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="text-decoration:none" rel="Sponsored">
-      <div class="card mb-3 shadow-card">
+  <div class="row mt-4 pt-4 bg-light">
+    <div class="col-md-0 col-lg-3 mb-3 ">
+      <div class="card border-0" >
         <div class="card-body">
-
-          <div class="thumbnail">
-            <img class="rounded w-100 mb-2" src="https://i.ytimg.com/vi/s1e7Q-5W7t8/mqdefault.jpg" alt="..." class="img-fluid">
-          </div>
-          <h4 class="card-title">Tonocast</h4>
-          <p class="card-text text-muted mb-0" style="font-size:15px">The best app to listen to your favourite podcasts.</p>
-         <img alt='Get it on Google Play' class="w-100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-                <div class="w-100 text-muted d-flex justify-content-end" style="font-size:10px">Sponsored</div>
-
+          <h5 class="card-title fw-bold h1 text-primary">We are on LinkedIn</h5>
+                  We are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
         </div>
-    </div>
-  </a>   
-
-
-
-
--->   
-
-
-
-    </aside>
-
       </div>
-</div>
+    </div>
+    <div class="col-md-8 col-lg-6 " >
+     
+        
+          
+      
+      
+        <p class="h3 ">Related Articles</p>
+        <ul class="list-unstyled">
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_variables_and_datatypes/" class="text-decoration-none">Variables and Datatypes in Dart</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_overview/" class="text-decoration-none">Dart Overview</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_operators/" class="text-decoration-none">Operators in Dart</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/json/2023/01/04/what-is-json.html" class="text-decoration-none">Using JSON for Data Storage and Exchange</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter_list_view_explained_with_examples/" class="text-decoration-none">Understanding and Using ListViews in Flutter: Examples and Best Practices</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html" class="text-decoration-none">Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter-column-widget-explained-with-examples/" class="text-decoration-none">Flutter Columns Explained: From Basics to Advanced Use Cases</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" class="text-decoration-none">Flutter Scrollable Columns: The Complete Guide</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/" class="text-decoration-none">just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/dio_http_client/" class="text-decoration-none">Dio | Powerfull Http Client for flutter</a>
+          </li>
+          
+        </ul>
+      
+    </div>
+    <div class="col-md-4 col-lg-3 mb-3">
+     
+    </div>
+
+  </div>
 </main>
-  <footer class="border-top">
+   
+   
+    <footer class="border-top">
 
-<div class="container">
-  <div class="row row-cols-5 pb-2 pt-5 my-2 ">
-    <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
-      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        <img src="/assets/brand/logo_2.webp" width="70">
-      </a>
-      <p class="text-muted">flutterrettulf@gmail.com </p>
-      <p class="text-muted">© 2022 </p>
-      <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
-    </div>
+    <div class="container">
+      <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+        <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="/brand/logo_2.webp" width="70">
+          </a>
+          <p class="text-muted">flutterrettulf@gmail.com </p>
+          <p class="text-muted">© 2022 </p>
+          <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
+        </div>
+        
+        
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/categories/" class="nav-link p-0 text-muted">Top Categories</a></h5>
+          <ul class="nav flex-column">
+         
 
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-      <h5>Top Tags</h5>
-      <ul class="nav flex-column">
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/dart-tutorials/" class="nav-link p-0 text-muted">Dart Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter/" class="nav-link p-0 text-muted">Flutter</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-buttons/" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-column/" class="nav-link p-0 text-muted">Flutter Column</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-listview/" class="nav-link p-0 text-muted">Flutter ListView</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-plugins/" class="nav-link p-0 text-muted">Flutter Plugins</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-tutorials/" class="nav-link p-0 text-muted">Flutter Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-widgets/" class="nav-link p-0 text-muted">Flutter Widgets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/json/" class="nav-link p-0 text-muted">JSON</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/navigation/" class="nav-link p-0 text-muted">Navigation</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/categories/" class="nav-link p-0 text-muted">All Categories</a></li>
+    
+          </ul>
+        </div>
         
-        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
         
-        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
         
-        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/font-assets" class="nav-link p-0 text-muted">Font Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/tags/" class="nav-link p-0 text-muted">Top Tags</a></h5>
+          <ul class="nav flex-column">
+         
 
-      </ul>
-    </div>
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/android/" class="nav-link p-0 text-muted">android</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/animatedindicator/" class="nav-link p-0 text-muted">AnimatedIndicator</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/api-request/" class="nav-link p-0 text-muted">API Request</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/assets/" class="nav-link p-0 text-muted">Assets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/audio/" class="nav-link p-0 text-muted">audio</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/basicapp/" class="nav-link p-0 text-muted">BasicApp</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/beginner/" class="nav-link p-0 text-muted">Beginner</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/column-widget/" class="nav-link p-0 text-muted">Column widget</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/columns/" class="nav-link p-0 text-muted">Columns</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/customize-scrolling/" class="nav-link p-0 text-muted">Customize scrolling</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 text-muted">All Tags</a></li>
+    
+          </ul>
+        </div>
+        
+        
 
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Top Categories</h5>
-      <ul class="nav flex-column">
-        
-        <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-column" class="nav-link p-0 text-muted">Flutter Column</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-listview" class="nav-link p-0 text-muted">Flutter ListView</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/json" class="nav-link p-0 text-muted">JSON</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
-
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Links</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
-        <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted hover"><span class="bi bi-facebook me-2"></span>Facebook</a></li>-->
-       <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-twitter me-2"></span>Twitter</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-mastodon me-2"></span>Mastodon</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img src="/assets/img/dev.png " class="me-2" width="17">Dev.to</a></li>-->
-        <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
-        <li class="nav-item mb-2"><a href="/feed.xml" class="nav-link p-0 text-muted"><span class="bi bi-rss me-2"></span>RSS Feed</a></li> 
-        <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
-      
-      </ul>
-    </div>
-  </div>
-</div>
-<script type="text/javascript">
-            document.querySelectorAll("table").forEach(table => {
-                table.classList.add("table")
-                table.classList.add("table-striped")
-                table.classList.add("table-bordered")
-                table.classList.add("table-sm")
-            })
-        </script>
-</footer> 
-
-
-<!-- <div class="p-4">
-  <h4 class="fst-italic">Elsewhere</h4>
-  <ol class="list-unstyled">
-    <li><a href="#">GitHub</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Facebook</a></li>
-  </ol>
-</div> -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-
-    <div class="offcanvas-body p-0">
-      <div class=" list-group list-group-flush border-bottom scrollarea "> 
-        
-      
-        
-        
-        <a href="/dart_tutorials/dart_overview/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Dart Overview</div>
-          </div>
-        </a>
-        
-        <a href="/dart_tutorials/dart_hello_world/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Dart Hello World Program</div>
-          </div>
-        </a>
-        
-        <a href="/dart_tutorials/dart_variables_and_datatypes/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Variables and Datatypes in Dart</div>
-          </div>
-        </a>
-        
-        <a href="/dart_tutorials/dart_operators/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Operators in Dart</div>
-          </div>
-        </a>
-        
-        <a href="/dart_tutorials/dart_list_methods/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Exploring the Powerful List Methods of Dart</div>
-          </div>
-        </a>
-           
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-           
+    
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+    
+          <h5>Discover FlutterrettulF</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
+            
+           <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+            
+            <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+            
+            <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-    function check(){
-      const checkboxes = document.querySelectorAll('input[type=checkbox]');
-              checkboxes.forEach((checkbox) => {
-                if (checkbox.getAttribute('data-is-correct') === 'true') {
-                  checkbox.parentElement.classList.add('list-group-item-success');
-                } else {
-                  checkbox.parentElement.classList.add('list-group-item-danger');
-                }
-              });
-    }
-    document.getElementById('check-btn').addEventListener('click', check);
-  </script>
-  </body>
+    <script type="text/javascript">
+                document.querySelectorAll("table").forEach(table => {
+                    table.classList.add("table")
+                    table.classList.add("table-striped")
+                    table.classList.add("table-bordered")
+                    table.classList.add("table-sm")
+                })
+            </script>
+    </footer> 
+    
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="1088001170"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="5124283255"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+
+    </head>
+    <body>       
+        <div id="content">
+         
+        </div>
+    </body>
 </html>

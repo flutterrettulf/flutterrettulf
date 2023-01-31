@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ElevatedButton on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/elevatedbutton/</link>
+    <description>Recent content in ElevatedButton on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/elevatedbutton/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter: Elevated Button Examples.</title>
+      <link>https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html</link>
+      <pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html</guid>
+      <description>What is ElevatedButton in Flutter? Elevated Button is a flutter component included inside the material package i.e. “package:flutter/material.dart“. It is a label child displayed on a Material widget whose elevation increases when the button is pressed. The label&amp;rsquo;s Text and Icon widgets are displayed in style&amp;rsquo;s ButtonStyle.foregroundColor and the button&amp;rsquo;s filled background is the ButtonStyle.backgroundColor. It is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow.</description>
+    </item>
+    
+  </channel>
+</rss>

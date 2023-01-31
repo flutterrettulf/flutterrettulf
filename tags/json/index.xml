@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JSON on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/json/</link>
+    <description>Recent content in JSON on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Jan 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using JSON for Data Storage and Exchange</title>
+      <link>https://flutterrettulf.com/json/2023/01/04/what-is-json.html</link>
+      <pubDate>Wed, 04 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/json/2023/01/04/what-is-json.html</guid>
+      <description>What is JSON and why it is used? JSON (JavaScript Object Notation) is a simple data exchange format that is simple for both humans and machines to read, write, parse, and produce. It is simple to use with current JavaScript programmes because it is built on a subset of the JavaScript programming language.
+JSON is used to transmit data between a server and a client or between a server and a server.</description>
+    </item>
+    
+  </channel>
+</rss>

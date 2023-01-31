@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SpinkitPlugin on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/spinkitplugin/</link>
+    <description>Recent content in SpinkitPlugin on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Oct 2022 15:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/spinkitplugin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter: Spinkit Plugin | Collection of animated loading indicators</title>
+      <link>https://flutterrettulf.com/flutter_plugins/flutter_spinkit_plugin/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/flutter_spinkit_plugin/</guid>
+      <description>Spinkit Plugin A collection of loading indicators animated with flutter.
+Installation Let&amp;rsquo;s look at different ways to install and use the flutter spinkit plugin
+Add dependency Add this to your package&amp;rsquo;s pubspec.ymal file:
+dependencies: flutter_spinkit: ^5.2.0 Install package from command line flutter pub add flutter_spinkit Import Package import &amp;#39;package:flutter_spinkit/flutter_spinkit.dart&amp;#39;; Usage Add these to any widget as a child: SpinKitRotatingCircle( color: Colors.white, size: 50.0, ), SpinKitDoubleBounce( color: Colors.white, size: 50.0, ), SpinKitWave( color: Colors.</description>
+    </item>
+    
+  </channel>
+</rss>

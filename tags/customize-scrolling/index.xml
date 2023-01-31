@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Customize scrolling on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/customize-scrolling/</link>
+    <description>Recent content in Customize scrolling on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Dec 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/customize-scrolling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter Scrollable Columns: The Complete Guide</title>
+      <link>https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html</guid>
+      <description>Introduction Welcome to our blog post about making a column scrollable in Flutter! If you&amp;rsquo;re building a mobile application using Flutter, you may have encountered a situation where you want to display a lot of content in a single screen, but it doesn&amp;rsquo;t all fit on the device. One way to solve this problem is to make the column scrollable, so that the user can swipe up and down to see all of the content.</description>
+    </item>
+    
+  </channel>
+</rss>

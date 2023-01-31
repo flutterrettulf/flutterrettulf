@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Operators on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/operators/</link>
+    <description>Recent content in Operators on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Oct 2022 15:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/operators/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operators in Dart</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_operators/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_operators/</guid>
+      <description>What are Operands &amp;amp; Operators in Dart? In mathematics, an operator is a mathematical symbol or function that indicates the operation to be done on a value or a set of values. This is similar to how an operator in programming works. An operator defines how the operands will be processed.
+Consider a simple expression val3 = val1 + val2. Here, val1 and val2 are the operands, and + is the operator.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flutter on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/flutter/</link>
+    <description>Recent content in Flutter on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter: Expanded/Flexible Widget explanied With examples</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter-expanded-widget/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter-expanded-widget/</guid>
+      <description>What is expanded widget in flutter? In Flutter, a widget is a piece of code that defines a visual element on the screen. The Expanded widget is a convenience widget that expands a child of a Row, Column, or Flex so that the child fills the available space. This is useful for creating flexible layouts that can adapt to different screen sizes. The Expanded widget takes a child widget and a flex value, which specifies the proportion of the available space that the child should occupy.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter</title>
+      <link>https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html</link>
+      <pubDate>Sun, 01 Jan 2023 08:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html</guid>
+      <description>Introduction Welcome to our tutorial on how to render a ListView inside another ListView or Column in Flutter. If you are a Flutter developer, you may have come across situations where you want to render a ListView inside another ListView or Column in Flutter. This can be a challenging task. Sometimes, if the approach is not correct, the elements in the ListView might not be visible, or you might get while nesting ListViews.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Scrollable Columns: The Complete Guide</title>
+      <link>https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html</guid>
+      <description>Introduction Welcome to our blog post about making a column scrollable in Flutter! If you&amp;rsquo;re building a mobile application using Flutter, you may have encountered a situation where you want to display a lot of content in a single screen, but it doesn&amp;rsquo;t all fit on the device. One way to solve this problem is to make the column scrollable, so that the user can swipe up and down to see all of the content.</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Basic App Example | How to create a flutter app</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/</link>
+      <pubDate>Thu, 20 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/</guid>
+      <description>Creating an App After installing flutter, you will be able to start making apps with Flutter. We will learn how to create a basic app with this tutorial. The app will have a simple button which will respond on click with the message &amp;ldquo;Hello Flutter&amp;rdquo;.
+From the Terminal Flutter provides a command-line tool that lets you start and manage your app. After installing Flutter you can start making apps with the following command.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Plugins</title>
+      <link>https://flutterrettulf.com/flutter_plugins/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Flutter Tutorials</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/</guid>
+      <description>Learn Flutter framework with our in-depth tutorials and articles.</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Spinkit Plugin | Collection of animated loading indicators</title>
+      <link>https://flutterrettulf.com/flutter_plugins/flutter_spinkit_plugin/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/flutter_spinkit_plugin/</guid>
+      <description>Spinkit Plugin A collection of loading indicators animated with flutter.
+Installation Let&amp;rsquo;s look at different ways to install and use the flutter spinkit plugin
+Add dependency Add this to your package&amp;rsquo;s pubspec.ymal file:
+dependencies: flutter_spinkit: ^5.2.0 Install package from command line flutter pub add flutter_spinkit Import Package import &amp;#39;package:flutter_spinkit/flutter_spinkit.dart&amp;#39;; Usage Add these to any widget as a child: SpinKitRotatingCircle( color: Colors.white, size: 50.0, ), SpinKitDoubleBounce( color: Colors.white, size: 50.0, ), SpinKitWave( color: Colors.</description>
+    </item>
+    
+    <item>
+      <title>How to disable the backbutton in Flutter using WillPopScope.</title>
+      <link>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html</guid>
+      <description>Introduction WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.
+If you want to know more about the WillPopScope widget, you can read the article How to use the WillPopScope widget in Flutter In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Loading Static Image &amp; Font Assets in Flutter App.</title>
+      <link>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html</guid>
+      <description>What are Static Assets? Static assets are the files that are bundled with the app and are not downloaded from the internet. Static assets are used to load images, fonts, and other files that are used in the app. Static assets are loaded using the pubspec.yaml file. The pubspec.yaml file is used to define the assets that are used in the app. The pubspec.yaml file is located in the root directory of the app.</description>
+    </item>
+    
+  </channel>
+</rss>

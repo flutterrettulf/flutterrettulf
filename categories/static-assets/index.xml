@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Static Assets on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/categories/static-assets/</link>
+    <description>Recent content in Static Assets on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/categories/static-assets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter: Loading Static Image &amp; Font Assets in Flutter App.</title>
+      <link>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html</guid>
+      <description>What are Static Assets? Static assets are the files that are bundled with the app and are not downloaded from the internet. Static assets are used to load images, fonts, and other files that are used in the app. Static assets are loaded using the pubspec.yaml file. The pubspec.yaml file is used to define the assets that are used in the app. The pubspec.yaml file is located in the root directory of the app.</description>
+    </item>
+    
+  </channel>
+</rss>

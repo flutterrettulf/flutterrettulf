@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>User interface on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/user-interface/</link>
+    <description>Recent content in User interface on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/user-interface/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter Columns Explained: From Basics to Advanced Use Cases</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter-column-widget-explained-with-examples/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter-column-widget-explained-with-examples/</guid>
+      <description>Introduction The Column widget in Flutter is used to display child widgets in a vertical arrangement. It is a versatile widget that can be used in many different ways.
+Here is an example of how to use the Column widget:
+Column( children: [ Text(&amp;#39;Item 1&amp;#39;), Text(&amp;#39;Item 2&amp;#39;), Text(&amp;#39;Item 3&amp;#39;), // ... ], ) In this example, the Column widget contains several Text widgets as its children. These widgets are arranged vertically within the Column widget.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dart Tutorials on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/categories/dart-tutorials/</link>
+    <description>Recent content in Dart Tutorials on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Jan 2023 15:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/categories/dart-tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exploring the Powerful List Methods of Dart</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_list_methods/</link>
+      <pubDate>Fri, 06 Jan 2023 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_list_methods/</guid>
+      <description>Introduction Hello and welcome to our tutorial on using lists in Dart. In this article, we&amp;rsquo;ll go through several ways to work with lists in Dart. Every programming language needs lists as a fundamental data structure, and Dart offers a variety of effective ways to interact with them. We will examine these techniques in-depth in this article. We hope this article will be helpful to you whether you&amp;rsquo;re a new or seasoned coder.</description>
+    </item>
+    
+    <item>
+      <title>Variables and Datatypes in Dart</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/</link>
+      <pubDate>Thu, 20 Oct 2022 14:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/</guid>
+      <description>What are variables in Dart? If you are familiar with programming, you would be aware of variables. A variable is basically a reserved memory location to store values. In other words, a variable in a program is a name given to a memory location that can store some data.
+For example, let&amp;rsquo;s say we want to store the temperature of a particular city in Celsius. In this case, we would create a variable, temperature, and store the value of 20 in it.</description>
+    </item>
+    
+    <item>
+      <title>Dart Overview</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_overview/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_overview/</guid>
+      <description>Overview Dart is a programming language for apps on several platforms that is client-optimized. It was created by Google and is employed to create desktop, server, online, and mobile applications. Dart is a garbage-collected, object-oriented, class-based language with C-style syntax. JavaScript or native code can both be produced using Dart. It supports type inference, reified generics, abstract classes, mixins, and interfaces.
+Dart also forms the foundation of Flutter . Dart provides the language and runtimes that power Flutter apps, but Dart also supports many core developer tasks like formatting, analyzing, and testing code.</description>
+    </item>
+    
+    <item>
+      <title>Dart Hello World Program</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart-hello-world/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart-hello-world/</guid>
+      <description>TL;DR Install Dart SDK from here . Create a file named hello_world.dart and add the following code: void main() { print(&amp;#39;Hello World&amp;#39;); } Run the following command to compile the code: dart hello_world.dart You should see the following output: Hello World Download &amp;amp; Install the Dart SDK The Dart Software Development Kit (SDK) is a set of libraries and tools that allow you to develop Dart applications. You can use a package manager to easily install and update a stable channel Dart SDK.</description>
+    </item>
+    
+    <item>
+      <title>Operators in Dart</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_operators/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_operators/</guid>
+      <description>What are Operands &amp;amp; Operators in Dart? In mathematics, an operator is a mathematical symbol or function that indicates the operation to be done on a value or a set of values. This is similar to how an operator in programming works. An operator defines how the operands will be processed.
+Consider a simple expression val3 = val1 + val2. Here, val1 and val2 are the operands, and + is the operator.</description>
+    </item>
+    
+  </channel>
+</rss>

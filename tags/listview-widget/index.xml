@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ListView Widget on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/listview-widget/</link>
+    <description>Recent content in ListView Widget on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/listview-widget/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding and Using ListViews in Flutter: Examples and Best Practices</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/</guid>
+      <description>What is the ListView Widget in Flutter? Listview is a widget used to display items in a sequential order. ListView is the most commonly used scrolling widget. The ListView widget in Flutter is a scrollable list of widgets. Based on the scroll direction, it displays its children, horizontally or vertically.
+A ListView is an example of a scrolling widget, which means that it creates a scrollable list of widgets. By default, the list scrolls vertically, but you can change the scrollDirection property to Axis.</description>
+    </item>
+    
+  </channel>
+</rss>

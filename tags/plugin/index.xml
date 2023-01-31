@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>plugin on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/plugin/</link>
+    <description>Recent content in plugin on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Oct 2022 14:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/plugin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</title>
+      <link>https://flutterrettulf.com/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/</link>
+      <pubDate>Fri, 21 Oct 2022 14:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/</guid>
+      <description>What is just_audio Plugin for Flutter just_audio is a feature-rich audio player for Android, iOS, macOS, web, Linux and Windows.
+Installation Add dependency Add this to your package&amp;rsquo;s pubspec.ymal file:
+dependencies: just_audio: ^0.9.29 Install package from command line flutter pub add just_audio Import Package import &amp;#39;package:just_audio/just_audio.dart&amp;#39;; Platform specific configuration Android Add the following to your AndroidManifest.xml file to enable your app to access audio files online.
+&amp;lt;uses-permission android:name=&amp;#34;android.permission.INTERNET&amp;#34; /&amp;gt; Add the following attribute to the application element if you want to connect to non-HTTPS URLs or if you employ a functionality that relies on the proxy, including headers, caching, or streaming audio sources:</description>
+    </item>
+    
+    <item>
+      <title>Dio | Powerfull Http Client for flutter</title>
+      <link>https://flutterrettulf.com/flutter_plugins/dio_http_client/</link>
+      <pubDate>Thu, 20 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/dio_http_client/</guid>
+      <description>What is Dio? Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.
+It is very simple to use.
+import &amp;#39;package:dio/dio.dart&amp;#39;; void getHttp() async { try { var response = await Dio().get(&amp;#39;http://www.google.com&amp;#39;); print(response); } catch (e) { print(e); } } Installation Updateing pubspec.yaml dependencies: dio: ^4.0.0 Using flutter pub flutter pub add dio Using dart pub dart pub add dio Now import dio in your dart file like:</description>
+    </item>
+    
+  </channel>
+</rss>

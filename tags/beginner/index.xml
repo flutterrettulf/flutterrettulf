@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beginner on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/beginner/</link>
+    <description>Recent content in Beginner on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Oct 2022 15:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dart Overview</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_overview/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_overview/</guid>
+      <description>Overview Dart is a programming language for apps on several platforms that is client-optimized. It was created by Google and is employed to create desktop, server, online, and mobile applications. Dart is a garbage-collected, object-oriented, class-based language with C-style syntax. JavaScript or native code can both be produced using Dart. It supports type inference, reified generics, abstract classes, mixins, and interfaces.
+Dart also forms the foundation of Flutter . Dart provides the language and runtimes that power Flutter apps, but Dart also supports many core developer tasks like formatting, analyzing, and testing code.</description>
+    </item>
+    
+  </channel>
+</rss>

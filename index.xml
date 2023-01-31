@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FlutterrettulF: Learn Flutter, Android Mobile Development, iOS Mobile Development on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/</link>
+    <description>Recent content in FlutterrettulF: Learn Flutter, Android Mobile Development, iOS Mobile Development on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Jan 2023 00:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About FlutterrettulF</title>
+      <link>https://flutterrettulf.com/about/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/about/</guid>
+      <description>Welcome to FlutterrettulF, your one-stop-shop for all things Dart, Flutter, mobile development, and programming! Here, we aim to provide beginner-friendly resources and tutorials on these topics, to help you jumpstart your journey into the world of mobile app development. The name FlutterrettulF is a play on the word &amp;ldquo;Flutter&amp;rdquo; and reflects our focus on the popular mobile development framework. Our goal is to provide a comprehensive and accessible resource for anyone starting out on their journey in these areas.</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Expanded/Flexible Widget explanied With examples</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter-expanded-widget/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter-expanded-widget/</guid>
+      <description>What is expanded widget in flutter? In Flutter, a widget is a piece of code that defines a visual element on the screen. The Expanded widget is a convenience widget that expands a child of a Row, Column, or Flex so that the child fills the available space. This is useful for creating flexible layouts that can adapt to different screen sizes. The Expanded widget takes a child widget and a flex value, which specifies the proportion of the available space that the child should occupy.</description>
+    </item>
+    
+    <item>
+      <title>Exploring the Powerful List Methods of Dart</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_list_methods/</link>
+      <pubDate>Fri, 06 Jan 2023 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_list_methods/</guid>
+      <description>Introduction Hello and welcome to our tutorial on using lists in Dart. In this article, we&amp;rsquo;ll go through several ways to work with lists in Dart. Every programming language needs lists as a fundamental data structure, and Dart offers a variety of effective ways to interact with them. We will examine these techniques in-depth in this article. We hope this article will be helpful to you whether you&amp;rsquo;re a new or seasoned coder.</description>
+    </item>
+    
+    <item>
+      <title>Using JSON for Data Storage and Exchange</title>
+      <link>https://flutterrettulf.com/json/2023/01/04/what-is-json.html</link>
+      <pubDate>Wed, 04 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/json/2023/01/04/what-is-json.html</guid>
+      <description>What is JSON and why it is used? JSON (JavaScript Object Notation) is a simple data exchange format that is simple for both humans and machines to read, write, parse, and produce. It is simple to use with current JavaScript programmes because it is built on a subset of the JavaScript programming language.
+JSON is used to transmit data between a server and a client or between a server and a server.</description>
+    </item>
+    
+    <item>
+      <title>Understanding and Using ListViews in Flutter: Examples and Best Practices</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/</guid>
+      <description>What is the ListView Widget in Flutter? Listview is a widget used to display items in a sequential order. ListView is the most commonly used scrolling widget. The ListView widget in Flutter is a scrollable list of widgets. Based on the scroll direction, it displays its children, horizontally or vertically.
+A ListView is an example of a scrolling widget, which means that it creates a scrollable list of widgets. By default, the list scrolls vertically, but you can change the scrollDirection property to Axis.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter</title>
+      <link>https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html</link>
+      <pubDate>Sun, 01 Jan 2023 08:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html</guid>
+      <description>Introduction Welcome to our tutorial on how to render a ListView inside another ListView or Column in Flutter. If you are a Flutter developer, you may have come across situations where you want to render a ListView inside another ListView or Column in Flutter. This can be a challenging task. Sometimes, if the approach is not correct, the elements in the ListView might not be visible, or you might get while nesting ListViews.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Columns Explained: From Basics to Advanced Use Cases</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter-column-widget-explained-with-examples/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter-column-widget-explained-with-examples/</guid>
+      <description>Introduction The Column widget in Flutter is used to display child widgets in a vertical arrangement. It is a versatile widget that can be used in many different ways.
+Here is an example of how to use the Column widget:
+Column( children: [ Text(&amp;#39;Item 1&amp;#39;), Text(&amp;#39;Item 2&amp;#39;), Text(&amp;#39;Item 3&amp;#39;), // ... ], ) In this example, the Column widget contains several Text widgets as its children. These widgets are arranged vertically within the Column widget.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Scrollable Columns: The Complete Guide</title>
+      <link>https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html</guid>
+      <description>Introduction Welcome to our blog post about making a column scrollable in Flutter! If you&amp;rsquo;re building a mobile application using Flutter, you may have encountered a situation where you want to display a lot of content in a single screen, but it doesn&amp;rsquo;t all fit on the device. One way to solve this problem is to make the column scrollable, so that the user can swipe up and down to see all of the content.</description>
+    </item>
+    
+    <item>
+      <title>just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</title>
+      <link>https://flutterrettulf.com/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/</link>
+      <pubDate>Fri, 21 Oct 2022 14:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/</guid>
+      <description>What is just_audio Plugin for Flutter just_audio is a feature-rich audio player for Android, iOS, macOS, web, Linux and Windows.
+Installation Add dependency Add this to your package&amp;rsquo;s pubspec.ymal file:
+dependencies: just_audio: ^0.9.29 Install package from command line flutter pub add just_audio Import Package import &amp;#39;package:just_audio/just_audio.dart&amp;#39;; Platform specific configuration Android Add the following to your AndroidManifest.xml file to enable your app to access audio files online.
+&amp;lt;uses-permission android:name=&amp;#34;android.permission.INTERNET&amp;#34; /&amp;gt; Add the following attribute to the application element if you want to connect to non-HTTPS URLs or if you employ a functionality that relies on the proxy, including headers, caching, or streaming audio sources:</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Basic App Example | How to create a flutter app</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/</link>
+      <pubDate>Thu, 20 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/</guid>
+      <description>Creating an App After installing flutter, you will be able to start making apps with Flutter. We will learn how to create a basic app with this tutorial. The app will have a simple button which will respond on click with the message &amp;ldquo;Hello Flutter&amp;rdquo;.
+From the Terminal Flutter provides a command-line tool that lets you start and manage your app. After installing Flutter you can start making apps with the following command.</description>
+    </item>
+    
+    <item>
+      <title>Dio | Powerfull Http Client for flutter</title>
+      <link>https://flutterrettulf.com/flutter_plugins/dio_http_client/</link>
+      <pubDate>Thu, 20 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/dio_http_client/</guid>
+      <description>What is Dio? Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.
+It is very simple to use.
+import &amp;#39;package:dio/dio.dart&amp;#39;; void getHttp() async { try { var response = await Dio().get(&amp;#39;http://www.google.com&amp;#39;); print(response); } catch (e) { print(e); } } Installation Updateing pubspec.yaml dependencies: dio: ^4.0.0 Using flutter pub flutter pub add dio Using dart pub dart pub add dio Now import dio in your dart file like:</description>
+    </item>
+    
+    <item>
+      <title>Variables and Datatypes in Dart</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/</link>
+      <pubDate>Thu, 20 Oct 2022 14:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_variables_and_datatypes/</guid>
+      <description>What are variables in Dart? If you are familiar with programming, you would be aware of variables. A variable is basically a reserved memory location to store values. In other words, a variable in a program is a name given to a memory location that can store some data.
+For example, let&amp;rsquo;s say we want to store the temperature of a particular city in Celsius. In this case, we would create a variable, temperature, and store the value of 20 in it.</description>
+    </item>
+    
+    <item>
+      <title>Dart Overview</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_overview/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_overview/</guid>
+      <description>Overview Dart is a programming language for apps on several platforms that is client-optimized. It was created by Google and is employed to create desktop, server, online, and mobile applications. Dart is a garbage-collected, object-oriented, class-based language with C-style syntax. JavaScript or native code can both be produced using Dart. It supports type inference, reified generics, abstract classes, mixins, and interfaces.
+Dart also forms the foundation of Flutter . Dart provides the language and runtimes that power Flutter apps, but Dart also supports many core developer tasks like formatting, analyzing, and testing code.</description>
+    </item>
+    
+    <item>
+      <title>Dart Hello World Program</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart-hello-world/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart-hello-world/</guid>
+      <description>TL;DR Install Dart SDK from here . Create a file named hello_world.dart and add the following code: void main() { print(&amp;#39;Hello World&amp;#39;); } Run the following command to compile the code: dart hello_world.dart You should see the following output: Hello World Download &amp;amp; Install the Dart SDK The Dart Software Development Kit (SDK) is a set of libraries and tools that allow you to develop Dart applications. You can use a package manager to easily install and update a stable channel Dart SDK.</description>
+    </item>
+    
+    <item>
+      <title>Operators in Dart</title>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_operators/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_operators/</guid>
+      <description>What are Operands &amp;amp; Operators in Dart? In mathematics, an operator is a mathematical symbol or function that indicates the operation to be done on a value or a set of values. This is similar to how an operator in programming works. An operator defines how the operands will be processed.
+Consider a simple expression val3 = val1 + val2. Here, val1 and val2 are the operands, and + is the operator.</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Spinkit Plugin | Collection of animated loading indicators</title>
+      <link>https://flutterrettulf.com/flutter_plugins/flutter_spinkit_plugin/</link>
+      <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/flutter_spinkit_plugin/</guid>
+      <description>Spinkit Plugin A collection of loading indicators animated with flutter.
+Installation Let&amp;rsquo;s look at different ways to install and use the flutter spinkit plugin
+Add dependency Add this to your package&amp;rsquo;s pubspec.ymal file:
+dependencies: flutter_spinkit: ^5.2.0 Install package from command line flutter pub add flutter_spinkit Import Package import &amp;#39;package:flutter_spinkit/flutter_spinkit.dart&amp;#39;; Usage Add these to any widget as a child: SpinKitRotatingCircle( color: Colors.white, size: 50.0, ), SpinKitDoubleBounce( color: Colors.white, size: 50.0, ), SpinKitWave( color: Colors.</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Elevated Button Examples.</title>
+      <link>https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html</link>
+      <pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html</guid>
+      <description>What is ElevatedButton in Flutter? Elevated Button is a flutter component included inside the material package i.e. “package:flutter/material.dart“. It is a label child displayed on a Material widget whose elevation increases when the button is pressed. The label&amp;rsquo;s Text and Icon widgets are displayed in style&amp;rsquo;s ButtonStyle.foregroundColor and the button&amp;rsquo;s filled background is the ButtonStyle.backgroundColor. It is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow.</description>
+    </item>
+    
+    <item>
+      <title>How to disable the backbutton in Flutter using WillPopScope.</title>
+      <link>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html</guid>
+      <description>Introduction WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.
+If you want to know more about the WillPopScope widget, you can read the article How to use the WillPopScope widget in Flutter In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.</description>
+    </item>
+    
+    <item>
+      <title>How to use WillPopScope widget in Flutter with examples.</title>
+      <link>https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html</guid>
+      <description>In this article, we will discuss how to use the WillPopScope class in Flutter.
+What is WillPopScope? WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. In other words, it can be used to override what happens when a user presses the back button on the device or pops the current route.
+The constructor of the class is as follows:</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Loading Static Image &amp; Font Assets in Flutter App.</title>
+      <link>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html</guid>
+      <description>What are Static Assets? Static assets are the files that are bundled with the app and are not downloaded from the internet. Static assets are used to load images, fonts, and other files that are used in the app. Static assets are loaded using the pubspec.yaml file. The pubspec.yaml file is used to define the assets that are used in the app. The pubspec.yaml file is located in the root directory of the app.</description>
+    </item>
+    
+    <item>
+      <title>How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?</title>
+      <link>https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html</guid>
+      <description>Introduction In this article, we will discuss how to use the WillPopScope widget in Flutter to show a snackbar saying press back button again to exit app. If you are not familiar with the WillPopScope widget, you can read the article How to use the WillPopScope widget in Flutter In order to exit the app, we need to press the back button twice. The first time we press the back button, we will show a snackbar saying press back button again to exit app.</description>
+    </item>
+    
+  </channel>
+</rss>

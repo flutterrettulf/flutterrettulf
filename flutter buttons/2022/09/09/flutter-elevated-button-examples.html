@@ -1,656 +1,602 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>Flutter: Elevated Button Examples.</title>
-  <meta name="title" content="Flutter: Elevated Button Examples.">
-  <meta name="twitter:card" content="summary-large-image" >
-  <meta name="twitter:site" content="flutterrettulf" >
-  <meta name="description" content="Elevated Button Widget is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. We will see some examples of Elevated Button in Flutter.">
-  <meta name="author" content="Justin Thomas">
-  
-  <meta name="tags" content="ElevatedButton ElevatedButtonExamples ElevatedButtonWidget ElevatedButtonFlutter">
-  
-  <meta property="og:title" content="Flutter: Elevated Button Examples." >
-  <meta property="twitter:title" content="Flutter: Elevated Button Examples." >
-  <meta property="og:description" content="Elevated Button Widget is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. We will see some examples of Elevated Button in Flutter." >
-  <meta property="twitter:description" content="Elevated Button Widget is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. We will see some examples of Elevated Button in Flutter." >
-  <meta property="og:url" content="https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" >
-  <meta property="twitter:url" content="https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" >
-  <meta name="robots" content="index, follow" >
-  <link rel="canonical" href="https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" >
-  
-  <meta property="og:type" content="article" >
-  <meta property="og:article:author" content="Justin Thomas" >
-  <meta property="og:article:published_time" content="2022-09-09" >
-  <meta property="og:article:modified_time" content="2022-09-09" >
-  <meta property="og:article:section" content="Flutter Buttons" >
-  <meta property="og:article:tag" content="ElevatedButton, ElevatedButtonExamples, ElevatedButtonWidget, and ElevatedButtonFlutter" >
-  
-  
-  <meta property="og:image" content="https://flutterrettulf.com/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo.png" >
-  <meta property="twitter:image" content="https://flutterrettulf.com/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo.png" >
-  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow" >
+        <link rel="canonical" href="https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html">
+        <link href="/css/blog.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/sitemanifest.json">        
 
-  <link href="/assets/prism.css" rel="stylesheet">
-  <script src="/assets/prism.js" ></script>
-  <!--fav icons-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-  <link rel="manifest" href="/sitemanifest.json">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-      
-  <!-- Custom styles for this template -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+            gtag('config', 'G-GKQ47FWX29');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+        crossorigin="anonymous"></script>
+        <meta property="og:title" content="Flutter: Elevated Button Examples." />
+<meta property="og:description" content="Elevated Button Widget is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. We will see some examples of Elevated Button in Flutter." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" /><meta property="og:image" content="https://flutterrettulf.com/post_images/flutter_elevated_button_demo.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-09T00:00:00+00:00" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <meta itemprop="name" content="Flutter: Elevated Button Examples.">
+<meta itemprop="description" content="Elevated Button Widget is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. We will see some examples of Elevated Button in Flutter."><meta itemprop="datePublished" content="2022-09-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-09-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1187"><meta itemprop="image" content="https://flutterrettulf.com/post_images/flutter_elevated_button_demo.png">
+<meta itemprop="keywords" content="ElevatedButton,ElevatedButtonExamples,ElevatedButtonWidget,ElevatedButtonFlutter," />
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://flutterrettulf.com/post_images/flutter_elevated_button_demo.png"/>
 
-    gtag('config', 'G-GKQ47FWX29');
-  </script>
-  <link href="/assets/blog.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
-  crossorigin="anonymous"></script>
-</head>
-  <style>
+<meta name="twitter:title" content="Flutter: Elevated Button Examples."/>
+<meta name="twitter:description" content="Elevated Button Widget is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. We will see some examples of Elevated Button in Flutter."/>
 
-body {
-  min-height: 75rem;
-  padding-top: 3.5rem;
-}
-  </style>
+        <title>
+             Flutter elevated button examples. | FlutterrettulF 
+        </title>
+        
+    </head>
+  
   <body>   
     <nav class="navbar navbar-expand-md navbar-light fixed-top border-bottom bg-white">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      
 
-      <a class="navbar-brand" href="/"><img src="/assets/brand/logo_2.svg" width="30"></a>
+      <a class="navbar-brand" href="/"><img src="/brand/logo_2.svg" width="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="bi bi-three-dots-vertical"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/static-assets">Static Assets</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/navigation">Navigation</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-column">Flutter Column</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-listview">Flutter ListView</a>
-          </li>
-              
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials">Dart tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins">Flutter plugins</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials">Flutter tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/posts">Posts</a>
-          </li>
-             
+            
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials/">Dart Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials/">Flutter Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins/">Popular Flutter Plugins</a>
+                    </li>
+                
+            
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none " aria-current="page" href="/categories/">Categories</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none" aria-current="page" href="/tags/">Tags</a>
+            </li>
         </ul>
-        <!-- <a class="btn btn-outline-light me-2" href="/courses">Courses</a>  -->
-        <!-- <a class="btn btn-primary"  href="/search">Search</a> -->
+        
+        
       </div>
     </div>
   </nav>
-  <main class="container-fluid">  
-    <div class="row"> 
-      <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
-        <aside>
-            <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
     
-    <a href="/category/flutter-buttons" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-      <span class="fs-5 fw-semibold">Flutter Buttons</span>
-    </a>
-    <div class=" list-group list-group-flush border-bottom scrollarea "> 
-      
-      
-      
-      
-      
-      
-      
-      
-      <a href="/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1"> Flutter: Elevated Button Examples.</div>
+<main class="container-fluid">
+ 
+  <div class="row ">
+    <div class="col-md-4 col-lg-3 d-none d-md-block"><div class="bg-light rounded p-3 sticky-top" style="top: 5rem;">
+        <p class="h5 fw-bold">The Index of Insight</p>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-elevatedbutton-in-flutter">What is ElevatedButton in Flutter?</a></li>
+    <li><a href="#what-are-the-states-of-elevated-button-in-flutter">What are the states of Elevated Button in Flutter?</a>
+      <ul>
+        <li><a href="#how-to-enable--disable-elevated-button-in-flutter">How to enable / disable Elevated Button in Flutter?</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-do-you-give-an-elevated-button-style-in-flutter">How do you give an elevated button style in Flutter?</a>
+      <ul>
+        <li><a href="#the-buttonstyle-class">The ButtonStyle Class</a></li>
+        <li><a href="#how-to-define-style-for-different-states-of-elevatedbutton-in-flutter">How to define style for different states of ElevatedButton in Flutter?</a></li>
+        <li><a href="#how-do-you-give-elevation-to-an-elevated-button">How do you give elevation to an elevated button?</a></li>
+        <li><a href="#how-do-you-give-shadow-to-an-elevated-button">How do you give shadow to an elevated button?</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-can-we-show-an-elevatedbutton-with-an-icon-in-flutter">How can we show an ElevatedButton with an icon in Flutter?</a></li>
+    <li><a href="#elevatedbutton-vs-raisedbutton-in-flutter-is-raised-button-deprecated-in-flutter">ElevatedButton vs RaisedButton in Flutter. Is Raised button deprecated in Flutter?</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+          <hr >
+          <p class="h5 my-2">Share</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <div class="btn-group ">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fflutter%2520buttons%2f2022%2f09%2f09%2fflutter-elevated-button-examples.html" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520buttons%2f2022%2f09%2f09%2fflutter-elevated-button-examples.html&text=Flutter%20elevated%20button%20examples." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520buttons%2f2022%2f09%2f09%2fflutter-elevated-button-examples.html&title=Flutter%20elevated%20button%20examples." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520buttons%2f2022%2f09%2f09%2fflutter-elevated-button-examples.html&title=Flutter%20elevated%20button%20examples." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+            </div>
+          </div>
+      </div></div>
+    <div class="col-md-8 col-lg-6 ">
+
+    <article >
+      <header >
+        <h1 class="fw-bold mb-4">
+          Flutter: Elevated Button Examples.
+        </h1>
+        
+        
+        <picture class="w-100">
+          
+          <source srcset="/post_images/flutter_elevated_button_demo_hu0308c48eedb658ba40388ceb0d0cc887_84428_200x0_resize_box_3.png" media="(max-width: 200px)">
+          
+          
+          <source srcset="/post_images/flutter_elevated_button_demo_hu0308c48eedb658ba40388ceb0d0cc887_84428_400x0_resize_box_3.png" media="(max-width: 400px)">
+          
+          
+          <source srcset="/post_images/flutter_elevated_button_demo_hu0308c48eedb658ba40388ceb0d0cc887_84428_600x0_resize_box_3.png" media="(max-width: 600px)">
+          
+          
+          <source srcset="/post_images/flutter_elevated_button_demo_hu0308c48eedb658ba40388ceb0d0cc887_84428_800x0_resize_box_3.png" media="(max-width: 800px)">
+          
+          <img src="/post_images/flutter_elevated_button_demo.png" alt="post_images/flutter_elevated_button_demo.png" class="img-fluid rounded mb-4" >
+        </picture>
+                
+      </header>
+      <div class="col-12 d-block d-md-none"><div class="bg-light rounded p-3 mb-4" >
+            <p class="h5 fw-bold">The Index of Insight</p>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-elevatedbutton-in-flutter">What is ElevatedButton in Flutter?</a></li>
+    <li><a href="#what-are-the-states-of-elevated-button-in-flutter">What are the states of Elevated Button in Flutter?</a>
+      <ul>
+        <li><a href="#how-to-enable--disable-elevated-button-in-flutter">How to enable / disable Elevated Button in Flutter?</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-do-you-give-an-elevated-button-style-in-flutter">How do you give an elevated button style in Flutter?</a>
+      <ul>
+        <li><a href="#the-buttonstyle-class">The ButtonStyle Class</a></li>
+        <li><a href="#how-to-define-style-for-different-states-of-elevatedbutton-in-flutter">How to define style for different states of ElevatedButton in Flutter?</a></li>
+        <li><a href="#how-do-you-give-elevation-to-an-elevated-button">How do you give elevation to an elevated button?</a></li>
+        <li><a href="#how-do-you-give-shadow-to-an-elevated-button">How do you give shadow to an elevated button?</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-can-we-show-an-elevatedbutton-with-an-icon-in-flutter">How can we show an ElevatedButton with an icon in Flutter?</a></li>
+    <li><a href="#elevatedbutton-vs-raisedbutton-in-flutter-is-raised-button-deprecated-in-flutter">ElevatedButton vs RaisedButton in Flutter. Is Raised button deprecated in Flutter?</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>      
+          </div></div>
+      <div class="nested-copy-line-height lh-copy f4 nested-links">
+        <h2 id="what-is-elevatedbutton-in-flutter">What is ElevatedButton in Flutter?</h2>
+<p>Elevated Button is a flutter component included inside the material package i.e. “package:flutter/material.dart“. It is a label child displayed on a Material widget whose elevation increases when the button is pressed. The label&rsquo;s Text and Icon widgets are displayed in style&rsquo;s ButtonStyle.foregroundColor and the button&rsquo;s filled background is the ButtonStyle.backgroundColor. It is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. Since they use color fill and shadow, they are often used to indicate a primary action in an app. They are also used to indicate a primary action in a dialog. We will see some examples of ElevatedButton in Flutter.</p>
+<p>You can read more about ElevatedButton in Flutter from <a href="https://api.flutter.dev/flutter/material/ElevatedButton-class.html" target="_blank" rel="nofollow noopener noreferrer" >Flutter ElevatedButton - class</a>
+.</p>
+<h2 id="what-are-the-states-of-elevated-button-in-flutter">What are the states of Elevated Button in Flutter?</h2>
+<p>There are 5 states of Elevated Button in Flutter. They are:</p>
+<ol>
+<li>Normal</li>
+<li>Hover</li>
+<li>Focus</li>
+<li>Pressed</li>
+<li>Disabled</li>
+</ol>
+<h3 id="how-to-enable--disable-elevated-button-in-flutter">How to enable / disable Elevated Button in Flutter?</h3>
+<p>If onPressed and onLongPress callbacks are null, then the button will be disabled.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// This button has an onPressed callback, so it is enabled and will react to hover and press.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>ElevatedButton(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">onPressed:</span> () {},
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">child:</span> <span style="color:#ff7b72">const</span> Text(<span style="color:#a5d6ff">&#39;Button1&#39;</span>),
+</span></span><span style="display:flex;"><span>),
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// This button is disabled because onPressed is null, so it will not react to hover or press.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>ElevatedButton(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">onPressed:</span> <span style="color:#79c0ff">null</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">child:</span> <span style="color:#ff7b72">const</span> Text(<span style="color:#a5d6ff">&#39;Button2&#39;</span>),
+</span></span><span style="display:flex;"><span>),
+</span></span></code></pre></div><p>The onPressed and onLongPress callbacks can be based on the state of the app, or they can be hardcoded. For example, if the app has a form with one field, then the button can be disabled until the form is valid.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// This button is will be enabled only when the `_formIsValid` variable is changed to true.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>ElevatedButton(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">onPressed:</span> _formIsValid <span style="color:#ff7b72;font-weight:bold">?</span> () {} <span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#79c0ff">null</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">child:</span> <span style="color:#ff7b72">const</span> Text(<span style="color:#a5d6ff">&#39;Button3&#39;</span>),
+</span></span><span style="display:flex;"><span>),
+</span></span></code></pre></div><h2 id="how-do-you-give-an-elevated-button-style-in-flutter">How do you give an elevated button style in Flutter?</h2>
+<p>The elevated button&rsquo;s default style is defined by defaultStyleOf. The button child&rsquo;s Text and Icon widgets are rendered with the ButtonStyle&rsquo;s foreground color. The button&rsquo;s InkWell adds the style&rsquo;s overlay color when the button is focused, hovered or pressed. The button&rsquo;s background color becomes its Material color.</p>
+<p>The style of a single elevated button can be overridden with its style parameter. The style of all elevated buttons in a subtree can be overridden with the ElevatedButtonTheme, and the style of all of the elevated buttons in an app can be overridden with the Theme&rsquo;s ThemeData.elevatedButtonTheme property.</p>
+<p>The static styleFrom method is a convenient way to create a elevated button ButtonStyle from simple values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// This button&#39;s style is defined by the ElevatedButton.styleFrom method.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>ElevatedButton(
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff;font-weight:bold">onPressed:</span> () {},
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff;font-weight:bold">style:</span> ElevatedButton.styleFrom(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">primary:</span> Colors.red, <span style="color:#8b949e;font-style:italic">// background color
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#79c0ff;font-weight:bold">onPrimary:</span> Colors.white, <span style="color:#8b949e;font-style:italic">// foreground color
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#79c0ff;font-weight:bold">shadowColor:</span> Colors.green, <span style="color:#8b949e;font-style:italic">// elevation color
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>  <span style="color:#79c0ff;font-weight:bold">elevation:</span> <span style="color:#a5d6ff">5</span>, <span style="color:#8b949e;font-style:italic">// elevation of button
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>),
+</span></span><span style="display:flex;"><span><span style="color:#79c0ff;font-weight:bold">child:</span> <span style="color:#ff7b72">const</span> Text(<span style="color:#a5d6ff">&#39;Button3&#39;</span>),
+</span></span><span style="display:flex;"><span>),
+</span></span></code></pre></div><p>You can read more about styleFrom in Flutter from <a href="https://api.flutter.dev/flutter/material/ElevatedButton/styleFrom.html" target="_blank" rel="nofollow noopener noreferrer" >Flutter ElevatedButton.styleFrom - method</a>
+.</p>
+<h3 id="the-buttonstyle-class">The ButtonStyle Class</h3>
+<p>The ButtonStyle class is used to define all the visual properties that most buttons have in common.</p>
+<p>Buttons and their themes have a ButtonStyle property which defines the visual properties whose default values are to be overridden. The default values are defined by the individual button widgets and are typically based on overall theme&rsquo;s ThemeData.colorScheme and ThemeData.textTheme.</p>
+<p>All of the ButtonStyle properties are null by default.</p>
+<h3 id="how-to-define-style-for-different-states-of-elevatedbutton-in-flutter">How to define style for different states of ElevatedButton in Flutter?</h3>
+<p>Many of the ButtonStyle properties are MaterialStateProperty objects which resolve to different values depending on the button&rsquo;s state.</p>
+<p>For example the Color properties are defined with MaterialStateProperty<!-- raw HTML omitted --> and can resolve to different colors depending on if the button is pressed, hovered, focused, disabled, etc.These properties can override the default value for just one state or all of them.</p>
+<p><strong>For example</strong> to create a ElevatedButton whose background color is the color scheme’s primary color with 50% opacity, but only when the button is pressed, one could write:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ElevatedButton(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">style:</span> ButtonStyle(
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff;font-weight:bold">backgroundColor:</span> MaterialStateProperty.resolveWith<span style="color:#ff7b72;font-weight:bold">&lt;</span>Color<span style="color:#ff7b72;font-weight:bold">?&gt;</span>(
+</span></span><span style="display:flex;"><span>      (Set<span style="color:#ff7b72;font-weight:bold">&lt;</span>MaterialState<span style="color:#ff7b72;font-weight:bold">&gt;</span> states) {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (states.contains(MaterialState.pressed))
+</span></span><span style="display:flex;"><span>          <span style="color:#ff7b72">return</span> Theme.of(context).colorScheme.primary.withOpacity(<span style="color:#a5d6ff">0.5</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">null</span>; <span style="color:#8b949e;font-style:italic">// Use the component&#39;s default.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      },
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>  ),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p><strong>Another example</strong> to create an ElevatedButton with a different background color for the disabled state, one could write:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ElevatedButton(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">style:</span> ButtonStyle(
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff;font-weight:bold">backgroundColor:</span> MaterialStateProperty.resolveWith<span style="color:#ff7b72;font-weight:bold">&lt;</span>Color<span style="color:#ff7b72;font-weight:bold">?&gt;</span>(
+</span></span><span style="display:flex;"><span>      (Set<span style="color:#ff7b72;font-weight:bold">&lt;</span>MaterialState<span style="color:#ff7b72;font-weight:bold">&gt;</span> states) {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">if</span> (states.contains(MaterialState.disabled))
+</span></span><span style="display:flex;"><span>          <span style="color:#ff7b72">return</span> Colors.grey;
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">return</span> <span style="color:#79c0ff">null</span>; <span style="color:#8b949e;font-style:italic">// Use the component&#39;s default.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      },
+</span></span><span style="display:flex;"><span>    ),
+</span></span><span style="display:flex;"><span>  ),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>In this case the background color for all other button states would fallback to the ElevatedButton’s default values.</p>
+<p>To <strong>unconditionally</strong> set the button&rsquo;s backgroundColor for all states one could write:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ElevatedButton(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">style:</span> ButtonStyle(
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff;font-weight:bold">backgroundColor:</span> MaterialStatePropertyAll<span style="color:#ff7b72;font-weight:bold">&lt;</span>Color<span style="color:#ff7b72;font-weight:bold">&gt;</span>(Colors.green),
+</span></span><span style="display:flex;"><span>  ),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Configuring a ButtonStyle directly makes it possible to very precisely control the button’s visual attributes for all states. This level of control is typically required when a custom “branded” look and feel is desirable. However, in many cases it’s useful to make relatively sweeping changes based on a few initial parameters with simple values. The button styleFrom() methods enable such sweeping changes.</p>
+<p>To configure all of the application&rsquo;s ElevatedButtons in the same way, specify the overall theme&rsquo;s elevatedButtonTheme property.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ThemeData(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">elevatedButtonTheme:</span> ElevatedButtonThemeData(
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff;font-weight:bold">style:</span> ElevatedButtonThemeData(
+</span></span><span style="display:flex;"><span>      <span style="color:#79c0ff;font-weight:bold">style:</span> ElevatedButton.styleFrom(
+</span></span><span style="display:flex;"><span>        <span style="color:#79c0ff;font-weight:bold">primary:</span> Colors.blue,
+</span></span><span style="display:flex;"><span>        <span style="color:#79c0ff;font-weight:bold">onPrimary:</span> Colors.white,
+</span></span><span style="display:flex;"><span>        <span style="color:#79c0ff;font-weight:bold">shape:</span> RoundedRectangleBorder(
+</span></span><span style="display:flex;"><span>          <span style="color:#79c0ff;font-weight:bold">borderRadius:</span> BorderRadius.circular(<span style="color:#a5d6ff">10</span>),
+</span></span><span style="display:flex;"><span>        ),
+</span></span><span style="display:flex;"><span>        <span style="color:#79c0ff;font-weight:bold">minimumSize:</span> Size(<span style="color:#a5d6ff">88</span>, <span style="color:#a5d6ff">36</span>),
+</span></span><span style="display:flex;"><span>      ),
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>  ),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h3 id="how-do-you-give-elevation-to-an-elevated-button">How do you give elevation to an elevated button?</h3>
+<p>We can override the elevation in style property of an elevated button or provide a common elevation to all the elevated buttons in the app using the theme.</p>
+<p>For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ElevatedButton(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">style:</span> ElevatedButton.styleFrom(
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff;font-weight:bold">elevation:</span> <span style="color:#a5d6ff">20</span>,
+</span></span><span style="display:flex;"><span>  ),
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">onPressed:</span> () {},
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">child:</span> Text(<span style="color:#a5d6ff">&#39;Elevated Button&#39;</span>),
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><h3 id="how-do-you-give-shadow-to-an-elevated-button">How do you give shadow to an elevated button?</h3>
+<p>We can give shadow to an elevated button by using the shadowColor property of an elevated button. We can also give shadow to an elevated button by using the style property of an elevated button. We can override the shadowColor in style property of an elevated button.</p>
+<p>For example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ElevatedButton(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">style:</span> ElevatedButton.styleFrom(
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff;font-weight:bold">shadowColor:</span> Colors.red,
+</span></span><span style="display:flex;"><span>  ),
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">onPressed:</span> () {},
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">child:</span> Text(<span style="color:#a5d6ff">&#39;Elevated Button&#39;</span>),
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><h2 id="how-can-we-show-an-elevatedbutton-with-an-icon-in-flutter">How can we show an ElevatedButton with an icon in Flutter?</h2>
+<p>In order to show an elevated button with icon in flutter, we use the ElevatedButton.icon() constructor.</p>
+<p><strong>For example:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>ElevatedButton.icon(
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">onPressed:</span> () {},
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">icon:</span> Icon(Icons.add),
+</span></span><span style="display:flex;"><span>  <span style="color:#79c0ff;font-weight:bold">label:</span> Text(<span style="color:#a5d6ff">&#39;Add&#39;</span>),
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>If you want to learn more about the ElevatedButton.icon constructor, you can read the official documentation here. <a href="https://api.flutter.dev/flutter/material/ElevatedButton/ElevatedButton.icon.html" target="_blank" rel="nofollow noopener noreferrer" >ElevatedButton.icon</a>
+.</p>
+<h2 id="elevatedbutton-vs-raisedbutton-in-flutter-is-raised-button-deprecated-in-flutter">ElevatedButton vs RaisedButton in Flutter. Is Raised button deprecated in Flutter?</h2>
+<p>As of June 2022, the RaisedButton widget is deprecated. It is recommended that you use the ElevatedButton widget instead. The RaisedButton widget will be removed in a future version of Flutter.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>ElevatedButton is a Material Design button that lifts and displays ink reactions on press. It is a filled button whose material elevates when pressed. An ElevatedButton consists of a text label, an icon, or both, displayed in a filled Material widget. The text label is displayed in the style defined by the button’s overall Theme, with the color taken from the button’s ButtonStyle. The ElevatedButton is usually used to indicate a primary action in an application.</p>
+<p>You can find the source code for this tutorial on GitHub. If you found this tutorial helpful, please share it with your friends. Thanks for reading!</p>
+<p><a href="https://github.com/flutterrettulf/elevatedbutton_demo" target="_blank" rel="nofollow noopener noreferrer" >Source Code for Flutter ElevatedButton Tutorial</a>
+.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/material/ElevatedButton-class.html" target="_blank" rel="nofollow noopener noreferrer" >ElevatedButton</a>
+</li>
+<li><a href="https://api.flutter.dev/flutter/material/ElevatedButton/ElevatedButton.icon.html" target="_blank" rel="nofollow noopener noreferrer" >ElevatedButton.icon</a>
+</li>
+<li><a href="https://api.flutter.dev/flutter/material/ElevatedButton/styleFrom.html" target="_blank" rel="nofollow noopener noreferrer" >ElevatedButton.styleFrom</a>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+
+      </div>
+    </article>
+    <div class="col-12 mt-4  bg-light rounded p-3 text-dark">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="btn-group ">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fflutter%2520buttons%2f2022%2f09%2f09%2fflutter-elevated-button-examples.html" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520buttons%2f2022%2f09%2f09%2fflutter-elevated-button-examples.html&text=Flutter%20elevated%20button%20examples." class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520buttons%2f2022%2f09%2f09%2fflutter-elevated-button-examples.html&title=Flutter%20elevated%20button%20examples." class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520buttons%2f2022%2f09%2f09%2fflutter-elevated-button-examples.html&title=Flutter%20elevated%20button%20examples." class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
         </div>
-        <!-- <div class="col-10 mb-1 small"> <h2 id="what-is-elevatedbutton-in-flutter">What is ElevatedButton in Flutter?</h2>
-</div> -->
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-         
+      </div>
     </div>
-    
+
   </div>
+  <div class="col-md-4 col-lg-3 d-none d-md-block">
+
 
 
  
-        </aside>
-      </div>
-      <div class="col-md-8 col-lg-8 p-4">
-        <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
-        
-        <meta itemprop="datePublished" content="2022-09-09T05:30:00+05:30">
-        
-        <meta itemprop="inLanguage" content="en-US">
-        
-        <meta itemprop="image" content="/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo.png">
-        
-        <meta itemprop="url" content="https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html">
-        <meta itemprop="dateModified" content="2022-09-09T05:30:00+05:30">
-        <meta itemprop="author" content="Justin Thomas">
-        <meta itemprop="publisher" content="Justin Thomas">
-        <meta itemprop="description" content="Elevated Button Widget is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. We will see some examples of Elevated Button in Flutter.">       
-
-        <header class="mb-4"><h1>Flutter: Elevated Button Examples.</h1>
-          <small class="text-muted">Posted on September 9, 2022</small>
-        </header>
-
-        <div class="blog-post-body lh-lg">
-          
-          
-            <img class="img-fluid rounded mb-4" src="/generated/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo-800-9474538d8.png" alt="Flutter: Elevated Button Examples." srcset="/generated/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo-400-9474538d8.png 400w, /generated/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo-600-9474538d8.png 600w, /generated/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo-800-9474538d8.png 800w, /generated/assets/img/flutter_elevatedbutton_demo/flutter_elevated_button_demo-1000-9474538d8.png 1000w">
-
-                
-          <ul id="toc" class="toc__list">
-<li class="toc-entry toc-h2"><a href="#what-is-elevatedbutton-in-flutter">What is ElevatedButton in Flutter?</a></li>
-<li class="toc-entry toc-h2"><a href="#what-are-the-states-of-elevated-button-in-flutter">What are the states of Elevated Button in Flutter?</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h3"><a href="#how-to-enable--disable-elevated-button-in-flutter">How to enable / disable Elevated Button in Flutter?</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#how-do-you-give-an-elevated-button-style-in-flutter">How do you give an elevated button style in Flutter?</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h3"><a href="#the-buttonstyle-class">The ButtonStyle Class</a></li>
-<li class="toc-entry toc-h3"><a href="#how-to-define-style-for-different-states-of-elevatedbutton-in-flutter">How to define style for different states of ElevatedButton in Flutter?</a></li>
-<li class="toc-entry toc-h3"><a href="#how-do-you-give-elevation-to-an-elevated-button">How do you give elevation to an elevated button?</a></li>
-<li class="toc-entry toc-h3"><a href="#how-do-you-give-shadow-to-an-elevated-button">How do you give shadow to an elevated button?</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h2"><a href="#how-can-we-show-an-elevatedbutton-with-an-icon-in-flutter">How can we show an ElevatedButton with an icon in Flutter?</a></li>
-<li class="toc-entry toc-h2"><a href="#elevatedbutton-vs-raisedbutton-in-flutter-is-raised-button-deprecated-in-flutter">ElevatedButton vs RaisedButton in Flutter. Is Raised button deprecated in Flutter?</a></li>
-<li class="toc-entry toc-h2"><a href="#conclusion">Conclusion</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>        
-          <h2 id="what-is-elevatedbutton-in-flutter">What is ElevatedButton in Flutter?</h2>
-
-<p>Elevated Button is a flutter component included inside the material package i.e. “package:flutter/material.dart“. It is a label child displayed on a Material widget whose elevation increases when the button is pressed. The label’s Text and Icon widgets are displayed in style’s ButtonStyle.foregroundColor and the button’s filled background is the ButtonStyle.backgroundColor. It is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow. Since they use color fill and shadow, they are often used to indicate a primary action in an app. They are also used to indicate a primary action in a dialog. We will see some examples of ElevatedButton in Flutter.</p>
-
-<p>You can read more about ElevatedButton in Flutter from <a href="https://api.flutter.dev/flutter/material/ElevatedButton-class.html" target="_blank">Flutter ElevatedButton - class</a>.</p>
-
-<h2 id="what-are-the-states-of-elevated-button-in-flutter">What are the states of Elevated Button in Flutter?</h2>
-
-<p>There are 5 states of Elevated Button in Flutter. They are:</p>
-<ol>
-  <li>Normal</li>
-  <li>Hover</li>
-  <li>Focus</li>
-  <li>Pressed</li>
-  <li>Disabled</li>
-</ol>
-
-<h3 id="how-to-enable--disable-elevated-button-in-flutter">How to enable / disable Elevated Button in Flutter?</h3>
-<p>If onPressed and onLongPress callbacks are null, then the button will be disabled.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This button has an onPressed callback, so it is enabled and will react to hover and press.</span>
-<span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
-  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Button1'</span><span class="p">),</span>
-<span class="p">),</span>
-</code></pre></div></div>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This button is disabled because onPressed is null, so it will not react to hover or press.</span>
-<span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">onPressed:</span> <span class="kc">null</span><span class="p">,</span>
-  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Button2'</span><span class="p">),</span>
-<span class="p">),</span>
-</code></pre></div></div>
-
-<p>The onPressed and onLongPress callbacks can be based on the state of the app, or they can be hardcoded. For example, if the app has a form with one field, then the button can be disabled until the form is valid.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// This button is will be enabled only when the `_formIsValid` variable is changed to true.</span>
-<span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">onPressed:</span> <span class="n">_formIsValid</span> <span class="o">?</span> <span class="p">()</span> <span class="p">{}</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Button3'</span><span class="p">),</span>
-<span class="p">),</span>
-</code></pre></div></div>
-
-<h2 id="how-do-you-give-an-elevated-button-style-in-flutter">How do you give an elevated button style in Flutter?</h2>
-
-<p>The elevated button’s default style is defined by defaultStyleOf. The button child’s Text and Icon widgets are rendered with the ButtonStyle’s foreground color. The button’s InkWell adds the style’s overlay color when the button is focused, hovered or pressed. The button’s background color becomes its Material color.</p>
-
-<p>The style of a single elevated button can be overridden with its style parameter. The style of all elevated buttons in a subtree can be overridden with the ElevatedButtonTheme, and the style of all of the elevated buttons in an app can be overridden with the Theme’s ThemeData.elevatedButtonTheme property.</p>
-
-<p>The static styleFrom method is a convenient way to create a elevated button ButtonStyle from simple values.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c1">// This button's style is defined by the ElevatedButton.styleFrom method.</span>
-<span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
-  <span class="nl">style:</span> <span class="n">ElevatedButton</span><span class="o">.</span><span class="na">styleFrom</span><span class="p">(</span>
-    <span class="nl">primary:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">red</span><span class="p">,</span> <span class="c1">// background color</span>
-    <span class="nl">onPrimary:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">white</span><span class="p">,</span> <span class="c1">// foreground color</span>
-    <span class="nl">shadowColor:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">green</span><span class="p">,</span> <span class="c1">// elevation color</span>
-    <span class="nl">elevation:</span> <span class="mi">5</span><span class="p">,</span> <span class="c1">// elevation of button</span>
-  <span class="p">),</span>
-  <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Button3'</span><span class="p">),</span>
-<span class="p">),</span>
-</code></pre></div></div>
-
-<p>You can read more about styleFrom in Flutter from <a href="https://api.flutter.dev/flutter/material/ElevatedButton/styleFrom.html" target="_blank">Flutter ElevatedButton.styleFrom - method</a>.</p>
-
-<h3 id="the-buttonstyle-class">The ButtonStyle Class</h3>
-<p>The ButtonStyle class is used to define all the visual properties that most buttons have in common.</p>
-
-<p>Buttons and their themes have a ButtonStyle property which defines the visual properties whose default values are to be overridden. The default values are defined by the individual button widgets and are typically based on overall theme’s ThemeData.colorScheme and ThemeData.textTheme.</p>
-
-<p>All of the ButtonStyle properties are null by default.</p>
-
-<h3 id="how-to-define-style-for-different-states-of-elevatedbutton-in-flutter">How to define style for different states of ElevatedButton in Flutter?</h3>
-<p>Many of the ButtonStyle properties are MaterialStateProperty objects which resolve to different values depending on the button’s state.</p>
-
-<p>For example the Color properties are defined with MaterialStateProperty<Color> and can resolve to different colors depending on if the button is pressed, hovered, focused, disabled, etc.These properties can override the default value for just one state or all of them.</Color></p>
-
-<p><strong>For example</strong> to create a ElevatedButton whose background color is the color scheme’s primary color with 50% opacity, but only when the button is pressed, one could write:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">style:</span> <span class="n">ButtonStyle</span><span class="p">(</span>
-    <span class="nl">backgroundColor:</span> <span class="n">MaterialStateProperty</span><span class="o">.</span><span class="na">resolveWith</span><span class="p">&lt;</span><span class="n">Color</span><span class="o">?</span><span class="p">&gt;(</span>
-      <span class="p">(</span><span class="kt">Set</span><span class="p">&lt;</span><span class="n">MaterialState</span><span class="p">&gt;</span> <span class="n">states</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">states</span><span class="o">.</span><span class="na">contains</span><span class="p">(</span><span class="n">MaterialState</span><span class="o">.</span><span class="na">pressed</span><span class="p">))</span>
-          <span class="k">return</span> <span class="n">Theme</span><span class="o">.</span><span class="na">of</span><span class="p">(</span><span class="n">context</span><span class="p">)</span><span class="o">.</span><span class="na">colorScheme</span><span class="o">.</span><span class="na">primary</span><span class="o">.</span><span class="na">withOpacity</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span>
-        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// Use the component's default.</span>
-      <span class="p">},</span>
-    <span class="p">),</span>
-  <span class="p">),</span>
-<span class="p">)</span>
-
-</code></pre></div></div>
-<p><strong>Another example</strong> to create an ElevatedButton with a different background color for the disabled state, one could write:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">style:</span> <span class="n">ButtonStyle</span><span class="p">(</span>
-    <span class="nl">backgroundColor:</span> <span class="n">MaterialStateProperty</span><span class="o">.</span><span class="na">resolveWith</span><span class="p">&lt;</span><span class="n">Color</span><span class="o">?</span><span class="p">&gt;(</span>
-      <span class="p">(</span><span class="kt">Set</span><span class="p">&lt;</span><span class="n">MaterialState</span><span class="p">&gt;</span> <span class="n">states</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">states</span><span class="o">.</span><span class="na">contains</span><span class="p">(</span><span class="n">MaterialState</span><span class="o">.</span><span class="na">disabled</span><span class="p">))</span>
-          <span class="k">return</span> <span class="n">Colors</span><span class="o">.</span><span class="na">grey</span><span class="p">;</span>
-        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// Use the component's default.</span>
-      <span class="p">},</span>
-    <span class="p">),</span>
-  <span class="p">),</span>
-<span class="p">)</span>
-</code></pre></div></div>
-
-<p>In this case the background color for all other button states would fallback to the ElevatedButton’s default values.</p>
-
-<p>To <strong>unconditionally</strong> set the button’s backgroundColor for all states one could write:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">style:</span> <span class="n">ButtonStyle</span><span class="p">(</span>
-    <span class="nl">backgroundColor:</span> <span class="n">MaterialStatePropertyAll</span><span class="p">&lt;</span><span class="n">Color</span><span class="p">&gt;(</span><span class="n">Colors</span><span class="o">.</span><span class="na">green</span><span class="p">),</span>
-  <span class="p">),</span>
-<span class="p">)</span>
-</code></pre></div></div>
-
-<p>Configuring a ButtonStyle directly makes it possible to very precisely control the button’s visual attributes for all states. This level of control is typically required when a custom “branded” look and feel is desirable. However, in many cases it’s useful to make relatively sweeping changes based on a few initial parameters with simple values. The button styleFrom() methods enable such sweeping changes.</p>
-
-<p>To configure all of the application’s ElevatedButtons in the same way, specify the overall theme’s elevatedButtonTheme property.</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ThemeData</span><span class="p">(</span>
-  <span class="nl">elevatedButtonTheme:</span> <span class="n">ElevatedButtonThemeData</span><span class="p">(</span>
-    <span class="nl">style:</span> <span class="n">ElevatedButtonThemeData</span><span class="p">(</span>
-      <span class="nl">style:</span> <span class="n">ElevatedButton</span><span class="o">.</span><span class="na">styleFrom</span><span class="p">(</span>
-        <span class="nl">primary:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">blue</span><span class="p">,</span>
-        <span class="nl">onPrimary:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">white</span><span class="p">,</span>
-        <span class="nl">shape:</span> <span class="n">RoundedRectangleBorder</span><span class="p">(</span>
-          <span class="nl">borderRadius:</span> <span class="n">BorderRadius</span><span class="o">.</span><span class="na">circular</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span>
-        <span class="p">),</span>
-        <span class="nl">minimumSize:</span> <span class="n">Size</span><span class="p">(</span><span class="mi">88</span><span class="p">,</span> <span class="mi">36</span><span class="p">),</span>
-      <span class="p">),</span>
-    <span class="p">)</span>
-  <span class="p">),</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<!-- 
-### Changing border style of ElevatedButton in Flutter.
-We use the Border.all() method to change the border style of ElevatedButton in Flutter. We can change the border color, border width, and border style. We can also change the border radius of ElevatedButton in Flutter. We can use the BorderRadius.circular() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadius.only() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadius.all() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadius.zero() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadiusDirectional.circular() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadiusDirectional.only() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadiusDirectional.all() method to change the border radius of ElevatedButton in Flutter. We can also use the BorderRadiusDirectional.zero() method to change the border radius of ElevatedButton in Flutter.
-
-
-### Change padding of Elevated Button in Flutter
-We can override the padding in style property of an elevated button. 
-For example:
+  </div>
+  </div>
   
-  ```dart
-  ElevatedButton(
-    style: ElevatedButton.styleFrom(
-      padding: EdgeInsets.all(20),
-    ),
-    onPressed: () {},
-    child: Text('Elevated Button'),
-  );
-  ```
-
-### Change width of Elevated Button in Flutter
-### Change height of Elevated Button in Flutter -->
-
-<h3 id="how-do-you-give-elevation-to-an-elevated-button">How do you give elevation to an elevated button?</h3>
-<p>We can override the elevation in style property of an elevated button or provide a common elevation to all the elevated buttons in the app using the theme.</p>
-
-<p>For example:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">style:</span> <span class="n">ElevatedButton</span><span class="o">.</span><span class="na">styleFrom</span><span class="p">(</span>
-    <span class="nl">elevation:</span> <span class="mi">20</span><span class="p">,</span>
-  <span class="p">),</span>
-  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
-  <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Elevated Button'</span><span class="p">),</span>
-<span class="p">);</span>
-</code></pre></div></div>
-
-<h3 id="how-do-you-give-shadow-to-an-elevated-button">How do you give shadow to an elevated button?</h3>
-
-<p>We can give shadow to an elevated button by using the shadowColor property of an elevated button. We can also give shadow to an elevated button by using the style property of an elevated button. We can override the shadowColor in style property of an elevated button.</p>
-
-<p>For example:</p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="p">(</span>
-  <span class="nl">style:</span> <span class="n">ElevatedButton</span><span class="o">.</span><span class="na">styleFrom</span><span class="p">(</span>
-    <span class="nl">shadowColor:</span> <span class="n">Colors</span><span class="o">.</span><span class="na">red</span><span class="p">,</span>
-  <span class="p">),</span>
-  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
-  <span class="nl">child:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Elevated Button'</span><span class="p">),</span>
-<span class="p">);</span>
-</code></pre></div></div>
-
-<h2 id="how-can-we-show-an-elevatedbutton-with-an-icon-in-flutter">How can we show an ElevatedButton with an icon in Flutter?</h2>
-<p>In order to show an elevated button with icon in flutter, we use the ElevatedButton.icon() constructor.</p>
-
-<p><strong>For example:</strong></p>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ElevatedButton</span><span class="o">.</span><span class="na">icon</span><span class="p">(</span>
-  <span class="nl">onPressed:</span> <span class="p">()</span> <span class="p">{},</span>
-  <span class="nl">icon:</span> <span class="n">Icon</span><span class="p">(</span><span class="n">Icons</span><span class="o">.</span><span class="na">add</span><span class="p">),</span>
-  <span class="nl">label:</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Add'</span><span class="p">),</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<p>If you want to learn more about the ElevatedButton.icon constructor, you can read the official documentation here. <a href="https://api.flutter.dev/flutter/material/ElevatedButton/ElevatedButton.icon.html" target="_blank">ElevatedButton.icon</a>.</p>
-
-<h2 id="elevatedbutton-vs-raisedbutton-in-flutter-is-raised-button-deprecated-in-flutter">ElevatedButton vs RaisedButton in Flutter. Is Raised button deprecated in Flutter?</h2>
-<p>As of June 2022, the RaisedButton widget is deprecated. It is recommended that you use the ElevatedButton widget instead. The RaisedButton widget will be removed in a future version of Flutter.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-<p>ElevatedButton is a Material Design button that lifts and displays ink reactions on press. It is a filled button whose material elevates when pressed. An ElevatedButton consists of a text label, an icon, or both, displayed in a filled Material widget. The text label is displayed in the style defined by the button’s overall Theme, with the color taken from the button’s ButtonStyle. The ElevatedButton is usually used to indicate a primary action in an application.</p>
-
-<p>You can find the source code for this tutorial on GitHub. If you found this tutorial helpful, please share it with your friends. Thanks for reading!</p>
-
-<p><a href="https://github.com/flutterrettulf/elevatedbutton_demo" target="_blank">Source Code for Flutter ElevatedButton Tutorial</a>.</p>
-
-<h2 id="references">References</h2>
-<ul>
-  <li><a href="https://api.flutter.dev/flutter/material/ElevatedButton-class.html" target="_blank">ElevatedButton</a></li>
-  <li><a href="https://api.flutter.dev/flutter/material/ElevatedButton/ElevatedButton.icon.html" target="_blank">ElevatedButton.icon</a></li>
-  <li><a href="https://api.flutter.dev/flutter/material/ElevatedButton/styleFrom.html" target="_blank">ElevatedButton.styleFrom</a></li>
-</ul>
-
-<!-- The icon is displayed in the color defined by the button’s ButtonStyle, and the size is defined by the overall IconTheme.  -->
-
-
-        </div>
-          </article>
-          <div class="row">
-            <!--share buttons-->
-            <div class="col-12 mb-4">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
-                  <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html&text=Flutter: Elevated Button Examples." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
-                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html&title=Flutter: Elevated Button Examples." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-                  <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html&title=Flutter: Elevated Button Examples." class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
-                </div>
-              </div>
-          </div>
-          </div>  
-          <div class="row">
-              <div class="col-sm-12 col-md-6 mb-2">
-                  
-                  <a href="/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> How to disable the backbutton in Flutter using WillPopScope. </a>
-                
-              </div>    
-              <div class="col-sm-12 col-md-6 text-end v-100">
-                
-                  <a href="/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" class="btn  btn-outline-primary btn-sm w-100">Flutter Scrollable Columns: The Complete Guide <i class="bi bi-arrow-right"></i></a>
-                
-              </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="card" style="background-image: linear-gradient(315deg, #007cc6 0%, #200bdbe7 74%);color:white">
-                <div class="card-body">
-                  <h5 class="card-title">We are on LinkedIn</h5>
-                  we are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. 
-                  Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="color: white;font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="col-md-12 col-lg-2">
-        <aside>
-
-      <!-- 
-    <div class="mb-3 mt-4" style="top: 4.5rem;">     
-      <a target="_blank" href='https://play.google.com/store/apps/details?id=com.tonocast.www&utm_source=flutterrettulf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="text-decoration:none" rel="Sponsored">
-      <div class="card mb-3 shadow-card">
+  <div class="row mt-4 pt-4 bg-light">
+    <div class="col-md-0 col-lg-3 mb-3 ">
+      <div class="card border-0" >
         <div class="card-body">
-
-          <div class="thumbnail">
-            <img class="rounded w-100 mb-2" src="https://i.ytimg.com/vi/s1e7Q-5W7t8/mqdefault.jpg" alt="..." class="img-fluid">
-          </div>
-          <h4 class="card-title">Tonocast</h4>
-          <p class="card-text text-muted mb-0" style="font-size:15px">The best app to listen to your favourite podcasts.</p>
-         <img alt='Get it on Google Play' class="w-100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-                <div class="w-100 text-muted d-flex justify-content-end" style="font-size:10px">Sponsored</div>
-
+          <h5 class="card-title fw-bold h1 text-primary">We are on LinkedIn</h5>
+                  We are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
         </div>
-    </div>
-  </a>   
-
-
-
-
--->   
-
-
-
-    </aside>
-
       </div>
-</div>
-</main>
-  <footer class="border-top">
-
-<div class="container">
-  <div class="row row-cols-5 pb-2 pt-5 my-2 ">
-    <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
-      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        <img src="/assets/brand/logo_2.webp" width="70">
-      </a>
-      <p class="text-muted">flutterrettulf@gmail.com </p>
-      <p class="text-muted">© 2022 </p>
-      <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
     </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-      <h5>Top Tags</h5>
-      <ul class="nav flex-column">
+    <div class="col-md-8 col-lg-6 " >
+     
         
-        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/font-assets" class="nav-link p-0 text-muted">Font Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
-
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Top Categories</h5>
-      <ul class="nav flex-column">
-        
-        <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-column" class="nav-link p-0 text-muted">Flutter Column</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-listview" class="nav-link p-0 text-muted">Flutter ListView</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/json" class="nav-link p-0 text-muted">JSON</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
-
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Links</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
-        <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted hover"><span class="bi bi-facebook me-2"></span>Facebook</a></li>-->
-       <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-twitter me-2"></span>Twitter</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-mastodon me-2"></span>Mastodon</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img src="/assets/img/dev.png " class="me-2" width="17">Dev.to</a></li>-->
-        <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
-        <li class="nav-item mb-2"><a href="/feed.xml" class="nav-link p-0 text-muted"><span class="bi bi-rss me-2"></span>RSS Feed</a></li> 
-        <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
       
-      </ul>
+      
+        <p class="h3 ">Related Articles</p>
+        <ul class="list-unstyled">
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" class="text-decoration-none">How to disable the backbutton in Flutter using WillPopScope.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html" class="text-decoration-none">How to use WillPopScope widget in Flutter with examples.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html" class="text-decoration-none">Flutter: Loading Static Image &amp; Font Assets in Flutter App.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html" class="text-decoration-none">How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?</a>
+          </li>
+          
+        </ul>
+      
     </div>
+    <div class="col-md-4 col-lg-3 mb-3">
+     
+    </div>
+
   </div>
-</div>
-<script type="text/javascript">
-            document.querySelectorAll("table").forEach(table => {
-                table.classList.add("table")
-                table.classList.add("table-striped")
-                table.classList.add("table-bordered")
-                table.classList.add("table-sm")
-            })
-        </script>
-</footer> 
+</main>
+   
+   
+    <footer class="border-top">
 
+    <div class="container">
+      <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+        <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="/brand/logo_2.webp" width="70">
+          </a>
+          <p class="text-muted">flutterrettulf@gmail.com </p>
+          <p class="text-muted">© 2022 </p>
+          <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
+        </div>
+        
+        
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/categories/" class="nav-link p-0 text-muted">Top Categories</a></h5>
+          <ul class="nav flex-column">
+         
 
-<!-- <div class="p-4">
-  <h4 class="fst-italic">Elsewhere</h4>
-  <ol class="list-unstyled">
-    <li><a href="#">GitHub</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Facebook</a></li>
-  </ol>
-</div> -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/dart-tutorials/" class="nav-link p-0 text-muted">Dart Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter/" class="nav-link p-0 text-muted">Flutter</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-buttons/" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-column/" class="nav-link p-0 text-muted">Flutter Column</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-listview/" class="nav-link p-0 text-muted">Flutter ListView</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-plugins/" class="nav-link p-0 text-muted">Flutter Plugins</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-tutorials/" class="nav-link p-0 text-muted">Flutter Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-widgets/" class="nav-link p-0 text-muted">Flutter Widgets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/json/" class="nav-link p-0 text-muted">JSON</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/navigation/" class="nav-link p-0 text-muted">Navigation</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/categories/" class="nav-link p-0 text-muted">All Categories</a></li>
     
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Flutter Buttons</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-0">
-      <div class=" list-group list-group-flush border-bottom scrollarea "> 
+          </ul>
+        </div>
         
         
         
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/tags/" class="nav-link p-0 text-muted">Top Tags</a></h5>
+          <ul class="nav flex-column">
+         
+
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/android/" class="nav-link p-0 text-muted">android</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/animatedindicator/" class="nav-link p-0 text-muted">AnimatedIndicator</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/api-request/" class="nav-link p-0 text-muted">API Request</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/assets/" class="nav-link p-0 text-muted">Assets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/audio/" class="nav-link p-0 text-muted">audio</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/basicapp/" class="nav-link p-0 text-muted">BasicApp</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/beginner/" class="nav-link p-0 text-muted">Beginner</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/column-widget/" class="nav-link p-0 text-muted">Column widget</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/columns/" class="nav-link p-0 text-muted">Columns</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/customize-scrolling/" class="nav-link p-0 text-muted">Customize scrolling</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 text-muted">All Tags</a></li>
+    
+          </ul>
+        </div>
         
         
-        
-        
-        
-        <a href="/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Flutter: Elevated Button Examples.</div>
-          </div>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-           
+
+    
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+    
+          <h5>Discover FlutterrettulF</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
+            
+           <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+            
+            <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+            
+            <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
+          </ul>
+        </div>
       </div>
     </div>
+    <script type="text/javascript">
+                document.querySelectorAll("table").forEach(table => {
+                    table.classList.add("table")
+                    table.classList.add("table-striped")
+                    table.classList.add("table-bordered")
+                    table.classList.add("table-sm")
+                })
+            </script>
+    </footer> 
     
-  </div>
-  </body>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="1088001170"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="5124283255"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+
+    </head>
+    <body>       
+        <div id="content">
+         
+        </div>
+    </body>
 </html>

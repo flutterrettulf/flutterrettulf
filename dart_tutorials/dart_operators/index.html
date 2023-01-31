@@ -1,892 +1,738 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>Operators in Dart</title>
-  <meta name="title" content="Operators in Dart">
-  <meta name="twitter:card" content="summary-large-image" >
-  <meta name="twitter:site" content="flutterrettulf" >
-  <meta name="description" content="Dart supports various types of operators such as arithmetic operators, boolean operators, logical operators, bitwise operators, relational operators, and assignment operators. In this article we will take a look at the various operators in Dart.">
-  <meta name="author" content="Justin Thomas">
-  
-  <meta name="tags" content="Dart Operators">
-  
-  <meta property="og:title" content="Operators in Dart" >
-  <meta property="twitter:title" content="Operators in Dart" >
-  <meta property="og:description" content="Dart supports various types of operators such as arithmetic operators, boolean operators, logical operators, bitwise operators, relational operators, and assignment operators. In this article we will take a look at the various operators in Dart." >
-  <meta property="twitter:description" content="Dart supports various types of operators such as arithmetic operators, boolean operators, logical operators, bitwise operators, relational operators, and assignment operators. In this article we will take a look at the various operators in Dart." >
-  <meta property="og:url" content="https://flutterrettulf.com/dart_tutorials/dart_operators/" >
-  <meta property="twitter:url" content="https://flutterrettulf.com/dart_tutorials/dart_operators/" >
-  <meta name="robots" content="index, follow" >
-  <link rel="canonical" href="https://flutterrettulf.com/dart_tutorials/dart_operators/" >
-  
-  <meta property="og:type" content="article" >
-  <meta property="og:article:author" content="Justin Thomas" >
-  <meta property="og:article:published_time" content="2022-10-19" >
-  <meta property="og:article:modified_time" content="2022-10-20" >
-  <meta property="og:article:section" content="Dart" >
-  <meta property="og:article:tag" content="Dart and Operators" >
-  
-  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow" >
+        <link rel="canonical" href="https://flutterrettulf.com/dart_tutorials/dart_operators/">
+        <link href="/css/blog.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/sitemanifest.json">        
 
-  <link href="/assets/prism.css" rel="stylesheet">
-  <script src="/assets/prism.js" ></script>
-  <!--fav icons-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-  <link rel="manifest" href="/sitemanifest.json">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-      
-  <!-- Custom styles for this template -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+            gtag('config', 'G-GKQ47FWX29');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+        crossorigin="anonymous"></script>
+        <meta property="og:title" content="Operators in Dart" />
+<meta property="og:description" content="Dart supports various types of operators such as arithmetic operators, boolean operators, logical operators, bitwise operators, relational operators, and assignment operators. In this article we will take a look at the various operators in Dart." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://flutterrettulf.com/dart_tutorials/dart_operators/" /><meta property="article:section" content="dart_tutorials" />
+<meta property="article:published_time" content="2022-10-19T15:00:00+05:30" />
+<meta property="article:modified_time" content="2022-10-20T15:00:00+05:30" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <meta itemprop="name" content="Operators in Dart">
+<meta itemprop="description" content="Dart supports various types of operators such as arithmetic operators, boolean operators, logical operators, bitwise operators, relational operators, and assignment operators. In this article we will take a look at the various operators in Dart."><meta itemprop="datePublished" content="2022-10-19T15:00:00+05:30" />
+<meta itemprop="dateModified" content="2022-10-20T15:00:00+05:30" />
+<meta itemprop="wordCount" content="843">
+<meta itemprop="keywords" content="Dart,Operators," />
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Operators in Dart"/>
+<meta name="twitter:description" content="Dart supports various types of operators such as arithmetic operators, boolean operators, logical operators, bitwise operators, relational operators, and assignment operators. In this article we will take a look at the various operators in Dart."/>
 
-    gtag('config', 'G-GKQ47FWX29');
-  </script>
-  <link href="/assets/blog.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
-  crossorigin="anonymous"></script>
-</head>
-  <style>
-
-body {
-  min-height: 75rem;
-  padding-top: 3.5rem;
-}
-  </style>
+        <title>
+             Operators in dart | FlutterrettulF 
+        </title>
+        
+    </head>
+  
   <body>   
     <nav class="navbar navbar-expand-md navbar-light fixed-top border-bottom bg-white">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      
 
-      <a class="navbar-brand" href="/"><img src="/assets/brand/logo_2.svg" width="30"></a>
+      <a class="navbar-brand" href="/"><img src="/brand/logo_2.svg" width="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="bi bi-three-dots-vertical"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/static-assets">Static Assets</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/navigation">Navigation</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-column">Flutter Column</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-listview">Flutter ListView</a>
-          </li>
-              
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials">Dart tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins">Flutter plugins</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials">Flutter tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/posts">Posts</a>
-          </li>
-             
+            
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials/">Dart Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials/">Flutter Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins/">Popular Flutter Plugins</a>
+                    </li>
+                
+            
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none " aria-current="page" href="/categories/">Categories</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none" aria-current="page" href="/tags/">Tags</a>
+            </li>
         </ul>
-        <!-- <a class="btn btn-outline-light me-2" href="/courses">Courses</a>  -->
-        <!-- <a class="btn btn-primary"  href="/search">Search</a> -->
+        
+        
       </div>
     </div>
   </nav>
-  <main class="container-fluid">  
-    <div class="row"> 
-      <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
-        <aside>
+    
+<main class="container-fluid">
+ 
+  <div class="row ">
+    <div class="col-md-4 col-lg-3 d-none d-md-block"><div class="bg-light rounded p-3 sticky-top" style="top: 5rem;">
+        <p class="h5 fw-bold">The Index of Insight</p>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</a></li>
+    <li><a href="#types-of-operators-in-dart-programming">Types of Operators in Dart Programming</a>
+      <ul>
+        <li><a href="#arithmetic-operators-in-dart">Arithmetic Operators in Dart</a></li>
+        <li><a href="#type-operators-in-dart">Type Operators in Dart</a></li>
+        <li><a href="#bitwise-operators-in-dart">Bitwise Operators in Dart</a></li>
+        <li><a href="#logical-operators-in-dart">Logical Operators in Dart</a></li>
+        <li><a href="#equality-and-relational-operators">Equality and relational operators</a></li>
+        <li><a href="#assignment-operators-in-dart">Assignment Operators in Dart</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#reference">Reference</a></li>
+    <li><a href="#dart-tutorial">Dart Tutorial</a></li>
+  </ul>
+</nav>
+          <hr >
+          <p class="h5 my-2">Share</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <div class="btn-group ">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_operators%2f" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_operators%2f&text=Operators%20in%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_operators%2f&title=Operators%20in%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_operators%2f&title=Operators%20in%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+            </div>
+          </div>
+      </div></div>
+    <div class="col-md-8 col-lg-6 ">
 
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
-
-    <div class=" list-group list-group-flush border-bottom scrollarea "> 
-      
-      
-      
-      
-      
-     
-      <a href="/dart_tutorials/dart_overview/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Dart Overview</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="overview">Overview</h1>
-<p>Dart is a programming language for apps on several platforms that is client-optimized.
-It was created by Google and is employed to create desktop, server, online, and mobile applications.
-Dart is a garbage-collected, object-oriented, class-based language with C-style syntax.
-JavaScript or native code can both be produced using Dart.
-It supports type inference, reified generics, abstract classes, mixins, and interfaces.</p>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/dart_tutorials/dart_hello_world/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Dart Hello World Program</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="tldr">TL;DR</h1>
+    <article >
+      <header >
+        <h1 class="fw-bold mb-4">
+          Operators in Dart
+        </h1>
+        
+                
+      </header>
+      <div class="col-12 d-block d-md-none"><div class="bg-light rounded p-3 mb-4" >
+            <p class="h5 fw-bold">The Index of Insight</p>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</a></li>
+    <li><a href="#types-of-operators-in-dart-programming">Types of Operators in Dart Programming</a>
+      <ul>
+        <li><a href="#arithmetic-operators-in-dart">Arithmetic Operators in Dart</a></li>
+        <li><a href="#type-operators-in-dart">Type Operators in Dart</a></li>
+        <li><a href="#bitwise-operators-in-dart">Bitwise Operators in Dart</a></li>
+        <li><a href="#logical-operators-in-dart">Logical Operators in Dart</a></li>
+        <li><a href="#equality-and-relational-operators">Equality and relational operators</a></li>
+        <li><a href="#assignment-operators-in-dart">Assignment Operators in Dart</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#reference">Reference</a></li>
+    <li><a href="#dart-tutorial">Dart Tutorial</a></li>
+  </ul>
+</nav>      
+          </div></div>
+      <div class="nested-copy-line-height lh-copy f4 nested-links">
+        <h2 id="what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</h2>
+<p>In mathematics, an operator is a mathematical symbol or function that indicates the operation to be done on a <strong>value</strong> or <strong>a set of values</strong>. This is similar to how an operator in programming works. <strong>An operator defines how the operands will be processed</strong>.</p>
+<p>Consider a simple expression <code>val3 = val1 + val2</code>. Here, <strong>val1</strong> and <strong>val2</strong> are the <strong>operands</strong>, and <strong>+</strong> is the operator. The <strong>operator</strong> receives the operands and performs an operation on them. The <strong>operator</strong> returns the result of the operation to the calling code. Here the operator returns the sum of <strong>val1</strong> and <strong>val2</strong>. The <strong>val3</strong> is the variable in which the result of the <strong>operator</strong> is stored.</p>
+<h2 id="types-of-operators-in-dart-programming">Types of Operators in Dart Programming</h2>
+<p>Dart supports several types of operators. We will discuss the following types of operators in Dart programming:</p>
 <ul>
-  <li>Install Dart SDK from <a href="https://dart.dev/get-dart">here</a>.</li>
-  <li>Create a file named <code class="language-plaintext highlighter-rouge">hello_world.dart</code> and add the following code:
-    <div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span> 
-  <span class="n">print</span><span class="p">(</span><span class="s">'Hello World'</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>Run the following command to compile the code:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dart hello_world.dart
-</code></pre></div>    </div>
-  </li>
-  <li>You should see the following output:
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World
-</code></pre></div>    </div>
-  </li>
+<li>Arithmetic operators</li>
+<li>Type operators</li>
+<li>Bitwise operators</li>
+<li>Logical operators</li>
+<li>Equality and relational operators</li>
+<li>Assignment operators</li>
 </ul>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/dart_tutorials/dart_variables_and_datatypes/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Variables and Datatypes in Dart</div>
+<h3 id="arithmetic-operators-in-dart">Arithmetic Operators in Dart</h3>
+<p>In Dart, you can use following operators to carry <strong>arithmetic operations</strong>. These operations include addition, subtraction, multiplication, division. The following table shows the available arithmetic operators.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Syntax</th>
+<th>Example</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>addition</td>
+<td>a + b</td>
+<td>5 + 6</td>
+<td>11</td>
+</tr>
+<tr>
+<td>-</td>
+<td>subtraction</td>
+<td>a - b</td>
+<td>10 - 5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>*</td>
+<td>multiplication</td>
+<td>a * b</td>
+<td>5 * 6</td>
+<td>30</td>
+</tr>
+<tr>
+<td>/</td>
+<td>division</td>
+<td>a / b</td>
+<td>50 / 10</td>
+<td>5</td>
+</tr>
+<tr>
+<td>~/</td>
+<td>floor division</td>
+<td>a ~/ b</td>
+<td>10 ~/ 3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>%</td>
+<td>modulo operator</td>
+<td>a % b</td>
+<td>13 % 5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>++</td>
+<td>increment</td>
+<td>++a</td>
+<td>++c</td>
+<td>2</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>decrement</td>
+<td>&ndash;a</td>
+<td>&ndash;c</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="type-operators-in-dart">Type Operators in Dart</h3>
+<p>In Dart, you can use following operators to check the <strong>type of object</strong>. The following table shows the available <strong>type operators</strong>-</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>is</td>
+<td>checks whether an instance has a certain value or not an expression in Dart is always true unless the runtime type of the expression is <strong>Null</strong>.</td>
+<td><code>if (obj is String){ print(‘yes’);} else{ print(‘no’);}</code></td>
+</tr>
+<tr>
+<td>is!</td>
+<td>negate the is value</td>
+<td><code> a is! String</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bitwise-operators-in-dart">Bitwise Operators in Dart</h3>
+<p>In Dart, you can use <strong>bitwise operators</strong> to perform operations on bits. The following table shows the bitwise operators:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Syntax</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>|</td>
+<td>OR</td>
+<td>A | B</td>
+<td>Set each bit to 1 if both bits are 1.</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>AND</td>
+<td>A &amp; B</td>
+<td>Set each bit to 1 if both bits are 1.</td>
+</tr>
+<tr>
+<td>^</td>
+<td>XOR</td>
+<td>A ^ B</td>
+<td>Set each bit to 1 if only one of two bits is 1.</td>
+</tr>
+<tr>
+<td>&laquo;</td>
+<td>left shift</td>
+<td>A&laquo;z</td>
+<td>Shift a bit pattern to the left, and fill the low-order bits with 0.</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>right shift</td>
+<td>A&raquo;z</td>
+<td>Shift a bit pattern to the right, and fill the high-order bits with 0.</td>
+</tr>
+<tr>
+<td>~</td>
+<td>one’s complement</td>
+<td>~A</td>
+<td>Invert all bits. This operation normally means “not A”.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logical-operators-in-dart">Logical Operators in Dart</h3>
+<p>In Dart, you can use following operators to perform <strong>logical operations</strong>, such as <strong>and</strong>, <strong>OR</strong> or <strong>NOT.</strong> The following table shows the logical operators:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Syntax</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td><code>AND</code></td>
+<td>A &amp;&amp; B</td>
+<td>Only if A and B are true, results true, otherwise results false.</td>
+</tr>
+<tr>
+<td>||</td>
+<td><code>OR</code></td>
+<td>A || B</td>
+<td>If A or B, or A and B, results true.</td>
+</tr>
+<tr>
+<td>!</td>
+<td>NOT</td>
+<td>!A</td>
+<td>If A is false, results true, otherwise results false.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="equality-and-relational-operators">Equality and relational operators</h3>
+<p>In Dart, you can use following operators to perform <strong>relational operations</strong>, such as <strong>equal to</strong>, <strong>not equal to</strong>, <strong>greater than</strong>, etc.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+<th>Syntax</th>
+<th>Example</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>equal to</td>
+<td>A == B</td>
+<td>10 == 10</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>greater than</td>
+<td>A &gt; B</td>
+<td>10 &gt; 5</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+<td>A &lt; B</td>
+<td>5 &lt; 10</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+<td>A &gt;= B</td>
+<td>13 &gt;= 10</td>
+<td>true</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+<td>A&lt;=B</td>
+<td>10 &lt;= 10</td>
+<td>true</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal</td>
+<td>A != B</td>
+<td>10 != 5</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<h3 id="assignment-operators-in-dart">Assignment Operators in Dart</h3>
+<p>Dart also supports following assignment operators, which are used to assign a value to a variable or expression.</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Explanation</th>
+<th>Syntax</th>
+<th>Example</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>The assignment assigns the value of its right-hand operand to its left-hand operand. The right-hand operand is first evaluated, and then the assignment is performed. Assigning a value of a <strong>lower-precedence</strong> operator to a variable or field of <strong>higher precedence</strong> results in an error.</td>
+<td>A = B</td>
+<td>i = 10</td>
+<td>10</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>Add and assignment (also known as Compound assignment operator) operator adds the value of its right-hand operand to the left-hand operand and assigns the result value to the left-hand operand.</td>
+<td><code>A += B</code>; <code>A = A + B;</code></td>
+<td>i += 10</td>
+<td>110</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>Subtracts and assigns right-hand operand from the left-hand operand and assigns the result to the left-hand operand.</td>
+<td><code>A -= B</code>; <code>A = A – B;</code></td>
+<td>i += 10</td>
+<td>-90</td>
+</tr>
+</tbody>
+</table>
+<h2 id="summary">Summary</h2>
+<p>In this article, we covered different types of operators available in Dart programming. Now that you are familiar with the types of operators and their uses, you should focus on practice.</p>
+<p>:) Happy Coding :)</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://dart.dev/guides/language/language-tour#operators" target="_blank" rel="nofollow noopener noreferrer" >Operators in Dart Docs</a>
+</li>
+</ul>
+<h2 id="dart-tutorial">Dart Tutorial</h2>
+<p>This article is part of the Dart Tutorials series. You can find the list of all the tutorials in the series in the <a href="/dart_tutorials">dart tutorials page</a>
+.</p>
+
+      </div>
+    </article>
+    <div class="col-12 mt-4  bg-light rounded p-3 text-dark">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="btn-group ">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_operators%2f" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_operators%2f&text=Operators%20in%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_operators%2f&title=Operators%20in%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fdart_tutorials%2fdart_operators%2f&title=Operators%20in%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
         </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="what-are-variables-in-dart">What are variables in Dart?</h1>
-<p>If you are familiar with programming, you would be aware of variables. A variable is basically a reserved memory location to store values. In other words, a variable in a program is a name given to a memory location that can store some data.</p>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/dart_tutorials/dart_operators/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Operators in Dart</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</h1>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/dart_tutorials/dart_list_methods/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Exploring the Powerful List Methods of Dart</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h2 id="introduction">Introduction</h2>
-<p>Hello and welcome to our tutorial on using lists in Dart. In this article, we’ll go through several ways to work with lists in Dart. Every programming language needs lists as a fundamental data structure, and Dart offers a variety of effective ways to interact with them. We will examine these techniques in-depth in this article. We hope this article will be helpful to you whether you’re a new or seasoned coder. Let’s get going!</p>
-</div> -->
-      </a>
-      
-  
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-         
+      </div>
     </div>
+
   </div>
+  <div class="col-md-4 col-lg-3 d-none d-md-block">
+
 
 
  
-    </aside>
-
-    </div>
-    <div class="col-md-8 col-lg-8 p-4">
-      <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting"
-      
-      
-      >
-      
-      <meta itemprop="datePublished" content="2022-10-19T15:00:00+05:30">
-      
-      <meta itemprop="inLanguage" content="en-US">
-      
-      <meta itemprop="url" content="https://flutterrettulf.com/dart_tutorials/dart_operators/">
-      <meta itemprop="datePublished" content="2022-10-19T15:00:00+05:30">
-      <meta itemprop="dateModified" content="2022-10-20T15:00:00+05:30">
-      <meta itemprop="author" content="Justin Thomas">
-      <meta itemprop="publisher" content="Justin Thomas">
-      <meta itemprop="description" content="Dart supports various types of operators such as arithmetic operators, boolean operators, logical operators, bitwise operators, relational operators, and assignment operators. In this article we will take a look at the various operators in Dart.">       
-
-        <header class="mb-4"><h1>Operators in Dart</h1>
-        <small class="text-muted">Added on October 19, 2022 |</small>
-        <small class="text-muted">Updated on October 20, 2022</small>
-      </header>
-      <div class="blog-post-body lh-lg">
-        
-        
-        
+  </div>
+  </div>
   
-            <ul id="toc" class="toc__list">
-<li class="toc-entry toc-h1"><a href="#what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</a></li>
-<li class="toc-entry toc-h1"><a href="#types-of-operators-in-dart-programming">Types of Operators in Dart Programming</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h2"><a href="#arithmetic-operators-in-dart">Arithmetic Operators in Dart</a></li>
-<li class="toc-entry toc-h2"><a href="#type-operators-in-dart">Type Operators in Dart</a></li>
-<li class="toc-entry toc-h2"><a href="#bitwise-operators-in-dart">Bitwise Operators in Dart</a></li>
-<li class="toc-entry toc-h2"><a href="#logical-operators-in-dart">Logical Operators in Dart</a></li>
-<li class="toc-entry toc-h2"><a href="#equality-and-relational-operators">Equality and relational operators</a></li>
-<li class="toc-entry toc-h2"><a href="#assignment-operators-in-dart">Assignment Operators in Dart</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h1"><a href="#summary">Summary</a></li>
-<li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
-<li class="toc-entry toc-h1"><a href="#dart-tutorial">Dart Tutorial</a></li>
-</ul> 
-    
-          <h1 id="what-are-operands--operators-in-dart">What are Operands &amp; Operators in Dart?</h1>
-
-<p>In mathematics, an operator is a mathematical symbol or function that indicates the operation to be done on a <strong>value</strong> or <strong>a set of values</strong>. This is similar to how an operator in programming works. <strong>An operator defines how the operands will be processed</strong>.</p>
-
-<p>Consider a simple expression <code class="language-plaintext highlighter-rouge">val3 = val1 + val2</code>. Here, <strong>val1</strong> and <strong>val2</strong> are the <strong>operands</strong>, and <strong>+</strong> is the operator. The <strong>operator</strong> receives the operands and performs an operation on them. The <strong>operator</strong> returns the result of the operation to the calling code. Here the operator returns the sum of <strong>val1</strong> and <strong>val2</strong>. The <strong>val3</strong> is the variable in which the result of the <strong>operator</strong> is stored.</p>
-
-<h1 id="types-of-operators-in-dart-programming">Types of Operators in Dart Programming</h1>
-
-<p>Dart supports several types of operators. We will discuss the following types of operators in Dart programming:</p>
-
-<ul>
-  <li>Arithmetic operators</li>
-  <li>Type operators</li>
-  <li>Bitwise operators</li>
-  <li>Logical operators</li>
-  <li>Equality and relational operators</li>
-  <li>Assignment operators</li>
-</ul>
-
-<h2 id="arithmetic-operators-in-dart">Arithmetic Operators in Dart</h2>
-
-<p>In Dart, you can use following operators to carry <strong>arithmetic operations</strong>. These operations include addition, subtraction, multiplication, division. The following table shows the available arithmetic operators.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Meaning</th>
-      <th>Syntax</th>
-      <th>Example</th>
-      <th>Output</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>+</td>
-      <td>addition</td>
-      <td>a + b</td>
-      <td>5 + 6</td>
-      <td>11</td>
-    </tr>
-    <tr>
-      <td>-</td>
-      <td>subtraction</td>
-      <td>a - b</td>
-      <td>10 - 5</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>*</td>
-      <td>multiplication</td>
-      <td>a * b</td>
-      <td>5 * 6</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <td>/</td>
-      <td>division</td>
-      <td>a / b</td>
-      <td>50 / 10</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <td>~/</td>
-      <td>floor division</td>
-      <td>a ~/ b</td>
-      <td>10 ~/ 3</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>%</td>
-      <td>modulo operator</td>
-      <td>a % b</td>
-      <td>13 % 5</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>++</td>
-      <td>increment</td>
-      <td>++a</td>
-      <td>++c</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>–</td>
-      <td>decrement</td>
-      <td>–a</td>
-      <td>–c</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="type-operators-in-dart">Type Operators in Dart</h2>
-
-<p>In Dart, you can use following operators to check the <strong>type of object</strong>. The following table shows the available <strong>type operators</strong>-</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Meaning</th>
-      <th>example</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>is</td>
-      <td>checks whether an instance has a certain value or not an expression in Dart is always true unless the runtime type of the expression is <strong>Null</strong>.</td>
-      <td><code class="language-plaintext highlighter-rouge">if (obj is String){ print(‘yes’);} else{ print(‘no’);}</code></td>
-    </tr>
-    <tr>
-      <td>is!</td>
-      <td>negate the is value</td>
-      <td>` a is! String`</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="bitwise-operators-in-dart">Bitwise Operators in Dart</h2>
-
-<p>In Dart, you can use <strong>bitwise operators</strong> to perform operations on bits. The following table shows the bitwise operators:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Meaning</th>
-      <th>Syntax</th>
-      <th>Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>|</td>
-      <td>OR</td>
-      <td>A | B</td>
-      <td>Set each bit to 1 if both bits are 1.</td>
-    </tr>
-    <tr>
-      <td>&amp;</td>
-      <td>AND</td>
-      <td>A &amp; B</td>
-      <td>Set each bit to 1 if both bits are 1.</td>
-    </tr>
-    <tr>
-      <td>^</td>
-      <td>XOR</td>
-      <td>A ^ B</td>
-      <td>Set each bit to 1 if only one of two bits is 1.</td>
-    </tr>
-    <tr>
-      <td>«</td>
-      <td>left shift</td>
-      <td>A«z</td>
-      <td>Shift a bit pattern to the left, and fill the low-order bits with 0.</td>
-    </tr>
-    <tr>
-      <td>&gt;&gt;</td>
-      <td>right shift</td>
-      <td>A»z</td>
-      <td>Shift a bit pattern to the right, and fill the high-order bits with 0.</td>
-    </tr>
-    <tr>
-      <td>~</td>
-      <td>one’s complement</td>
-      <td>~A</td>
-      <td>Invert all bits. This operation normally means “not A”.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="logical-operators-in-dart">Logical Operators in Dart</h2>
-
-<p>In Dart, you can use following operators to perform <strong>logical operations</strong>, such as <strong>and</strong>, <strong>OR</strong> or <strong>NOT.</strong> The following table shows the logical operators:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Meaning</th>
-      <th>Syntax</th>
-      <th>Explanation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>&amp;&amp;</td>
-      <td><code class="language-plaintext highlighter-rouge">AND</code></td>
-      <td>A &amp;&amp; B</td>
-      <td>Only if A and B are true, results true, otherwise results false.</td>
-    </tr>
-    <tr>
-      <td>||</td>
-      <td><code class="language-plaintext highlighter-rouge">OR</code></td>
-      <td>A || B</td>
-      <td>If A or B, or A and B, results true.</td>
-    </tr>
-    <tr>
-      <td>!</td>
-      <td>NOT</td>
-      <td>!A</td>
-      <td>If A is false, results true, otherwise results false.</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="equality-and-relational-operators">Equality and relational operators</h2>
-
-<p>In Dart, you can use following operators to perform <strong>relational operations</strong>, such as <strong>equal to</strong>, <strong>not equal to</strong>, <strong>greater than</strong>, etc.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Meaning</th>
-      <th>Syntax</th>
-      <th>Example</th>
-      <th>Output</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>==</td>
-      <td>equal to</td>
-      <td>A == B</td>
-      <td>10 == 10</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <td>&gt;</td>
-      <td>greater than</td>
-      <td>A &gt; B</td>
-      <td>10 &gt; 5</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <td>&lt;</td>
-      <td>less than</td>
-      <td>A &lt; B</td>
-      <td>5 &lt; 10</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <td>&gt;=</td>
-      <td>greater than or equal to</td>
-      <td>A &gt;= B</td>
-      <td>13 &gt;= 10</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <td>&lt;=</td>
-      <td>less than or equal to</td>
-      <td>A&lt;=B</td>
-      <td>10 &lt;= 10</td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <td>!=</td>
-      <td>not equal</td>
-      <td>A != B</td>
-      <td>10 != 5</td>
-      <td>true</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="assignment-operators-in-dart">Assignment Operators in Dart</h2>
-
-<p>Dart also supports following assignment operators, which are used to assign a value to a variable or expression.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Explanation</th>
-      <th>Syntax</th>
-      <th>Example</th>
-      <th>Output</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>=</td>
-      <td>The assignment assigns the value of its right-hand operand to its left-hand operand. The right-hand operand is first evaluated, and then the assignment is performed. Assigning a value of a <strong>lower-precedence</strong> operator to a variable or field of <strong>higher precedence</strong> results in an error.</td>
-      <td>A = B</td>
-      <td>i = 10</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <td>+=</td>
-      <td>Add and assignment (also known as Compound assignment operator) operator adds the value of its right-hand operand to the left-hand operand and assigns the result value to the left-hand operand.</td>
-      <td><code class="language-plaintext highlighter-rouge">A += B</code>; <code class="language-plaintext highlighter-rouge">A = A + B;</code></td>
-      <td>i += 10</td>
-      <td>110</td>
-    </tr>
-    <tr>
-      <td>-=</td>
-      <td>Subtracts and assigns right-hand operand from the left-hand operand and assigns the result to the left-hand operand.</td>
-      <td><code class="language-plaintext highlighter-rouge">A -= B</code>; <code class="language-plaintext highlighter-rouge">A = A – B;</code></td>
-      <td>i += 10</td>
-      <td>-90</td>
-    </tr>
-  </tbody>
-</table>
-
-<h1 id="summary">Summary</h1>
-
-<p>In this article, we covered different types of operators available in Dart programming. Now that you are familiar with the types of operators and their uses, you should focus on practice.</p>
-
-<p>:) Happy Coding :)</p>
-
-<h1 id="reference">Reference</h1>
-<ul>
-  <li><a href="https://dart.dev/guides/language/language-tour#operators">Operators in Dart Docs</a></li>
-</ul>
-
-<h1 id="dart-tutorial">Dart Tutorial</h1>
-<p>This article is part of the Dart Tutorials series. You can find the list of all the tutorials in the series in the <a href="/dart_tutorials">dart tutorials page</a>. You can also find the list of all articles in the <a href="/dart_tutorials">Dart Tutorials</a> series in the sidebar.</p>
-
-
-
-        
-          <h1>Knowledge Check</h1>
-          <div class="card card-body mb-4 mt-3" >
-
-          <p>Test your knowledge with this quiz.</p>
-          
-            <div class="row">
-              <div class="col-6 border-end">
-              <h2 class="fs-5 fw-bold">What is the output of the following code snippet?</h2>
-              
-              <pre class="highlight language-dart"><code class="language-dart">void main() {
-  int a = 10;
-  int b = 20;
-  print(a + b);
-}
-</code></pre>
-              
-            </div>
-            <div class="col-6">
-              <ul class="list-group">
-                
-                <li class="list-group-item ">
-                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" data-is-correct="true">
-                  <label class="form-check-label" for="firstCheckbox">30</label>
-                </li>
-                
-                <li class="list-group-item ">
-                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" data-is-correct="false">
-                  <label class="form-check-label" for="firstCheckbox">20</label>
-                </li>
-                
-                <li class="list-group-item ">
-                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" data-is-correct="false">
-                  <label class="form-check-label" for="firstCheckbox">10</label>
-                </li>
-                
-                <li class="list-group-item ">
-                  <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" data-is-correct="false">
-                  <label class="form-check-label" for="firstCheckbox">None of the above</label>
-                </li>
-                            
-              </ul>
-              <button type="button" class="btn btn-primary mt-1 float-end" id="check-btn">Check Answer</button>
-              </div>  
-            </div>
-          
-                    
-
-      </div>
-        </article>
-        <div class="row">
-          <!--share buttons-->
-          <div class="col-12 mb-4">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/dart_tutorials/dart_operators/" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/dart_tutorials/dart_operators/&text=Operators in Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/dart_tutorials/dart_operators/&title=Operators in Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/dart_tutorials/dart_operators/&title=Operators in Dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
-              </div>
-            </div>
-        </div>
-        </div>  
-        <div class="row">
-            <div class="col-sm-12 col-md-6 mb-2">
-                
-                <a href="/dart_tutorials/dart_variables_and_datatypes/" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> Variables and Datatypes in Dart </a>
-              
-            </div>    
-            <div class="col-sm-12 col-md-6 text-end v-100">
-              
-                <a href="/dart_tutorials/dart_list_methods/" class="btn  btn-outline-primary btn-sm w-100">Exploring the Powerful List Methods of Dart <i class="bi bi-arrow-right"></i></a>
-              
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="card" style="background-image: linear-gradient(315deg, #007cc6 0%, #200bdbe7 74%);color:white">
-              <div class="card-body">
-                <h5 class="card-title">We are on LinkedIn</h5>
-                we are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. 
-                Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="color: white;font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-      <div class="col-md-12 col-lg-2">
-        <aside>
-
-      <!-- 
-    <div class="mb-3 mt-4" style="top: 4.5rem;">     
-      <a target="_blank" href='https://play.google.com/store/apps/details?id=com.tonocast.www&utm_source=flutterrettulf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="text-decoration:none" rel="Sponsored">
-      <div class="card mb-3 shadow-card">
+  <div class="row mt-4 pt-4 bg-light">
+    <div class="col-md-0 col-lg-3 mb-3 ">
+      <div class="card border-0" >
         <div class="card-body">
-
-          <div class="thumbnail">
-            <img class="rounded w-100 mb-2" src="https://i.ytimg.com/vi/s1e7Q-5W7t8/mqdefault.jpg" alt="..." class="img-fluid">
-          </div>
-          <h4 class="card-title">Tonocast</h4>
-          <p class="card-text text-muted mb-0" style="font-size:15px">The best app to listen to your favourite podcasts.</p>
-         <img alt='Get it on Google Play' class="w-100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-                <div class="w-100 text-muted d-flex justify-content-end" style="font-size:10px">Sponsored</div>
-
+          <h5 class="card-title fw-bold h1 text-primary">We are on LinkedIn</h5>
+                  We are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
         </div>
-    </div>
-  </a>   
-
-
-
-
--->   
-
-
-
-    </aside>
-
       </div>
-</div>
+    </div>
+    <div class="col-md-8 col-lg-6 " >
+     
+        
+          
+      
+      
+        <p class="h3 ">Related Articles</p>
+        <ul class="list-unstyled">
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_overview/" class="text-decoration-none">Dart Overview</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/about/" class="text-decoration-none">About FlutterrettulF</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart-hello-world/" class="text-decoration-none">Dart Hello World Program</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/flutter_spinkit_plugin/" class="text-decoration-none">Flutter: Spinkit Plugin | Collection of animated loading indicators</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" class="text-decoration-none">Flutter: Elevated Button Examples.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" class="text-decoration-none">How to disable the backbutton in Flutter using WillPopScope.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html" class="text-decoration-none">How to use WillPopScope widget in Flutter with examples.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html" class="text-decoration-none">Flutter: Loading Static Image &amp; Font Assets in Flutter App.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html" class="text-decoration-none">How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?</a>
+          </li>
+          
+        </ul>
+      
+    </div>
+    <div class="col-md-4 col-lg-3 mb-3">
+     
+    </div>
+
+  </div>
 </main>
-  <footer class="border-top">
+   
+   
+    <footer class="border-top">
 
-<div class="container">
-  <div class="row row-cols-5 pb-2 pt-5 my-2 ">
-    <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
-      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        <img src="/assets/brand/logo_2.webp" width="70">
-      </a>
-      <p class="text-muted">flutterrettulf@gmail.com </p>
-      <p class="text-muted">© 2022 </p>
-      <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
-    </div>
+    <div class="container">
+      <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+        <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="/brand/logo_2.webp" width="70">
+          </a>
+          <p class="text-muted">flutterrettulf@gmail.com </p>
+          <p class="text-muted">© 2022 </p>
+          <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
+        </div>
+        
+        
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/categories/" class="nav-link p-0 text-muted">Top Categories</a></h5>
+          <ul class="nav flex-column">
+         
 
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-      <h5>Top Tags</h5>
-      <ul class="nav flex-column">
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/dart-tutorials/" class="nav-link p-0 text-muted">Dart Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter/" class="nav-link p-0 text-muted">Flutter</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-buttons/" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-column/" class="nav-link p-0 text-muted">Flutter Column</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-listview/" class="nav-link p-0 text-muted">Flutter ListView</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-plugins/" class="nav-link p-0 text-muted">Flutter Plugins</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-tutorials/" class="nav-link p-0 text-muted">Flutter Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-widgets/" class="nav-link p-0 text-muted">Flutter Widgets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/json/" class="nav-link p-0 text-muted">JSON</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/navigation/" class="nav-link p-0 text-muted">Navigation</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/categories/" class="nav-link p-0 text-muted">All Categories</a></li>
+    
+          </ul>
+        </div>
         
-        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
         
-        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
         
-        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/font-assets" class="nav-link p-0 text-muted">Font Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/tags/" class="nav-link p-0 text-muted">Top Tags</a></h5>
+          <ul class="nav flex-column">
+         
 
-      </ul>
-    </div>
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/android/" class="nav-link p-0 text-muted">android</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/animatedindicator/" class="nav-link p-0 text-muted">AnimatedIndicator</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/api-request/" class="nav-link p-0 text-muted">API Request</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/assets/" class="nav-link p-0 text-muted">Assets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/audio/" class="nav-link p-0 text-muted">audio</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/basicapp/" class="nav-link p-0 text-muted">BasicApp</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/beginner/" class="nav-link p-0 text-muted">Beginner</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/column-widget/" class="nav-link p-0 text-muted">Column widget</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/columns/" class="nav-link p-0 text-muted">Columns</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/customize-scrolling/" class="nav-link p-0 text-muted">Customize scrolling</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 text-muted">All Tags</a></li>
+    
+          </ul>
+        </div>
+        
+        
 
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Top Categories</h5>
-      <ul class="nav flex-column">
-        
-        <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-column" class="nav-link p-0 text-muted">Flutter Column</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-listview" class="nav-link p-0 text-muted">Flutter ListView</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/json" class="nav-link p-0 text-muted">JSON</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
-
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Links</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
-        <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted hover"><span class="bi bi-facebook me-2"></span>Facebook</a></li>-->
-       <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-twitter me-2"></span>Twitter</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-mastodon me-2"></span>Mastodon</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img src="/assets/img/dev.png " class="me-2" width="17">Dev.to</a></li>-->
-        <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
-        <li class="nav-item mb-2"><a href="/feed.xml" class="nav-link p-0 text-muted"><span class="bi bi-rss me-2"></span>RSS Feed</a></li> 
-        <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
-      
-      </ul>
-    </div>
-  </div>
-</div>
-<script type="text/javascript">
-            document.querySelectorAll("table").forEach(table => {
-                table.classList.add("table")
-                table.classList.add("table-striped")
-                table.classList.add("table-bordered")
-                table.classList.add("table-sm")
-            })
-        </script>
-</footer> 
-
-
-<!-- <div class="p-4">
-  <h4 class="fst-italic">Elsewhere</h4>
-  <ol class="list-unstyled">
-    <li><a href="#">GitHub</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Facebook</a></li>
-  </ol>
-</div> -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-
-    <div class="offcanvas-body p-0">
-      <div class=" list-group list-group-flush border-bottom scrollarea "> 
-        
-      
-        
-        
-        <a href="/dart_tutorials/dart_overview/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Dart Overview</div>
-          </div>
-        </a>
-        
-        <a href="/dart_tutorials/dart_hello_world/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Dart Hello World Program</div>
-          </div>
-        </a>
-        
-        <a href="/dart_tutorials/dart_variables_and_datatypes/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Variables and Datatypes in Dart</div>
-          </div>
-        </a>
-        
-        <a href="/dart_tutorials/dart_operators/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Operators in Dart</div>
-          </div>
-        </a>
-        
-        <a href="/dart_tutorials/dart_list_methods/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Exploring the Powerful List Methods of Dart</div>
-          </div>
-        </a>
-           
-        
-        
-      
-        
-        
-      
-        
-        
-      
-        
-           
+    
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+    
+          <h5>Discover FlutterrettulF</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
+            
+           <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+            
+            <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+            
+            <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-    function check(){
-      const checkboxes = document.querySelectorAll('input[type=checkbox]');
-              checkboxes.forEach((checkbox) => {
-                if (checkbox.getAttribute('data-is-correct') === 'true') {
-                  checkbox.parentElement.classList.add('list-group-item-success');
-                } else {
-                  checkbox.parentElement.classList.add('list-group-item-danger');
-                }
-              });
-    }
-    document.getElementById('check-btn').addEventListener('click', check);
-  </script>
-  </body>
+    <script type="text/javascript">
+                document.querySelectorAll("table").forEach(table => {
+                    table.classList.add("table")
+                    table.classList.add("table-striped")
+                    table.classList.add("table-bordered")
+                    table.classList.add("table-sm")
+                })
+            </script>
+    </footer> 
+    
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="1088001170"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="5124283255"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+
+    </head>
+    <body>       
+        <div id="content">
+         
+        </div>
+    </body>
 </html>

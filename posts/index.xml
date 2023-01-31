@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learn Flutter, Android Mobile Development, iOS Mobile Development on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/posts/</link>
+    <description>Recent content in Learn Flutter, Android Mobile Development, iOS Mobile Development on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Oct 2022 15:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using JSON for Data Storage and Exchange</title>
+      <link>https://flutterrettulf.com/json/2023/01/04/what-is-json.html</link>
+      <pubDate>Wed, 04 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/json/2023/01/04/what-is-json.html</guid>
+      <description>What is JSON and why it is used? JSON (JavaScript Object Notation) is a simple data exchange format that is simple for both humans and machines to read, write, parse, and produce. It is simple to use with current JavaScript programmes because it is built on a subset of the JavaScript programming language.
+JSON is used to transmit data between a server and a client or between a server and a server.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter</title>
+      <link>https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html</link>
+      <pubDate>Sun, 01 Jan 2023 08:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html</guid>
+      <description>Introduction Welcome to our tutorial on how to render a ListView inside another ListView or Column in Flutter. If you are a Flutter developer, you may have come across situations where you want to render a ListView inside another ListView or Column in Flutter. This can be a challenging task. Sometimes, if the approach is not correct, the elements in the ListView might not be visible, or you might get while nesting ListViews.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Scrollable Columns: The Complete Guide</title>
+      <link>https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html</guid>
+      <description>Introduction Welcome to our blog post about making a column scrollable in Flutter! If you&amp;rsquo;re building a mobile application using Flutter, you may have encountered a situation where you want to display a lot of content in a single screen, but it doesn&amp;rsquo;t all fit on the device. One way to solve this problem is to make the column scrollable, so that the user can swipe up and down to see all of the content.</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Elevated Button Examples.</title>
+      <link>https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html</link>
+      <pubDate>Fri, 09 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html</guid>
+      <description>What is ElevatedButton in Flutter? Elevated Button is a flutter component included inside the material package i.e. “package:flutter/material.dart“. It is a label child displayed on a Material widget whose elevation increases when the button is pressed. The label&amp;rsquo;s Text and Icon widgets are displayed in style&amp;rsquo;s ButtonStyle.foregroundColor and the button&amp;rsquo;s filled background is the ButtonStyle.backgroundColor. It is a Material Design button that lifts and displays ink reactions on press. It is a filled button with a material design elevation and drop shadow.</description>
+    </item>
+    
+    <item>
+      <title>How to disable the backbutton in Flutter using WillPopScope.</title>
+      <link>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html</guid>
+      <description>Introduction WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.
+If you want to know more about the WillPopScope widget, you can read the article How to use the WillPopScope widget in Flutter In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.</description>
+    </item>
+    
+    <item>
+      <title>How to use WillPopScope widget in Flutter with examples.</title>
+      <link>https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html</guid>
+      <description>In this article, we will discuss how to use the WillPopScope class in Flutter.
+What is WillPopScope? WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. In other words, it can be used to override what happens when a user presses the back button on the device or pops the current route.
+The constructor of the class is as follows:</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Loading Static Image &amp; Font Assets in Flutter App.</title>
+      <link>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html</guid>
+      <description>What are Static Assets? Static assets are the files that are bundled with the app and are not downloaded from the internet. Static assets are used to load images, fonts, and other files that are used in the app. Static assets are loaded using the pubspec.yaml file. The pubspec.yaml file is used to define the assets that are used in the app. The pubspec.yaml file is located in the root directory of the app.</description>
+    </item>
+    
+    <item>
+      <title>How to use the WillPopScope widget in Flutter to show Press Back Button Again to Exit App?</title>
+      <link>https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/navigation/2022/09/03/press-back-button-again-to-exit-app-flutter-willpopscope-widget.html</guid>
+      <description>Introduction In this article, we will discuss how to use the WillPopScope widget in Flutter to show a snackbar saying press back button again to exit app. If you are not familiar with the WillPopScope widget, you can read the article How to use the WillPopScope widget in Flutter In order to exit the app, we need to press the back button twice. The first time we press the back button, we will show a snackbar saying press back button again to exit app.</description>
+    </item>
+    
+  </channel>
+</rss>

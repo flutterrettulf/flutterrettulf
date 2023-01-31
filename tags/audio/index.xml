@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>audio on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/audio/</link>
+    <description>Recent content in audio on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Oct 2022 14:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/audio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</title>
+      <link>https://flutterrettulf.com/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/</link>
+      <pubDate>Fri, 21 Oct 2022 14:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/</guid>
+      <description>What is just_audio Plugin for Flutter just_audio is a feature-rich audio player for Android, iOS, macOS, web, Linux and Windows.
+Installation Add dependency Add this to your package&amp;rsquo;s pubspec.ymal file:
+dependencies: just_audio: ^0.9.29 Install package from command line flutter pub add just_audio Import Package import &amp;#39;package:just_audio/just_audio.dart&amp;#39;; Platform specific configuration Android Add the following to your AndroidManifest.xml file to enable your app to access audio files online.
+&amp;lt;uses-permission android:name=&amp;#34;android.permission.INTERNET&amp;#34; /&amp;gt; Add the following attribute to the application element if you want to connect to non-HTTPS URLs or if you employ a functionality that relies on the proxy, including headers, caching, or streaming audio sources:</description>
+    </item>
+    
+  </channel>
+</rss>

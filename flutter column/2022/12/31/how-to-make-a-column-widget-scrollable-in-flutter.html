@@ -1,472 +1,484 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>Flutter Scrollable Columns: The Complete Guide</title>
-  <meta name="title" content="Flutter Scrollable Columns: The Complete Guide">
-  <meta name="twitter:card" content="summary-large-image" >
-  <meta name="twitter:site" content="flutterrettulf" >
-  <meta name="description" content="Learn how to make a column scrollable in Flutter and improve the user experience of your mobile application. Our step-by-step guide covers everything you need to know, from adding scrolling to customizing the behavior of your scrollable columns. Follow along and start building beautiful, interactive applications with Flutter today.">
-  <meta name="author" content="Justin Thomas">
-  
-  <meta name="tags" content="Flutter Scrollable column Scrolling Customize scrolling Column widget Single screen SingleChildScrollView">
-  
-  <meta property="og:title" content="Flutter Scrollable Columns: The Complete Guide" >
-  <meta property="twitter:title" content="Flutter Scrollable Columns: The Complete Guide" >
-  <meta property="og:description" content="Learn how to make a column scrollable in Flutter and improve the user experience of your mobile application. Our step-by-step guide covers everything you need to know, from adding scrolling to customizing the behavior of your scrollable columns. Follow along and start building beautiful, interactive applications with Flutter today." >
-  <meta property="twitter:description" content="Learn how to make a column scrollable in Flutter and improve the user experience of your mobile application. Our step-by-step guide covers everything you need to know, from adding scrolling to customizing the behavior of your scrollable columns. Follow along and start building beautiful, interactive applications with Flutter today." >
-  <meta property="og:url" content="https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" >
-  <meta property="twitter:url" content="https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" >
-  <meta name="robots" content="index, follow" >
-  <link rel="canonical" href="https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" >
-  
-  <meta property="og:type" content="article" >
-  <meta property="og:article:author" content="Justin Thomas" >
-  <meta property="og:article:published_time" content="2022-12-31" >
-  <meta property="og:article:modified_time" content="2022-12-31" >
-  <meta property="og:article:section" content="Flutter Column" >
-  <meta property="og:article:tag" content="Flutter, Scrollable column, Scrolling, Customize scrolling, Column widget, Single screen, and SingleChildScrollView" >
-  
-  
-  <meta property="og:image" content="https://flutterrettulf.com/assets/img/scollable_columns/scrollable_columns.png" >
-  <meta property="twitter:image" content="https://flutterrettulf.com/assets/img/scollable_columns/scrollable_columns.png" >
-  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow" >
+        <link rel="canonical" href="https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html">
+        <link href="/css/blog.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/sitemanifest.json">        
 
-  <link href="/assets/prism.css" rel="stylesheet">
-  <script src="/assets/prism.js" ></script>
-  <!--fav icons-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-  <link rel="manifest" href="/sitemanifest.json">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-      
-  <!-- Custom styles for this template -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+            gtag('config', 'G-GKQ47FWX29');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+        crossorigin="anonymous"></script>
+        <meta property="og:title" content="Flutter Scrollable Columns: The Complete Guide" />
+<meta property="og:description" content="Learn how to make a column scrollable in Flutter and improve the user experience of your mobile application. Our step-by-step guide covers everything you need to know, from adding scrolling to customizing the behavior of your scrollable columns. Follow along and start building beautiful, interactive applications with Flutter today." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" /><meta property="og:image" content="https://flutterrettulf.com/post_images/scrollable_columns.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-31T00:00:00+05:30" />
+<meta property="article:modified_time" content="2022-12-31T00:00:00+05:30" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <meta itemprop="name" content="Flutter Scrollable Columns: The Complete Guide">
+<meta itemprop="description" content="Learn how to make a column scrollable in Flutter and improve the user experience of your mobile application. Our step-by-step guide covers everything you need to know, from adding scrolling to customizing the behavior of your scrollable columns. Follow along and start building beautiful, interactive applications with Flutter today."><meta itemprop="datePublished" content="2022-12-31T00:00:00+05:30" />
+<meta itemprop="dateModified" content="2022-12-31T00:00:00+05:30" />
+<meta itemprop="wordCount" content="491"><meta itemprop="image" content="https://flutterrettulf.com/post_images/scrollable_columns.png">
+<meta itemprop="keywords" content="Flutter,Scrollable column,Scrolling,Customize scrolling,Column widget,Single screen,SingleChildScrollView," />
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://flutterrettulf.com/post_images/scrollable_columns.png"/>
 
-    gtag('config', 'G-GKQ47FWX29');
-  </script>
-  <link href="/assets/blog.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
-  crossorigin="anonymous"></script>
-</head>
-  <style>
+<meta name="twitter:title" content="Flutter Scrollable Columns: The Complete Guide"/>
+<meta name="twitter:description" content="Learn how to make a column scrollable in Flutter and improve the user experience of your mobile application. Our step-by-step guide covers everything you need to know, from adding scrolling to customizing the behavior of your scrollable columns. Follow along and start building beautiful, interactive applications with Flutter today."/>
 
-body {
-  min-height: 75rem;
-  padding-top: 3.5rem;
-}
-  </style>
+        <title>
+             Flutter scrollable columns the complete guide | FlutterrettulF 
+        </title>
+        
+    </head>
+  
   <body>   
     <nav class="navbar navbar-expand-md navbar-light fixed-top border-bottom bg-white">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      
 
-      <a class="navbar-brand" href="/"><img src="/assets/brand/logo_2.svg" width="30"></a>
+      <a class="navbar-brand" href="/"><img src="/brand/logo_2.svg" width="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="bi bi-three-dots-vertical"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/static-assets">Static Assets</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/navigation">Navigation</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-column">Flutter Column</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-listview">Flutter ListView</a>
-          </li>
-              
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials">Dart tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins">Flutter plugins</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials">Flutter tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/posts">Posts</a>
-          </li>
-             
+            
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials/">Dart Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials/">Flutter Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins/">Popular Flutter Plugins</a>
+                    </li>
+                
+            
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none " aria-current="page" href="/categories/">Categories</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none" aria-current="page" href="/tags/">Tags</a>
+            </li>
         </ul>
-        <!-- <a class="btn btn-outline-light me-2" href="/courses">Courses</a>  -->
-        <!-- <a class="btn btn-primary"  href="/search">Search</a> -->
+        
+        
       </div>
     </div>
   </nav>
-  <main class="container-fluid">  
-    <div class="row"> 
-      <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
-        <aside>
-            <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
     
-    <a href="/category/flutter-column" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-      <span class="fs-5 fw-semibold">Flutter Column</span>
-    </a>
-    <div class=" list-group list-group-flush border-bottom scrollarea "> 
-      
-      
-      
-      
-      
-      
-      <a href="/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1"> Flutter Scrollable Columns: The Complete Guide</div>
+<main class="container-fluid">
+ 
+  <div class="row ">
+    <div class="col-md-4 col-lg-3 d-none d-md-block"><div class="bg-light rounded p-3 sticky-top" style="top: 5rem;">
+        <p class="h5 fw-bold">The Index of Insight</p>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#how-to-add-scrolling-to-your-flutter-columns">How to Add Scrolling to Your Flutter Columns?</a></li>
+    <li><a href="#using-singlechildscrollview-with-a-column">Using <code>SingleChildScrollView</code> with a <code>Column</code></a></li>
+    <li><a href="#efficieny-of-using-singlecildscrollview-vs-listview">Efficieny of using SingleCildScrollView vs ListView</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+          <hr >
+          <p class="h5 my-2">Share</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <div class="btn-group ">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fflutter%2520column%2f2022%2f12%2f31%2fhow-to-make-a-column-widget-scrollable-in-flutter.html" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520column%2f2022%2f12%2f31%2fhow-to-make-a-column-widget-scrollable-in-flutter.html&text=Flutter%20scrollable%20columns%20the%20complete%20guide" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520column%2f2022%2f12%2f31%2fhow-to-make-a-column-widget-scrollable-in-flutter.html&title=Flutter%20scrollable%20columns%20the%20complete%20guide" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520column%2f2022%2f12%2f31%2fhow-to-make-a-column-widget-scrollable-in-flutter.html&title=Flutter%20scrollable%20columns%20the%20complete%20guide" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+            </div>
+          </div>
+      </div></div>
+    <div class="col-md-8 col-lg-6 ">
+
+    <article >
+      <header >
+        <h1 class="fw-bold mb-4">
+          Flutter Scrollable Columns: The Complete Guide
+        </h1>
+        
+        
+        <picture class="w-100">
+          
+          <source srcset="/post_images/scrollable_columns_hu4241e00790c7cea84b68998d8903e9c1_91078_200x0_resize_box_3.png" media="(max-width: 200px)">
+          
+          
+          <source srcset="/post_images/scrollable_columns_hu4241e00790c7cea84b68998d8903e9c1_91078_400x0_resize_box_3.png" media="(max-width: 400px)">
+          
+          
+          <source srcset="/post_images/scrollable_columns_hu4241e00790c7cea84b68998d8903e9c1_91078_600x0_resize_box_3.png" media="(max-width: 600px)">
+          
+          
+          <source srcset="/post_images/scrollable_columns_hu4241e00790c7cea84b68998d8903e9c1_91078_800x0_resize_box_3.png" media="(max-width: 800px)">
+          
+          <img src="/post_images/scrollable_columns.png" alt="post_images/scrollable_columns.png" class="img-fluid rounded mb-4" >
+        </picture>
+                
+      </header>
+      <div class="col-12 d-block d-md-none"><div class="bg-light rounded p-3 mb-4" >
+            <p class="h5 fw-bold">The Index of Insight</p>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#how-to-add-scrolling-to-your-flutter-columns">How to Add Scrolling to Your Flutter Columns?</a></li>
+    <li><a href="#using-singlechildscrollview-with-a-column">Using <code>SingleChildScrollView</code> with a <code>Column</code></a></li>
+    <li><a href="#efficieny-of-using-singlecildscrollview-vs-listview">Efficieny of using SingleCildScrollView vs ListView</a></li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>      
+          </div></div>
+      <div class="nested-copy-line-height lh-copy f4 nested-links">
+        <h2 id="introduction">Introduction</h2>
+<p>Welcome to our blog post about making a column scrollable in Flutter! If you&rsquo;re building a mobile application using Flutter, you may have encountered a situation where you want to display a lot of content in a single screen, but it doesn&rsquo;t all fit on the device. One way to solve this problem is to make the column scrollable, so that the user can swipe up and down to see all of the content. In this post, we&rsquo;ll show you how to make a column scrollable in Flutter and share some tips on how to customize the scrolling behavior to fit your needs.</p>
+<h2 id="how-to-add-scrolling-to-your-flutter-columns">How to Add Scrolling to Your Flutter Columns?</h2>
+<p>The easiest method to achieve a scrollable <code>Column</code> in Flutter is to use the <code>SingleChildScrollView</code> widget. It gives us a box in which a single widget can be scrolled. This widget is helpful when a single box, which will typically be completely visible, but you need to ensure that it can be scrolled if the container is too small in one axis.</p>
+<h2 id="using-singlechildscrollview-with-a-column">Using <code>SingleChildScrollView</code> with a <code>Column</code></h2>
+<p>There might be situations where some devices&rsquo; screens are extremely small, the application can be utilised in landscape mode even though the aspect ratio is different from what was intended, or the application is being displayed in a small window in split-screen mode. In any case, it might be sensible to enclose the layout in a <code>SingleChildScrollView</code> as a result. This makes sure that when the application is viewed under normal circumstances, the content is always visible and when the screen size is smaller than expected, the content is scrollable.</p>
+<p>Let&rsquo;s take the following example.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>SingleChildScrollView(
+</span></span><span style="display:flex;"><span>    <span style="color:#79c0ff;font-weight:bold">child:</span> SizedBox(
+</span></span><span style="display:flex;"><span>        <span style="color:#79c0ff;font-weight:bold">height:</span><span style="color:#a5d6ff">240</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#79c0ff;font-weight:bold">child:</span>Column(
+</span></span><span style="display:flex;"><span>            <span style="color:#79c0ff;font-weight:bold">children:</span> <span style="color:#ff7b72;font-weight:bold">&lt;</span>Widget<span style="color:#ff7b72;font-weight:bold">&gt;</span>[
+</span></span><span style="display:flex;"><span>                Container(
+</span></span><span style="display:flex;"><span>                    <span style="color:#8b949e;font-style:italic">// A fixed-height child.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>                    <span style="color:#79c0ff;font-weight:bold">height:</span> <span style="color:#a5d6ff">120.0</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#79c0ff;font-weight:bold">child:</span> <span style="color:#ff7b72">const</span> Text(<span style="color:#a5d6ff">&#39;Fixed Height Content&#39;</span>),
+</span></span><span style="display:flex;"><span>                ),
+</span></span><span style="display:flex;"><span>                Container(
+</span></span><span style="display:flex;"><span>                    <span style="color:#8b949e;font-style:italic">// Another fixed-height child.
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>                    <span style="color:#79c0ff;font-weight:bold">height:</span> <span style="color:#a5d6ff">120.0</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#79c0ff;font-weight:bold">child:</span> <span style="color:#ff7b72">const</span> Text(<span style="color:#a5d6ff">&#39;Fixed Height Content&#39;</span>),
+</span></span><span style="display:flex;"><span>                ),
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>In the above example, we are using a <code>SingleChildScrollView</code> with a <code>Column</code> containing two children. The children have a fixed height. The column is placed inside a SizedBox with a fixed height. As you might know, the <code>Column</code> will try to occupy all available space it gets. When it is placed inside a <code>SingleChildScrollView</code>, the available space is infinite. The <code>Column</code> will try to fill all available space and this might create a conflict. In order to solve this conflict, we place it inside a <code>SizedBox</code> with a fixed height.</p>
+<h2 id="efficieny-of-using-singlecildscrollview-vs-listview">Efficieny of using SingleCildScrollView vs ListView</h2>
+<p>If the viewport is expected to usually contain content beyond the dimensions of the screen, then SingleChildScrollView would be very expensive. According to the official flutter documentation for <a href="https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html" target="_blank" rel="nofollow noopener noreferrer" >SingleChildScrollView</a>
+, it is better to use a ListView instead of a SingleChildScrollView that contains a ListBody or Column with many children when you have a list of children and do not need cross-axis shrink-wrapping behaviour, such as when creating a scrolling list that is always the width of the screen.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html" target="_blank" rel="nofollow noopener noreferrer" >Flutter Documentation for SingleChildScrollView</a>
+</li>
+</ul>
+
+      </div>
+    </article>
+    <div class="col-12 mt-4  bg-light rounded p-3 text-dark">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="btn-group ">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fflutter%2520column%2f2022%2f12%2f31%2fhow-to-make-a-column-widget-scrollable-in-flutter.html" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520column%2f2022%2f12%2f31%2fhow-to-make-a-column-widget-scrollable-in-flutter.html&text=Flutter%20scrollable%20columns%20the%20complete%20guide" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520column%2f2022%2f12%2f31%2fhow-to-make-a-column-widget-scrollable-in-flutter.html&title=Flutter%20scrollable%20columns%20the%20complete%20guide" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fflutter%2520column%2f2022%2f12%2f31%2fhow-to-make-a-column-widget-scrollable-in-flutter.html&title=Flutter%20scrollable%20columns%20the%20complete%20guide" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
         </div>
-        <!-- <div class="col-10 mb-1 small"> <h2 id="introduction">Introduction</h2>
-</div> -->
-      </a>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-         
+      </div>
     </div>
-    
+
   </div>
+  <div class="col-md-4 col-lg-3 d-none d-md-block">
+
 
 
  
-        </aside>
-      </div>
-      <div class="col-md-8 col-lg-8 p-4">
-        <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting">
-        
-        <meta itemprop="datePublished" content="2022-12-31T00:00:00+05:30">
-        
-        <meta itemprop="inLanguage" content="en-US">
-        
-        <meta itemprop="image" content="/assets/img/scollable_columns/scrollable_columns.png">
-        
-        <meta itemprop="url" content="https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html">
-        <meta itemprop="dateModified" content="2022-12-31T00:00:00+05:30">
-        <meta itemprop="author" content="Justin Thomas">
-        <meta itemprop="publisher" content="Justin Thomas">
-        <meta itemprop="description" content="Learn how to make a column scrollable in Flutter and improve the user experience of your mobile application. Our step-by-step guide covers everything you need to know, from adding scrolling to customizing the behavior of your scrollable columns. Follow along and start building beautiful, interactive applications with Flutter today.">       
-
-        <header class="mb-4"><h1>Flutter Scrollable Columns: The Complete Guide</h1>
-          <small class="text-muted">Posted on December 31, 2022</small>
-        </header>
-
-        <div class="blog-post-body lh-lg">
-          
-          
-            <img class="img-fluid rounded mb-4" src="/generated/assets/img/scollable_columns/scrollable_columns-800-bb414fa27.png" alt="Flutter Scrollable Columns: The Complete Guide" srcset="/generated/assets/img/scollable_columns/scrollable_columns-400-bb414fa27.png 400w, /generated/assets/img/scollable_columns/scrollable_columns-600-bb414fa27.png 600w, /generated/assets/img/scollable_columns/scrollable_columns-800-bb414fa27.png 800w, /generated/assets/img/scollable_columns/scrollable_columns-1000-bb414fa27.png 1000w">
-
-                
-          <ul id="toc" class="toc__list">
-<li class="toc-entry toc-h2"><a href="#introduction">Introduction</a></li>
-<li class="toc-entry toc-h2"><a href="#how-to-add-scrolling-to-your-flutter-columns">How to Add Scrolling to Your Flutter Columns?</a></li>
-<li class="toc-entry toc-h2"><a href="#using-singlechildscrollview-with-a-column">Using SingleChildScrollView with a Column</a></li>
-<li class="toc-entry toc-h2"><a href="#efficieny-of-using-singlecildscrollview-vs-listview">Efficieny of using SingleCildScrollView vs ListView</a></li>
-<li class="toc-entry toc-h2"><a href="#references">References</a></li>
-<li class="toc-entry toc-h1"><a href="#related-articles">Related Articles</a></li>
-</ul>        
-          <h2 id="introduction">Introduction</h2>
-
-<p>Welcome to our blog post about making a column scrollable in Flutter! If you’re building a mobile application using Flutter, you may have encountered a situation where you want to display a lot of content in a single screen, but it doesn’t all fit on the device. One way to solve this problem is to make the column scrollable, so that the user can swipe up and down to see all of the content. In this post, we’ll show you how to make a column scrollable in Flutter and share some tips on how to customize the scrolling behavior to fit your needs.</p>
-
-<h2 id="how-to-add-scrolling-to-your-flutter-columns">How to Add Scrolling to Your Flutter Columns?</h2>
-
-<p>The easiest method to achieve a scrollable <code class="language-plaintext highlighter-rouge">Column</code> in Flutter is to use the <code class="language-plaintext highlighter-rouge">SingleChildScrollView</code> widget. It gives us a box in which a single widget can be scrolled. This widget is helpful when a single box, which will typically be completely visible, but you need to ensure that it can be scrolled if the container is too small in one axis.</p>
-
-<h2 id="using-singlechildscrollview-with-a-column">Using <code class="language-plaintext highlighter-rouge">SingleChildScrollView</code> with a <code class="language-plaintext highlighter-rouge">Column</code></h2>
-<p>There might be situations where some devices’ screens are extremely small, the application can be utilised in landscape mode even though the aspect ratio is different from what was intended, or the application is being displayed in a small window in split-screen mode. In any case, it might be sensible to enclose the layout in a <code class="language-plaintext highlighter-rouge">SingleChildScrollView</code> as a result. This makes sure that when the application is viewed under normal circumstances, the content is always visible and when the screen size is smaller than expected, the content is scrollable.</p>
-
-<p>Let’s take the following example.</p>
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">SingleChildScrollView</span><span class="p">(</span>
-    <span class="nl">child:</span> <span class="n">SizedBox</span><span class="p">(</span>
-        <span class="nl">height:</span><span class="mi">240</span><span class="p">,</span>
-        <span class="nl">child:</span><span class="n">Column</span><span class="p">(</span>
-            <span class="nl">children:</span> <span class="p">&lt;</span><span class="n">Widget</span><span class="p">&gt;[</span>
-                <span class="n">Container</span><span class="p">(</span>
-                    <span class="c1">// A fixed-height child.</span>
-                    <span class="nl">height:</span> <span class="mf">120.0</span><span class="p">,</span>
-                    <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Fixed Height Content'</span><span class="p">),</span>
-                <span class="p">),</span>
-                <span class="n">Container</span><span class="p">(</span>
-                    <span class="c1">// Another fixed-height child.</span>
-                    <span class="nl">height:</span> <span class="mf">120.0</span><span class="p">,</span>
-                    <span class="nl">child:</span> <span class="kd">const</span> <span class="n">Text</span><span class="p">(</span><span class="s">'Fixed Height Content'</span><span class="p">),</span>
-                <span class="p">),</span>
-            <span class="p">]</span>
-        <span class="p">)</span>
-    <span class="p">)</span>
-<span class="p">)</span>
-</code></pre></div></div>
-<p>In the above example, we are using a <code class="language-plaintext highlighter-rouge">SingleChildScrollView</code> with a <code class="language-plaintext highlighter-rouge">Column</code> containing two children. The children have a fixed height. The column is placed inside a SizedBox with a fixed height. As you might know, the <code class="language-plaintext highlighter-rouge">Column</code> will try to occupy all available space it gets. When it is placed inside a <code class="language-plaintext highlighter-rouge">SingleChildScrollView</code>, the available space is infinite. The <code class="language-plaintext highlighter-rouge">Column</code> will try to fill all available space and this might create a conflict. In order to solve this conflict, we place it inside a <code class="language-plaintext highlighter-rouge">SizedBox</code> with a fixed height.</p>
-
-<h2 id="efficieny-of-using-singlecildscrollview-vs-listview">Efficieny of using SingleCildScrollView vs ListView</h2>
-<p>If the viewport is expected to usually contain content beyond the dimensions of the screen, then SingleChildScrollView would be very expensive. According to the official flutter documentation for <a href="https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html" target="_blank">SingleChildScrollView</a>, it is better to use a ListView instead of a SingleChildScrollView that contains a ListBody or Column with many children when you have a list of children and do not need cross-axis shrink-wrapping behaviour, such as when creating a scrolling list that is always the width of the screen.</p>
-
-<h2 id="references">References</h2>
-<ul>
-  <li><a href="https://api.flutter.dev/flutter/widgets/SingleChildScrollView-class.html" target="_blank">Flutter Documentation for SingleChildScrollView</a></li>
-</ul>
-
-<h1 id="related-articles">Related Articles</h1>
-<p>Checkout some of the articles about ListView on Flutterrettulf.</p>
-<ol>
-  <li><a href="/flutter_tutorials/flutter_list_view_explained_with_examples" target="_blank">Understanding and Using ListViews in Flutter: Examples and Best Practices</a></li>
-  <li><a href="/flutter%20listview/2022/11/28/how-to-create-a-listview-with-items-seperated.html" target="_blank">How to create a ListView with a separator between items in flutter?</a></li>
-</ol>
-
-
-        </div>
-          </article>
-          <div class="row">
-            <!--share buttons-->
-            <div class="col-12 mb-4">
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
-                  <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html&text=Flutter Scrollable Columns: The Complete Guide" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
-                  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html&title=Flutter Scrollable Columns: The Complete Guide" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-                  <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html&title=Flutter Scrollable Columns: The Complete Guide" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
-                </div>
-              </div>
-          </div>
-          </div>  
-          <div class="row">
-              <div class="col-sm-12 col-md-6 mb-2">
-                  
-                  <a href="/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> Flutter: Elevated Button Examples. </a>
-                
-              </div>    
-              <div class="col-sm-12 col-md-6 text-end v-100">
-                
-                  <a href="/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html" class="btn  btn-outline-primary btn-sm w-100">Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter <i class="bi bi-arrow-right"></i></a>
-                
-              </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <div class="card" style="background-image: linear-gradient(315deg, #007cc6 0%, #200bdbe7 74%);color:white">
-                <div class="card-body">
-                  <h5 class="card-title">We are on LinkedIn</h5>
-                  we are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. 
-                  Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="color: white;font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div class="col-md-12 col-lg-2">
-        <aside>
-
-      <!-- 
-    <div class="mb-3 mt-4" style="top: 4.5rem;">     
-      <a target="_blank" href='https://play.google.com/store/apps/details?id=com.tonocast.www&utm_source=flutterrettulf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="text-decoration:none" rel="Sponsored">
-      <div class="card mb-3 shadow-card">
+  </div>
+  </div>
+  
+  <div class="row mt-4 pt-4 bg-light">
+    <div class="col-md-0 col-lg-3 mb-3 ">
+      <div class="card border-0" >
         <div class="card-body">
-
-          <div class="thumbnail">
-            <img class="rounded w-100 mb-2" src="https://i.ytimg.com/vi/s1e7Q-5W7t8/mqdefault.jpg" alt="..." class="img-fluid">
-          </div>
-          <h4 class="card-title">Tonocast</h4>
-          <p class="card-text text-muted mb-0" style="font-size:15px">The best app to listen to your favourite podcasts.</p>
-         <img alt='Get it on Google Play' class="w-100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-                <div class="w-100 text-muted d-flex justify-content-end" style="font-size:10px">Sponsored</div>
-
+          <h5 class="card-title fw-bold h1 text-primary">We are on LinkedIn</h5>
+                  We are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
         </div>
-    </div>
-  </a>   
-
-
-
-
--->   
-
-
-
-    </aside>
-
       </div>
-</div>
-</main>
-  <footer class="border-top">
-
-<div class="container">
-  <div class="row row-cols-5 pb-2 pt-5 my-2 ">
-    <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
-      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        <img src="/assets/brand/logo_2.webp" width="70">
-      </a>
-      <p class="text-muted">flutterrettulf@gmail.com </p>
-      <p class="text-muted">© 2022 </p>
-      <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
     </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-      <h5>Top Tags</h5>
-      <ul class="nav flex-column">
+    <div class="col-md-8 col-lg-6 " >
+     
         
-        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/font-assets" class="nav-link p-0 text-muted">Font Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
-
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Top Categories</h5>
-      <ul class="nav flex-column">
-        
-        <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-column" class="nav-link p-0 text-muted">Flutter Column</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-listview" class="nav-link p-0 text-muted">Flutter ListView</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/json" class="nav-link p-0 text-muted">JSON</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
-
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Links</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
-        <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted hover"><span class="bi bi-facebook me-2"></span>Facebook</a></li>-->
-       <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-twitter me-2"></span>Twitter</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-mastodon me-2"></span>Mastodon</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img src="/assets/img/dev.png " class="me-2" width="17">Dev.to</a></li>-->
-        <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
-        <li class="nav-item mb-2"><a href="/feed.xml" class="nav-link p-0 text-muted"><span class="bi bi-rss me-2"></span>RSS Feed</a></li> 
-        <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
       
-      </ul>
+      
+        <p class="h3 ">Related Articles</p>
+        <ul class="list-unstyled">
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter_basic_app_example/" class="text-decoration-none">Flutter: Basic App Example | How to create a flutter app</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/flutter_spinkit_plugin/" class="text-decoration-none">Flutter: Spinkit Plugin | Collection of animated loading indicators</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" class="text-decoration-none">How to disable the backbutton in Flutter using WillPopScope.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/static%20assets/2022/09/03/loading-static-image-font-assets-in-flutter-app.html" class="text-decoration-none">Flutter: Loading Static Image &amp; Font Assets in Flutter App.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/" class="text-decoration-none">just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/dio_http_client/" class="text-decoration-none">Dio | Powerfull Http Client for flutter</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_variables_and_datatypes/" class="text-decoration-none">Variables and Datatypes in Dart</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/about/" class="text-decoration-none">About FlutterrettulF</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart-hello-world/" class="text-decoration-none">Dart Hello World Program</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_overview/" class="text-decoration-none">Dart Overview</a>
+          </li>
+          
+        </ul>
+      
     </div>
+    <div class="col-md-4 col-lg-3 mb-3">
+     
+    </div>
+
   </div>
-</div>
-<script type="text/javascript">
-            document.querySelectorAll("table").forEach(table => {
-                table.classList.add("table")
-                table.classList.add("table-striped")
-                table.classList.add("table-bordered")
-                table.classList.add("table-sm")
-            })
-        </script>
-</footer> 
+</main>
+   
+   
+    <footer class="border-top">
 
+    <div class="container">
+      <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+        <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="/brand/logo_2.webp" width="70">
+          </a>
+          <p class="text-muted">flutterrettulf@gmail.com </p>
+          <p class="text-muted">© 2022 </p>
+          <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
+        </div>
+        
+        
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/categories/" class="nav-link p-0 text-muted">Top Categories</a></h5>
+          <ul class="nav flex-column">
+         
 
-<!-- <div class="p-4">
-  <h4 class="fst-italic">Elsewhere</h4>
-  <ol class="list-unstyled">
-    <li><a href="#">GitHub</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Facebook</a></li>
-  </ol>
-</div> -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/dart-tutorials/" class="nav-link p-0 text-muted">Dart Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter/" class="nav-link p-0 text-muted">Flutter</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-buttons/" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-column/" class="nav-link p-0 text-muted">Flutter Column</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-listview/" class="nav-link p-0 text-muted">Flutter ListView</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-plugins/" class="nav-link p-0 text-muted">Flutter Plugins</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-tutorials/" class="nav-link p-0 text-muted">Flutter Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-widgets/" class="nav-link p-0 text-muted">Flutter Widgets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/json/" class="nav-link p-0 text-muted">JSON</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/navigation/" class="nav-link p-0 text-muted">Navigation</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/categories/" class="nav-link p-0 text-muted">All Categories</a></li>
     
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Flutter Column</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-0">
-      <div class=" list-group list-group-flush border-bottom scrollarea "> 
+          </ul>
+        </div>
         
         
         
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/tags/" class="nav-link p-0 text-muted">Top Tags</a></h5>
+          <ul class="nav flex-column">
+         
+
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/android/" class="nav-link p-0 text-muted">android</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/animatedindicator/" class="nav-link p-0 text-muted">AnimatedIndicator</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/api-request/" class="nav-link p-0 text-muted">API Request</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/assets/" class="nav-link p-0 text-muted">Assets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/audio/" class="nav-link p-0 text-muted">audio</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/basicapp/" class="nav-link p-0 text-muted">BasicApp</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/beginner/" class="nav-link p-0 text-muted">Beginner</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/column-widget/" class="nav-link p-0 text-muted">Column widget</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/columns/" class="nav-link p-0 text-muted">Columns</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/customize-scrolling/" class="nav-link p-0 text-muted">Customize scrolling</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 text-muted">All Tags</a></li>
+    
+          </ul>
+        </div>
         
         
-        
-        <a href="/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Flutter Scrollable Columns: The Complete Guide</div>
-          </div>
-        </a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-           
+
+    
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+    
+          <h5>Discover FlutterrettulF</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
+            
+           <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+            
+            <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+            
+            <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
+          </ul>
+        </div>
       </div>
     </div>
+    <script type="text/javascript">
+                document.querySelectorAll("table").forEach(table => {
+                    table.classList.add("table")
+                    table.classList.add("table-striped")
+                    table.classList.add("table-bordered")
+                    table.classList.add("table-sm")
+                })
+            </script>
+    </footer> 
     
-  </div>
-  </body>
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="1088001170"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="5124283255"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+
+    </head>
+    <body>       
+        <div id="content">
+         
+        </div>
+    </body>
 </html>

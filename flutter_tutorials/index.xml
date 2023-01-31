@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flutter Tutorials on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/flutter_tutorials/</link>
+    <description>Recent content in Flutter Tutorials on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 19 Oct 2022 15:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/flutter_tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flutter: Expanded/Flexible Widget explanied With examples</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter-expanded-widget/</link>
+      <pubDate>Tue, 31 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter-expanded-widget/</guid>
+      <description>What is expanded widget in flutter? In Flutter, a widget is a piece of code that defines a visual element on the screen. The Expanded widget is a convenience widget that expands a child of a Row, Column, or Flex so that the child fills the available space. This is useful for creating flexible layouts that can adapt to different screen sizes. The Expanded widget takes a child widget and a flex value, which specifies the proportion of the available space that the child should occupy.</description>
+    </item>
+    
+    <item>
+      <title>Understanding and Using ListViews in Flutter: Examples and Best Practices</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter_list_view_explained_with_examples/</guid>
+      <description>What is the ListView Widget in Flutter? Listview is a widget used to display items in a sequential order. ListView is the most commonly used scrolling widget. The ListView widget in Flutter is a scrollable list of widgets. Based on the scroll direction, it displays its children, horizontally or vertically.
+A ListView is an example of a scrolling widget, which means that it creates a scrollable list of widgets. By default, the list scrolls vertically, but you can change the scrollDirection property to Axis.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Columns Explained: From Basics to Advanced Use Cases</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter-column-widget-explained-with-examples/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter-column-widget-explained-with-examples/</guid>
+      <description>Introduction The Column widget in Flutter is used to display child widgets in a vertical arrangement. It is a versatile widget that can be used in many different ways.
+Here is an example of how to use the Column widget:
+Column( children: [ Text(&amp;#39;Item 1&amp;#39;), Text(&amp;#39;Item 2&amp;#39;), Text(&amp;#39;Item 3&amp;#39;), // ... ], ) In this example, the Column widget contains several Text widgets as its children. These widgets are arranged vertically within the Column widget.</description>
+    </item>
+    
+    <item>
+      <title>Flutter: Basic App Example | How to create a flutter app</title>
+      <link>https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/</link>
+      <pubDate>Thu, 20 Oct 2022 15:00:00 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/flutter_tutorials/flutter_basic_app_example/</guid>
+      <description>Creating an App After installing flutter, you will be able to start making apps with Flutter. We will learn how to create a basic app with this tutorial. The app will have a simple button which will respond on click with the message &amp;ldquo;Hello Flutter&amp;rdquo;.
+From the Terminal Flutter provides a command-line tool that lets you start and manage your app. After installing Flutter you can start making apps with the following command.</description>
+    </item>
+    
+  </channel>
+</rss>

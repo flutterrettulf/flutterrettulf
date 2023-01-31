@@ -1,576 +1,534 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>Dio | Powerfull Http Client for flutter</title>
-  <meta name="title" content="Dio | Powerfull Http Client for flutter">
-  <meta name="twitter:card" content="summary-large-image" >
-  <meta name="twitter:site" content="flutterrettulf" >
-  <meta name="description" content="Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc. This article tries to introduce some of its features to beginner developers.">
-  <meta name="author" content="Justin Thomas">
-  
-  <meta name="tags" content="network helper dio http plugin android ios macos web linux windows">
-  
-  <meta property="og:title" content="Dio | Powerfull Http Client for flutter" >
-  <meta property="twitter:title" content="Dio | Powerfull Http Client for flutter" >
-  <meta property="og:description" content="Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc. This article tries to introduce some of its features to beginner developers." >
-  <meta property="twitter:description" content="Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc. This article tries to introduce some of its features to beginner developers." >
-  <meta property="og:url" content="https://flutterrettulf.com/flutter_plugins/dio_http_client/" >
-  <meta property="twitter:url" content="https://flutterrettulf.com/flutter_plugins/dio_http_client/" >
-  <meta name="robots" content="index, follow" >
-  <link rel="canonical" href="https://flutterrettulf.com/flutter_plugins/dio_http_client/" >
-  
-  <meta property="og:type" content="article" >
-  <meta property="og:article:author" content="Justin Thomas" >
-  <meta property="og:article:published_time" content="2022-10-20" >
-  <meta property="og:article:modified_time" content="2022-10-20" >
-  <meta property="og:article:section" content="Flutter Plugins" >
-  <meta property="og:article:tag" content="network, helper, dio, http, plugin, android, ios, macos, web, linux, and windows" >
-  
-  
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow" >
+        <link rel="canonical" href="https://flutterrettulf.com/flutter_plugins/dio_http_client/">
+        <link href="/css/blog.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/sitemanifest.json">        
 
-  <link href="/assets/prism.css" rel="stylesheet">
-  <script src="/assets/prism.js" ></script>
-  <!--fav icons-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-  <link rel="manifest" href="/sitemanifest.json">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-      
-  <!-- Custom styles for this template -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     <!-- Custom styles for this template -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+            gtag('config', 'G-GKQ47FWX29');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+        crossorigin="anonymous"></script>
+        <meta property="og:title" content="Dio | Powerfull Http Client for flutter" />
+<meta property="og:description" content="Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc. This article tries to introduce some of its features to beginner developers." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://flutterrettulf.com/flutter_plugins/dio_http_client/" /><meta property="article:section" content="flutter_plugins" />
+<meta property="article:published_time" content="2022-10-20T15:00:00+05:30" />
+<meta property="article:modified_time" content="2022-10-20T15:00:00+05:30" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        <meta itemprop="name" content="Dio | Powerfull Http Client for flutter">
+<meta itemprop="description" content="Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc. This article tries to introduce some of its features to beginner developers."><meta itemprop="datePublished" content="2022-10-20T15:00:00+05:30" />
+<meta itemprop="dateModified" content="2022-10-20T15:00:00+05:30" />
+<meta itemprop="wordCount" content="269">
+<meta itemprop="keywords" content="network,helper,dio,http,plugin,android,ios,macos,web,linux,windows," />
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dio | Powerfull Http Client for flutter"/>
+<meta name="twitter:description" content="Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc. This article tries to introduce some of its features to beginner developers."/>
 
-    gtag('config', 'G-GKQ47FWX29');
-  </script>
-  <link href="/assets/blog.css" rel="stylesheet">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
-  crossorigin="anonymous"></script>
-</head>
-  <style>
-
-body {
-  min-height: 75rem;
-  padding-top: 3.5rem;
-}
-  </style>
+        <title>
+             Dio powerfull HTTP client for flutter | FlutterrettulF 
+        </title>
+        
+    </head>
+  
   <body>   
     <nav class="navbar navbar-expand-md navbar-light fixed-top border-bottom bg-white">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      
 
-      <a class="navbar-brand" href="/"><img src="/assets/brand/logo_2.svg" width="30"></a>
+      <a class="navbar-brand" href="/"><img src="/brand/logo_2.svg" width="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="bi bi-three-dots-vertical"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/static-assets">Static Assets</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/navigation">Navigation</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-buttons">Flutter Buttons</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-column">Flutter Column</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none " aria-current="page" href="/category/flutter-listview">Flutter ListView</a>
-          </li>
-              
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials">Dart tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins">Flutter plugins</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials">Flutter tutorials</a>
-          </li>
-          
-          <!--active class add on correct page-->
-          <li class="nav-item">
-            <a class="nav-link text-decoration-none" aria-current="page" href="/posts">Posts</a>
-          </li>
-             
+            
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials/">Dart Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials/">Flutter Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins/">Popular Flutter Plugins</a>
+                    </li>
+                
+            
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none " aria-current="page" href="/categories/">Categories</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none" aria-current="page" href="/tags/">Tags</a>
+            </li>
         </ul>
-        <!-- <a class="btn btn-outline-light me-2" href="/courses">Courses</a>  -->
-        <!-- <a class="btn btn-primary"  href="/search">Search</a> -->
+        
+        
       </div>
     </div>
   </nav>
-  <main class="container-fluid">  
-    <div class="row"> 
-      <div class="col-md-4 col-lg-2 bg-fl-grey  border-end p-0 d-md-block d-none">
-        <aside>
+    
+<main class="container-fluid">
+ 
+  <div class="row ">
+    <div class="col-md-4 col-lg-3 d-none d-md-block"><div class="bg-light rounded p-3 sticky-top" style="top: 5rem;">
+        <p class="h5 fw-bold">The Index of Insight</p>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-dio">What is Dio?</a></li>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#updateing-pubspecyaml">Updateing pubspec.yaml</a></li>
+        <li><a href="#using-flutter-pub">Using flutter pub</a></li>
+        <li><a href="#using-dart-pub">Using dart pub</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-usage">Basic Usage</a>
+      <ul>
+        <li><a href="#get">Get</a></li>
+        <li><a href="#post">Post</a></li>
+        <li><a href="#listening-on-uploading-progress">Listening on uploading progress</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#reference">Reference</a></li>
+    <li><a href="#flutter-plugins">Flutter Plugins</a></li>
+  </ul>
+</nav>
+          <hr >
+          <p class="h5 my-2">Share</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <div class="btn-group ">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fflutter_plugins%2fdio_http_client%2f" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fflutter_plugins%2fdio_http_client%2f&text=Dio%20powerfull%20HTTP%20client%20for%20flutter" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fflutter_plugins%2fdio_http_client%2f&title=Dio%20powerfull%20HTTP%20client%20for%20flutter" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fflutter_plugins%2fdio_http_client%2f&title=Dio%20powerfull%20HTTP%20client%20for%20flutter" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+            </div>
+          </div>
+      </div></div>
+    <div class="col-md-8 col-lg-6 ">
 
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-fl-grey ">
+    <article >
+      <header >
+        <h1 class="fw-bold mb-4">
+          Dio | Powerfull Http Client for flutter
+        </h1>
+        
+                
+      </header>
+      <div class="col-12 d-block d-md-none"><div class="bg-light rounded p-3 mb-4" >
+            <p class="h5 fw-bold">The Index of Insight</p>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-dio">What is Dio?</a></li>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#updateing-pubspecyaml">Updateing pubspec.yaml</a></li>
+        <li><a href="#using-flutter-pub">Using flutter pub</a></li>
+        <li><a href="#using-dart-pub">Using dart pub</a></li>
+      </ul>
+    </li>
+    <li><a href="#basic-usage">Basic Usage</a>
+      <ul>
+        <li><a href="#get">Get</a></li>
+        <li><a href="#post">Post</a></li>
+        <li><a href="#listening-on-uploading-progress">Listening on uploading progress</a></li>
+      </ul>
+    </li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#reference">Reference</a></li>
+    <li><a href="#flutter-plugins">Flutter Plugins</a></li>
+  </ul>
+</nav>      
+          </div></div>
+      <div class="nested-copy-line-height lh-copy f4 nested-links">
+        <h2 id="what-is-dio">What is Dio?</h2>
+<p>Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.</p>
+<p>It is very simple to use.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#a5d6ff">&#39;package:dio/dio.dart&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">void</span> getHttp() <span style="color:#ff7b72">async</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">var</span> response <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> Dio().<span style="color:#ff7b72">get</span>(<span style="color:#a5d6ff">&#39;http://www.google.com&#39;</span>);
+</span></span><span style="display:flex;"><span>    print(response);
+</span></span><span style="display:flex;"><span>  } <span style="color:#ff7b72">catch</span> (e) {
+</span></span><span style="display:flex;"><span>    print(e);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="installation">Installation</h2>
+<h3 id="updateing-pubspecyaml">Updateing pubspec.yaml</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">dependencies</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">dio</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">^4.0.0</span><span style="color:#6e7681">
+</span></span></span></code></pre></div><h3 id="using-flutter-pub">Using flutter pub</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>flutter pub add dio
+</span></span></code></pre></div><h3 id="using-dart-pub">Using dart pub</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>dart pub add dio
+</span></span></code></pre></div><p>Now import <code>dio</code> in your dart file like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#a5d6ff">&#39;package:dio/dio.dart&#39;</span>;
+</span></span></code></pre></div><h2 id="basic-usage">Basic Usage</h2>
+<h3 id="get">Get</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>      <span style="color:#ff7b72">try</span> {
+</span></span><span style="display:flex;"><span>        Response response <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> Dio().<span style="color:#ff7b72">get</span>(<span style="color:#a5d6ff">&#34;https://httpbin.org/get&#34;</span>);
+</span></span><span style="display:flex;"><span>        print(response.data.toString());
+</span></span><span style="display:flex;"><span>      } <span style="color:#ff7b72">catch</span> (e) {
+</span></span><span style="display:flex;"><span>        print(e);
+</span></span><span style="display:flex;"><span>      }
+</span></span></code></pre></div><h3 id="post">Post</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>    FormData formData <span style="color:#ff7b72;font-weight:bold">=</span> FormData.fromMap({
+</span></span><span style="display:flex;"><span>      <span style="color:#a5d6ff">&#34;name&#34;</span><span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">&#34;wendux&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a5d6ff">&#34;age&#34;</span><span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#a5d6ff">25</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#8b949e;font-style:italic">// &#34;file&#34;: await MultipartFile.fromFile(&#34;./text.txt&#34;),   // File
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#8b949e;font-style:italic">// &#34;file2&#34;:[
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#8b949e;font-style:italic">//   await MultipartFile.fromFile(&#34;./example/upload.txt&#34;),
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#8b949e;font-style:italic">//   await MultipartFile.fromFile(&#34;./example/upload.txt&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>      <span style="color:#8b949e;font-style:italic">// ]  //File List
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">try</span> {
+</span></span><span style="display:flex;"><span>      Response response <span style="color:#ff7b72;font-weight:bold">=</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#ff7b72">await</span> Dio().post(<span style="color:#a5d6ff">&#34;https://httpbin.org/post&#34;</span>, <span style="color:#79c0ff;font-weight:bold">data:</span> formData);
+</span></span><span style="display:flex;"><span>      print(response);
+</span></span><span style="display:flex;"><span>    } <span style="color:#ff7b72">catch</span> (e) {
+</span></span><span style="display:flex;"><span>      print(e);
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="listening-on-uploading-progress">Listening on uploading progress</h3>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span>    Dio dio <span style="color:#ff7b72;font-weight:bold">=</span> Dio();
+</span></span><span style="display:flex;"><span>    FormData formData <span style="color:#ff7b72;font-weight:bold">=</span> FormData.fromMap({
+</span></span><span style="display:flex;"><span>      <span style="color:#a5d6ff">&#34;file&#34;</span><span style="color:#ff7b72;font-weight:bold">:</span> <span style="color:#ff7b72">await</span> MultipartFile.fromFile(<span style="color:#a5d6ff">&#34;./time.jpg&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#79c0ff;font-weight:bold">filename:</span> <span style="color:#a5d6ff">&#34;upload.jpg&#34;</span>), <span style="color:#8b949e;font-style:italic">//fileName:  , contentType:Upload file content type
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    });
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">try</span> {
+</span></span><span style="display:flex;"><span>      Response response <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> dio.post(
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;&lt;url&gt;&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#79c0ff;font-weight:bold">data:</span> formData,
+</span></span><span style="display:flex;"><span>        <span style="color:#79c0ff;font-weight:bold">onSendProgress:</span> (<span style="color:#ff7b72">int</span> sent, <span style="color:#ff7b72">int</span> total) {
+</span></span><span style="display:flex;"><span>          print(<span style="color:#a5d6ff">&#34;</span><span style="color:#a5d6ff">$</span>sent<span style="color:#a5d6ff"> </span><span style="color:#a5d6ff">$</span>total<span style="color:#a5d6ff">&#34;</span>);
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>      );
+</span></span><span style="display:flex;"><span>      print(response);
+</span></span><span style="display:flex;"><span>    } <span style="color:#ff7b72">catch</span> (e) {
+</span></span><span style="display:flex;"><span>      print(e);
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="summary">Summary</h2>
+<p>Here we learned what is dio and how to install and the basic usage of dio.
+I hope this simple guide will be useful for you. Stay Connected!~</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://pub.dev/packages/dio" target="_blank" rel="nofollow noopener noreferrer" >Dio on Pub.dev</a>
+</li>
+</ul>
+<h2 id="flutter-plugins">Flutter Plugins</h2>
+<p>This article is a part of <a href="/flutter-plugins/">Flutter Plugins</a>
+ collection. It is a series of articles to help beginner developers to find and explore many useful <code>flutter plugins</code>. If you would like to see more articles like this check out <a href="/flutter-plugins/">Flutter Plugins</a>
+ collection.</p>
 
-    <div class=" list-group list-group-flush border-bottom scrollarea "> 
-      
-      
-      
-      
-      
-      
-      
-      
-     
-      <a href="/flutter_plugins/flutter_spinkit_plugin/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Flutter: Spinkit Plugin | Collection of animated loading indicators</div>
+      </div>
+    </article>
+    <div class="col-12 mt-4  bg-light rounded p-3 text-dark">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="btn-group ">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fflutter_plugins%2fdio_http_client%2f" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fflutter_plugins%2fdio_http_client%2f&text=Dio%20powerfull%20HTTP%20client%20for%20flutter" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fflutter_plugins%2fdio_http_client%2f&title=Dio%20powerfull%20HTTP%20client%20for%20flutter" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fflutter_plugins%2fdio_http_client%2f&title=Dio%20powerfull%20HTTP%20client%20for%20flutter" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
         </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="spinkit-plugin">Spinkit Plugin</h1>
-<p>A collection of loading indicators animated with flutter.</p>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/flutter_plugins/dio_http_client/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> Dio | Powerfull Http Client for flutter</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="what-is-dio">What is Dio?</h1>
-</div> -->
-      </a>
-      
-      
-     
-      <a href="/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-        <div class="d-flex w-100 align-items-center justify-content-between">
-          <div class="mb-1 sidebar-text"> just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</div>
-        </div>
-        <!-- <div class="col-10 mb-1 small"> <h1 id="just_audio-plugin-for-flutter">just_audio Plugin for Flutter</h1>
-<p>just_audio is a feature-rich audio player for Android, iOS, macOS, web, Linux and Windows.</p>
-</div> -->
-      </a>
-      
-  
-      
-      
-      
-      
-      
-      
-      
-         
+      </div>
     </div>
+
   </div>
+  <div class="col-md-4 col-lg-3 d-none d-md-block">
+
 
 
  
-    </aside>
-
-    </div>
-    <div class="col-md-8 col-lg-8 p-4">
-      <article class="blog-post" itemscope itemtype="https://schema.org/BlogPosting"
-      
-      
-      >
-      
-      <meta itemprop="datePublished" content="2022-10-20T15:00:00+05:30">
-      
-      <meta itemprop="inLanguage" content="en-US">
-      
-      <meta itemprop="url" content="https://flutterrettulf.com/flutter_plugins/dio_http_client/">
-      <meta itemprop="datePublished" content="2022-10-20T15:00:00+05:30">
-      <meta itemprop="dateModified" content="2022-10-20T15:00:00+05:30">
-      <meta itemprop="author" content="Justin Thomas">
-      <meta itemprop="publisher" content="Justin Thomas">
-      <meta itemprop="description" content="Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc. This article tries to introduce some of its features to beginner developers.">       
-
-        <header class="mb-4"><h1>Dio | Powerfull Http Client for flutter</h1>
-        <small class="text-muted">Added on October 20, 2022 |</small>
-        <small class="text-muted">Updated on October 20, 2022</small>
-      </header>
-      <div class="blog-post-body lh-lg">
-        
-        
-        
+  </div>
+  </div>
   
-            <ul id="toc" class="toc__list">
-<li class="toc-entry toc-h1"><a href="#what-is-dio">What is Dio?</a></li>
-<li class="toc-entry toc-h1"><a href="#installation">Installation</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h2"><a href="#updateing-pubspecyaml">Updateing pubspec.yaml</a></li>
-<li class="toc-entry toc-h2"><a href="#using-flutter-pub">Using flutter pub</a></li>
-<li class="toc-entry toc-h2"><a href="#using-dart-pub">Using dart pub</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h1"><a href="#basic-usage">Basic Usage</a>
-<ul class="toc__sublist">
-<li class="toc-entry toc-h2"><a href="#get">Get</a></li>
-<li class="toc-entry toc-h2"><a href="#post">Post</a></li>
-<li class="toc-entry toc-h2"><a href="#listening-on-uploading-progress">Listening on uploading progress</a></li>
-</ul>
-</li>
-<li class="toc-entry toc-h1"><a href="#summary">Summary</a></li>
-<li class="toc-entry toc-h1"><a href="#reference">Reference</a></li>
-<li class="toc-entry toc-h1"><a href="#flutter-plugins">Flutter Plugins</a></li>
-</ul> 
-    
-          <h1 id="what-is-dio">What is Dio?</h1>
-
-<p>Dio is a powerful Http client for Dart, which supports Interceptors, Global configuration, FormData, Request Cancellation, File downloading, Timeout etc.</p>
-
-<p>It is very simple to use.</p>
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="s">'package:dio/dio.dart'</span><span class="o">;</span>
-<span class="kt">void</span> <span class="nf">getHttp</span><span class="p">()</span> <span class="kd">async</span> <span class="p">{</span>
-  <span class="k">try</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Dio</span><span class="p">()</span><span class="o">.</span><span class="na">get</span><span class="p">(</span><span class="s">'http://www.google.com'</span><span class="p">);</span>
-    <span class="n">print</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
-  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">print</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h1 id="installation">Installation</h1>
-
-<h2 id="updateing-pubspecyaml">Updateing pubspec.yaml</h2>
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">dependencies</span><span class="pi">:</span>
-    <span class="na">dio</span><span class="pi">:</span> <span class="s">^4.0.0</span>
-</code></pre></div></div>
-
-<h2 id="using-flutter-pub">Using flutter pub</h2>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>flutter pub add dio
-</code></pre></div></div>
-
-<h2 id="using-dart-pub">Using dart pub</h2>
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dart pub add dio
-</code></pre></div></div>
-
-<p>Now import <code class="language-plaintext highlighter-rouge">dio</code> in your dart file like:</p>
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="s">'package:dio/dio.dart'</span><span class="o">;</span>
-</code></pre></div></div>
-
-<h1 id="basic-usage">Basic Usage</h1>
-
-<h2 id="get">Get</h2>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      <span class="k">try</span> <span class="p">{</span>
-        <span class="n">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Dio</span><span class="p">()</span><span class="o">.</span><span class="na">get</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">);</span>
-        <span class="n">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="na">data</span><span class="o">.</span><span class="na">toString</span><span class="p">());</span>
-      <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">print</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-      <span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="post">Post</h2>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">FormData</span> <span class="n">formData</span> <span class="o">=</span> <span class="n">FormData</span><span class="o">.</span><span class="na">fromMap</span><span class="p">({</span>
-      <span class="s">"name"</span><span class="o">:</span> <span class="s">"wendux"</span><span class="p">,</span>
-      <span class="s">"age"</span><span class="o">:</span> <span class="mi">25</span><span class="p">,</span>
-      <span class="c1">// "file": await MultipartFile.fromFile("./text.txt"),   // File</span>
-      <span class="c1">// "file2":[</span>
-      <span class="c1">//   await MultipartFile.fromFile("./example/upload.txt"),</span>
-      <span class="c1">//   await MultipartFile.fromFile("./example/upload.txt")</span>
-      <span class="c1">// ]  //File List</span>
-    <span class="p">});</span>
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="n">Response</span> <span class="n">response</span> <span class="o">=</span>
-          <span class="k">await</span> <span class="n">Dio</span><span class="p">()</span><span class="o">.</span><span class="na">post</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nl">data:</span> <span class="n">formData</span><span class="p">);</span>
-      <span class="n">print</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">print</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="listening-on-uploading-progress">Listening on uploading progress</h2>
-
-<div class="language-dart highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="n">Dio</span> <span class="n">dio</span> <span class="o">=</span> <span class="n">Dio</span><span class="p">();</span>
-    <span class="n">FormData</span> <span class="n">formData</span> <span class="o">=</span> <span class="n">FormData</span><span class="o">.</span><span class="na">fromMap</span><span class="p">({</span>
-      <span class="s">"file"</span><span class="o">:</span> <span class="k">await</span> <span class="n">MultipartFile</span><span class="o">.</span><span class="na">fromFile</span><span class="p">(</span><span class="s">"./time.jpg"</span><span class="p">,</span>
-          <span class="nl">filename:</span> <span class="s">"upload.jpg"</span><span class="p">),</span> <span class="c1">//fileName:  , contentType:Upload file content type</span>
-    <span class="p">});</span>
-    <span class="k">try</span> <span class="p">{</span>
-      <span class="n">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">dio</span><span class="o">.</span><span class="na">post</span><span class="p">(</span>
-        <span class="s">"&lt;url&gt;"</span><span class="p">,</span>
-        <span class="nl">data:</span> <span class="n">formData</span><span class="p">,</span>
-        <span class="nl">onSendProgress:</span> <span class="p">(</span><span class="kt">int</span> <span class="n">sent</span><span class="p">,</span> <span class="kt">int</span> <span class="n">total</span><span class="p">)</span> <span class="p">{</span>
-          <span class="n">print</span><span class="p">(</span><span class="s">"</span><span class="si">$sent</span><span class="s"> </span><span class="si">$total</span><span class="s">"</span><span class="p">);</span>
-        <span class="p">},</span>
-      <span class="p">);</span>
-      <span class="n">print</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">print</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-    <span class="p">}</span>
-</code></pre></div></div>
-
-<h1 id="summary">Summary</h1>
-<p>Here we learned what is dio and how to install and the basic usage of dio.
-I hope this simple guide will be useful for you. Stay Connected!~</p>
-
-<h1 id="reference">Reference</h1>
-<ul>
-  <li><a href="https://pub.dev/packages/dio">Dio on Pub.dev</a></li>
-</ul>
-
-<h1 id="flutter-plugins">Flutter Plugins</h1>
-
-<p>This article is a part of <a href="/flutter-plugins/">Flutter Plugins</a> collection. It is a series of articles to help beginner developers to find and explore many useful <code class="language-plaintext highlighter-rouge">flutter plugins</code>. If you would like to see more articles like this check out <a href="/flutter-plugins/">Flutter Plugins</a> collection.</p>
-
-
-                    
-
-      </div>
-        </article>
-        <div class="row">
-          <!--share buttons-->
-          <div class="col-12 mb-4">
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://flutterrettulf.com/flutter_plugins/dio_http_client/" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://flutterrettulf.com/flutter_plugins/dio_http_client/&text=Dio | Powerfull Http Client for flutter" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
-                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://flutterrettulf.com/flutter_plugins/dio_http_client/&title=Dio | Powerfull Http Client for flutter" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-                <a href="https://www.reddit.com/submit?url=https://flutterrettulf.com/flutter_plugins/dio_http_client/&title=Dio | Powerfull Http Client for flutter" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
-              </div>
-            </div>
-        </div>
-        </div>  
-        <div class="row">
-            <div class="col-sm-12 col-md-6 mb-2">
-                
-                <a href="/flutter_plugins/flutter_spinkit_plugin/" class="btn btn-outline-primary btn-sm w-100 "> <i class="bi bi-arrow-left"></i> Flutter: Spinkit Plugin | Collection of animated loading indicators </a>
-              
-            </div>    
-            <div class="col-sm-12 col-md-6 text-end v-100">
-              
-                <a href="/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/" class="btn  btn-outline-primary btn-sm w-100">just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows. <i class="bi bi-arrow-right"></i></a>
-              
-            </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="card" style="background-image: linear-gradient(315deg, #007cc6 0%, #200bdbe7 74%);color:white">
-              <div class="card-body">
-                <h5 class="card-title">We are on LinkedIn</h5>
-                we are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. 
-                Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="color: white;font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-      <div class="col-md-12 col-lg-2">
-        <aside>
-
-      <!-- 
-    <div class="mb-3 mt-4" style="top: 4.5rem;">     
-      <a target="_blank" href='https://play.google.com/store/apps/details?id=com.tonocast.www&utm_source=flutterrettulf&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' style="text-decoration:none" rel="Sponsored">
-      <div class="card mb-3 shadow-card">
+  <div class="row mt-4 pt-4 bg-light">
+    <div class="col-md-0 col-lg-3 mb-3 ">
+      <div class="card border-0" >
         <div class="card-body">
-
-          <div class="thumbnail">
-            <img class="rounded w-100 mb-2" src="https://i.ytimg.com/vi/s1e7Q-5W7t8/mqdefault.jpg" alt="..." class="img-fluid">
-          </div>
-          <h4 class="card-title">Tonocast</h4>
-          <p class="card-text text-muted mb-0" style="font-size:15px">The best app to listen to your favourite podcasts.</p>
-         <img alt='Get it on Google Play' class="w-100" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-                <div class="w-100 text-muted d-flex justify-content-end" style="font-size:10px">Sponsored</div>
-
+          <h5 class="card-title fw-bold h1 text-primary">We are on LinkedIn</h5>
+                  We are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
         </div>
-    </div>
-  </a>   
-
-
-
-
--->   
-
-
-
-    </aside>
-
       </div>
-</div>
+    </div>
+    <div class="col-md-8 col-lg-6 " >
+     
+        
+          
+      
+      
+        <p class="h3 ">Related Articles</p>
+        <ul class="list-unstyled">
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter_basic_app_example/" class="text-decoration-none">Flutter: Basic App Example | How to create a flutter app</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_variables_and_datatypes/" class="text-decoration-none">Variables and Datatypes in Dart</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/about/" class="text-decoration-none">About FlutterrettulF</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart-hello-world/" class="text-decoration-none">Dart Hello World Program</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_overview/" class="text-decoration-none">Dart Overview</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/flutter_spinkit_plugin/" class="text-decoration-none">Flutter: Spinkit Plugin | Collection of animated loading indicators</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_operators/" class="text-decoration-none">Operators in Dart</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter%20buttons/2022/09/09/flutter-elevated-button-examples.html" class="text-decoration-none">Flutter: Elevated Button Examples.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/how-to-use-willpopscope-widget-in-flutter-with-examples.html" class="text-decoration-none">How to use WillPopScope widget in Flutter with examples.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html" class="text-decoration-none">How to disable the backbutton in Flutter using WillPopScope.</a>
+          </li>
+          
+        </ul>
+      
+    </div>
+    <div class="col-md-4 col-lg-3 mb-3">
+     
+    </div>
+
+  </div>
 </main>
-  <footer class="border-top">
+   
+   
+    <footer class="border-top">
 
-<div class="container">
-  <div class="row row-cols-5 pb-2 pt-5 my-2 ">
-    <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
-      <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-        <img src="/assets/brand/logo_2.webp" width="70">
-      </a>
-      <p class="text-muted">flutterrettulf@gmail.com </p>
-      <p class="text-muted">© 2022 </p>
-      <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
-    </div>
+    <div class="container">
+      <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+        <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="/brand/logo_2.webp" width="70">
+          </a>
+          <p class="text-muted">flutterrettulf@gmail.com </p>
+          <p class="text-muted">© 2022 </p>
+          <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
+        </div>
+        
+        
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/categories/" class="nav-link p-0 text-muted">Top Categories</a></h5>
+          <ul class="nav flex-column">
+         
 
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-      <h5>Top Tags</h5>
-      <ul class="nav flex-column">
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/dart-tutorials/" class="nav-link p-0 text-muted">Dart Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter/" class="nav-link p-0 text-muted">Flutter</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-buttons/" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-column/" class="nav-link p-0 text-muted">Flutter Column</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-listview/" class="nav-link p-0 text-muted">Flutter ListView</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-plugins/" class="nav-link p-0 text-muted">Flutter Plugins</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-tutorials/" class="nav-link p-0 text-muted">Flutter Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-widgets/" class="nav-link p-0 text-muted">Flutter Widgets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/json/" class="nav-link p-0 text-muted">JSON</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/navigation/" class="nav-link p-0 text-muted">Navigation</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/categories/" class="nav-link p-0 text-muted">All Categories</a></li>
+    
+          </ul>
+        </div>
         
-        <li class="nav-item mb-2"><a href="/tag/assets" class="nav-link p-0 text-muted">Assets</a></li>
         
-        <li class="nav-item mb-2"><a href="/tag/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
         
-        <li class="nav-item mb-2"><a href="/tag/image-assets" class="nav-link p-0 text-muted">Image Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/font-assets" class="nav-link p-0 text-muted">Font Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/willpopscope" class="nav-link p-0 text-muted">WillPopScope</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/double-back-to-exit-app" class="nav-link p-0 text-muted">Double Back To Exit App</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag/disable-back-button" class="nav-link p-0 text-muted">Disable Back Button</a></li>
-        
-        <li class="nav-item mb-2"><a href="/tag" class="nav-link p-0 text-muted">All Tags</a></li>
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/tags/" class="nav-link p-0 text-muted">Top Tags</a></h5>
+          <ul class="nav flex-column">
+         
 
-      </ul>
-    </div>
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/android/" class="nav-link p-0 text-muted">android</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/animatedindicator/" class="nav-link p-0 text-muted">AnimatedIndicator</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/api-request/" class="nav-link p-0 text-muted">API Request</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/assets/" class="nav-link p-0 text-muted">Assets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/audio/" class="nav-link p-0 text-muted">audio</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/basicapp/" class="nav-link p-0 text-muted">BasicApp</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/beginner/" class="nav-link p-0 text-muted">Beginner</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/column-widget/" class="nav-link p-0 text-muted">Column widget</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/columns/" class="nav-link p-0 text-muted">Columns</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/customize-scrolling/" class="nav-link p-0 text-muted">Customize scrolling</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 text-muted">All Tags</a></li>
+    
+          </ul>
+        </div>
+        
+        
 
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Top Categories</h5>
-      <ul class="nav flex-column">
-        
-        <li class="nav-item mb-2"><a href="/category/static-assets" class="nav-link p-0 text-muted">Static Assets</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/navigation" class="nav-link p-0 text-muted">Navigation</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-buttons" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-column" class="nav-link p-0 text-muted">Flutter Column</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/flutter-listview" class="nav-link p-0 text-muted">Flutter ListView</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category/json" class="nav-link p-0 text-muted">JSON</a></li>
-        
-        <li class="nav-item mb-2"><a href="/category" class="nav-link p-0 text-muted">All Categories</a></li>
-
-      </ul>
-    </div>
-
-    <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
-
-      <h5>Links</h5>
-      <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
-        <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted hover"><span class="bi bi-facebook me-2"></span>Facebook</a></li>-->
-       <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
-        <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-twitter me-2"></span>Twitter</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><span class="bi bi-mastodon me-2"></span>Mastodon</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted"><img src="/assets/img/dev.png " class="me-2" width="17">Dev.to</a></li>-->
-        <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
-        <li class="nav-item mb-2"><a href="/feed.xml" class="nav-link p-0 text-muted"><span class="bi bi-rss me-2"></span>RSS Feed</a></li> 
-        <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
-      
-      </ul>
-    </div>
-  </div>
-</div>
-<script type="text/javascript">
-            document.querySelectorAll("table").forEach(table => {
-                table.classList.add("table")
-                table.classList.add("table-striped")
-                table.classList.add("table-bordered")
-                table.classList.add("table-sm")
-            })
-        </script>
-</footer> 
-
-
-<!-- <div class="p-4">
-  <h4 class="fst-italic">Elsewhere</h4>
-  <ol class="list-unstyled">
-    <li><a href="#">GitHub</a></li>
-    <li><a href="#">Twitter</a></li>
-    <li><a href="#">Facebook</a></li>
-  </ol>
-</div> -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-
-    <div class="offcanvas-body p-0">
-      <div class=" list-group list-group-flush border-bottom scrollarea "> 
-        
-      
-        
-        
-      
-        
-        
-        <a href="/flutter_plugins/flutter_spinkit_plugin/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Flutter: Spinkit Plugin | Collection of animated loading indicators</div>
-          </div>
-        </a>
-        
-        <a href="/flutter_plugins/dio_http_client/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight  active " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> Dio | Powerfull Http Client for flutter</div>
-          </div>
-        </a>
-        
-        <a href="/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/" class="list-group-item list-group-item-light  list-group-item-action  py-3 lh-tight " aria-current="true">
-          <div class="d-flex w-100 align-items-center justify-content-between">
-            <div class="mb-1"> just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</div>
-          </div>
-        </a>
-           
-        
-        
-      
-        
-        
-      
-        
-           
+    
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+    
+          <h5>Discover FlutterrettulF</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
+            
+           <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+            
+            <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+            
+            <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-  <script>
-    function check(){
-      const checkboxes = document.querySelectorAll('input[type=checkbox]');
-              checkboxes.forEach((checkbox) => {
-                if (checkbox.getAttribute('data-is-correct') === 'true') {
-                  checkbox.parentElement.classList.add('list-group-item-success');
-                } else {
-                  checkbox.parentElement.classList.add('list-group-item-danger');
-                }
-              });
-    }
-    document.getElementById('check-btn').addEventListener('click', check);
-  </script>
-  </body>
+    <script type="text/javascript">
+                document.querySelectorAll("table").forEach(table => {
+                    table.classList.add("table")
+                    table.classList.add("table-striped")
+                    table.classList.add("table-bordered")
+                    table.classList.add("table-sm")
+                })
+            </script>
+    </footer> 
+    
+    
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+     crossorigin="anonymous"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="1088001170"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6266336353439034"
+     data-ad-slot="5124283255"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+
+    </head>
+    <body>       
+        <div id="content">
+         
+        </div>
+    </body>
 </html>

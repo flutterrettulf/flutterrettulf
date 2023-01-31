@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Disable Back Button on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/disable-back-button/</link>
+    <description>Recent content in Disable Back Button on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/disable-back-button/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to disable the backbutton in Flutter using WillPopScope.</title>
+      <link>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html</link>
+      <pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://flutterrettulf.com/navigation/2022/09/03/how-to-disable-backbutton-in-flutter-using-willpopscope.html</guid>
+      <description>Introduction WillPopScope class in Flutter is used to create a Widget that registers a callback to veto attempts by the user to dismiss the enclosing ModalRoute. This is useful when you want to prevent the user from accidentally exiting the app or navigating back to the previous screen.
+If you want to know more about the WillPopScope widget, you can read the article How to use the WillPopScope widget in Flutter In this article, we will see how to disable the backbutton in Flutter using the WillPopScope widget.</description>
+    </item>
+    
+  </channel>
+</rss>
