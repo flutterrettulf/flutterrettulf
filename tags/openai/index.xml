@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>openai on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</title>
+    <link>https://flutterrettulf.com/tags/openai/</link>
+    <description>Recent content in openai on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 03 Feb 2023 23:39:58 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/tags/openai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3</title>
+      <link>https://flutterrettulf.com/posts/intro_to_open_ai_api_chat_gpt_codex/</link>
+      <pubDate>Fri, 03 Feb 2023 23:39:58 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/posts/intro_to_open_ai_api_chat_gpt_codex/</guid>
+      <description>ChatGPT is a state-of-the-art AI language model created by OpenAI that has taken the world by storm. It has the ability to understand and generate human-like text, making it a powerful tool for various applications such as chatbots, language translation, and more. In fact, this paragraph was written by ChatGPT. The model is trained on a large dataset of human conversations, and it can be used to generate text in a variety of different languages.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index, follow" >
+        <link rel="canonical" href="https://flutterrettulf.com/posts/intro_to_open_ai_api_chat_gpt_codex/">
+        <link href="/css/blog.css" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+        <link rel="manifest" href="/sitemanifest.json">        
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKQ47FWX29"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GKQ47FWX29');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
+        crossorigin="anonymous"></script>
+
+        <meta property="og:title" content="Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3" />
+<meta property="og:description" content="This article provides a comprehensive overview of the basics of OpenAI API, ChatGPT, and GPT-3. It explains what these technologies are, how they work, and their potential applications in a clear and easy-to-understand manner. This guide is perfect for anyone looking to gain a better understanding of these cutting-edge AI technologies and their impact on the future." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://flutterrettulf.com/posts/intro_to_open_ai_api_chat_gpt_codex/" /><meta property="og:image" content="https://flutterrettulf.com/post_images/chat_gpt_1.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-03T23:39:58+05:30" />
+<meta property="article:modified_time" content="2023-02-03T23:39:58+05:30" />
+
+        <meta itemprop="name" content="Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3">
+<meta itemprop="description" content="This article provides a comprehensive overview of the basics of OpenAI API, ChatGPT, and GPT-3. It explains what these technologies are, how they work, and their potential applications in a clear and easy-to-understand manner. This guide is perfect for anyone looking to gain a better understanding of these cutting-edge AI technologies and their impact on the future."><meta itemprop="datePublished" content="2023-02-03T23:39:58+05:30" />
+<meta itemprop="dateModified" content="2023-02-03T23:39:58+05:30" />
+<meta itemprop="wordCount" content="1204"><meta itemprop="image" content="https://flutterrettulf.com/post_images/chat_gpt_1.png">
+<meta itemprop="keywords" content="openai,gpt3,codex,chatbot,api," />
+        <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://flutterrettulf.com/post_images/chat_gpt_1.png"/>
+
+<meta name="twitter:title" content="Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3"/>
+<meta name="twitter:description" content="This article provides a comprehensive overview of the basics of OpenAI API, ChatGPT, and GPT-3. It explains what these technologies are, how they work, and their potential applications in a clear and easy-to-understand manner. This guide is perfect for anyone looking to gain a better understanding of these cutting-edge AI technologies and their impact on the future."/>
+
+        <title>
+             Unpacking the basics a guide to open ai api, chat gpt, and gpt 3 | FlutterrettulF 
+        </title>
+        
+    </head>
+  
+  <body>   
+    <nav class="navbar navbar-expand-md navbar-light fixed-top border-bottom bg-white">
+    <div class="container-fluid">
+      
+
+      <a class="navbar-brand" href="/"><img src="/brand/logo_2.svg" width="30"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="bi bi-three-dots-vertical"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/dart_tutorials/">Dart Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_tutorials/">Flutter Crash Course</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link text-decoration-none" aria-current="page" href="/flutter_plugins/">Popular Flutter Plugins</a>
+                    </li>
+                
+            
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none " aria-current="page" href="/categories/">Categories</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link text-decoration-none" aria-current="page" href="/tags/">Tags</a>
+            </li>
+        </ul>
+        
+        
+      </div>
+    </div>
+  </nav>
+    
+<main class="container-fluid">
+ 
+  <div class="row ">
+    <div class="col-md-4 col-lg-3 d-none d-md-block"><div class="bg-light rounded p-3 sticky-top" style="top: 5rem;">
+        <p class="h5 fw-bold">The Index of Insight</p>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#open-ai-who-are-they">Open AI: Who are they?</a></li>
+    <li><a href="#why-open-ai-was-created">Why Open AI was created?</a></li>
+    <li><a href="#generative-models">Generative Models</a></li>
+    <li><a href="#what-is-gpt-3">What is GPT-3?</a></li>
+    <li><a href="#what-is-an-ai-model">What is an AI Model?</a></li>
+    <li><a href="#the-openai-api-series">The OpenAI API series</a></li>
+  </ul>
+</nav>
+          <hr >
+          <p class="h5 my-2">Share</p>
+          <div class="d-flex justify-content-between align-items-center ">
+            <div class="btn-group ">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&text=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&title=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&title=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+            </div>
+          </div>
+      </div></div>
+    <div class="col-md-8 col-lg-6 ">
+
+    <article >
+      <header >
+        <h1 class="fw-bold mb-4">
+          Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3
+        </h1>
+        
+        
+        <picture class="w-100">
+          
+          <source srcset="/post_images/chat_gpt_1_hu2ae498501f7861130fb0a6e679b11cd5_870314_200x0_resize_box_3.png" media="(max-width: 200px)">
+          
+          
+          <source srcset="/post_images/chat_gpt_1_hu2ae498501f7861130fb0a6e679b11cd5_870314_400x0_resize_box_3.png" media="(max-width: 400px)">
+          
+          
+          <source srcset="/post_images/chat_gpt_1_hu2ae498501f7861130fb0a6e679b11cd5_870314_600x0_resize_box_3.png" media="(max-width: 600px)">
+          
+          
+          <source srcset="/post_images/chat_gpt_1_hu2ae498501f7861130fb0a6e679b11cd5_870314_800x0_resize_box_3.png" media="(max-width: 800px)">
+          
+          <img src="/post_images/chat_gpt_1.png" alt="post_images/chat_gpt_1.png" class="img-fluid rounded mb-4" >
+        </picture>
+                
+      </header>
+      <div class="col-12 d-block d-md-none"><div class="bg-light rounded p-3 mb-4" >
+            <p class="h5 fw-bold">The Index of Insight</p>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#open-ai-who-are-they">Open AI: Who are they?</a></li>
+    <li><a href="#why-open-ai-was-created">Why Open AI was created?</a></li>
+    <li><a href="#generative-models">Generative Models</a></li>
+    <li><a href="#what-is-gpt-3">What is GPT-3?</a></li>
+    <li><a href="#what-is-an-ai-model">What is an AI Model?</a></li>
+    <li><a href="#the-openai-api-series">The OpenAI API series</a></li>
+  </ul>
+</nav>      
+          </div></div>
+      <div class="nested-copy-line-height lh-copy f4 nested-links">
+        <p>ChatGPT is a state-of-the-art AI language model created by OpenAI that has taken the world by storm. It has the ability to understand and generate human-like text, making it a powerful tool for various applications such as chatbots, language translation, and more. In fact, this paragraph was written by ChatGPT. The model is trained on a large dataset of human conversations, and it can be used to generate text in a variety of different languages. It writes poems, stories, novels, programs, business strategies, and even more.</p>
+<p>With all the fuzz around ChatGPT and the AI revolution, I thought it would be a good idea to explains some of the basics which are mostly left out of majority of the articles. I will try to explain the basics of Generative Models, GPT-3, and Open AI.</p>
+<h2 id="open-ai-who-are-they">Open AI: Who are they?</h2>
+<p><strong>OpenAI</strong> is a wonderful organization that is dedicated to advancing the field of artificial intelligence. They are a combination of a non-profit and a for-profit company, with the goal of developing AI that is safe and beneficial for humanity (friendly AI). In other words, they are trying to create the hypothetical Artitficial General Intelligence (AGI), which will be on our side(humans), when <strong>Skynet</strong> becomes a reality wink smiley.The organization was founded in San Francisco in 2015 by Sam Altman, Reid Hoffman, Jessica Livingston, Elon Musk, Ilya Sutskever, Peter Thiel and others. Microsoft is reported to be investing <strong>11 million dollars</strong> in Open AI as of January 2023. We are probably going to see some of the amazing features of ChatGPT deeply integrated into Microsoft products in the near future.</p>
+<h2 id="why-open-ai-was-created">Why Open AI was created?</h2>
+<p>OpenAI was created to help solve the AI alignment problem. The AI alignment problem is the problem of ensuring that AI systems are aligned with human values. In other words, we want to make sure that AI systems are safe and beneficial for humanity. OpenAI is trying to solve this problem by creating friendly AI that is safe and beneficial for humanity. They are also trying to solve the AI safety problem, which is the problem of ensuring that AI systems are safe and beneficial for humanity. OpenAI is trying to solve this problem by creating friendly AI that is safe and beneficial for humanity.</p>
+<p>Elon Musk and Sam Altman has stated that they are partly motivated by the concerns about AI Safety. They also mentioned their concerns about existensial risk from artifical general intelligence.</p>
+<p>Vishal Sikka, former CEO of Infosys, stated that an &ldquo;openness&rdquo; where the endeavor would &ldquo;produce results generally in the greater interest of humanity&rdquo; was a fundamental requirement for his support, and that OpenAI &ldquo;aligns very nicely with our long-held values&rdquo; and their &ldquo;endeavor to do purposeful work&rdquo;.</p>
+<p>Ai is going to be a huge part of our future, and we need to make sure that it is safe and beneficial for humanity.</p>
+<h2 id="generative-models">Generative Models</h2>
+<p><code>Generative models</code> are a type of <code>machine learning</code> algorithm, that can generate new data based on what it has learned from already existing data. These algorithms generate new data by learning patterns and relationships within the data, and then using this knowledge to create new, that is similar to the original data.</p>
+<p>For example, a <code>generative model</code> trained on images of faces could then generate new, unique faces that have similar features to the faces it was trained on. These models can be used for a variety of tasks, such as generating images, music, text, and even 3D models.</p>
+<p>In essence, <code>generative models</code> attempt to learn the underlying structure of the data they are given and use that structure to create new, related data. This opens up a wide range of possibilities and applications, from creating new works of art to generating synthetic data for training other machine learning models.</p>
+<h2 id="what-is-gpt-3">What is GPT-3?</h2>
+<p><code>GPT-3</code> is a powerful AI language model developed by <code>OpenAI</code>. It has the ability to generate text that is very similar to what a human might write. This means that it can understand the context of a conversation, write coherent and meaningful sentences, and even generate entire articles or stories.</p>
+<p>Think of <code>GPT-3</code> as a really smart friend who can write anything you want based on a prompt you give them. You can ask it to write a story, answer a question, or even write a poem. The amazing thing is that GPT-3 can do this without being explicitly taught how to write in a certain way. It just learns from a huge amount of text data and figures out the patterns and relationships on its own.</p>
+<p><code>GPT-3</code> has the potential to revolutionize the way we interact with computers and the way we access information. In the future, it may be used for things like automated news writing, customer service, and even creative writing. It&rsquo;s a cutting-edge technology that is changing the landscape of AI and has exciting implications for the future.</p>
+<h2 id="what-is-an-ai-model">What is an AI Model?</h2>
+<p>An AI model is a computer program that has been trained to perform specific tasks or make predictions based on input data. Essentially, it&rsquo;s like creating a digital version of a human brain to solve problems or make decisions.</p>
+<p>To train an AI model, you feed it a large amount of data and then teach it to recognize patterns and relationships within that data. This process is called &ldquo;training&rdquo;. Once the model has been trained, it can then use that knowledge to make predictions or perform tasks based on new input data.</p>
+<p>For example, you could train an AI model to identify objects in pictures. When you show it a new picture, it would use the knowledge it learned during training to identify the objects in the picture and classify them based on what it learned.</p>
+<p>AI models can be used for a wide range of applications, from image and speech recognition to language translation and even autonomous vehicles. They have the potential to revolutionize the way we interact with technology and solve problems in various industries.</p>
+<h2 id="the-openai-api-series">The OpenAI API series</h2>
+<p>OpenAI provides the powerfull GPT-3 model and its descendants as an API. This means that you can use the model in your own applications. The API is very easy to use.
+Some of the servises offered by Open AI API are:</p>
+<ul>
+<li><strong>Completion</strong>: Generate text from a prompt.</li>
+<li><strong>Embedding</strong>: Get the embedding of a text. The embedding is a vector representation of the text. It can be used to compare the similarity of two texts(Search, Classification etc&hellip;).</li>
+<li><strong>Fine-tuning</strong>: Fine-tune the model on your own data. This is a very powerful feature that allows you to train the model on your own data and use it for your own applications.</li>
+<li><strong>Image generation</strong>: Generate images from a prompt. Edit or Generate Variants of an image.</li>
+<li><strong>Moderation</strong>: Moderate text for profanity, offensive language, and other unwanted content.</li>
+</ul>
+<p>The OpenAI series is a series of articles that I am writing to help developers understand how to use the OpenAI API. The series will cover topics such as how to use the API, how to fine tune models, and how to use the <code>openai</code> package in python. Stay tuned for more articles in the series! Follow us on <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow noopener noreferrer" >LinkedIn</a>
+ to get notified when new articles are published.</p>
+
+      </div>
+    </article>
+    <div class="col-12 mt-4  bg-light rounded p-3 text-dark">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="btn-group ">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&text=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&title=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&title=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col-md-4 col-lg-3">
+    <aside class=" bg-light rounded p-2 sticky-top mt-3 mt-md-0" style="top: 5rem;">
+      <p>Sponsored</p>
+       
+      <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-6266336353439034"
+      data-ad-slot="5124283255"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+
+     </aside>
+ 
+ 
+  </div>
+  </div>
+  
+  <div class="row mt-4 pt-4 bg-light">
+    <div class="col-md-0 col-lg-3 mb-3 ">
+      <div class="card border-0" >
+        <div class="card-body">
+          <h5 class="card-title fw-bold h1 text-primary">We are on LinkedIn</h5>
+                  We are committed to providing valuable and engaging content about flutter,dart and programming in general, to our readers. Follow <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow" style="font-weight: 800;">FlutterrettulF on LinkedIn</a> to stay up-to-date on the latest updates and insights from our team.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 col-lg-9 " >
+     
+        
+          
+      
+      
+        <p class="h3 ">Related Articles</p>
+        <ul class="list-unstyled">
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter-expanded-widget/" class="text-decoration-none">Flutter: Expanded/Flexible Widget explanied With examples</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/dart_tutorials/dart_list_methods/" class="text-decoration-none">Exploring the Powerful List Methods of Dart</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/json/2023/01/04/what-is-json.html" class="text-decoration-none">Using JSON for Data Storage and Exchange</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter_list_view_explained_with_examples/" class="text-decoration-none">Understanding and Using ListViews in Flutter: Examples and Best Practices</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter%20listview/2023/01/01/how-to-render-list-inside-list-flutter.html" class="text-decoration-none">Flutter Pro Tip: Rendering ListView inside another ListView or Column in Flutter</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter-column-widget-explained-with-examples/" class="text-decoration-none">Flutter Columns Explained: From Basics to Advanced Use Cases</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter%20column/2022/12/31/how-to-make-a-column-widget-scrollable-in-flutter.html" class="text-decoration-none">Flutter Scrollable Columns: The Complete Guide</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/just_audio_plugin_for_flutter_android_ios_macos_web_linux_windows/" class="text-decoration-none">just_audio : An audio player plugin for Android, iOS, macOS, web, Linux and Windows.</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_plugins/dio_http_client/" class="text-decoration-none">Dio | Powerfull Http Client for flutter</a>
+          </li>
+          
+          <li  class="mb-2">
+            <a href="/flutter_tutorials/flutter_basic_app_example/" class="text-decoration-none">Flutter: Basic App Example | How to create a flutter app</a>
+          </li>
+          
+        </ul>
+      
+    </div>
+    <div class="col-md-4 col-lg-3 mb-3">
+   
+ 
+    </div>
+
+  </div>
+</main>
+   
+   
+    <footer class="border-top">
+
+    <div class="container">
+      <div class="row row-cols-5 pb-2 pt-5 my-2 ">
+        <div class="col-12 col-md-12 col-lg-3 mb-5 mb-md-5 mb-lg-0">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="/brand/logo_2.webp" width="70">
+          </a>
+          <p class="text-muted">flutterrettulf@gmail.com </p>
+          <p class="text-muted">© 2022 </p>
+          <p><small>Flutter and the related logo are trademarks of Google LLC. We are not endorsed by or affiliated with Google LLC.</small></p>
+        </div>
+        
+        
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/categories/" class="nav-link p-0 text-muted">Top Categories</a></h5>
+          <ul class="nav flex-column">
+         
+
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/api/" class="nav-link p-0 text-muted">api</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/chatbot/" class="nav-link p-0 text-muted">chatbot</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/codex/" class="nav-link p-0 text-muted">codex</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/dart-tutorials/" class="nav-link p-0 text-muted">Dart Tutorials</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter/" class="nav-link p-0 text-muted">Flutter</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-buttons/" class="nav-link p-0 text-muted">Flutter Buttons</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-column/" class="nav-link p-0 text-muted">Flutter Column</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-listview/" class="nav-link p-0 text-muted">Flutter ListView</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-plugins/" class="nav-link p-0 text-muted">Flutter Plugins</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/categories/flutter-tutorials/" class="nav-link p-0 text-muted">Flutter Tutorials</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/categories/" class="nav-link p-0 text-muted">All Categories</a></li>
+    
+          </ul>
+        </div>
+        
+        
+        
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+          <h5><a href="/tags/" class="nav-link p-0 text-muted">Top Tags</a></h5>
+          <ul class="nav flex-column">
+         
+
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/android/" class="nav-link p-0 text-muted">android</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/animatedindicator/" class="nav-link p-0 text-muted">AnimatedIndicator</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/api/" class="nav-link p-0 text-muted">api</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/api-request/" class="nav-link p-0 text-muted">API Request</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/assets/" class="nav-link p-0 text-muted">Assets</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/audio/" class="nav-link p-0 text-muted">audio</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/basicapp/" class="nav-link p-0 text-muted">BasicApp</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/beginner/" class="nav-link p-0 text-muted">Beginner</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/chatbot/" class="nav-link p-0 text-muted">chatbot</a></li>
+                
+            
+                
+                <li class="nav-item mb-2"><a href="/tags/codex/" class="nav-link p-0 text-muted">codex</a></li>
+                
+            
+            <li class="nav-item mb-2"><a href="/tags/" class="nav-link p-0 text-muted">All Tags</a></li>
+    
+          </ul>
+        </div>
+        
+        
+
+    
+        <div class="col-12 col-md-3 mb-5 mb-md-5 mb-lg-0">
+    
+          <h5>Discover FlutterrettulF</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="https://github.com/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-github me-2"></span>Github</a></li>
+            <li class="nav-item mb-2"><a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" class="nav-link p-0 text-muted" rel="nofollow"> <span class="bi bi-linkedin me-2"></span>LinkedIn</a></li>
+            
+           <li class="nav-item mb-2"><a href="https://www.instagram.com/flutterrettulf/" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-instagram me-2"></span>Instagram</a></li> 
+            
+            <li class="nav-item mb-2"><a href="https://medium.com/@flutterrettulf" class="nav-link p-0 text-muted" rel="nofollow"><span class="bi bi-medium me-2"></span>Medium</a></li>  
+            
+            <li class="nav-item mb-2"><a href="/sitemap.xml" class="nav-link p-0 text-muted"><span class="bi bi-diagram-3 me-2"></span>Sitemap</a></li> 
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+                document.querySelectorAll("table").forEach(table => {
+                    table.classList.add("table")
+                    table.classList.add("table-striped")
+                    table.classList.add("table-bordered")
+                    table.classList.add("table-sm")
+                })
+            </script>
+    </footer> 
+    
+    
+    
+    
+
+
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+   
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+       
+
+    </head>
+    <body>       
+        <div id="content">
+         
+        </div>
+    </body>
+</html>
