@@ -157,10 +157,10 @@ Dart also forms the foundation of Flutter . Dart provides the language and runti
     
     <item>
       <title>Dart Hello World Program</title>
-      <link>https://flutterrettulf.com/dart_tutorials/dart-hello-world/</link>
+      <link>https://flutterrettulf.com/dart_tutorials/dart_hello_world/</link>
       <pubDate>Wed, 19 Oct 2022 15:00:00 +0530</pubDate>
       
-      <guid>https://flutterrettulf.com/dart_tutorials/dart-hello-world/</guid>
+      <guid>https://flutterrettulf.com/dart_tutorials/dart_hello_world/</guid>
       <description>TL;DR Install Dart SDK from here . Create a file named hello_world.dart and add the following code: void main() { print(&amp;#39;Hello World&amp;#39;); } Run the following command to compile the code: dart hello_world.dart You should see the following output: Hello World Download &amp;amp; Install the Dart SDK The Dart Software Development Kit (SDK) is a set of libraries and tools that allow you to develop Dart applications. You can use a package manager to easily install and update a stable channel Dart SDK.</description>
     </item>
     
