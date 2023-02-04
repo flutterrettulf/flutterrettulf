@@ -6,7 +6,17 @@
     <description>Recent content in Dart Tutorials on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Jan 2023 15:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/categories/dart-tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Feb 2023 11:03:43 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/categories/dart-tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to wait for the completion of multiple futures in dart</title>
+      <link>https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/</link>
+      <pubDate>Sat, 04 Feb 2023 11:03:43 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/</guid>
+      <description>Asynchronous Programming in Dart Asynchronous programming is a method of writing code, that allows the program to run multiple tasks in the background without blocking the main thread. This means that the program can continue to respond to user requests, while it is waiting for the completion of a long running task.
+For example, consider a mobile application that downloads a file from the internet. In a synchronous program, the program will wait for the file to download before it can respond to user requests.</description>
+    </item>
+    
     <item>
       <title>Exploring the Powerful List Methods of Dart</title>
       <link>https://flutterrettulf.com/dart_tutorials/dart_list_methods/</link>

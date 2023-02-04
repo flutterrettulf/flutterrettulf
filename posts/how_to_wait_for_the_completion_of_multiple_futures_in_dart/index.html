@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index, follow" >
-        <link rel="canonical" href="https://flutterrettulf.com/posts/intro_to_open_ai_api_chat_gpt_codex/">
+        <link rel="canonical" href="https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/">
         <link href="/css/blog.css" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
@@ -29,26 +29,24 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6266336353439034"
         crossorigin="anonymous"></script>
 
-        <meta property="og:title" content="Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3" />
-<meta property="og:description" content="This article provides a comprehensive overview of the basics of OpenAI API, ChatGPT, and GPT-3. It explains what these technologies are, how they work, and their potential applications in a clear and easy-to-understand manner. This guide is perfect for anyone looking to gain a better understanding of these cutting-edge AI technologies and their impact on the future." />
+        <meta property="og:title" content="How to wait for the completion of multiple futures in dart" />
+<meta property="og:description" content="In this tutorial, we will learn how to wait for the completion of multiple futures in dart/Flutter. We will use the Future.wait() method to wait for the completion of multiple futures." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://flutterrettulf.com/posts/intro_to_open_ai_api_chat_gpt_codex/" /><meta property="og:image" content="https://flutterrettulf.com/post_images/chat_gpt_1.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-02-03T23:39:58+05:30" />
-<meta property="article:modified_time" content="2023-02-03T23:39:58+05:30" />
+<meta property="og:url" content="https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-04T11:03:43+05:30" />
+<meta property="article:modified_time" content="2023-02-04T11:03:43+05:30" />
 
-        <meta itemprop="name" content="Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3">
-<meta itemprop="description" content="This article provides a comprehensive overview of the basics of OpenAI API, ChatGPT, and GPT-3. It explains what these technologies are, how they work, and their potential applications in a clear and easy-to-understand manner. This guide is perfect for anyone looking to gain a better understanding of these cutting-edge AI technologies and their impact on the future."><meta itemprop="datePublished" content="2023-02-03T23:39:58+05:30" />
-<meta itemprop="dateModified" content="2023-02-03T23:39:58+05:30" />
-<meta itemprop="wordCount" content="1204"><meta itemprop="image" content="https://flutterrettulf.com/post_images/chat_gpt_1.png">
-<meta itemprop="keywords" content="openai,gpt3,codex,chatbot,api," />
-        <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://flutterrettulf.com/post_images/chat_gpt_1.png"/>
-
-<meta name="twitter:title" content="Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3"/>
-<meta name="twitter:description" content="This article provides a comprehensive overview of the basics of OpenAI API, ChatGPT, and GPT-3. It explains what these technologies are, how they work, and their potential applications in a clear and easy-to-understand manner. This guide is perfect for anyone looking to gain a better understanding of these cutting-edge AI technologies and their impact on the future."/>
+        <meta itemprop="name" content="How to wait for the completion of multiple futures in dart">
+<meta itemprop="description" content="In this tutorial, we will learn how to wait for the completion of multiple futures in dart/Flutter. We will use the Future.wait() method to wait for the completion of multiple futures."><meta itemprop="datePublished" content="2023-02-04T11:03:43+05:30" />
+<meta itemprop="dateModified" content="2023-02-04T11:03:43+05:30" />
+<meta itemprop="wordCount" content="587">
+<meta itemprop="keywords" content="" />
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to wait for the completion of multiple futures in dart"/>
+<meta name="twitter:description" content="In this tutorial, we will learn how to wait for the completion of multiple futures in dart/Flutter. We will use the Future.wait() method to wait for the completion of multiple futures."/>
 
         <title>
-             Unpacking the basics a guide to open ai api, chat gpt, and gpt 3 | FlutterrettulF 
+             How to wait for the completion of multiple futures in dart | FlutterrettulF 
         </title>
         
     </head>
@@ -102,22 +100,20 @@
         <p class="h5 fw-bold">The Index of Insight</p>
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#open-ai-who-are-they">Open AI: Who are they?</a></li>
-    <li><a href="#why-open-ai-was-created">Why Open AI was created?</a></li>
-    <li><a href="#generative-models">Generative Models</a></li>
-    <li><a href="#what-is-gpt-3">What is GPT-3?</a></li>
-    <li><a href="#what-is-an-ai-model">What is an AI Model?</a></li>
-    <li><a href="#the-openai-api-series">The OpenAI API series</a></li>
+    <li><a href="#asynchronous-programming-in-dart">Asynchronous Programming in Dart</a></li>
+    <li><a href="#futurewait-method">Future.wait() method</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>
           <hr >
           <p class="h5 my-2">Share</p>
           <div class="d-flex justify-content-between align-items-center ">
             <div class="btn-group ">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&text=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&title=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
-              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&title=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fposts%2fhow_to_wait_for_the_completion_of_multiple_futures_in_dart%2f" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fhow_to_wait_for_the_completion_of_multiple_futures_in_dart%2f&text=How%20to%20wait%20for%20the%20completion%20of%20multiple%20futures%20in%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-twitter"></i></a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fposts%2fhow_to_wait_for_the_completion_of_multiple_futures_in_dart%2f&title=How%20to%20wait%20for%20the%20completion%20of%20multiple%20futures%20in%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fhow_to_wait_for_the_completion_of_multiple_futures_in_dart%2f&title=How%20to%20wait%20for%20the%20completion%20of%20multiple%20futures%20in%20dart" class="btn  btn-outline-secondary" target="_blank"><i class="bi bi-reddit"></i></a>
             </div>
           </div>
       </div></div>
@@ -132,85 +128,100 @@
     <article >
       <header >
         <h1 class="fw-bold mb-4">
-          Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3
+          How to wait for the completion of multiple futures in dart
         </h1>
         
-        
-        <picture class="w-100">
-          
-          <source srcset="/post_images/chat_gpt_1_hu2ae498501f7861130fb0a6e679b11cd5_870314_200x0_resize_box_3.png" media="(max-width: 200px)">
-          
-          
-          <source srcset="/post_images/chat_gpt_1_hu2ae498501f7861130fb0a6e679b11cd5_870314_400x0_resize_box_3.png" media="(max-width: 400px)">
-          
-          
-          <source srcset="/post_images/chat_gpt_1_hu2ae498501f7861130fb0a6e679b11cd5_870314_600x0_resize_box_3.png" media="(max-width: 600px)">
-          
-          
-          <source srcset="/post_images/chat_gpt_1_hu2ae498501f7861130fb0a6e679b11cd5_870314_800x0_resize_box_3.png" media="(max-width: 800px)">
-          
-          <img src="/post_images/chat_gpt_1.png" alt="post_images/chat_gpt_1.png" class="img-fluid rounded mb-4" >
-        </picture>
                 
       </header>
       <div class="col-12 d-block d-md-none"><div class="bg-light rounded p-3 mb-4" >
             <p class="h5 fw-bold">The Index of Insight</p>
               <nav id="TableOfContents">
   <ul>
-    <li><a href="#open-ai-who-are-they">Open AI: Who are they?</a></li>
-    <li><a href="#why-open-ai-was-created">Why Open AI was created?</a></li>
-    <li><a href="#generative-models">Generative Models</a></li>
-    <li><a href="#what-is-gpt-3">What is GPT-3?</a></li>
-    <li><a href="#what-is-an-ai-model">What is an AI Model?</a></li>
-    <li><a href="#the-openai-api-series">The OpenAI API series</a></li>
+    <li><a href="#asynchronous-programming-in-dart">Asynchronous Programming in Dart</a></li>
+    <li><a href="#futurewait-method">Future.wait() method</a></li>
+    <li><a href="#summary">Summary</a></li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>      
           </div></div>
       <div class="nested-copy-line-height lh-copy f4 nested-links">
-        <p>ChatGPT is a state-of-the-art AI language model created by OpenAI that has taken the world by storm. It has the ability to understand and generate human-like text, making it a powerful tool for various applications such as chatbots, language translation, and more. In fact, this paragraph was written by ChatGPT. The model is trained on a large dataset of human conversations, and it can be used to generate text in a variety of different languages. It writes poems, stories, novels, programs, business strategies, and even more.</p>
-<p>With all the fuzz around ChatGPT and the AI revolution, I thought it would be a good idea to explains some of the basics which are mostly left out of majority of the articles. I will try to explain the basics of Generative Models, GPT-3, and Open AI.</p>
-<h2 id="open-ai-who-are-they">Open AI: Who are they?</h2>
-<p><strong>OpenAI</strong> is a wonderful organization that is dedicated to advancing the field of artificial intelligence. They are a combination of a non-profit and a for-profit company, with the goal of developing AI that is safe and beneficial for humanity (friendly AI). In other words, they are trying to create the hypothetical Artitficial General Intelligence (AGI), which will be on our side(humans), when <strong>Skynet</strong> becomes a reality wink smiley.The organization was founded in San Francisco in 2015 by Sam Altman, Reid Hoffman, Jessica Livingston, Elon Musk, Ilya Sutskever, Peter Thiel and others. Microsoft is reported to be investing <strong>11 million dollars</strong> in Open AI as of January 2023. We are probably going to see some of the amazing features of ChatGPT deeply integrated into Microsoft products in the near future.</p>
-<h2 id="why-open-ai-was-created">Why Open AI was created?</h2>
-<p>OpenAI was created to help solve the AI alignment problem. The AI alignment problem is the problem of ensuring that AI systems are aligned with human values. In other words, we want to make sure that AI systems are safe and beneficial for humanity. OpenAI is trying to solve this problem by creating friendly AI that is safe and beneficial for humanity. They are also trying to solve the AI safety problem, which is the problem of ensuring that AI systems are safe and beneficial for humanity. OpenAI is trying to solve this problem by creating friendly AI that is safe and beneficial for humanity.</p>
-<p>Elon Musk and Sam Altman has stated that they are partly motivated by the concerns about AI Safety. They also mentioned their concerns about existensial risk from artifical general intelligence.</p>
-<p>Vishal Sikka, former CEO of Infosys, stated that an &ldquo;openness&rdquo; where the endeavor would &ldquo;produce results generally in the greater interest of humanity&rdquo; was a fundamental requirement for his support, and that OpenAI &ldquo;aligns very nicely with our long-held values&rdquo; and their &ldquo;endeavor to do purposeful work&rdquo;.</p>
-<p>Ai is going to be a huge part of our future, and we need to make sure that it is safe and beneficial for humanity.</p>
-<h2 id="generative-models">Generative Models</h2>
-<p><code>Generative models</code> are a type of <code>machine learning</code> algorithm, that can generate new data based on what it has learned from already existing data. These algorithms generate new data by learning patterns and relationships within the data, and then using this knowledge to create new, that is similar to the original data.</p>
-<p>For example, a <code>generative model</code> trained on images of faces could then generate new, unique faces that have similar features to the faces it was trained on. These models can be used for a variety of tasks, such as generating images, music, text, and even 3D models.</p>
-<p>In essence, <code>generative models</code> attempt to learn the underlying structure of the data they are given and use that structure to create new, related data. This opens up a wide range of possibilities and applications, from creating new works of art to generating synthetic data for training other machine learning models.</p>
-<h2 id="what-is-gpt-3">What is GPT-3?</h2>
-<p><code>GPT-3</code> is a powerful AI language model developed by <code>OpenAI</code>. It has the ability to generate text that is very similar to what a human might write. This means that it can understand the context of a conversation, write coherent and meaningful sentences, and even generate entire articles or stories.</p>
-<p>Think of <code>GPT-3</code> as a really smart friend who can write anything you want based on a prompt you give them. You can ask it to write a story, answer a question, or even write a poem. The amazing thing is that GPT-3 can do this without being explicitly taught how to write in a certain way. It just learns from a huge amount of text data and figures out the patterns and relationships on its own.</p>
-<p><code>GPT-3</code> has the potential to revolutionize the way we interact with computers and the way we access information. In the future, it may be used for things like automated news writing, customer service, and even creative writing. It&rsquo;s a cutting-edge technology that is changing the landscape of AI and has exciting implications for the future.</p>
-<h2 id="what-is-an-ai-model">What is an AI Model?</h2>
-<p>An AI model is a computer program that has been trained to perform specific tasks or make predictions based on input data. Essentially, it&rsquo;s like creating a digital version of a human brain to solve problems or make decisions.</p>
-<p>To train an AI model, you feed it a large amount of data and then teach it to recognize patterns and relationships within that data. This process is called &ldquo;training&rdquo;. Once the model has been trained, it can then use that knowledge to make predictions or perform tasks based on new input data.</p>
-<p>For example, you could train an AI model to identify objects in pictures. When you show it a new picture, it would use the knowledge it learned during training to identify the objects in the picture and classify them based on what it learned.</p>
-<p>AI models can be used for a wide range of applications, from image and speech recognition to language translation and even autonomous vehicles. They have the potential to revolutionize the way we interact with technology and solve problems in various industries.</p>
-<h2 id="the-openai-api-series">The OpenAI API series</h2>
-<p>OpenAI provides the powerfull GPT-3 model and its descendants as an API. This means that you can use the model in your own applications. The API is very easy to use.
-Some of the servises offered by Open AI API are:</p>
+        <h2 id="asynchronous-programming-in-dart">Asynchronous Programming in Dart</h2>
+<p>Asynchronous programming is a method of writing code, that allows the program to run multiple tasks in the background without blocking the main thread. This means that the program can continue to respond to user requests, while it is waiting for the completion of a long running task.</p>
+<p>For example, consider a mobile application that downloads a file from the internet. In a synchronous program, the program will wait for the file to download before it can respond to user requests. That is, the program will be blocked until the file is downloaded. It will not be able to respond to user requests until the file is downloaded. This is not a good user experience.</p>
+<p>With asynchronous programming, the program can continue to respond to user requests, while it is downloading the file. This is a better user experience.</p>
+<p>In Dart, asynchronous programming is achieved using the <code>Future</code> class. A <code>Future</code> object represents a value that will be available in the future. The <code>Future</code> class is defined in the <code>dart:async</code> library. You can import the library using the following statement:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#a5d6ff">&#39;dart:async&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Future<span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span> getFutureValue() <span style="color:#ff7b72">async</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// network requests
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#8b949e;font-style:italic">// file operations
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>    <span style="color:#8b949e;font-style:italic">// database operations
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//usage
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>s <span style="color:#ff7b72;font-weight:bold">=</span>  <span style="color:#ff7b72">await</span> getFutureValue();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// or
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>getFutureValue().then((value) {
+</span></span><span style="display:flex;"><span>    s <span style="color:#ff7b72;font-weight:bold">=</span> value;
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div><h2 id="futurewait-method">Future.wait() method</h2>
+<p>Sometimes, our program has to make multiple network requests. We have to wait for the completion of all the network requests before we can proceed.</p>
+<p>For example, consider a mobile application that displays a list of courses. The application has to make a network request to fetch the list of courses. Simultaneously, the application might have to make a network request to fetch the list of instructors. Suppose, we want to display the list of courses and the list of instructors once both the network requests are completed.</p>
+<p>With the <code>Future.wait()</code> method, we can wait for the program to complete both the network requests.  The method takes a list of <code>Future</code> objects as an argument. It returns a <code>Future</code> object that completes when all the <code>Future</code> objects in the list are completed. When the <code>Future</code> object completes, it returns a list of values. The values are returned in the <strong>same order as the <code>Future</code> objects</strong> in the list.</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dart" data-lang="dart"><span style="display:flex;"><span><span style="color:#ff7b72">import</span> <span style="color:#a5d6ff">&#39;dart:async&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Future<span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span> getFutureValue1() <span style="color:#ff7b72">async</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// some asynchroneous code
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Future<span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span> getFutureValue2() <span style="color:#ff7b72">async</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// some asynchroneous code
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Future<span style="color:#ff7b72;font-weight:bold">&lt;</span><span style="color:#ff7b72">int</span><span style="color:#ff7b72;font-weight:bold">&gt;</span> getFutureValue3() <span style="color:#ff7b72">async</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// some asynchroneous code
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">//usage
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>Future.wait([
+</span></span><span style="display:flex;"><span>        getFutureValue1(), 
+</span></span><span style="display:flex;"><span>        getFutureValue2(), 
+</span></span><span style="display:flex;"><span>        getFutureValue3()
+</span></span><span style="display:flex;"><span>    ]).then((values) {
+</span></span><span style="display:flex;"><span>    print(values);
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// or 
+</span></span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>values <span style="color:#ff7b72;font-weight:bold">=</span> <span style="color:#ff7b72">await</span> Future.wait([
+</span></span><span style="display:flex;"><span>        getFutureValue1(), 
+</span></span><span style="display:flex;"><span>        getFutureValue2(), 
+</span></span><span style="display:flex;"><span>        getFutureValue3()
+</span></span><span style="display:flex;"><span>    ]);
+</span></span></code></pre></div><p>In the above example, we created three functions that performs some kind of asynchronous operation. All the functions return a <code>Future</code> object. We passed the <code>Future</code> objects as a <code>list</code> to the <code>Future.wait()</code> method. The method returns a <code>Future</code> object that completes when all the three asynchronous operations are completed. When the <code>Future</code> object completes, it returns a list of values. The values are returned in the same order as the <code>Future</code> objects in the list.</p>
+<h2 id="summary">Summary</h2>
+<p>In this tutorial, we learned how to wait for the completion of multiple futures in dart/Flutter. We used the <code>Future.wait()</code> method to wait for the completion of all the <code>Future</code> objects in a list. The method returns a <code>Future</code> object that completes when all the <code>Future</code> objects in the list are completed. When the <code>Future</code> object returned by the <code>Future.wait()</code> method completes, it returns a list of values. The values are returned in the same order as the <code>Future</code> objects in the list.</p>
+<h2 id="references">References</h2>
 <ul>
-<li><strong>Completion</strong>: Generate text from a prompt.</li>
-<li><strong>Embedding</strong>: Get the embedding of a text. The embedding is a vector representation of the text. It can be used to compare the similarity of two texts(Search, Classification etc&hellip;).</li>
-<li><strong>Fine-tuning</strong>: Fine-tune the model on your own data. This is a very powerful feature that allows you to train the model on your own data and use it for your own applications.</li>
-<li><strong>Image generation</strong>: Generate images from a prompt. Edit or Generate Variants of an image.</li>
-<li><strong>Moderation</strong>: Moderate text for profanity, offensive language, and other unwanted content.</li>
+<li><a href="https://api.flutter.dev/flutter/dart-async/Future/wait.html" target="_blank" rel="nofollow noopener noreferrer" >Future.wait()</a>
+</li>
+<li><a href="https://dart.dev/codelabs/async-await" target="_blank" rel="nofollow noopener noreferrer" >Asynchronous Programming in dart</a>
+</li>
 </ul>
-<p>The OpenAI series is a series of articles that I am writing to help developers understand how to use the OpenAI API. The series will cover topics such as how to use the API, how to fine tune models, and how to use the <code>openai</code> package in python. Stay tuned for more articles in the series! Follow us on <a href="https://www.linkedin.com/company/flutterrettulf" target="_blank" rel="nofollow noopener noreferrer" >LinkedIn</a>
- to get notified when new articles are published.</p>
 
       </div>
     </article>
     <div class="col-12 mt-4  bg-light rounded p-3 text-dark">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="btn-group ">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
-          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&text=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&title=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fintro_to_open_ai_api_chat_gpt_codex%2f&title=Unpacking%20the%20basics%20a%20guide%20to%20open%20ai%20api%2c%20chat%20gpt%2c%20and%20gpt%203" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fflutterrettulf.com%2fposts%2fhow_to_wait_for_the_completion_of_multiple_futures_in_dart%2f" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fhow_to_wait_for_the_completion_of_multiple_futures_in_dart%2f&text=How%20to%20wait%20for%20the%20completion%20of%20multiple%20futures%20in%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-twitter"></i></a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fflutterrettulf.com%2fposts%2fhow_to_wait_for_the_completion_of_multiple_futures_in_dart%2f&title=How%20to%20wait%20for%20the%20completion%20of%20multiple%20futures%20in%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.reddit.com/submit?url=https%3a%2f%2fflutterrettulf.com%2fposts%2fhow_to_wait_for_the_completion_of_multiple_futures_in_dart%2f&title=How%20to%20wait%20for%20the%20completion%20of%20multiple%20futures%20in%20dart" class="btn  btn-outline-primary" target="_blank"><i class="bi bi-reddit"></i></a>
         </div>
       </div>
     </div>
@@ -252,6 +263,10 @@ Some of the servises offered by Open AI API are:</p>
         <ul class="list-unstyled">
           
           <li  class="mb-2">
+            <a href="/posts/intro_to_open_ai_api_chat_gpt_codex/" class="text-decoration-none">Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3</a>
+          </li>
+          
+          <li  class="mb-2">
             <a href="/flutter_tutorials/flutter-expanded-widget/" class="text-decoration-none">Flutter: Expanded/Flexible Widget explanied With examples</a>
           </li>
           
@@ -285,10 +300,6 @@ Some of the servises offered by Open AI API are:</p>
           
           <li  class="mb-2">
             <a href="/flutter_plugins/dio_http_client/" class="text-decoration-none">Dio | Powerfull Http Client for flutter</a>
-          </li>
-          
-          <li  class="mb-2">
-            <a href="/flutter_tutorials/flutter_basic_app_example/" class="text-decoration-none">Flutter: Basic App Example | How to create a flutter app</a>
           </li>
           
         </ul>

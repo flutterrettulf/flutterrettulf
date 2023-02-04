@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Oct 2022 15:00:00 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>How to wait for the completion of multiple futures in dart</title>
+      <link>https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/</link>
+      <pubDate>Sat, 04 Feb 2023 11:03:43 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/</guid>
+      <description>Asynchronous Programming in Dart Asynchronous programming is a method of writing code, that allows the program to run multiple tasks in the background without blocking the main thread. This means that the program can continue to respond to user requests, while it is waiting for the completion of a long running task.
+For example, consider a mobile application that downloads a file from the internet. In a synchronous program, the program will wait for the file to download before it can respond to user requests.</description>
+    </item>
+    
+    <item>
       <title>Unpacking the Basics: A Guide to OpenAI API, ChatGPT, and GPT-3</title>
       <link>https://flutterrettulf.com/posts/intro_to_open_ai_api_chat_gpt_codex/</link>
       <pubDate>Fri, 03 Feb 2023 23:39:58 +0530</pubDate>

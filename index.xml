@@ -6,7 +6,7 @@
     <description>Recent content in FlutterrettulF: Learn Flutter, Android Mobile Development, iOS Mobile Development on FlutterrettulF | Learn Flutter | Android Mobile Development | iOS Mobile Development</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Feb 2023 23:39:58 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 Feb 2023 11:03:43 +0530</lastBuildDate><atom:link href="https://flutterrettulf.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About FlutterrettulF</title>
       <link>https://flutterrettulf.com/about/</link>
@@ -14,6 +14,16 @@
       
       <guid>https://flutterrettulf.com/about/</guid>
       <description>Welcome to FlutterrettulF, your one-stop-shop for all things Dart, Flutter, mobile development, and programming! Here, we aim to provide beginner-friendly resources and tutorials on these topics, to help you jumpstart your journey into the world of mobile app development. The name FlutterrettulF is a play on the word &amp;ldquo;Flutter&amp;rdquo; and reflects our focus on the popular mobile development framework. Our goal is to provide a comprehensive and accessible resource for anyone starting out on their journey in these areas.</description>
+    </item>
+    
+    <item>
+      <title>How to wait for the completion of multiple futures in dart</title>
+      <link>https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/</link>
+      <pubDate>Sat, 04 Feb 2023 11:03:43 +0530</pubDate>
+      
+      <guid>https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/</guid>
+      <description>Asynchronous Programming in Dart Asynchronous programming is a method of writing code, that allows the program to run multiple tasks in the background without blocking the main thread. This means that the program can continue to respond to user requests, while it is waiting for the completion of a long running task.
+For example, consider a mobile application that downloads a file from the internet. In a synchronous program, the program will wait for the file to download before it can respond to user requests.</description>
     </item>
     
     <item>

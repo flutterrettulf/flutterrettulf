@@ -5,13 +5,22 @@
     <loc>https://flutterrettulf.com/about/</loc>
     <lastmod>2022-10-19T15:00:00+05:30</lastmod>
   </url><url>
+    <loc>https://flutterrettulf.com/categories/</loc>
+    <lastmod>2023-02-04T11:03:43+05:30</lastmod>
+  </url><url>
+    <loc>https://flutterrettulf.com/categories/dart-tutorials/</loc>
+    <lastmod>2023-02-04T11:03:43+05:30</lastmod>
+  </url><url>
+    <loc>https://flutterrettulf.com/</loc>
+    <lastmod>2023-02-04T11:03:43+05:30</lastmod>
+  </url><url>
+    <loc>https://flutterrettulf.com/posts/how_to_wait_for_the_completion_of_multiple_futures_in_dart/</loc>
+    <lastmod>2023-02-04T11:03:43+05:30</lastmod>
+  </url><url>
     <loc>https://flutterrettulf.com/tags/api/</loc>
     <lastmod>2023-02-03T23:39:58+05:30</lastmod>
   </url><url>
     <loc>https://flutterrettulf.com/categories/api/</loc>
-    <lastmod>2023-02-03T23:39:58+05:30</lastmod>
-  </url><url>
-    <loc>https://flutterrettulf.com/categories/</loc>
     <lastmod>2023-02-03T23:39:58+05:30</lastmod>
   </url><url>
     <loc>https://flutterrettulf.com/tags/chatbot/</loc>
@@ -24,9 +33,6 @@
     <lastmod>2023-02-03T23:39:58+05:30</lastmod>
   </url><url>
     <loc>https://flutterrettulf.com/categories/codex/</loc>
-    <lastmod>2023-02-03T23:39:58+05:30</lastmod>
-  </url><url>
-    <loc>https://flutterrettulf.com/</loc>
     <lastmod>2023-02-03T23:39:58+05:30</lastmod>
   </url><url>
     <loc>https://flutterrettulf.com/tags/gpt3/</loc>
@@ -75,9 +81,6 @@
     <lastmod>2023-01-06T15:00:00+05:30</lastmod>
   </url><url>
     <loc>https://flutterrettulf.com/tags/dart/</loc>
-    <lastmod>2023-01-06T15:00:00+05:30</lastmod>
-  </url><url>
-    <loc>https://flutterrettulf.com/categories/dart-tutorials/</loc>
     <lastmod>2023-01-06T15:00:00+05:30</lastmod>
   </url><url>
     <loc>https://flutterrettulf.com/tags/list/</loc>
